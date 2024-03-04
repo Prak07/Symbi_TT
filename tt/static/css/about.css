@@ -64,8 +64,10 @@ nav {
   padding: 1.4vw;
 }
 #nav-1 a h4 {
-  font-size: 1.3vw;
-  font-weight: 600;
+  font-size: 1.5vw;
+  font-weight: 200;
+  letter-spacing: 0.09vw;
+  font-family: os;
 }
 #nav-2 a {
   display: inline-block;
@@ -74,8 +76,8 @@ nav {
   border: none;
   color: #ffffff;
   text-align: center;
-  font-size: 1.3vw;
-  padding: 0.8vw 0vw;
+  font-size: 1.6vw;
+  padding: 0.5vw 0vw;
   width: 7vw;
   transition: all 0.5s;
   cursor: pointer;
@@ -87,6 +89,9 @@ nav {
   position: relative;
   transition: 0.5s;
   background: transparent;
+  font-family: os;
+  font-weight: 300;
+  letter-spacing: 0.1vw;
 }
 
 #nav-2 a span:after {
@@ -151,6 +156,9 @@ nav a {
   background: transparent;
   font-size: 1.5vw;
   line-height: 2.5vw;
+  font-family: os;
+  font-weight: 300;
+  letter-spacing: 0.1vw;
 }
 
 #objective {
@@ -161,6 +169,11 @@ nav a {
   align-items: flex-end;
   flex-direction: column;
   gap: 2vw;
+}
+#objective p {
+  font-family: os;
+  font-weight: 300;
+  letter-spacing: 0.1vw;
 }
 #objective h1 {
   background-color: transparent;
@@ -229,6 +242,9 @@ nav a {
   background: transparent;
   font-size: 1.5vw;
   line-height: 2.5vw;
+  font-family: os;
+  font-weight: 300;
+  letter-spacing: 0.1vw;
 }
 
 #footer {
