@@ -2,10 +2,6 @@
   font-family: gil;
   src: url("/static/font/Gilroy-Light.otf");
 }
-@font-face {
-  font-family: teko;
-  src: url("/static/font/Teko-VariableFont_wght.ttf");
-}
 
 @font-face {
   font-family: Nunito;
@@ -69,10 +65,8 @@ nav {
   padding: 1.4vw;
 }
 #nav-1 a h4 {
-  font-size: 1.5vw;
-  font-weight: 200;
-  letter-spacing: 0.09vw;
-  font-family: os;
+  font-size: 1.3vw;
+  font-weight: 600;
 }
 #nav-2 a {
   display: inline-block;
@@ -81,8 +75,8 @@ nav {
   border: none;
   color: #ffffff;
   text-align: center;
-  font-size: 1.6vw;
-  padding: 0.5vw 0vw;
+  font-size: 1.3vw;
+  padding: 0.8vw 0vw;
   width: 7vw;
   transition: all 0.5s;
   cursor: pointer;
@@ -94,9 +88,6 @@ nav {
   position: relative;
   transition: 0.5s;
   background: transparent;
-  font-family: os;
-  font-weight: 300;
-  letter-spacing: 0.1vw;
 }
 
 #nav-2 a span:after {
@@ -230,11 +221,12 @@ nav a {
 }
 #data-cont h1 {
   background-color: transparent;
-  font-size: 6.8vw;
-  letter-spacing: 0.1vw;
+  font-size: 4vw;
   color: rgba(255, 64, 0, 0.854);
-  font-family: teko;
-  font-weight: 350;
+  font-weight: 600;
+  font-family: gil;
+  line-height: 3.8vw;
+  margin-bottom: 1vw;
 }
 #data-cont .elem {
   width: 100%;
@@ -296,8 +288,16 @@ nav a {
 #footer .links h3 {
   color: rgba(255, 64, 0, 0.854);
   width: 100%;
+  margin-bottom: 1vw;
   font-size: 1.4vw;
   background-color: #202020 !important;
+}
+#footer .links h2 {
+  margin-top: 5vw;
+  text-decoration: underline;
+  color: #fff;
+  font-size: 1.5vw;
+  background-color: rgb(66, 65, 65);
 }
 #footer .links a {
   width: fit-content;
