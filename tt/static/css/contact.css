@@ -30,6 +30,10 @@ body {
   height: 100%;
   width: 100%;
 }
+::selection {
+  color: black;
+  background-color: #fff;
+}
 #page1 {
   width: 100%;
   padding: 0vw 3vw;
@@ -65,7 +69,7 @@ nav {
 }
 #nav-1 a h4 {
   font-size: 1.3vw;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 #nav-2 a {
@@ -75,8 +79,8 @@ nav {
   border: none;
   color: #ffffff;
   text-align: center;
-  font-size: 1.3vw;
-  padding: 0.8vw 0vw;
+  font-size: 1.5vw;
+  padding: 0.6vw 0vw;
   width: 7vw;
   transition: all 0.5s;
   cursor: pointer;
