@@ -350,7 +350,9 @@ form button:hover span:after {
 
 .label-up {
   padding: 0vw 0.5vw;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   font-size: 1.8vw;
   width: 100%;
