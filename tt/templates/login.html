@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/static/images/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/static/css/login.css" />
+    <title>Symbi TT-Login</title>
+  </head>
+
+  <body>
+    <a id="img-div" href="/">
+      <img src="/static/images/logo-no-background.png" alt="" />
+    </a>
+    <div id="page1">
+      <div class="container" id="container">
+        <div class="form-container sign-up">
+          <form action="/" method="post" style="gap: 1.5vw">
+            {% csrf_token %}
+            <h1 style="margin-bottom: 0">Create Account</h1>
+
+            <div class="input-box">
+              <input type="text" required />
+              <label for="email">Email</label>
+            </div>
+
+            <div class="input-box">
+              <input type="text" required />
+              <label for="password">Password</label>
+            </div>
+
+            <div class="input-box">
+              <input type="text" required />
+              <label for="divison">Division</label>
+            </div>
+            <div class="input-box">
+              <input type="text" required />
+              <label for="semester">Sem</label>
+            </div>
+            <div id="select-program">
+              <select id="menu">
+                <option value="" disabled selected>Program</option>
+                <option value="bca">BCA</option>
+                <option value="bbait">BBA(IT)</option>
+                <option value="msc">MSC(CA)</option>
+                <option value="mbait">MBA(IT)</option>
+                <option value="mbadt">MBA(DT)</option>
+              </select>
+            </div>
+            <div id="radio">
+              <h3>Hounors ?</h3>
+              <div class="radio-button-container">
+                <div class="radio-button">
+                  <input
+                    required
+                    type="radio"
+                    class="radio-button__input"
+                    id="radio1"
+                    name="radio-group"
+                  />
+                  <label class="radio-button__label" for="radio1">
+                    <span class="radio-button__custom"></span>
+                    Yes
+                  </label>
+                </div>
+                <div class="radio-button">
+                  <input
+                    required
+                    type="radio"
+                    class="radio-button__input"
+                    id="radio2"
+                    name="radio-group"
+                  />
+                  <label class="radio-button__label" for="radio2">
+                    <span class="radio-button__custom"></span>
+                    NO
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+        <div class="form-container sign-in">
+          <form action="/" method="post">
+            {% csrf_token %}
+            <h1>Sign In</h1>
+
+            <div class="input-box">
+              <input type="text" required />
+              <label for="username">Email</label>
+            </div>
+            <div class="input-box">
+              <input type="text" required />
+              <label for="name">Password</label>
+            </div>
+
+            <button type="submit">Sign In</button>
+          </form>
+        </div>
+        <div class="toggle-container">
+          <div class="toggle">
+            <div class="toggle-panel toggle-left">
+              <h1>Already have an account?</h1>
+              <p>Sign-in, now to get your routine!</p>
+              <button class="hidden" id="login"><p>Sign In</p></button>
+            </div>
+            <div class="toggle-panel toggle-right">
+              <h1 style="width: 80%">Don't have an account?</h1>
+              <p>Register, now to get your routine!</p>
+              <button class="hidden" id="register"><p>Sign Up</p></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="/static/js/login.js"></script>
+  </body>
+</html>

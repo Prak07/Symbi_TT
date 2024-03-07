@@ -30,6 +30,11 @@ body {
   height: 100%;
   width: 100%;
 }
+
+::selection {
+  color: black;
+  background-color: #fff;
+}
 #page1 {
   width: 100%;
   min-height: 100vh;
@@ -66,7 +71,7 @@ nav {
 }
 #nav-1 a h4 {
   font-size: 1.3vw;
-  font-weight: 600;
+  font-weight: 500;
 }
 #nav-2 a {
   display: inline-block;
@@ -75,8 +80,8 @@ nav {
   border: none;
   color: #ffffff;
   text-align: center;
-  font-size: 1.3vw;
-  padding: 0.8vw 0vw;
+  font-size: 1.5vw;
+  padding: 0.6vw 0vw;
   width: 7vw;
   transition: all 0.5s;
   cursor: pointer;
@@ -87,6 +92,7 @@ nav {
   display: inline-block;
   position: relative;
   transition: 0.5s;
+
   background: transparent;
 }
 
@@ -120,7 +126,7 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 9.3vw 4vw;
+  padding: 11vw 4vw;
   gap: 3vw;
 }
 .calendar {
@@ -131,6 +137,7 @@ nav a {
   color: white;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-self: flex-start;
 }
 
 .header {
@@ -147,7 +154,7 @@ nav a {
 .month-year {
   background: transparent;
   font-size: 1.5vw;
-  color: rgba(255, 64, 0, 0.854);
+  color: rgba(255, 64, 0);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -208,16 +215,15 @@ nav a {
 }
 
 #data-cont {
-  min-height: 38vw;
+  min-height: 33vw;
   width: 70vw;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 0.8vw;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
   gap: 0.6vw;
-  padding: 0.8vw 1vw 2vw 1vw;
+  padding: 2vw 1vw 1vw 1vw;
 }
 #data-cont h1 {
   background-color: transparent;
@@ -226,7 +232,7 @@ nav a {
   font-weight: 600;
   font-family: gil;
   line-height: 3.8vw;
-  margin-bottom: 1vw;
+  margin-bottom: 2vw;
 }
 #data-cont .elem {
   width: 100%;
@@ -234,6 +240,7 @@ nav a {
   background-color: transparent;
   border: 1px solid #fff;
   display: flex;
+  justify-content: space-between;
   gap: 0.8vw;
 }
 .overflow {
@@ -247,13 +254,13 @@ nav a {
   padding: 0vw 0.8vw;
   align-items: center;
   justify-content: center;
-  width: 30%;
+  width: 20vw;
   border-right: 1px solid #fff;
 }
 .elem .elem-parts h3 {
   color: white;
-  font-size: 1.4vw;
-  font-weight: 100;
+  font-size: 1.3vw;
+  font-weight: 400;
   background: transparent;
 }
 
@@ -326,6 +333,9 @@ nav a {
   width: 100%;
   position: relative;
   top: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all ease 0.5s;
   background-color: #202020 !important;
   font-family: os;
