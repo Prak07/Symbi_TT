@@ -1,14 +1,15 @@
 import os
 from pathlib import Path
+from decouple import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = "django-insecure-y-r!7&9=)qa=ss(8arpm%p-953&t51ap_94t+)m65m^v!)%#06"
+SECRET_KEY = config("SECRET_KEY")
 
-DEBUG = True
+DEBUG = config("DEBUG", cast=bool)
 
-ALLOWED_HOSTS = ["127.0.0.1", "192.168.101.30", "192.168.30.106"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
