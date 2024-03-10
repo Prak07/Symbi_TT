@@ -30,6 +30,11 @@ body {
   height: 100%;
   width: 100%;
 }
+.mousefollower {
+  width: 20px !important;
+  height: 20px;
+}
+
 ::selection {
   color: black;
   background-color: #fff;
@@ -207,7 +212,7 @@ form .input-box input:focus ~ label,
   color: rgba(255, 64, 0, 0.854);
 }
 #form-container #contact-info {
-  height: 20vw;
+  height: 25vw;
   width: 25vw;
   padding: 1vw;
   display: flex;
@@ -225,7 +230,7 @@ form .input-box input:focus ~ label,
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 2vw;
+  gap: 1vw;
 }
 .elem-cont {
   overflow: hidden;
@@ -237,11 +242,11 @@ form .input-box input:focus ~ label,
   font-size: 1.5vw;
   padding-bottom: 0.5vw;
   border-bottom: 1px solid #eee;
-  width: 70%;
+  width: 92%;
 }
 #info h3 i {
   font-weight: 100;
-  font-size: 1.4vw;
+  font-size: 1.6vw;
 }
 form button {
   display: inline-block;
@@ -405,4 +410,142 @@ form button:hover span:after {
 .overflow {
   overflow: hidden;
   background-color: #202020 !important;
+}
+@media screen and (max-width: 600px) {
+  #page1 {
+    width: 100%;
+    justify-content: center;
+    padding: 14vw 0 0 0vw;
+  }
+  #nav-left img {
+    width: 28%;
+  }
+  .mousefollower {
+    display: none;
+  }
+
+  nav {
+    position: static;
+    padding: 8vw 5vw;
+  }
+
+  #nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2.5vw;
+  }
+  #nav-1 {
+    gap: 4vw;
+  }
+
+  #nav-1 a h4 {
+    font-size: 3vw;
+    font-weight: 500;
+  }
+  #nav-2 a {
+    font-size: 3vw;
+    width: fit-content;
+    padding: 1vw 2vw;
+  }
+  #contact {
+    height: 90%;
+    padding: 1vw 4vw;
+    align-items: normal;
+    gap: 3.8vw;
+  }
+  #contact .content h1 {
+    font-size: 16vw;
+    padding: 0 2vw;
+  }
+  #contact .content h1 em {
+    -webkit-text-stroke: 0.3vw rgba(255, 64, 0, 0.854);
+  }
+  #contact .underline {
+    border-bottom: 1px solid white;
+    width: 95%;
+  }
+  #contact #form-container {
+    width: 100%;
+    height: 60vh;
+    gap: 4vw;
+    flex-direction: column;
+  }
+  #contact #form-container form {
+    padding: 3vw 4vw;
+    width: 100%;
+    gap: 8vw;
+  }
+  form .input-box {
+    height: 7.5vw;
+  }
+  form .input-box label {
+    font-size: 4vw;
+  }
+  form .input-box input[type="text"] {
+    font-size: 4vw;
+  }
+  form button {
+    font-size: 5.5vw;
+    border-radius: 1vw;
+    padding: 1vw 4vw;
+    width: fit-content;
+  }
+  #form-container #contact-info {
+    width: 100%;
+    height: 48%;
+    gap: 6vw;
+  }
+
+  #contact-info h1 {
+    text-align: center;
+    font-size: 9vw;
+  }
+  #info {
+    gap: 5vw;
+    align-items: center;
+  }
+  #info .elem-cont {
+    width: 78%;
+  }
+  #info h3 {
+    font-size: 5vw;
+    padding-bottom: 0.3vw !important;
+    width: 100%;
+    text-align: center;
+  }
+  #info h3 i {
+    font-size: 5vw;
+  }
+
+  #footer {
+    height: 35vh;
+  }
+  #footer #footer-container {
+    padding: 0vw 0vw !important;
+    justify-content: space-around;
+  }
+  #footer .links {
+    height: 70%;
+    width: 28vw;
+    gap: 3.5vw;
+  }
+  #footer .links h3 {
+    font-size: 3.3vw;
+  }
+  .button {
+    height: 5vw;
+  }
+  .label-up {
+    font-size: 3.8vw;
+  }
+  .mail {
+    font-size: 2.5vw !important;
+    color: #fff;
+  }
+  .label-up i {
+    font-size: 4vw !important;
+  }
+  #copyright h3 {
+    font-size: 5vw;
+  }
 }

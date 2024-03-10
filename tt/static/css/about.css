@@ -30,6 +30,11 @@ body {
   height: 100%;
   width: 100%;
 }
+.mousefollower {
+  width: 20px !important;
+  height: 20px;
+}
+
 ::selection {
   color: black;
   background-color: #fff;
@@ -353,4 +358,128 @@ nav a {
 .overflow {
   overflow: hidden;
   background-color: #202020 !important;
+}
+@media screen and (max-width: 600px) {
+  .mousefollower {
+    display: none;
+  }
+  #page1 {
+    min-height: 40vh;
+  }
+
+  nav {
+    position: static;
+    padding: 8vw 5vw;
+  }
+  #nav-left img {
+    width: 28%;
+  }
+  #nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2.5vw;
+  }
+  #nav-1 {
+    gap: 4vw;
+  }
+
+  #nav-1 a h4 {
+    font-size: 3vw;
+    font-weight: 500;
+  }
+  #nav-2 a {
+    font-size: 3vw;
+    width: fit-content;
+    padding: 1vw 2vw;
+  }
+
+  #about {
+    min-height: 165vw;
+    padding: 1vw 1vw;
+  }
+  #about h1 {
+    font-size: 18vw;
+  }
+  #about h1 em {
+    font-size: 18vw;
+    -webkit-text-stroke: 0.3vw rgba(255, 64, 0, 0.854);
+  }
+  #about .underline {
+    width: 95%;
+  }
+  #about p {
+    font-size: 4vw;
+    line-height: 6.5vw;
+    width: 95%;
+  }
+  #objective {
+    min-height: 140vw;
+    padding: 1vw 0vw;
+    gap: 3vw;
+    align-items: normal;
+  }
+  #objective h1 {
+    font-size: 15.7vw;
+  }
+
+  #objective .underline {
+    width: 100%;
+  }
+  #objective .para {
+    width: 100%;
+  }
+  #objective .para p {
+    font-size: 4vw;
+    line-height: 6.9vw;
+    width: 100%;
+    text-align: start;
+  }
+
+  #scope {
+    min-height: 150vw;
+    padding: 1vw 1vw;
+    gap: 4vw;
+  }
+  #scope h1 {
+    font-size: 18vw;
+  }
+  #scope .underline {
+    width: 95%;
+  }
+  #scope p {
+    font-size: 4vw;
+    line-height: 7vw;
+    width: 95%;
+  }
+  #footer {
+    height: 35vh;
+  }
+  #footer #footer-container {
+    padding: 0vw 0vw !important;
+    justify-content: space-around;
+  }
+  #footer .links {
+    height: 70%;
+    width: 28vw;
+    gap: 3.5vw;
+  }
+  #footer .links h3 {
+    font-size: 3.3vw;
+  }
+  .button {
+    height: 5vw;
+  }
+  .label-up {
+    font-size: 3.8vw;
+  }
+  .mail {
+    font-size: 2.5vw !important;
+    color: #fff;
+  }
+  .label-up i {
+    font-size: 4vw !important;
+  }
+  #copyright h3 {
+    font-size: 5vw;
+  }
 }
