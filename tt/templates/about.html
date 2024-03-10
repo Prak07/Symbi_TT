@@ -1,87 +1,84 @@
-{% extends "base.html"%}
-{% load static %}
-{% block title %}Symbi TT-About{% endblock title %}
-{% block body%}
-<link rel="stylesheet" href="/static/css/about.css"/>
-      <div id="page1">
-        <div id="about">
-          <div class="content">
-            <h1>About <em>Symbi tt </em></h1>
-          </div>
-          <div class="underline"></div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
-            expedita ullam natus beatae dicta nam enim quidem? Esse harum
-            reprehenderit aut, eaque ut in, alias illo blanditiis delectus
-            nostrum error nulla eveniet dolorum temporibus consectetur. Sequi
-            veritatis reprehenderit quam expedita voluptatibus necessitatibus
-            est blanditiis aperiam qui in assumenda sed repudiandae, odio
-            voluptatum reiciendis unde eius labore, ipsum omnis eveniet
-            inventore placeat! Pariatur, reiciendis est? Voluptas omnis, harum
-            fugiat veritatis reprehenderit nobis facere quam consequuntur cum
-            delectus ducimus eveniet at quo quibusdam ullam nisi dolorum
-            possimus soluta quos recusandae? Et ipsam harum esse? Voluptatibus
-            quasi enim, velit incidunt officia quis adipisci!
-          </p>
-        </div>
-        <div id="objective">
-          <div class="content">
-            <h1>Objectives</h1>
-          </div>
-          <div class="underline"></div>
-          <div class="para">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
-              expedita ullam natus beatae dicta nam enim quidem? Esse harum
-              reprehenderit aut, eaque ut in, alias illo blanditiis delectus
-              nostrum error nulla eveniet dolorum temporibus consectetur. Sequi
-              veritatis reprehenderit quam expedita voluptatibus necessitatibus
-              est blanditiis aperiam qui in assumenda sed repudiandae, odio
-              voluptatum reiciendis unde eius labore, ipsum omnis eveniet
-              inventore placeat! Pariatur, reiciendis est? Voluptas omnis, harum
-              fugiat veritatis reprehenderit nobis facere quam consequuntur cum
-              delectus ducimus eveniet at quo quibusdam ullam nisi dolorum
-              possimus soluta quos recusandae? Et ipsam harum esse? Voluptatibus
-              quasi enim, velit incidunt officia quis adipisci!
-            </p>
-          </div>
-        </div>
-        <div id="scope">
-          <div class="content">
-            <h1>Scope</h1>
-          </div>
-          <div class="underline"></div>
-          <div class="para">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
-              expedita ullam natus beatae dicta nam enim quidem? Esse harum
-              reprehenderit aut, eaque ut in, alias illo blanditiis delectus
-              nostrum error nulla eveniet dolorum temporibus consectetur. Sequi
-              veritatis reprehenderit quam expedita voluptatibus necessitatibus
-              est blanditiis aperiam qui in assumenda sed repudiandae, odio
-              voluptatum reiciendis unde eius labore, ipsum omnis eveniet
-              inventore placeat! Pariatur, reiciendis est? Voluptas omnis, harum
-              fugiat veritatis reprehenderit nobis facere quam consequuntur cum
-              delectus ducimus eveniet at quo quibusdam ullam nisi dolorum
-              possimus soluta quos recusandae? Et ipsam harum esse? Voluptatibus
-              quasi enim, velit incidunt officia quis adipisci!
-            </p>
-          </div>
-        </div>
-      </div>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+{% extends "base.html"%} {% block title %}Symbi TT-About{%endblock title %} {%
+load static %} {% block body%}
+<link rel="stylesheet" href="/static/css/about.css" />
+<div id="page1">
+  <div id="about">
+    <div class="content">
+      <h1>About <em>Symbi tt </em></h1>
+    </div>
+    <div class="underline"></div>
+    <p data-scroll data-scroll-speed="1">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam expedita
+      ullam natus beatae dicta nam enim quidem? Esse harum reprehenderit aut,
+      eaque ut in, alias illo blanditiis delectus nostrum error nulla eveniet
+      dolorum temporibus consectetur. Sequi veritatis reprehenderit quam
+      expedita voluptatibus necessitatibus est blanditiis aperiam qui in
+      assumenda sed repudiandae, odio voluptatum reiciendis unde eius labore,
+      ipsum omnis eveniet inventore placeat! Pariatur, reiciendis est? Voluptas
+      omnis, harum fugiat veritatis reprehenderit nobis facere quam consequuntur
+      cum delectus ducimus eveniet at quo quibusdam ullam nisi dolorum possimus
+      soluta quos recusandae? Et ipsam harum esse? Voluptatibus quasi enim,
+      velit incidunt officia quis adipisci!
+    </p>
+  </div>
+  <div id="objective">
+    <div class="content">
+      <h1>Objectives</h1>
+    </div>
+    <div class="underline"></div>
+    <div class="para" data-scroll data-scroll-speed="2">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+        expedita ullam natus beatae dicta nam enim quidem? Esse harum
+        reprehenderit aut, eaque ut in, alias illo blanditiis delectus nostrum
+        error nulla eveniet dolorum temporibus consectetur. Sequi veritatis
+        reprehenderit quam expedita voluptatibus necessitatibus est blanditiis
+        aperiam qui in assumenda sed repudiandae, odio voluptatum reiciendis
+        unde eius labore, ipsum omnis eveniet inventore placeat! Pariatur,
+        reiciendis est? Voluptas omnis, harum fugiat veritatis reprehenderit
+        nobis facere quam consequuntur cum delectus ducimus eveniet at quo
+        quibusdam ullam nisi dolorum possimus soluta quos recusandae? Et ipsam
+        harum esse? Voluptatibus quasi enim, velit incidunt officia quis
+        adipisci!
+      </p>
+    </div>
+  </div>
+  <div id="scope">
+    <div class="content">
+      <h1>Scope</h1>
+    </div>
+    <div class="underline"></div>
+    <div class="para" data-scroll data-scroll-speed="2">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+        expedita ullam natus beatae dicta nam enim quidem? Esse harum
+        reprehenderit aut, eaque ut in, alias illo blanditiis delectus nostrum
+        error nulla eveniet dolorum temporibus consectetur. Sequi veritatis
+        reprehenderit quam expedita voluptatibus necessitatibus est blanditiis
+        aperiam qui in assumenda sed repudiandae, odio voluptatum reiciendis
+        unde eius labore, ipsum omnis eveniet inventore placeat! Pariatur,
+        reiciendis est? Voluptas omnis, harum fugiat veritatis reprehenderit
+        nobis facere quam consequuntur cum delectus ducimus eveniet at quo
+        quibusdam ullam nisi dolorum possimus soluta quos recusandae? Et ipsam
+        harum esse? Voluptatibus quasi enim, velit incidunt officia quis
+        adipisci!
+      </p>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/sheryjs/dist/Shery.js"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+<script
+  type="text/javascript"
+  src="https://unpkg.com/sheryjs/dist/Shery.js"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+  integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
 
-    <script src="/static/js/about.js"></script>
-    {% endblock body %}
+<script src="/static/js/about.js"></script>
+{% endblock body %}

@@ -4,6 +4,7 @@ function locogsap() {
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
+    multiplier: 0.7,
   });
   locoScroll.on("scroll", ScrollTrigger.update);
 

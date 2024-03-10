@@ -1,68 +1,65 @@
-{% extends "base.html"%}
-{% load static %}
-{% block title %}Symbi TT-Contact{% endblock title %}
-{% block body%}
-<link rel="stylesheet" href="/static/css/contact.css"/>
-      <div id="page1">
-        <div id="contact">
-          <div class="content">
-            <h1>Let's <em> Talk </em></h1>
+{% extends "base.html" %} {% block title %}Symbi TT-Contact{%endblock title %}
+{% load static %} {% block body%}
+<link rel="stylesheet" href="/static/css/contact.css" />
+<div id="page1" data-scroll>
+  <div id="contact">
+    <div class="content">
+      <h1>Let's <em> Talk </em></h1>
+    </div>
+    <div class="underline"></div>
+    <div id="form-container" data-scroll data-scroll-speed="1">
+      <form action="/" method="post">
+        {% csrf_token %}
+        <div class="input-box">
+          <input type="text" required />
+          <label for="name">Name</label>
+        </div>
+        <div class="input-box">
+          <input type="text" required />
+          <label for="name">Email</label>
+        </div>
+        <div class="input-box">
+          <input type="text" required />
+          <label for="name">Message</label>
+        </div>
+        <button type="submit"><span>Send!</span></button>
+      </form>
+      <div id="contact-info">
+        <div class="elem-cont" data-scroll data-scroll-speed="1">
+          <h1>Contact Information</h1>
+        </div>
+        <div id="info">
+          <div class="elem-cont" data-scroll data-scroll-speed="1">
+            <h3><i class="ri-phone-line"> - </i>6205764684</h3>
           </div>
-          <div class="underline"></div>
-          <div id="form-container">
-            <form action="/" method="post">
-              {% csrf_token %}
-              <div class="input-box">
-                <input type="text" required />
-                <label for="name">Name</label>
-              </div>
-              <div class="input-box">
-                <input type="text" required />
-                <label for="name">Email</label>
-              </div>
-              <div class="input-box">
-                <input type="text" required />
-                <label for="name">Message</label>
-              </div>
-              <button type="submit"><span>Send!</span></button>
-            </form>
-            <div id="contact-info">
-              <div class="elem-cont">
-                <h1>Contact Information</h1>
-              </div>
-              <div id="info">
-                <div class="elem-cont">
-                  <h3><i class="ri-phone-line"> - </i>6205764684</h3>
-                </div>
-                <div class="elem-cont">
-                  <h3><i class="ri-mail-fill"> - </i>xyz@gmail.com</h3>
-                </div>
-                <div class="elem-cont">
-                  <h3><i class="ri-map-pin-range-fill"> - </i>SICSR</h3>
-                </div>
-              </div>
-            </div>
+          <div class="elem-cont" data-scroll data-scroll-speed="1">
+            <h3><i class="ri-mail-fill"> - </i>symbitimetable@gmail.com</h3>
+          </div>
+          <div class="elem-cont" data-scroll data-scroll-speed="1">
+            <h3><i class="ri-map-pin-range-fill"> - </i>SICSR</h3>
           </div>
         </div>
       </div>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/sheryjs/dist/Shery.js"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+<script
+  type="text/javascript"
+  src="https://unpkg.com/sheryjs/dist/Shery.js"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+  integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
 
-    <script src="/static/js/contact.js"></script>
-    {% endblock body %}
-</html>
+<script src="/static/js/contact.js"></script>
+{% endblock body %}
