@@ -1,78 +1,77 @@
-{% extends "base.html"%}
-{% load static %}
-{% block title %}Symbi TT{% endblock title %}
-{% block body%}
+{% extends "base.html" %} {% block title %} Symbi TT {% endblock title %} {%
+load static %} {% block body %}
 <link rel="stylesheet" href="static/css/main.css" />
-      <div id="page1">
-        <div id="container">
-          <div id="data-cont">
-            <h1>Your Routine</h1>
-            <div class="elem">
-              <div class="elem-parts">
-                <h3>Foundations of Data Warehousing and Data Mining</h3>
-              </div>
-              <div class="elem-parts">
-                <h3>Class - 404</h3>
-              </div>
-              <div class="elem-parts">
-                <h3>1:30 - 2:30</h3>
-              </div>
-            </div>
-            <div class="elem">
-              <div class="elem-parts">
-                <h3>Introduction to Mobile Concepts</h3>
-              </div>
-              <div class="elem-parts">
-                <h3>Class - 406</h3>
-              </div>
-              <div class="elem-parts">
-                <h3>10:30 - 11:30</h3>
-              </div>
-            </div>
-            <div class="elem">
-              <div class="elem-parts">
-                <h3>Creative Writing</h3>
-              </div>
-              <div class="elem-parts">
-                <h3>Class - 307</h3>
-              </div>
-              <div class="elem-parts">
-                <h3>11:30 - 12:30</h3>
-              </div>
-            </div>
-          </div>
-          <div class="calendar">
-            <div class="header">
-              <button class="prev">&#10094;</button>
-              <div class="month-year"></div>
-              <button class="next">&#10095;</button>
-            </div>
-            <div class="weekdays">
-              <h4>Sun</h4>
-              <h4>Mon</h4>
-              <h4>Tue</h4>
-              <h4>Wed</h4>
-              <h4>Thu</h4>
-              <h4>Fri</h4>
-              <h4>Sat</h4>
-            </div>
-            <div class="days"></div>
-          </div>
+<div id="page1">
+  <div id="container">
+    <div id="data-cont" data-scroll data-scroll-speed="2">
+      <h1>Your Routine</h1>
+      <div class="elem">
+        <div class="elem-parts">
+          <h3>
+            Foundations of Data Warehousing and Data Mining Foundations of Data
+          </h3>
+        </div>
+        <div class="elem-parts">
+          <h3>Class - 404</h3>
+        </div>
+        <div class="elem-parts">
+          <h3>1:30 - 2:30</h3>
         </div>
       </div>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+      <div class="elem">
+        <div class="elem-parts">
+          <h3>Introduction to Mobile Concepts</h3>
+        </div>
+        <div class="elem-parts">
+          <h3>Class - 406</h3>
+        </div>
+        <div class="elem-parts">
+          <h3>10:30 - 11:30</h3>
+        </div>
+      </div>
+      <div class="elem">
+        <div class="elem-parts">
+          <h3>Creative Writing</h3>
+        </div>
+        <div class="elem-parts">
+          <h3>Class - 307</h3>
+        </div>
+        <div class="elem-parts">
+          <h3>11:30 - 12:30</h3>
+        </div>
+      </div>
+    </div>
+    <div class="calendar" data-scroll data-scroll-speed="2">
+      <div class="header">
+        <button class="prev">&#10094;</button>
+        <div class="month-year"></div>
+        <button class="next">&#10095;</button>
+      </div>
+      <div class="weekdays">
+        <h4>Sun</h4>
+        <h4>Mon</h4>
+        <h4>Tue</h4>
+        <h4>Wed</h4>
+        <h4>Thu</h4>
+        <h4>Fri</h4>
+        <h4>Sat</h4>
+      </div>
+      <div class="days"></div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/sheryjs/dist/Shery.js"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="static/js/script.js"></script>
-    {% endblock body %}
-
+<script
+  type="text/javascript"
+  src="https://unpkg.com/sheryjs/dist/Shery.js"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+  integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script src="static/js/script.js"></script>
+{% endblock body %}

@@ -4,6 +4,12 @@ function locogsap() {
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
+    multiplier: 0.7,
+    // for tablet smooth
+    tablet: { smooth: true },
+
+    // for mobile
+    smartphone: { smooth: true },
   });
   locoScroll.on("scroll", ScrollTrigger.update);
 
@@ -21,10 +27,6 @@ function locogsap() {
         height: window.innerHeight,
       };
     },
-
-    pinType: document.querySelector("#main").style.transform
-      ? "transform"
-      : "fixed",
   });
 
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
@@ -32,6 +34,7 @@ function locogsap() {
   ScrollTrigger.refresh();
 }
 locogsap();
+
 function cursor() {
   Shery.mouseFollower({
     skew: true,

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>{% block title %}{% endblock title %}</title>
-    <link rel="stylesheet" href="/static/css/about.css"/>
+    <link rel="stylesheet" href="/static/css/about.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -19,152 +19,149 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    
   </head>
   <div id="main">
-  <nav>
-    <div id="nav-left">
-      <a href="/"><img src="/static/images/logo-no-background.png" alt="" /></a>
-    </div>
-    <div id="nav-right">
-      <div id="nav-1">
-        <a href="/"><h4>Home</h4></a>
-        <a href="/about/"><h4>About</h4></a>
-        <a href="/contact/"><h4>Contact</h4></a>
+    <nav>
+      <div id="nav-left">
+        <a href="/"
+          ><img src="/static/images/logo-no-background.png" alt=""
+        /></a>
       </div>
-      <div id="nav-2">
-        <a href="/login/">
-          <span>Login</span>
-        </a>
+      <div id="nav-right">
+        <div id="nav-1">
+          <a href="/"><h4>Home</h4></a>
+          <a href="/about/"><h4>About</h4></a>
+          <a href="/contact/"><h4>Contact</h4></a>
+        </div>
+        <div id="nav-2">
+          <a href="/login/">
+            <span>Login</span>
+          </a>
+        </div>
       </div>
-    </div>
-  </nav>
-  <body>
-      {% block body%}
-      {% endblock body %}
+    </nav>
+    <body>
+      {% block body%} {% endblock body %}
     </body>
     <div id="footer">
-        <div id="footer-container">
-          <div class="links">
-            <div class="overflow">
-              <h3>Socials</h3>
-            </div>
-            <a
-              href="https://www.linkedin.com/pulse/topics/home/?trk=guest_homepage-basic_guest_nav_menu_articles"
-              target="_blank"
-            >
-              <div class="button">
-                <span class="label-up"
-                  ><i
-                    class="ri-linkedin-box-fill"
-                    style="color: rgb(219, 212, 212); font-size: 2vw"
-                  ></i
-                  >LinkedIn</span
-                >
-                <span class="label-up"
-                  ><i
-                    class="ri-linkedin-box-fill"
-                    style="color: rgb(219, 212, 212)"
-                  ></i
-                  >LinkedIn</span
-                >
-              </div>
-            </a>
-
-            <a href="https://github.com/i-Rony-op" target="_blank">
-              <div class="button">
-                <span class="label-up"
-                  ><i class="ri-github-fill"></i>GitHub</span
-                >
-                <span class="label-up"
-                  ><i class="ri-github-fill"></i>GitHub</span
-                >
-              </div>
-            </a>
-
-            <a href="https://www.instagram.com/" target="_blank">
-              <div class="button">
-                <span class="label-up"
-                  ><i class="ri-instagram-line"></i>Instagram</span
-                >
-                <span class="label-up"
-                  ><i class="ri-instagram-line"></i>Instagram</span
-                >
-              </div>
-            </a>
-
-            <a href="https://twitter.com/" target="_blank">
-              <div class="button">
-                <span class="label-up"
-                  ><i class="ri-twitter-x-fill"></i>Twitter</span
-                >
-                <span class="label-up"
-                  ><i class="ri-twitter-x-fill"></i>Twitter</span
-                >
-              </div>
-            </a>
+      <div id="footer-container">
+        <div class="links">
+          <div class="overflow">
+            <h3>Socials</h3>
           </div>
-          <div class="links">
-            <div class="overflow">
-              <h3>Quick Links</h3>
+          <a
+            href="https://www.linkedin.com/pulse/topics/home/?trk=guest_homepage-basic_guest_nav_menu_articles"
+            target="_blank"
+          >
+            <div class="button">
+              <span class="label-up"
+                ><i
+                  class="ri-linkedin-box-fill"
+                  style="color: rgb(219, 212, 212); font-size: 2vw"
+                ></i
+                >LinkedIn</span
+              >
+              <span class="label-up"
+                ><i
+                  class="ri-linkedin-box-fill"
+                  style="color: rgb(219, 212, 212)"
+                ></i
+                >LinkedIn</span
+              >
             </div>
-            <a href="/">
-              <div class="button">
-                <span class="label-up"
-                  ><i class="ri-home-3-line" style="font-size: 2.2vw"></i
-                  >Home</span
-                >
-                <span class="label-up"
-                  ><i class="ri-home-3-line" style="font-size: 2.2vw"></i
-                  >Home</span
-                >
-              </div>
-            </a>
+          </a>
 
-            <a href="/about/">
-              <div class="button">
-                <span class="label-up"
-                  ><i class="ri-user-search-line"></i>About</span
-                >
-                <span class="label-up"
-                  ><i class="ri-user-search-line"></i>About</span
-                >
-              </div>
-            </a>
+          <a href="https://github.com/i-Rony-op" target="_blank">
+            <div class="button">
+              <span class="label-up"><i class="ri-github-fill"></i>GitHub</span>
+              <span class="label-up"><i class="ri-github-fill"></i>GitHub</span>
+            </div>
+          </a>
 
-            <a href="/contact/">
-              <div class="button">
-                <span class="label-up"
-                  ><i class="ri-customer-service-2-line"></i>Contact</span
-                >
-                <span class="label-up"
-                  ><i class="ri-customer-service-2-line"></i>Contact</span
-                >
-              </div>
-            </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <div class="button">
+              <span class="label-up"
+                ><i class="ri-instagram-line"></i>Instagram</span
+              >
+              <span class="label-up"
+                ><i class="ri-instagram-line"></i>Instagram</span
+              >
+            </div>
+          </a>
+
+          <a href="https://twitter.com/" target="_blank">
+            <div class="button">
+              <span class="label-up"
+                ><i class="ri-twitter-x-fill"></i>Twitter</span
+              >
+              <span class="label-up"
+                ><i class="ri-twitter-x-fill"></i>Twitter</span
+              >
+            </div>
+          </a>
+        </div>
+        <div class="links">
+          <div class="overflow">
+            <h3>Quick Links</h3>
           </div>
-          <div class="links">
-            <div class="overflow">
-              <h3>Wanna Talk?</h3>
+          <a href="/">
+            <div class="button">
+              <span class="label-up"
+                ><i class="ri-home-3-line" style="font-size: 2.2vw"></i
+                >Home</span
+              >
+              <span class="label-up"
+                ><i class="ri-home-3-line" style="font-size: 2.2vw"></i
+                >Home</span
+              >
             </div>
+          </a>
+
+          <a href="/about/">
+            <div class="button">
+              <span class="label-up"
+                ><i class="ri-user-search-line"></i>About</span
+              >
+              <span class="label-up"
+                ><i class="ri-user-search-line"></i>About</span
+              >
+            </div>
+          </a>
+
+          <a href="/contact/">
+            <div class="button">
+              <span class="label-up"
+                ><i class="ri-customer-service-2-line"></i>Contact</span
+              >
+              <span class="label-up"
+                ><i class="ri-customer-service-2-line"></i>Contact</span
+              >
+            </div>
+          </a>
+        </div>
+        <div class="links">
+          <div class="overflow">
+            <h3>Say Hi...!</h3>
+          </div>
+          <a href="mailto:symbitimetable@gmail.com">
             <div class="button" style="height: 2.9vw">
               <span class="label-up mail"
-                ><i class="ri-mail-send-line"></i> xyz@gmail.com
+                ><i class="ri-mail-send-line"></i> symbitimetable@gmail.com
               </span>
               <span class="label-up mail"
-                ><i class="ri-mail-send-line"></i> xyz@gmail.com
+                ><i class="ri-mail-send-line"></i> symbitimetable@gmail.com
               </span>
             </div>
-            <div id="img-cont">
-              <img src="/static/images/logo-no-background.png" alt="" />
-            </div>
+          </a>
+          <div id="img-cont">
+            <img src="/static/images/logo-no-background.png" alt="" />
           </div>
         </div>
-        <div id="copyright">
-          <h3>Symbi Time Table &copy; 2024</h3>
-        </div>
+      </div>
+      <div id="copyright">
+        <h3>Symbi Time Table &copy; 2024</h3>
       </div>
     </div>
-    <script src="/static/js/base.js"></script>
-    </html>
-    
+  </div>
+  <script src="/static/js/base.js"></script>
+</html>
