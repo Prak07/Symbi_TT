@@ -35,6 +35,7 @@ body {
   width: 100%;
   height: 100vh;
   display: flex;
+
   justify-content: center;
   padding: 2vw 0vw;
 }
@@ -86,7 +87,6 @@ img {
   border-color: #fff;
   scale: 1;
   position: relative;
-  padding: 0vw 2vw;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   padding: 1vw 2vw;
@@ -149,23 +149,22 @@ input[type="email"] {
   outline: none;
   color: #fff;
   font-weight: 100;
+  font-size: 1vw;
   width: 100%;
   height: 100%;
-}
-form .input-box input[type="text"] {
   background-color: transparent;
 }
 
 #select-program {
   width: 80%;
   border-bottom: 1px solid #fff;
-  padding-bottom: 1vw;
+  padding-bottom: 0.5vw;
 }
 #select-program #menu {
   background-color: rgba(255, 64, 0, 0.854) !important;
   width: 100%;
   color: #fff;
-  padding: 0.5vw 0.5vw;
+  padding: 0.5vw 1vw;
   font-size: 1.1vw;
   font-weight: 400;
   border: none;
@@ -183,6 +182,32 @@ form .input-box input[type="text"] {
   font-size: 1vw;
   font-weight: 200;
 }
+#select-electives {
+  width: 80%;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 0.5vw;
+}
+#select-electives #elec-menu {
+  background-color: rgba(255, 64, 0, 0.854) !important;
+  width: 100%;
+  color: #fff;
+  padding: 0.5vw 1vw;
+  font-size: 1.1vw;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  border-radius: 1vw;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#select-electives option {
+  color: #fff;
+  background-color: #212121;
+  font-size: 1vw;
+  font-weight: 200;
+}
 
 form .input-box input:focus ~ label,
 .input-box input:valid ~ label {
@@ -196,6 +221,7 @@ form .input-box input:focus ~ label,
   margin: 8px 0;
   padding: 10px 15px;
   font-size: 13px;
+  vertical-align: top;
   border-radius: 8px;
   width: 100%;
   outline: none;
@@ -325,9 +351,11 @@ form h1 {
   display: flex;
   flex-direction: column;
   margin-left: 3vw;
-  gap: 0.5vw;
+  gap: 0.2vw;
   border-bottom: 1px solid #fff;
-  padding-bottom: 1vw;
+  padding-bottom: 0.5vw;
+  margin-top: -0.5vw;
+  margin-bottom: -0.5vw;
   width: 79%;
 }
 #radio h3 {
@@ -392,4 +420,159 @@ form h1 {
   transform: scale(1.2);
   border-color: rgba(255, 64, 0, 0.854) s;
   box-shadow: 0 0 20px rgba(255, 64, 0, 0.854);
+}
+@media screen and (max-width: 600px) {
+  #page1 {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding: 20vw 0vw;
+  }
+  img {
+    width: 12%;
+  }
+  .container {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 2vw;
+    position: relative;
+    overflow: hidden;
+    height: 110%;
+    width: 95%;
+  }
+  .container button {
+    background-color: rgba(255, 64, 0, 0.726);
+    color: #fff;
+    font-size: 6vw;
+    padding: 1vw 2.5vw;
+    border: 1px solid transparent;
+    border-radius: 5vw;
+    font-weight: 600;
+    letter-spacing: 0.1vw;
+    margin-top: 1vw;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  .container button.hidden {
+    border-radius: 5vw;
+    padding: 2.5vw 4.5vw;
+  }
+  .container button p {
+    font-size: 5vw;
+    padding: 0.5vw;
+  }
+  form .input-box {
+    position: relative;
+    border-bottom: 1px solid #fff;
+    width: 90%;
+    height: 9vw;
+  }
+  .container form h1 {
+    font-family: plain;
+    font-size: 9vw;
+    margin-bottom: 2vw;
+    color: #fff;
+    font-weight: 100;
+  }
+  .sign-up form h1 {
+    font-size: 6vw;
+  }
+  .container .form-container form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1vw 0 0;
+    height: 100%;
+    background-color: #2d2d2d;
+    gap: 7vw !important;
+  }
+  form .input-box input[type="text"] {
+    font-size: 3.6vw;
+    font-weight: 300;
+  }
+  form .input-box label {
+    font-size: 4vw;
+  }
+  .toggle-container {
+    border-radius: 0;
+  }
+  .toggle-panel {
+    gap: 4vw;
+    width: 50%;
+    padding: 0 2vw;
+  }
+  .toggle-panel h1 {
+    font-size: 7vw;
+    line-height: 8vw;
+    font-weight: 300;
+    width: 100% !important;
+  }
+  .toggle-panel p {
+    font-size: 3.8vw;
+    line-height: 4.5vw;
+    font-weight: 400;
+  }
+  #select-program {
+    width: 90%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 3vw;
+  }
+  #select-program #menu {
+    background-color: rgba(255, 64, 0, 0.854) !important;
+    width: 100%;
+    color: #fff;
+    padding: 1.5vw 2vw;
+    font-size: 3vw;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    border-radius: 20vw;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  #select-electives {
+    width: 90%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 3vw;
+  }
+  #select-electives #elec-menu {
+    background-color: rgba(255, 64, 0, 0.854) !important;
+    width: 100%;
+    color: #fff;
+    padding: 1.5vw 2vw;
+    font-size: 3vw;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    border-radius: 20vw;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  #radio {
+    width: 90%;
+  }
+  #radio h3 {
+    font-size: 4vw;
+    font-weight: 400;
+    color: #fff;
+  }
+  .radio-button__label {
+    font-size: 3vw;
+  }
+  .radio-button label span {
+    margin-left: -1.8vw;
+    margin-top: 0.3vw;
+  }
+  .radio-button-container {
+    gap: 8vw;
+  }
+
+  .radio-button__custom {
+    width: 3vw;
+    height: 3vw;
+  }
 }

@@ -1,3 +1,9 @@
+/* :root {
+  --mousefollowercolor: transparent;
+}
+.mousefollower {
+  background-color: var(--mousefollowercolor);
+} */
 @font-face {
   font-family: gil;
   src: url("/static/font/Gilroy-Light.otf");
@@ -31,6 +37,11 @@ body {
   width: 100%;
 }
 
+.mousefollower {
+  width: 20px !important;
+  height: 20px;
+}
+
 ::selection {
   color: black;
   background-color: #fff;
@@ -48,7 +59,6 @@ nav {
   width: 100%;
   height: 5vw;
   padding: 4vw 3vw;
-
   position: fixed;
 }
 #nav-left img {
@@ -135,7 +145,7 @@ nav a {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(100px);
   color: white;
-  border-radius: 5px;
+  border-radius: 0.8vw;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   align-self: flex-start;
 }
@@ -377,4 +387,143 @@ nav a {
   color: rgb(255, 64, 0);
   font-weight: 400;
   font-size: 1.5vw;
+}
+@media screen and (max-width: 600px) {
+  .mousefollower {
+    display: none;
+  }
+  #page1 {
+    min-height: 40vh;
+  }
+
+  nav {
+    position: static;
+    padding: 8vw 5vw;
+  }
+  #nav-left img {
+    width: 28%;
+  }
+  #nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2.5vw;
+  }
+  #nav-1 {
+    gap: 4vw;
+  }
+
+  #nav-1 a h4 {
+    font-size: 3vw;
+    font-weight: 500;
+  }
+  #nav-2 a {
+    font-size: 3vw;
+    width: fit-content;
+    padding: 1vw 2vw;
+  }
+  #container {
+    height: 70%;
+    width: 100%;
+    padding: 6vw 1vw 2vw 1vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .calendar {
+    align-self: center;
+    height: 71vw;
+    width: 80vw;
+  }
+  .month-year {
+    font-size: 6vw;
+    color: rgba(255, 64, 0);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .prev,
+  .next {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 6vw;
+    cursor: pointer;
+    outline: none;
+    padding: 0.5vw;
+  }
+  .weekdays h4 {
+    font-size: 4.5vw;
+    text-align: center;
+    padding: 0.3vw;
+    font-weight: 300;
+    background: transparent;
+  }
+  .days div {
+    text-align: center;
+    padding: 0.5vw;
+    background: transparent;
+    font-size: 4vw;
+    cursor: pointer;
+    margin: 0.9vw;
+    font-weight: 600;
+  }
+  #data-cont {
+    width: 100%;
+    padding: 6vw 2vw 2vw 2vw;
+  }
+  #data-cont h1 {
+    font-size: 7vw;
+    margin-bottom: 4vw;
+  }
+
+  #data-cont .elem {
+    width: 100%;
+    min-height: 17vh;
+    background-color: transparent;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8vw;
+  }
+  .elem .elem-parts {
+    height: 100%;
+    width: 100%;
+  }
+  .elem .elem-parts h3 {
+    font-size: 3.5vw;
+  }
+  #nav-left img {
+    width: 7vw;
+  }
+
+  #footer {
+    height: 35vh;
+  }
+  #footer #footer-container {
+    padding: 0vw 0vw !important;
+    justify-content: space-around;
+  }
+  #footer .links {
+    height: 70%;
+    width: 28vw;
+    gap: 3.5vw;
+  }
+  #footer .links h3 {
+    font-size: 3.3vw;
+  }
+  .button {
+    height: 5vw;
+  }
+  .label-up {
+    font-size: 3.8vw;
+  }
+  .mail {
+    font-size: 2.5vw !important;
+    color: #fff;
+  }
+  .label-up i {
+    font-size: 4vw !important;
+  }
+  #copyright h3 {
+    font-size: 5vw;
+  }
 }
