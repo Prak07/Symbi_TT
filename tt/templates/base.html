@@ -34,9 +34,13 @@
           <a href="/contact/"><h4>Contact</h4></a>
         </div>
         <div id="nav-2">
+          {% if user.is_authenticated %}
+          <img src="/static/images/profile.png" alt="" style="width: 50px;"/>
+          {% else %}
           <a href="/login/">
             <span>Login</span>
           </a>
+          {% endif %}
         </div>
       </div>
     </nav>
