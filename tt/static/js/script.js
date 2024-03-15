@@ -5,10 +5,8 @@ function locogsap() {
     el: document.querySelector("#main"),
     smooth: true,
     multiplier: 0.7,
-    // for tablet smooth
     tablet: { smooth: true },
 
-    // for mobile
     smartphone: { smooth: true },
   });
   locoScroll.on("scroll", ScrollTrigger.update);

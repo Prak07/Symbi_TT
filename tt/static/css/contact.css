@@ -30,10 +30,6 @@ body {
   height: 100%;
   width: 100%;
 }
-.mousefollower {
-  width: 20px !important;
-  height: 20px;
-}
 
 ::selection {
   color: black;
@@ -44,11 +40,348 @@ body {
   padding: 0vw 3vw;
   height: 90vh;
 }
+.overlay {
+  position: absolute;
+  padding: 1vw 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #00000098;
+  display: flex;
+  justify-content: center;
+  z-index: 9;
+  display: none;
+  transition: all 5s ease-in;
+  gap: 1vw;
+}
 
+#profile-cont {
+  width: 30vw;
+  height: 37.5vw;
+  display: flex;
+  background-color: transparent;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#close {
+  font-size: 1.7vw;
+  font-weight: 100;
+  height: fit-content;
+  color: #fff;
+  border-radius: 0.5vw;
+  padding: 0.1vw 0.2vw;
+  background-color: rgba(255, 64, 0, 0.828);
+  cursor: pointer;
+}
+.dets {
+  background-color: transparent;
+  margin-top: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8vw;
+}
+.dets h2 {
+  color: rgb(255, 64, 0);
+  font-size: 2.5vw;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.dets h4 {
+  font-size: 1.3vw;
+  font-weight: 300;
+  background-color: transparent;
+  color: #fff !important;
+}
+.card-client1 .button-cont {
+  width: 100%;
+  display: flex;
+  padding: 3vw 5vw;
+  justify-content: space-between;
+  background-color: transparent;
+}
+.card-client2 .button-cont {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 0 3vw;
+}
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 15%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 64, 0);
+}
+
+.sign {
+  width: 100%;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.sign svg {
+  width: 17px;
+  background-color: transparent !important;
+}
+
+.sign svg path {
+  fill: white;
+}
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  background-color: transparent;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+.Btn:hover {
+  width: 125px;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 20px;
+}
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: 0.3s;
+  padding-right: 10px;
+}
+.Btn:active {
+  transform: translate(2px, 2px);
+}
+.edit-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 15%;
+  background-color: #151515;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.edit-svgIcon {
+  width: 17px;
+  transition-duration: 0.3s;
+  background-color: transparent;
+}
+
+.edit-svgIcon path {
+  fill: white;
+}
+
+.edit-button:hover {
+  width: 120px;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+  background-color: #151515;
+  align-items: center;
+}
+
+.edit-button:hover .edit-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.edit-button::before {
+  display: none;
+  content: "Edit";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.edit-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+
+.card-client1 {
+  background: #555;
+  min-width: 30vw;
+  height: 37.5vw;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 0 6px 10px #212121;
+  border-radius: 10px;
+  text-align: center;
+  color: rgba(255, 64, 0, 0.828);
+  font-family: "Poppins", sans-serif;
+  transition: all 1s ease;
+}
+.card-client2 {
+  background: #555;
+  min-width: 30vw;
+  height: 37.5vw;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  gap: 1vw;
+  flex-direction: column;
+  box-shadow: 0 6px 10px #212121;
+  border-radius: 10px;
+  text-align: center;
+  color: rgba(255, 64, 0, 0.828);
+  font-family: "Poppins", sans-serif;
+  transition: all 1s ease;
+}
+.card-client2 h2 {
+  font-size: 2.5vw;
+  color: rgb(255, 64, 0);
+  font-weight: 600;
+  background-color: transparent;
+}
+.card-client2 p {
+  background-color: rgba(0, 0, 0, 0.281);
+  color: #fff;
+  font-size: 1.3vw;
+  padding: 0.5vw 1.5vw;
+  border: 1px solid #fff;
+  border-radius: 5vw;
+  font-weight: 600;
+  letter-spacing: 0.1vw;
+  margin-top: 1vw;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.user-picture {
+  overflow: hidden;
+  object-fit: cover;
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.user-picture svg {
+  width: 2.5rem;
+  fill: currentColor;
+}
+#profile-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: transparent;
+  gap: 1.5vw;
+}
+#profile-form .input-box {
+  position: relative;
+  border-bottom: 1px solid #fff;
+  width: 80%;
+  height: 3vw;
+  background-color: transparent;
+}
+#profile-form .input-box label {
+  position: absolute;
+  top: 50%;
+  left: 0.1vw;
+  transform: translateY(-50%);
+  font-size: 1vw;
+  color: #fff;
+  font-weight: 400;
+  pointer-events: none;
+  background-color: transparent;
+  transition: all ease 0.5s;
+}
+#profile-form .input-box input[type="text"],
+input[type="email"] {
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 100;
+  font-size: 1vw;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+#profile-form .input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+  color: rgba(255, 64, 0, 0.854);
+}
+input {
+  background-color: black;
+  color: #fff;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  vertical-align: top;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+}
+#profile-form button {
+  background-color: rgba(255, 64, 0, 0.726);
+  color: #fff;
+  font-size: 1.3vw;
+  padding: 0.5vw 1.3vw;
+  border: 1px solid transparent;
+  border-radius: 5vw;
+  font-weight: 600;
+  letter-spacing: 0.5vw;
+  margin-top: 1vw;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 8vw;
+}
+#profile-form button:hover {
+  scale: 1.1;
+}
+.card-client2 p:hover {
+  scale: 1.02;
+}
 nav {
   display: flex;
   align-items: center;
-  background-color: transparent;
   justify-content: space-between;
   width: 100%;
   height: 5vw;
@@ -75,6 +408,21 @@ nav {
 #nav-1 a h4 {
   font-size: 1.3vw;
   font-weight: 500;
+}
+#nav-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+#nav-2 i {
+  font-size: 2.5vw;
+  font-weight: 100;
+  color: #fff;
+  border-radius: 0.5vw;
+  padding: 0.1vw 0.2vw;
+  background-color: rgba(255, 64, 0, 0.828);
+  cursor: pointer;
 }
 
 #nav-2 a {
