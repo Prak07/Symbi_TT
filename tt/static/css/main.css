@@ -285,6 +285,147 @@ body {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+
+#select-program {
+  width: 80%;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  padding-bottom: 0.5vw;
+}
+#select-program #menu {
+  background-color: rgba(255, 64, 0, 0.854) !important;
+  width: 100%;
+  color: #fff;
+  padding: 0.5vw 1vw;
+  font-size: 1.1vw;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  border-radius: 1vw;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#select-program option {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #212121;
+  font-size: 1vw;
+  font-weight: 200;
+}
+#select-electives {
+  width: 80%;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 0.5vw;
+  background-color: transparent;
+}
+#select-electives #elec-menu {
+  background-color: rgba(255, 64, 0, 0.854) !important;
+  width: 100%;
+  color: #fff;
+  padding: 0.5vw 1vw;
+  font-size: 1.1vw;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  border-radius: 1vw;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#select-electives option {
+  color: #fff;
+  background-color: #212121;
+  font-size: 1vw;
+  font-weight: 200;
+}
+#radio {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  margin-left: 3vw;
+  gap: 0.2vw;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 0.5vw;
+  margin-top: -0.5vw;
+  margin-bottom: -0.5vw;
+  width: 79%;
+}
+#radio h3 {
+  font-size: 1vw;
+  text-align: start;
+  font-weight: 400;
+  background-color: transparent;
+
+  color: #fff;
+}
+.radio-button-container {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+
+  gap: 1.8vw;
+}
+
+.radio-button {
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-button__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-button__label {
+  display: inline-block;
+  padding-left: 2vw;
+  position: relative;
+  background-color: transparent;
+
+  font-size: 0.9vw;
+  color: #f2f2f2;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.radio-button__custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.3vw;
+  height: 1.3vw;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 64, 0, 0.446);
+  transition: all 0.3s ease;
+}
+
+.radio-button__input:checked + .radio-button__label .radio-button__custom {
+  background-color: rgba(255, 64, 0, 0.854);
+  border-color: transparent;
+  transform: scale(0.8);
+  box-shadow: 0 0 20px rgb(255, 64, 0);
+}
+
+.radio-button__input:checked + .radio-button__label {
+  color: rgb(255, 64, 0);
+}
+
+.radio-button__label:hover .radio-button__custom {
+  transform: scale(1.2);
+  border-color: rgba(255, 64, 0, 0.854) s;
+  box-shadow: 0 0 20px rgba(255, 64, 0, 0.854);
+}
+
 .user-picture {
   overflow: hidden;
   object-fit: cover;
@@ -417,13 +558,8 @@ nav {
   justify-content: center;
   gap: 2vw;
 }
-#nav-2 i {
-  font-size: 2.5vw;
-  font-weight: 100;
-  color: #fff;
-  border-radius: 0.5vw;
-  padding: 0.1vw 0.2vw;
-  background-color: rgba(255, 64, 0, 0.828);
+#nav-2 img {
+  width: 50px;
   cursor: pointer;
 }
 #nav-2 a {
@@ -738,6 +874,9 @@ nav a {
   #page1 {
     min-height: 40vh;
   }
+  #nav-2 img {
+    width: 35px;
+  }
   #close {
     font-size: 5vw;
   }
@@ -758,7 +897,7 @@ nav a {
   #profile-cont {
     width: 75%;
     height: 120vw;
-    background-color: #007bff !important;
+    background-color: transparent;
   }
 
   .card-client1 {
@@ -803,7 +942,7 @@ nav a {
   .card-client2 p {
     background-color: rgba(0, 0, 0, 0.281);
     color: #fff;
-    font-size: 1.3vw;
+    font-size: 4.3vw;
     padding: 0.5vw 1.5vw;
     border: 1px solid #fff;
     border-radius: 5vw;
@@ -812,6 +951,86 @@ nav a {
     margin-top: 1vw;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+  }
+  #select-program {
+    width: 80%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.5vw;
+  }
+  #select-program #menu {
+    background-color: rgba(255, 64, 0, 0.854) !important;
+    width: 100%;
+    color: #fff;
+    padding: 0.5vw 1vw;
+    font-size: 3.5vw;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  #select-program option {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: #212121;
+    font-size: 1vw;
+    font-weight: 200;
+  }
+  #select-electives {
+    width: 80%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.5vw;
+  }
+  #select-electives #elec-menu {
+    background-color: rgba(255, 64, 0, 0.854) !important;
+    width: 100%;
+    color: #fff;
+    padding: 0.5vw 1vw;
+    font-size: 3.5vw;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  #select-electives option {
+    color: #fff;
+    background-color: #212121;
+    font-size: 1vw;
+    font-weight: 200;
+  }
+  #radio {
+    margin-left: 7vw;
+    padding: 0 3vw;
+  }
+  .radio-button-container {
+    gap: 15vw;
+  }
+  .radio-button__custom {
+    width: 3.5vw;
+    height: 3.5vw;
+    margin-top: 0.5vw;
+    margin-left: -2vw;
+  }
+  #radio h3 {
+    font-size: 3.5vw;
+    text-align: start;
+    font-weight: 400;
+    background-color: transparent;
+    color: #fff;
+  }
+  .radio-button__label {
+    font-size: 3.5vw;
+  }
+  form button {
+    font-size: 4.3vw;
+    width: 20vw;
   }
   .user-picture {
     overflow: hidden;
@@ -882,9 +1101,7 @@ nav a {
     font-size: 3vw;
     font-weight: 500;
   }
-  #nav-2 i {
-    font-size: 5vw;
-  }
+
   #nav-2 a {
     font-size: 3vw;
     width: fit-content;

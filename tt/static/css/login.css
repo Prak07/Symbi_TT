@@ -55,7 +55,9 @@ img {
   height: 45vw;
   width: 60vw;
 }
-
+#message {
+  z-index: 9;
+}
 .container p {
   font-size: 14px;
   line-height: 1.2vw;
@@ -69,6 +71,7 @@ img {
   border: 1px solid transparent;
   border-radius: 5vw;
   font-weight: 600;
+  outline: none;
   letter-spacing: 0.1vw;
   margin-top: 1vw;
   cursor: pointer;
@@ -81,7 +84,9 @@ img {
   position: relative;
   z-index: 9;
   transition: all 0.3s ease-in;
+  margin-bottom: 0 !important;
 }
+
 .container button.hidden {
   background-color: transparent;
   border-color: #fff;
@@ -346,6 +351,7 @@ form h1 {
 .container.active .toggle-right {
   transform: translateX(200%);
 }
+
 #radio {
   align-self: flex-start;
   display: flex;
@@ -431,6 +437,11 @@ form h1 {
   img {
     width: 12%;
   }
+  #message {
+    z-index: 9;
+    left: -60%;
+    top: -5%;
+  }
   .container {
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
@@ -460,6 +471,7 @@ form h1 {
   .container button p {
     font-size: 5vw;
     padding: 0.5vw;
+    margin-bottom: 0 !important;
   }
   form .input-box {
     position: relative;

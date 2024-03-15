@@ -40,6 +40,7 @@ body {
   padding: 0vw 3vw;
   height: 90vh;
 }
+
 .overlay {
   position: absolute;
   padding: 1vw 0;
@@ -53,7 +54,10 @@ body {
   transition: all 5s ease-in;
   gap: 1vw;
 }
-
+#nav-2 img {
+  width: 50px;
+  cursor: pointer;
+}
 #profile-cont {
   width: 30vw;
   height: 37.5vw;
@@ -468,6 +472,147 @@ nav a {
   text-decoration: none;
   color: white;
 }
+
+#select-program {
+  width: 80%;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  padding-bottom: 0.5vw;
+}
+#select-program #menu {
+  background-color: rgba(255, 64, 0, 0.854) !important;
+  width: 100%;
+  color: #fff;
+  padding: 0.5vw 1vw;
+  font-size: 1.1vw;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  border-radius: 1vw;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#select-program option {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #212121;
+  font-size: 1vw;
+  font-weight: 200;
+}
+#select-electives {
+  width: 80%;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 0.5vw;
+  background-color: transparent;
+}
+#select-electives #elec-menu {
+  background-color: rgba(255, 64, 0, 0.854) !important;
+  width: 100%;
+  color: #fff;
+  padding: 0.5vw 1vw;
+  font-size: 1.1vw;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  border-radius: 1vw;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#select-electives option {
+  color: #fff;
+  background-color: #212121;
+  font-size: 1vw;
+  font-weight: 200;
+}
+#radio {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  margin-left: 3vw;
+  gap: 0.2vw;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 0.5vw;
+  margin-top: -0.5vw;
+  margin-bottom: -0.5vw;
+  width: 79%;
+}
+#radio h3 {
+  font-size: 1vw;
+  text-align: start;
+  font-weight: 400;
+  background-color: transparent;
+
+  color: #fff;
+}
+.radio-button-container {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+
+  gap: 1.8vw;
+}
+
+.radio-button {
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-button__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-button__label {
+  display: inline-block;
+  padding-left: 2vw;
+  position: relative;
+  background-color: transparent;
+
+  font-size: 0.9vw;
+  color: #f2f2f2;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.radio-button__custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.3vw;
+  height: 1.3vw;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 64, 0, 0.446);
+  transition: all 0.3s ease;
+}
+
+.radio-button__input:checked + .radio-button__label .radio-button__custom {
+  background-color: rgba(255, 64, 0, 0.854);
+  border-color: transparent;
+  transform: scale(0.8);
+  box-shadow: 0 0 20px rgb(255, 64, 0);
+}
+
+.radio-button__input:checked + .radio-button__label {
+  color: rgb(255, 64, 0);
+}
+
+.radio-button__label:hover .radio-button__custom {
+  transform: scale(1.2);
+  border-color: rgba(255, 64, 0, 0.854) s;
+  box-shadow: 0 0 20px rgba(255, 64, 0, 0.854);
+}
+
 #contact {
   width: 100%;
   height: 40vw;
@@ -476,6 +621,7 @@ nav a {
   flex-direction: column;
   align-items: center;
 }
+
 .content {
   overflow: hidden;
   padding: 0vw 1.2vw;
@@ -765,6 +911,214 @@ form button:hover span:after {
     justify-content: center;
     padding: 14vw 0 0 0vw;
   }
+  #close {
+    font-size: 5vw;
+  }
+  .dets {
+    background-color: transparent;
+    margin-top: 1vw;
+    gap: 3.8vw;
+  }
+  .dets h2 {
+    color: rgb(255, 64, 0);
+    font-size: 6vw;
+    font-weight: 600;
+    background-color: transparent;
+  }
+  .dets h4 {
+    font-size: 3vw;
+  }
+  #profile-cont {
+    width: 75%;
+    height: 120vw;
+    background-color: transparent;
+  }
+
+  .card-client1 {
+    background: #555;
+    min-width: 100%;
+    height: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 6px 10px #212121;
+    border-radius: 10px;
+    text-align: center;
+    color: rgba(255, 64, 0, 0.828);
+    font-family: "Poppins", sans-serif;
+    transition: all 1s ease;
+  }
+  .card-client2 {
+    background: #555;
+    min-width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    gap: 5vw;
+    flex-direction: column;
+    box-shadow: 0 6px 10px #212121;
+    border-radius: 10px;
+    text-align: center;
+    color: rgba(255, 64, 0, 0.828);
+    font-family: "Poppins", sans-serif;
+    transition: all 1s ease;
+  }
+  .card-client2 h2 {
+    font-size: 7vw;
+    color: rgb(255, 64, 0);
+    font-weight: 600;
+    background-color: transparent;
+  }
+  .card-client2 p {
+    background-color: rgba(0, 0, 0, 0.281);
+    color: #fff;
+    font-size: 4.3vw;
+    padding: 0.5vw 1.5vw;
+    border: 1px solid #fff;
+    border-radius: 5vw;
+    font-weight: 600;
+    letter-spacing: 0.1vw;
+    margin-top: 1vw;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  #profile-cont form button {
+    font-size: 4.3vw;
+    width: 20vw;
+  }
+  .user-picture {
+    overflow: hidden;
+    object-fit: cover;
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .user-picture svg {
+    width: 2.5rem;
+    fill: currentColor;
+  }
+  #profile-cont form {
+    gap: 6vw;
+  }
+  #profile-cont form .input-box {
+    position: relative;
+    border-bottom: 1px solid #fff;
+    width: 80%;
+    height: 9vw;
+    background-color: transparent;
+  }
+  #profile-cont form .input-box input[type="text"] {
+    font-size: 4vw;
+  }
+  #profile-cont form .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0.1vw;
+    transform: translateY(-50%);
+    font-size: 3vw;
+    color: #fff;
+    font-weight: 400;
+    pointer-events: none;
+    background-color: transparent;
+    transition: all ease 0.5s;
+  }
+  .card-client2 .button-cont {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0 6.5vw;
+  }
+  #select-program {
+    width: 80%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.5vw;
+  }
+  #select-program #menu {
+    background-color: rgba(255, 64, 0, 0.854) !important;
+    width: 100%;
+    color: #fff;
+    padding: 0.5vw 1vw;
+    font-size: 3.5vw;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  #select-program option {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: #212121;
+    font-size: 1vw;
+    font-weight: 200;
+  }
+  #select-electives {
+    width: 80%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.5vw;
+  }
+  #select-electives #elec-menu {
+    background-color: rgba(255, 64, 0, 0.854) !important;
+    width: 100%;
+    color: #fff;
+    padding: 0.5vw 1vw;
+    font-size: 3.5vw;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  #select-electives option {
+    color: #fff;
+    background-color: #212121;
+    font-size: 1vw;
+    font-weight: 200;
+  }
+  #radio {
+    margin-left: 7vw;
+    padding: 0 3vw;
+  }
+  .radio-button-container {
+    gap: 15vw;
+  }
+  .radio-button__custom {
+    width: 3.5vw;
+    height: 3.5vw;
+    margin-top: 0.5vw;
+    margin-left: -2vw;
+  }
+  #radio h3 {
+    font-size: 3.5vw;
+    text-align: start;
+    font-weight: 400;
+    background-color: transparent;
+    color: #fff;
+  }
+  .radio-button__label {
+    font-size: 3.5vw;
+  }
+  form button {
+    font-size: 4.3vw;
+    width: 20vw;
+  }
   #nav-left img {
     width: 28%;
   }
@@ -781,6 +1135,9 @@ form button:hover span:after {
     display: flex;
     align-items: center;
     gap: 2.5vw;
+  }
+  #nav-2 img {
+    width: 35px;
   }
   #nav-1 {
     gap: 4vw;
