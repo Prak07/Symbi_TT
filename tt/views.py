@@ -7,15 +7,68 @@ from django.contrib.auth.hashers import make_password
 from django.core.validators import validate_email
 
 
-def home(request):
-    return render(request, "index.html")
+def update_profile(request,page):
+    if request.method == "POST":
+        user=request.user
+        div = request.POST["div"]
+        email = request.POST["email"]
+        div = div.upper()
+        sem = request.POST["sem"]
+        sem = sem.upper()
+        sem_s = {
+            "1": "I",
+            "2": "II",
+            "3": "III",
+            "4": "IV",
+            "5": "V",
+            "6": "VI",
+            "7": "VII",
+            "8": "VIII",
+        }
+        if sem in sem_s:
+            sem = sem_s[sem]
+        program = request.POST["program"]
+        elective = request.POST["elective"]
+        Honours = request.POST["honours"]
+        try:
+            validate_email(email)
+            if div in ["A", "B", "C", "D", "E", "F", "G", "H"]:
+                if sem in sem_s.values():
+                    if Honours == "yes":
+                        user.email=email
+                        user.sem=sem
+                        user.div=div
+                        user.program=program
+                        user.elective=elective
+                        user.honours=True
+                        user.save()
+                    else:
+                        user.email=email
+                        user.sem=sem
+                        user.div=div
+                        user.program=program
+                        user.honours=False
+                        user.elective=elective
+                        user.save()
+                else:
+                    messages.info(request, "Enter right semester")
+            else:
+                messages.info(request, "Enter right division")
+        except:
+            messages.info(request, "Enter correct email")
+    return render(request,page)
 
+def home(request):
+    update_profile(request,"index.html")
+    return render(request, 'index.html')
 
 def about(request):
+    update_profile(request,"about.html")
     return render(request, "about.html")
 
 
 def contact(request):
+    update_profile(request,"contact.html")
     return render(request, "contact.html")
 
 
@@ -29,6 +82,7 @@ def login(request):
             div = request.POST["div"]
             div = div.upper()
             sem = request.POST["sem"]
+            sem = sem.upper()
             sem_s = {
                 "1": "I",
                 "2": "II",
@@ -77,8 +131,7 @@ def login(request):
                                         honours=True,
                                     )
                                     CustomUser.save
-                                    messages.success(
-                                        request,
+                                    messages.success(request,
                                         "Registration done now sign in to continue",
                                     )
                                     return render(
@@ -178,7 +231,7 @@ def login(request):
                 messages.info(request, "Invalid credentials")
                 return redirect("login")
         else:
-            return render(request, "login")
+            return render(request,"login")
     else:
         return render(request, "login.html")
 
