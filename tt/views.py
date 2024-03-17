@@ -1,3 +1,4 @@
+from django.forms import ValidationError
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.http import HttpResponse
@@ -59,6 +60,19 @@ def update_profile(request, page):
     return render(request, page)
 
 
+def contact(request):
+    if request.method == "POST" and "contact_form" in request.POST:
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        message = request.POST.get("message")
+        entry = ContactUser.objects.create(name=name, email=email, message=message)
+        entry.save()
+        messages.info(request, "Message Sent")
+        return redirect("contact")
+    update_profile(request, "contact.html")
+    return render(request, "contact.html")
+
+
 def home(request):
     update_profile(request, "index.html")
     return render(request, "index.html")
@@ -67,11 +81,6 @@ def home(request):
 def about(request):
     update_profile(request, "about.html")
     return render(request, "about.html")
-
-
-def contact(request):
-    update_profile(request, "contact.html")
-    return render(request, "contact.html")
 
 
 def login(request):

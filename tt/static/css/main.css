@@ -51,6 +51,9 @@ body {
   z-index: 9;
   display: none;
 }
+.message {
+  top: 31% !important;
+}
 
 #profile-cont {
   width: 30vw;
@@ -899,7 +902,13 @@ nav a {
     height: 120vw;
     background-color: transparent;
   }
-
+  .message {
+    top: 6% !important;
+    left: 23% !important;
+  }
+  .message h4 {
+    font-size: 6vw !important;
+  }
   .card-client1 {
     background: #555;
     min-width: 100%;
