@@ -469,8 +469,8 @@ nav {
   right: 0;
 }
 nav a {
-  text-decoration: none;
-  color: white;
+  text-decoration: none !important;
+  color: white !important;
 }
 
 #select-program {
@@ -1002,12 +1002,12 @@ form button:hover span:after {
     align-items: center;
     margin: auto;
   }
-  #message {
-    top: 7%;
-    left: 25% !important;
+  .message {
+    top: 6% !important;
+    left: 36% !important;
   }
-  #message h4 {
-    font-size: 6vw !important;
+  .message h4 {
+    font-size: 4vw !important;
   }
 
   .user-picture svg {

@@ -35,42 +35,27 @@
         </div>
         {% for message in messages %} {% if message %}
         <div
-          classs="container p-5"
-          id="message"
+          class="message"
           style="
             position: absolute;
             z-index: 99;
-            left: 36%;
-            transition: all 0.5s ease;
-            background-color: rgba(255, 255, 255, 0.776);
-            padding: 0.2vw 0.8vw;
-            border-radius: 10px;
+            top: 5%;
+            left: 41%;
+            width: fit-content;
           "
         >
-          <div class="row no-gutters" style="background-color: transparent">
-            <div
-              class="col-lg-2 col-md-15 mt-5"
-              style="background-color: transparent"
-            >
-              <div
-                class="alert alert-danger fade show"
-                role="alert"
-                style="background-color: transparent"
-              >
-                <h4
-                  class="alert-heading"
-                  style="
-                    font-size: 2vw;
-                    color: red;
-                    font-weight: 300;
-                    background-color: transparent;
-                  "
-                >
-                  {{message}}!
-                </h4>
-              </div>
-            </div>
-          </div>
+          <h4
+            style="
+              color: #0c5460;
+              padding: 1vw 2vw;
+              font-size: 1.1vw;
+              border-radius: 5px;
+
+              background-color: #d1ecf1 !important;
+            "
+          >
+            {{message}}!
+          </h4>
         </div>
         {% endif %} {% endfor %}
         <div id="nav-2">
@@ -351,7 +336,7 @@
   </div>
   <script src="/static/js/base.js"></script>
   <script>
-    var popup = document.querySelector("#message");
+    var popup = document.querySelector(".message");
     setTimeout(() => {
       popup.style.display = "none";
     }, 3000);
