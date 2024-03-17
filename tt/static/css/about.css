@@ -869,17 +869,24 @@ nav a {
   }
   .dets h2 {
     color: rgb(255, 64, 0);
-    font-size: 6vw;
+    font-size: 5vw;
     font-weight: 600;
     background-color: transparent;
   }
   .dets h4 {
-    font-size: 3vw;
+    font-size: 3.9vw;
   }
   #profile-cont {
     width: 75%;
     height: 120vw;
     background-color: transparent;
+  }
+  #message {
+    top: 7%;
+    left: 25% !important;
+  }
+  #message h4 {
+    font-size: 6vw !important;
   }
 
   .card-client1 {

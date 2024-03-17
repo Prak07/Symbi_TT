@@ -67,25 +67,25 @@ gsap.from("#nav-1 a", {
 gsap.from("#contact .content h1", {
   opacity: 0,
   y: 500,
-  duration: 2,
+  duration: 1.5,
   delay: 0.7,
 });
 
 gsap.from("#contact .underline", {
   opacity: 0,
   x: 100,
-  duration: 1,
+  duration: 0.5,
   delay: 1,
 });
 gsap.from("#form-container form", {
   opacity: 0,
   x: -400,
   duration: 1.5,
-  delay: 1,
+  delay: 0.8,
 });
 gsap.from("#contact-info .elem-cont h1, #info .elem-cont h3", {
   opacity: 0,
   y: 300,
-  duration: 2,
-  delay: 1,
+  duration: 1.5,
+  delay: 0.8,
 });
