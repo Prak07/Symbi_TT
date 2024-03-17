@@ -33,6 +33,46 @@
           <a href="/about/"><h4>About</h4></a>
           <a href="/contact/"><h4>Contact</h4></a>
         </div>
+        {% for message in messages %} {% if message %}
+        <div
+          classs="container p-5"
+          id="message"
+          style="
+            position: absolute;
+            z-index: 99;
+            left: 36%;
+            transition: all 0.5s ease;
+            background-color: rgba(255, 255, 255, 0.776);
+            padding: 0.2vw 0.8vw;
+            border-radius: 10px;
+          "
+        >
+          <div class="row no-gutters" style="background-color: transparent">
+            <div
+              class="col-lg-2 col-md-15 mt-5"
+              style="background-color: transparent"
+            >
+              <div
+                class="alert alert-danger fade show"
+                role="alert"
+                style="background-color: transparent"
+              >
+                <h4
+                  class="alert-heading"
+                  style="
+                    font-size: 2vw;
+                    color: red;
+                    font-weight: 300;
+                    background-color: transparent;
+                  "
+                >
+                  {{message}}!
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %} {% endfor %}
         <div id="nav-2">
           {% if user.is_authenticated %}
           <img id="profile" src="/static/images/profile.png" alt="Profile" />
@@ -47,7 +87,6 @@
     </nav>
     <body>
       {% if user.is_authenticated %}
-
       <div class="overlay">
         <div id="profile-cont">
           <div class="card-client1">
@@ -92,18 +131,24 @@
           </div>
           <div class="card-client2">
             <h2>Edit Your Details</h2>
-            <form action="/" id="profile-form">
+            <form action="/" id="profile-form" method="post">
+              {% csrf_token %}
               <div class="input-box">
-                <input type="text" required />
+                <input
+                  type="text"
+                  value="{{user.email}}"
+                  name="email"
+                  required
+                />
                 <label for="email">Email</label>
               </div>
 
               <div class="input-box">
-                <input type="text" required />
+                <input type="text" value="{{user.div}}" name="div" required />
                 <label for="divison">Division</label>
               </div>
               <div class="input-box">
-                <input type="text" required />
+                <input type="text" value="{{user.sem}}" name="sem" required />
                 <label for="semester">Sem</label>
               </div>
               <div id="select-program">
@@ -118,7 +163,7 @@
               </div>
               <div id="select-electives">
                 <select id="elec-menu" name="elective">
-                  <option value="none" selected>Electives</option>
+                  <option value="none" selected>Elective</option>
                   <option value="Creative">Creative Writing</option>
                   <option value="Understanding">Understanding Cinema</option>
                   <option value="Appreciating">Appreciating Cinema</option>
@@ -163,6 +208,7 @@
                       id="radio2"
                       name="honours"
                       value="no"
+                      checked
                     />
                     <label class="radio-button__label" for="radio2">
                       <span class="radio-button__custom"></span>
@@ -304,4 +350,10 @@
     </div>
   </div>
   <script src="/static/js/base.js"></script>
+  <script>
+    var popup = document.querySelector("#message");
+    setTimeout(() => {
+      popup.style.display = "none";
+    }, 3000);
+  </script>
 </html>
