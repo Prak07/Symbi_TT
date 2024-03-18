@@ -325,7 +325,7 @@ body {
 }
 #profile-form .input-box label {
   position: absolute;
-  top: 50%;
+  top: -5px;
   left: 0.1vw;
   transform: translateY(-50%);
   font-size: 1vw;
@@ -346,10 +346,11 @@ body {
   background-color: transparent;
 }
 
-#profile-form .input-box input:focus ~ label,
-.input-box input:valid ~ label {
-  top: -5px !important;
-  color: rgba(255, 64, 0, 0.854) !important;
+#profile-form .input-box input:valid ~ label {
+  color: rgba(0, 255, 85, 0.854);
+} 
+#profile-form .input-box input:invalid ~ label{
+  color: rgba(255, 0, 0, 0.854);
 }
 input {
   background-color: black;
@@ -703,7 +704,7 @@ form .input-box input[type="text"] {
 form .input-box input:focus ~ label,
 .input-box input:valid ~ label {
   top: -5px;
-  color: rgba(255, 64, 0, 0.854);
+  color: rgba(255, 64, 0, 0.854) ;
 }
 #form-container #contact-info {
   height: 25vw;
