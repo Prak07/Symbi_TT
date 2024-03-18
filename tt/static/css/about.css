@@ -324,7 +324,7 @@ form .input-box {
 }
 form .input-box label {
   position: absolute;
-  top: 50%;
+  top: -5px;
   left: 0.1vw;
   transform: translateY(-50%);
   font-size: 1vw;
@@ -334,8 +334,7 @@ form .input-box label {
   background-color: transparent;
   transition: all ease 0.5s;
 }
-form .input-box input[type="text"],
-input[type="email"] {
+form .input-box input[type="text"] {
   border: none;
   outline: none;
   color: #fff;
@@ -345,10 +344,11 @@ input[type="email"] {
   height: 100%;
   background-color: transparent;
 }
-form .input-box input:focus ~ label,
-.input-box input:valid ~ label {
-  top: -5px;
-  color: rgba(255, 64, 0, 0.854);
+form .input-box input:valid ~ label {
+  color: rgba(0, 255, 85, 0.854);
+} 
+.input-box input:invalid ~ label{
+  color: rgba(255, 0, 0, 0.854);
 }
 input {
   background-color: black;

@@ -31,32 +31,24 @@ def update_profile(request, page):
         program = request.POST["program"]
         elective = request.POST["elective"]
         Honours = request.POST["honours"]
-        try:
-            validate_email(email)
-            if div in ["A", "B", "C", "D", "E", "F", "G", "H"]:
-                if sem in sem_s.values():
-                    if Honours == "yes":
-                        user.email = email
-                        user.sem = sem
-                        user.div = div
-                        user.program = program
-                        user.elective = elective
-                        user.honours = True
-                        user.save()
-                    else:
-                        user.email = email
-                        user.sem = sem
-                        user.div = div
-                        user.program = program
-                        user.honours = False
-                        user.elective = elective
-                        user.save()
-                else:
-                    messages.info(request, "Enter right semester")
-            else:
-                messages.info(request, "Enter right division")
-        except:
-            messages.info(request, "Enter correct email")
+        if Honours == "yes":
+            user.email = email
+            user.sem = sem
+            user.div = div
+            user.program = program
+            user.elective = elective
+            user.honours = True
+            user.save()
+            messages.info(request,"Profile Updated")
+        else:
+            user.email = email
+            user.sem = sem
+            user.div = div
+            user.program = program
+            user.honours = False
+            user.elective = elective
+            user.save()
+            messages.info(request,"Profile Updated")
     return render(request, page)
 
 
