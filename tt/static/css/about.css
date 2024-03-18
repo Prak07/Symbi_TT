@@ -63,6 +63,10 @@ body {
   background-color: rgba(255, 64, 0, 0.828);
   cursor: pointer;
 }
+.message {
+  top: 2% !important;
+}
+
 .dets {
   background-color: transparent;
   margin-top: 1vw;
@@ -279,8 +283,6 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-
-
 form {
   display: flex;
   align-items: center;
@@ -320,8 +322,8 @@ form .input-box input[type="text"] {
 }
 form .input-box input:valid ~ label {
   color: rgba(0, 255, 85, 0.854);
-} 
-.input-box input:invalid ~ label{
+}
+.input-box input:invalid ~ label {
   color: rgba(255, 0, 0, 0.854);
 }
 input {
@@ -615,7 +617,6 @@ form button:hover {
   line-height: 2.5vw;
 }
 
-
 .overflow {
   overflow: hidden;
   background-color: #202020 !important;
@@ -649,12 +650,12 @@ form button:hover {
     height: 120vw;
     background-color: transparent;
   }
-  #message {
-    top: 7%;
-    left: 25% !important;
+  .message {
+    top: 6% !important;
+    left: 42% !important;
   }
-  #message h4 {
-    font-size: 6vw !important;
+  .message h4 {
+    font-size: 4.5vw !important;
   }
 
   .card-client1 {
@@ -713,7 +714,7 @@ form button:hover {
     font-size: 4.3vw;
     width: 20vw;
   }
-  
+
   .user-picture svg {
     width: 2.5rem;
     fill: currentColor;
