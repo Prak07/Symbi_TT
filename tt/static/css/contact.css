@@ -279,7 +279,6 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-
 #profile-form {
   display: flex;
   align-items: center;
@@ -320,8 +319,8 @@ body {
 
 #profile-form .input-box input:valid ~ label {
   color: rgba(0, 255, 85, 0.854);
-} 
-#profile-form .input-box input:invalid ~ label{
+}
+#profile-form .input-box input:invalid ~ label {
   color: rgba(255, 0, 0, 0.854);
 }
 input {
@@ -587,7 +586,7 @@ form .input-box input[type="text"] {
 form .input-box input:focus ~ label,
 .input-box input:valid ~ label {
   top: -5px;
-  color: rgba(255, 64, 0, 0.854) ;
+  color: rgba(255, 64, 0, 0.854);
 }
 #form-container #contact-info {
   height: 25vw;
@@ -669,7 +668,6 @@ form button:hover span:after {
   opacity: 1;
   right: 0;
 }
-
 
 .overflow {
   overflow: hidden;
@@ -762,11 +760,11 @@ form button:hover span:after {
   }
 
   .message {
-    top: 6% !important;
-    left: 36% !important;
+    top: 9% !important;
+    left: 30% !important;
   }
   .message h4 {
-    font-size: 4vw !important;
+    font-size: 5vw !important;
   }
 
   .user-picture svg {
