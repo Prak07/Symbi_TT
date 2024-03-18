@@ -40,11 +40,6 @@ body {
   min-height: 100vh;
 }
 
-
-.message {
-  top: 31% !important;
-}
-
 #profile-cont {
   width: 30vw;
   height: 37.5vw;
@@ -419,8 +414,6 @@ body {
   box-shadow: 0 0 20px rgba(255, 64, 0, 0.854);
 }
 
-
-
 form {
   display: flex;
   align-items: center;
@@ -460,8 +453,8 @@ form .input-box input[type="text"] {
 }
 form .input-box input:valid ~ label {
   color: rgba(0, 255, 85, 0.854);
-} 
-.input-box input:invalid ~ label{
+}
+.input-box input:invalid ~ label {
   color: rgba(255, 0, 0, 0.854);
 }
 input {
@@ -503,7 +496,7 @@ form button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding:  4vw;
+  padding: 4vw;
   gap: 3vw;
 }
 .calendar {
