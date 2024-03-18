@@ -1,6 +1,8 @@
 {% extends "base.html" %} {% block title %}Symbi TT-Contact{%endblock title %}
 {% load static %} {% block body%}
+
 <link rel="stylesheet" href="/static/css/contact.css" />
+
 <div id="page1" data-scroll>
   <div id="contact">
     <div class="content">
@@ -8,21 +10,21 @@
     </div>
     <div class="underline"></div>
     <div id="form-container" data-scroll data-scroll-speed="1">
-      <form action="/" method="post">
+      <form action="/contact/" method="post" name="contact_form">
         {% csrf_token %}
         <div class="input-box">
-          <input type="text" required />
+          <input type="text" required name="name" />
           <label for="name">Name</label>
         </div>
         <div class="input-box">
-          <input type="text" required />
+          <input type="text" required name="email" />
           <label for="name">Email</label>
         </div>
         <div class="input-box">
-          <input type="text" required />
+          <input type="text" required name="message" />
           <label for="name">Message</label>
         </div>
-        <button type="submit"><span>Send!</span></button>
+        <button type="submit" name="contact_form"><span>Send!</span></button>
       </form>
       <div id="contact-info">
         <div class="elem-cont" data-scroll data-scroll-speed="1">

@@ -33,30 +33,31 @@
           <a href="/about/"><h4>About</h4></a>
           <a href="/contact/"><h4>Contact</h4></a>
         </div>
-    {% for message in messages %} {% if message %}
-    <div classs="container p-5" id="message" style="position: absolute">
-      <div class="row no-gutters">
-        <div class="col-lg-2 col-md-15 mt-5" style="margin-left: 82vw">
-          <div class="alert alert-danger fade show" role="alert">
-            <button
-              type="button"
-              class="close"
-              data-dismiss="alert"
-              aria-label="Close"
-            >
-              <span aria-hidden="True">&times;</span>
-            </button>
-            <h4
-              class="alert-heading"
-              style="font-size:larger; color:red"
-            >
-              {{message}}
-            </h4>
-          </div>
+        {% for message in messages %} {% if message %}
+        <div
+          class="message"
+          style="
+            position: absolute;
+            z-index: 99;
+            top: 5%;
+            left: 41%;
+            width: fit-content;
+          "
+        >
+          <h4
+            style="
+              color: #0c5460;
+              padding: 1vw 2vw;
+              font-size: 1.1vw;
+              border-radius: 5px;
+
+              background-color: #d1ecf1 !important;
+            "
+          >
+            {{message}}!
+          </h4>
         </div>
-      </div>
-    </div>
-    {% endif %} {% endfor %}
+        {% endif %} {% endfor %}
         <div id="nav-2">
           {% if user.is_authenticated %}
           <img id="profile" src="/static/images/profile.png" alt="Profile" />
@@ -87,7 +88,9 @@
               <h4>Divison - {{user.div}}</h4>
               <h4>Sem - {{user.sem}}</h4>
               <h4>Electives - {{user.elective}}</h4>
-              <h4>Honours - {{user.honours}}</h4>
+              <h4>
+                Honours - {% if user.honours %} Yes {% else %} No {% endif %}
+              </h4>
             </div>
             <div class="button-cont">
               <a href="/logout/" class="Btn">
@@ -116,7 +119,12 @@
             <form action="/" id="profile-form" method="post">
               {% csrf_token %}
               <div class="input-box">
-                <input type="text" value="{{user.email}}" name="email" required />
+                <input
+                  type="text"
+                  value="{{user.email}}"
+                  name="email"
+                  required
+                />
                 <label for="email">Email</label>
               </div>
 
@@ -148,9 +156,15 @@
                   <option value="Introduction">Introduction to Theatre</option>
                   <option value="Foundation">Foundations of Ethics</option>
                   <option value="Sociology">Basic Sociology</option>
-                  <option value="Basic 1">Basic Psychology-Group-1</option>
-                  <option value="Basic 2">Basic Psychology-Group-2</option>
-                  <option value="Basic 3">Basic Psychology-Group-3</option>
+                  <option value="Basic Psychology 1">
+                    Basic Psychology-Group-1
+                  </option>
+                  <option value="Basic Psychology 2">
+                    Basic Psychology-Group-2
+                  </option>
+                  <option value="Basic Psychology 3">
+                    Basic Psychology-Group-3
+                  </option>
                 </select>
               </div>
 
@@ -179,6 +193,7 @@
                       id="radio2"
                       name="honours"
                       value="no"
+                      checked
                     />
                     <label class="radio-button__label" for="radio2">
                       <span class="radio-button__custom"></span>
@@ -196,9 +211,8 @@
           </div>
         </div>
         <i id="close" class="ri-close-large-line"></i>
-        {% endif %}
       </div>
-      {% block body%} {% endblock body %}
+      {% endif %} {% block body%} {% endblock body %}
     </body>
     <div id="footer">
       <div id="footer-container">
@@ -321,4 +335,10 @@
     </div>
   </div>
   <script src="/static/js/base.js"></script>
+  <script>
+    var popup = document.querySelector(".message");
+    setTimeout(() => {
+      popup.style.display = "none";
+    }, 3000);
+  </script>
 </html>

@@ -87,7 +87,7 @@ body {
 }
 .dets h2 {
   color: rgb(255, 64, 0);
-  font-size: 2.5vw;
+  font-size: 2vw;
   font-weight: 600;
   background-color: transparent;
 }
@@ -335,8 +335,7 @@ body {
   background-color: transparent;
   transition: all ease 0.5s;
 }
-#profile-form .input-box input[type="text"],
-input[type="email"] {
+#profile-form .input-box input[type="text"] {
   border: none;
   outline: none;
   color: #fff;
@@ -346,10 +345,11 @@ input[type="email"] {
   height: 100%;
   background-color: transparent;
 }
+
 #profile-form .input-box input:focus ~ label,
 .input-box input:valid ~ label {
-  top: -5px;
-  color: rgba(255, 64, 0, 0.854);
+  top: -5px !important;
+  color: rgba(255, 64, 0, 0.854) !important;
 }
 input {
   background-color: black;
@@ -469,8 +469,8 @@ nav {
   right: 0;
 }
 nav a {
-  text-decoration: none;
-  color: white;
+  text-decoration: none !important;
+  color: white !important;
 }
 
 #select-program {
@@ -921,12 +921,12 @@ form button:hover span:after {
   }
   .dets h2 {
     color: rgb(255, 64, 0);
-    font-size: 6vw;
+    font-size: 5vw;
     font-weight: 600;
     background-color: transparent;
   }
   .dets h4 {
-    font-size: 3vw;
+    font-size: 3.9vw;
   }
   #profile-cont {
     width: 75%;
@@ -1001,6 +1001,13 @@ form button:hover span:after {
     justify-content: center;
     align-items: center;
     margin: auto;
+  }
+  .message {
+    top: 6% !important;
+    left: 36% !important;
+  }
+  .message h4 {
+    font-size: 4vw !important;
   }
 
   .user-picture svg {

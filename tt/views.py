@@ -1,3 +1,4 @@
+from django.forms import ValidationError
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.http import HttpResponse
@@ -7,9 +8,9 @@ from django.contrib.auth.hashers import make_password
 from django.core.validators import validate_email
 
 
-def update_profile(request,page):
+def update_profile(request, page):
     if request.method == "POST":
-        user=request.user
+        user = request.user
         div = request.POST["div"]
         email = request.POST["email"]
         div = div.upper()
@@ -35,20 +36,20 @@ def update_profile(request,page):
             if div in ["A", "B", "C", "D", "E", "F", "G", "H"]:
                 if sem in sem_s.values():
                     if Honours == "yes":
-                        user.email=email
-                        user.sem=sem
-                        user.div=div
-                        user.program=program
-                        user.elective=elective
-                        user.honours=True
+                        user.email = email
+                        user.sem = sem
+                        user.div = div
+                        user.program = program
+                        user.elective = elective
+                        user.honours = True
                         user.save()
                     else:
-                        user.email=email
-                        user.sem=sem
-                        user.div=div
-                        user.program=program
-                        user.honours=False
-                        user.elective=elective
+                        user.email = email
+                        user.sem = sem
+                        user.div = div
+                        user.program = program
+                        user.honours = False
+                        user.elective = elective
                         user.save()
                 else:
                     messages.info(request, "Enter right semester")
@@ -56,20 +57,30 @@ def update_profile(request,page):
                 messages.info(request, "Enter right division")
         except:
             messages.info(request, "Enter correct email")
-    return render(request,page)
-
-def home(request):
-    update_profile(request,"index.html")
-    return render(request, 'index.html')
-
-def about(request):
-    update_profile(request,"about.html")
-    return render(request, "about.html")
+    return render(request, page)
 
 
 def contact(request):
-    update_profile(request,"contact.html")
+    if request.method == "POST" and "contact_form" in request.POST:
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        message = request.POST.get("message")
+        entry = ContactUser.objects.create(name=name, email=email, message=message)
+        entry.save()
+        messages.info(request, "Message Sent")
+        return redirect("contact")
+    update_profile(request, "contact.html")
     return render(request, "contact.html")
+
+
+def home(request):
+    update_profile(request, "index.html")
+    return render(request, "index.html")
+
+
+def about(request):
+    update_profile(request, "about.html")
+    return render(request, "about.html")
 
 
 def login(request):
@@ -131,7 +142,8 @@ def login(request):
                                         honours=True,
                                     )
                                     CustomUser.save
-                                    messages.success(request,
+                                    messages.success(
+                                        request,
                                         "Registration done now sign in to continue",
                                     )
                                     return render(
@@ -231,7 +243,7 @@ def login(request):
                 messages.info(request, "Invalid credentials")
                 return redirect("login")
         else:
-            return render(request,"login")
+            return render(request, "login")
     else:
         return render(request, "login.html")
 

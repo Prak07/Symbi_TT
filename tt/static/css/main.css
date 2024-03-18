@@ -51,6 +51,9 @@ body {
   z-index: 9;
   display: none;
 }
+.message {
+  top: 31% !important;
+}
 
 #profile-cont {
   width: 30vw;
@@ -81,7 +84,7 @@ body {
 }
 .dets h2 {
   color: rgb(255, 64, 0);
-  font-size: 2.5vw;
+  font-size: 2vw;
   font-weight: 600;
   background-color: transparent;
 }
@@ -887,19 +890,25 @@ nav a {
   }
   .dets h2 {
     color: rgb(255, 64, 0);
-    font-size: 6vw;
+    font-size: 5vw;
     font-weight: 600;
     background-color: transparent;
   }
   .dets h4 {
-    font-size: 3vw;
+    font-size: 3.9vw;
   }
   #profile-cont {
     width: 75%;
     height: 120vw;
     background-color: transparent;
   }
-
+  .message {
+    top: 6% !important;
+    left: 23% !important;
+  }
+  .message h4 {
+    font-size: 6vw !important;
+  }
   .card-client1 {
     background: #555;
     min-width: 100%;
@@ -1080,6 +1089,13 @@ nav a {
     justify-content: space-between;
     background-color: transparent;
     padding: 0 6.5vw;
+  }
+  #message {
+    top: 7% !important;
+    left: 32% !important;
+  }
+  #message h4 {
+    font-size: 5vw !important;
   }
   nav {
     position: static;
