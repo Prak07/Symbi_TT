@@ -27,24 +27,34 @@ Shery.makeMagnet("#nav-1 a,.links a", {
 
 var profile = document.querySelector("#profile");
 var close = document.querySelector("#close");
-
 var overlay = document.querySelector(".overlay");
 var editbtn = document.querySelector("#edit-btn");
 var card1 = document.querySelector(".card-client1");
 var card2 = document.querySelector(".card-client2");
 var cancel = document.querySelector("#cancel");
-profile.addEventListener("click", function () {
-  overlay.style.display = "flex";
-});
-close.addEventListener("click", function () {
-  overlay.style.display = "none";
-});
 
-editbtn.addEventListener("click", function () {
-  card1.style.transform = "translateX(-100%)";
-  card2.style.transform = "translateX(-100%)";
-});
-cancel.addEventListener("click", function () {
-  card1.style.transform = "translateX(0%)";
-  card2.style.transform = "translateX(0%)";
-});
+if (profile) {
+  profile.addEventListener("click", function () {
+    overlay.style.display = "flex";
+  });
+}
+
+if (close) {
+  close.addEventListener("click", function () {
+    overlay.style.display = "none";
+  });
+}
+
+if (editbtn && card1 && card2) {
+  editbtn.addEventListener("click", function () {
+    card1.style.transform = "translateX(-100%)";
+    card2.style.transform = "translateX(-100%)";
+  });
+}
+
+if (cancel && card1 && card2) {
+  cancel.addEventListener("click", function () {
+    card1.style.transform = "translateX(0%)";
+    card2.style.transform = "translateX(0%)";
+  });
+}
