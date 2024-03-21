@@ -6,41 +6,29 @@ load static %} {% block body %}
   <div id="container">
     <div id="data-cont" data-scroll data-scroll-speed="2">
       <h1>Your Routine</h1>
+      {% if user.is_authenticated %}
+      {% if data %}
+      {% for i in data %}
       <div class="elem">
         <div class="elem-parts">
           <h3>
-            Foundations of Data Warehousing and Data Mining Foundations of Data
+            {{i.0}}
           </h3>
         </div>
         <div class="elem-parts">
-          <h3>Class - 404</h3>
+          <h3>{{i.1}}-{{i.2}}</h3>
         </div>
         <div class="elem-parts">
-          <h3>1:30 - 2:30</h3>
+          <h3>{{i.3}}</h3>
         </div>
       </div>
-      <div class="elem">
-        <div class="elem-parts">
-          <h3>Introduction to Mobile Concepts</h3>
-        </div>
-        <div class="elem-parts">
-          <h3>Class - 406</h3>
-        </div>
-        <div class="elem-parts">
-          <h3>10:30 - 11:30</h3>
-        </div>
-      </div>
-      <div class="elem">
-        <div class="elem-parts">
-          <h3>Creative Writing</h3>
-        </div>
-        <div class="elem-parts">
-          <h3>Class - 307</h3>
-        </div>
-        <div class="elem-parts">
-          <h3>11:30 - 12:30</h3>
-        </div>
-      </div>
+      {% endfor %}
+      {% else %}
+      <p class="signin_message">NO CLASSES TODAY</p>
+      {% endif %}
+      {% else %}
+      <p class="signin_message">sign in to see your personalised routine</p>
+      {% endif %}
     </div>
     <div class="calendar" data-scroll data-scroll-speed="2">
       <div class="header">

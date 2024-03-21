@@ -3,7 +3,7 @@ from django.contrib.auth.models import User, AbstractUser
 
 
 class CustomUser(AbstractUser):
-    div = models.CharField(max_length=10)
+    div = models.CharField(max_length=10,blank=True)
     sem = models.CharField(max_length=10)
     program = models.CharField(max_length=50)
     elective = models.CharField(max_length=50)
