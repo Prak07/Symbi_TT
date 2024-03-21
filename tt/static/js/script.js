@@ -70,6 +70,21 @@ gsap.from("#nav-2", {
   duration: 1,
   delay: 0.2,
 });
+function getCookie(name) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+      const cookies = document.cookie.split(';');
+      for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          // Does this cookie string begin with the name we want?
+          if (cookie.substring(0, name.length + 1) === (name + '=')) {
+              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+              break;
+          }
+      }
+  }
+  return cookieValue;
+}
 
 function calendar() {
   document.addEventListener("DOMContentLoaded", function () {
@@ -102,8 +117,7 @@ function calendar() {
       }
       for (let i = 1; i <= daysInMonth; i++) {
         const date = new Date(currentYear, currentMonth, i);
-        const isSelected =
-          selectedDate && date.toDateString() === selectedDate.toDateString();
+        const isSelected =selectedDate && date.toDateString() === selectedDate.toDateString();
         const isToday = date.toDateString() === today.toDateString(); // Check if the date is today
 
         // Add classes based on selection and current date
@@ -118,7 +132,7 @@ function calendar() {
         daysHTML += `<div class="${classes}" data-date="${date.toISOString()}">${i}</div>`;
       }
       daysElement.innerHTML = daysHTML;
-
+      const csrftoken = getCookie('csrftoken');
       // Add event listeners to each day element for date selection
       const dayElements = document.querySelectorAll(".day");
       dayElements.forEach((dayElement) => {
@@ -127,7 +141,70 @@ function calendar() {
           selectedDate = new Date(selectedDateString);
           renderCalendar(); // Re-render the calendar to update the selected date UI
           // You can perform further operations with the selected date here
-          console.log("Selected date:", selectedDate);
+          fetch('/update_routine/',{
+            method:'POST',
+            headers:{'Content-Type':'application/json',
+            'X-CSRFToken':csrftoken,},
+            body:JSON.stringify({"date":selectedDate})
+          }).then(response => {
+    if (!response.ok) {
+        throw new Error("Network response was not ok");
+    }
+    return response.json(); // Parse JSON response
+})
+.then(data => {
+    // Extract the list from the JSON response
+    const dataList = data.data_list;
+
+        // Select the container element with class 'elem'
+        
+        // Clear previous content
+        if (dataList && dataList.length > 0) {
+          const container = document.querySelector('#time_table')
+          container.innerHTML = '';
+          for(let i=0;i<dataList.length;i++){
+        // Iterate over each item in dataList and generate HTML
+            // Create elements
+            const div1 = document.createElement("div");
+            div1.classList.add("elem");
+
+            const div11 = document.createElement("div");
+            div11.classList.add("elem-parts");
+            const h3_1 = document.createElement("h3");
+            h3_1.textContent = dataList[i][0];
+            div11.appendChild(h3_1);
+            div1.appendChild(div11)
+
+            const div12 = document.createElement("div");
+            div12.classList.add("elem-parts");
+            const h3_2 = document.createElement("h3");
+            h3_2.textContent = dataList[i][1] + "-" + dataList[i][2];
+            div12.appendChild(h3_2);
+            div1.appendChild(div12)
+
+            const div13 = document.createElement("div");
+            div13.classList.add("elem-parts");
+            const h3_3 = document.createElement("h3");
+            h3_3.textContent = dataList[i][3];
+            div13.appendChild(h3_3);
+            div1.appendChild(div13)
+
+            container.appendChild(div1);
+          };
+        }
+        else {
+          // If there is no data available, display a message
+          const container = document.querySelector('#time_table')
+          container.innerHTML='';
+          const message = document.createElement('p');
+          message.classList.add('signin_message');
+          message.textContent = 'NO CLASSES TODAY';
+          container.appendChild(message);
+      }
+})
+.catch(error => {
+    console.error("Error updating HTML content:", error);
+});
         });
       });
     }
