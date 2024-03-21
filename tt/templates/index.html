@@ -7,6 +7,7 @@ load static %} {% block body %}
     <div id="data-cont" data-scroll data-scroll-speed="2">
       <h1>Your Routine</h1>
       {% if user.is_authenticated %}
+      <div id="time_table" style="background:transparent;">
       {% if data %}
       {% for i in data %}
       <div class="elem">
@@ -29,6 +30,7 @@ load static %} {% block body %}
       {% else %}
       <p class="signin_message">sign in to see your personalised routine</p>
       {% endif %}
+    </div>
     </div>
     <div class="calendar" data-scroll data-scroll-speed="2">
       <div class="header">

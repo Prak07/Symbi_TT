@@ -1,14 +1,15 @@
 from django.forms import ValidationError
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from .models import *
 from django.contrib import messages
 from django.contrib.auth.hashers import make_password
 from django.core.validators import validate_email
 import requests
 from bs4 import BeautifulSoup
-from datetime import date , datetime
+from datetime import date, datetime
+import json
 def login(request):
     if request.method == "POST":
         submit_action = request.POST.get("submit_action")
@@ -215,8 +216,10 @@ def update_profile(request, page):
 
 
 def home(request):
+    today=str(date.today())
+    year,month,day=today.split("-")
     update_profile(request, "index.html")
-    data=routine(request)
+    data=routine(request,year,month,day)
     return render(request, "index.html",{"data":data})
 
 def about(request):
@@ -236,10 +239,8 @@ def contact(request):
     update_profile(request, "contact.html")
     return render(request, "contact.html")
 
-def routine(request):
+def routine(request,year,month,day):
     if request.user.is_authenticated:
-        today=str(date.today())
-        year,month,day=today.split("-")
         url=f"http://time-table.sicsr.ac.in/day.php?year={year}&month={month}&day={day}&area=1&room=29"
         course=request.user.program
         sem=request.user.sem
@@ -407,3 +408,14 @@ def routine(request):
             return []
     else:
         return "none"
+def update_routine(request):
+    if request.method == 'POST':
+        # Retrieve data from the request
+        data = json.loads(request.body)
+        selected_date = data.get('date')
+        selected_date=selected_date[0:10].split("-")
+        year=int(selected_date[0])
+        month=int(selected_date[1])
+        day=int(selected_date[2])+1
+        data=routine(request,year,month,day)
+        return JsonResponse({"data_list":data})
