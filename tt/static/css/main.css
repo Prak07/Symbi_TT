@@ -596,6 +596,16 @@ form button:hover {
   gap: 0.6vw;
   padding: 2vw 1vw 1vw 1vw;
 }
+.signin_message{
+  font-size: 2.5vw ;
+  background-color: transparent;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: #fff;
+  font-family: os;
+  letter-spacing: .1vw;
+
+}
 #data-cont h1 {
   background-color: transparent;
   font-size: 4vw;
@@ -647,6 +657,10 @@ form button:hover {
   }
   #close {
     font-size: 5vw;
+  }
+  .signin_message{
+    font-size: 4vw ;
+  
   }
   .dets {
     background-color: transparent;
