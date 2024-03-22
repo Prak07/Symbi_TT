@@ -138,6 +138,7 @@ function calendar() {
       dayElements.forEach((dayElement) => {
         dayElement.addEventListener("click", function () {
           const selectedDateString = this.dataset.date;
+          console.log(selectedDateString)
           selectedDate = new Date(selectedDateString);
           renderCalendar(); // Re-render the calendar to update the selected date UI
           // You can perform further operations with the selected date here
