@@ -861,7 +861,7 @@ form button:hover {
   }
 
   #about {
-    min-height: 165vw;
+    min-height: 175vw;
     padding: 1vw 1vw;
   }
   #about h1 {
@@ -880,7 +880,7 @@ form button:hover {
     width: 95%;
   }
   #objective {
-    min-height: 140vw;
+    min-height: 151vw;
     padding: 1vw 0vw;
     gap: 3vw;
     align-items: normal;
@@ -903,7 +903,7 @@ form button:hover {
   }
 
   #scope {
-    min-height: 150vw;
+    min-height: 157vw;
     padding: 1vw 1vw;
     gap: 4vw;
   }
