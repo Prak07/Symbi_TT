@@ -337,7 +337,7 @@ def routine(request,year,month,day):
             title=" ".join(raw_title)
             if course=="BCA":
                 if "BCA" in title :
-                    if f"{sem} " in title or f"{sem}-" in title :
+                    if f" {sem} " in title or f" {sem}-" in title :
                         if f" {div} " in title or f" {div}-" in title or f" {div}:" in title :
                             scraping(i)
                         if honours=="yes":
@@ -350,7 +350,7 @@ def routine(request,year,month,day):
                             
             elif course=="BBA(IT)":
                 if "BBA(IT)" in title:
-                    if f"{sem} " in title or f"{sem}-" in title :
+                    if f" {sem} " in title or f" {sem}-" in title :
                         if f" {div} " in title or f" {div}-" in title or f" {div}:" in title :
                             scraping(i)
                         if "Flexi-Credit" in title:
@@ -359,7 +359,7 @@ def routine(request,year,month,day):
                             electives(elective)
             elif course=="MBA(IT)":
                 if "MBA(IT)" in title:
-                    if f"{sem} " in title or f"{sem}-" in title :
+                    if f" {sem} " in title or f" {sem}-" in title :
                             if f" {div} " in title or f" {div}-" in title or f" {div}:" in title :
                                 scraping(i)
                     if "(SPM)" in title or "(DA)" in title:
@@ -370,7 +370,7 @@ def routine(request,year,month,day):
                         electives(elective)
             elif course=="MSC(CA)":              
                 if "MSC(CA)" in title:
-                    if f"{sem} " in title or f"{sem}-" in title :
+                    if f" {sem} " in title or f" {sem}-" in title :
                         scraping(i)
                     if "Flexi-Credit" in title:
                         scraping(i)
@@ -378,7 +378,7 @@ def routine(request,year,month,day):
                         electives(elective)
             elif course=="MBA(DT)":              
                 if "MBA(DT)" in title:
-                    if f"{sem} " in title or f"{sem}-" in title :
+                    if f" {sem} " in title or f" {sem}-" in title :
                         scraping(i)
                     if "Flexi-Credit" in title:
                         scraping(i)
@@ -416,6 +416,38 @@ def update_routine(request):
         selected_date=selected_date[0:10].split("-")
         year=int(selected_date[0])
         month=int(selected_date[1])
-        day=int(selected_date[2])+1
+        day=int(selected_date[2])
+        if month==2:
+            if year%4==0:
+                if day==29:
+                    day=1
+                    month+=1
+                else:
+                    day+=1
+            else:
+                if day==28:
+                    day=1
+                    month+=1
+                else:
+                    day+=1
+        elif month==12:
+            if day==31:
+                day=1
+                month=1
+                year+=1
+            else:
+                day+=1   
+        elif month%2!=0 or month==8:
+            if day==31:
+                day=1
+                month+=1
+            else:
+                day+=1
+        elif month%2==0:
+            if day==30:
+                day=1
+                month+=1
+            else:
+                day+=1
         data=routine(request,year,month,day)
         return JsonResponse({"data_list":data})
