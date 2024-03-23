@@ -273,6 +273,10 @@ def routine(request,year,month,day):
                             if "Extra Lecture" in tds[1].get_text() or "Lecture Scheduled" in tds[1].get_text():
                                 subject=tds[1].get_text().split(":")
                                 subject="Extra Lecture : "+subject[2]
+                            elif "MBA(IT)" in tds[1].get_text():
+                                subject=tds[1].get_text().split("-") 
+                                subject=subject[0].replace(sem," ")
+                                subject=subject.replace(course," ")
                             elif ":" in tds[1].get_text():
                                 subject=tds[1].get_text().split(":")
                                 subject=subject[1].split("-")
@@ -340,7 +344,7 @@ def routine(request,year,month,day):
                     if f" {sem} " in title or f" {sem}-" in title :
                         if f" {div} " in title or f" {div}-" in title or f" {div}:" in title :
                             scraping(i)
-                        if honours=="yes":
+                        if honours==True:
                             if "Honours" in title:
                                 scraping(i)
                         if "Flexi-Credit" in title:
@@ -369,7 +373,7 @@ def routine(request,year,month,day):
                     if elective!="none":
                         electives(elective)
             elif course=="MSC(CA)":              
-                if "MSC(CA)" in title:
+                if "MSc(CA)" in title:
                     if f" {sem} " in title or f" {sem}-" in title :
                         scraping(i)
                     if "Flexi-Credit" in title:
