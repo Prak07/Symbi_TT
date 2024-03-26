@@ -7,9 +7,12 @@ from django.contrib import messages
 from django.contrib.auth.hashers import make_password
 from django.core.validators import validate_email
 import requests
+import asyncio
 from bs4 import BeautifulSoup
 from datetime import date, datetime
 import json
+import time
+from asgiref.sync import sync_to_async
 def login(request):
     if request.method == "POST":
         submit_action = request.POST.get("submit_action")
@@ -213,14 +216,21 @@ def update_profile(request, page):
             messages.info(request,"Profile Updated")
     return render(request, page)
 
-
-
+@sync_to_async
+def get(request,year,month,day):
+    time.sleep(1)
+    data = routine(request,year,month,day)
+    return {"data_list":data}
+    
 def home(request):
-    today=str(date.today())
-    year,month,day=today.split("-")
-    update_profile(request, "index.html")
-    data=routine(request,year,month,day)
-    return render(request, "index.html",{"data":data})
+    if request.method == "POST":
+        update_profile(request, "index.html")
+    async def async_home():
+        today=str(date.today())
+        year,month,day=today.split("-")
+        data = await get(request,year,month,day)
+        return render(request, "index.html",data)
+    return asyncio.run(async_home())
 
 def about(request):
     update_profile(request, "about.html")
@@ -385,7 +395,7 @@ def routine(request,year,month,day):
                     if f" {sem} " in title or f" {sem}-" in title :
                         scraping(i)
                     if "Flexi-Credit" in title:
-                        scraping(i)
+                        scraping(i) 
                     if elective!="none":
                         electives(elective)
 
@@ -453,5 +463,7 @@ def update_routine(request):
                 month+=1
             else:
                 day+=1
-        data=routine(request,year,month,day)
-        return JsonResponse({"data_list":data})
+        async def async_home():
+            data = await get(request,year,month,day)
+            return JsonResponse(data)
+        return asyncio.run(async_home())

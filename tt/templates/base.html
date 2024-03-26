@@ -366,8 +366,10 @@
   <script src="/static/js/base.js"></script>
   <script>
     var popup = document.querySelector(".message");
-    setTimeout(() => {
-      popup.style.display = "none";
-    }, 3000);
+    if (popup){
+      setTimeout(() => {
+        popup.style.display = "none";
+      }, 3000);
+    }
   </script>
 </html>
