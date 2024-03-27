@@ -218,7 +218,6 @@ def update_profile(request, page):
 
 @sync_to_async
 def get(request,year,month,day):
-    time.sleep(1)
     data = routine(request,year,month,day)
     return {"data_list":data}
     
