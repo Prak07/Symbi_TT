@@ -137,8 +137,9 @@ function calendar() {
       const dayElements = document.querySelectorAll(".day");
       dayElements.forEach((dayElement) => {
         dayElement.addEventListener("click", function () {
+          document.getElementById("loader").style.display = "block";
+          document.getElementById("time_table").style.display = "none";
           const selectedDateString = this.dataset.date;
-          console.log(selectedDateString)
           selectedDate = new Date(selectedDateString);
           renderCalendar(); // Re-render the calendar to update the selected date UI
           // You can perform further operations with the selected date here
@@ -202,6 +203,8 @@ function calendar() {
           message.textContent = 'NO CLASSES TODAY';
           container.appendChild(message);
       }
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("time_table").style.display = "block";
 })
 .catch(error => {
     console.error("Error updating HTML content:", error);

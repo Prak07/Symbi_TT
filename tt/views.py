@@ -7,9 +7,12 @@ from django.contrib import messages
 from django.contrib.auth.hashers import make_password
 from django.core.validators import validate_email
 import requests
+import asyncio
 from bs4 import BeautifulSoup
 from datetime import date, datetime
 import json
+
+from asgiref.sync import sync_to_async
 
 
 def login(request):
@@ -216,12 +219,23 @@ def update_profile(request, page):
     return render(request, page)
 
 
-def home(request):
-    today = str(date.today())
-    year, month, day = today.split("-")
-    update_profile(request, "index.html")
+@sync_to_async
+def get(request, year, month, day):
     data = routine(request, year, month, day)
-    return render(request, "index.html", {"data": data})
+    return {"data_list": data}
+
+
+def home(request):
+    if request.method == "POST":
+        update_profile(request, "index.html")
+
+    async def async_home():
+        today = str(date.today())
+        year, month, day = today.split("-")
+        data = await get(request, year, month, day)
+        return render(request, "index.html", data)
+
+    return asyncio.run(async_home())
 
 
 def about(request):
@@ -418,6 +432,7 @@ def routine(request, year, month, day):
                     if f" {sem} " in title or f" {sem}-" in title:
                         scraping(i)
                     if "Flexi-Credit" in title:
+
                         scraping(i)
                     if elective != "none":
                         electives(elective)
@@ -488,6 +503,11 @@ def update_routine(request):
                 day = 1
                 month += 1
             else:
+
                 day += 1
-        data = routine(request, year, month, day)
-        return JsonResponse({"data_list": data})
+
+        async def async_home():
+            data = await get(request, year, month, day)
+            return JsonResponse(data)
+
+        return asyncio.run(async_home())

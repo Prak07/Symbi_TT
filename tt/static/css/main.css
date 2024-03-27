@@ -884,6 +884,9 @@ form button:hover {
     width: fit-content;
     padding: 1vw 2vw;
   }
+  .loader{
+    left: 42% !important;
+  }
   #container {
     height: 70%;
     width: 100%;
