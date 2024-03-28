@@ -135,6 +135,9 @@ form .input-box {
   width: 80%;
   height: 3vw;
   background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 form .input-box label {
   position: absolute;
@@ -147,6 +150,25 @@ form .input-box label {
   pointer-events: none;
   background-color: transparent;
   transition: all ease 0.5s;
+}
+.input-box i {
+  color: #fff;
+  position: absolute;
+  transform: translateY(-10%);
+  left: 90%;
+  font-size: 1vw;
+  cursor: pointer;
+  transition: all 3s ease;
+  padding: 2px;
+}
+
+.eye2 {
+  display: none;
+  color: rgb(255, 64, 0) !important;
+}
+.s_eye2 {
+  display: none;
+  color: rgb(255, 64, 0) !important;
 }
 form .input-box input[type="text"],
 input[type="email"] {
@@ -479,6 +501,7 @@ form h1 {
     width: 90%;
     height: 9vw;
   }
+
   .container form h1 {
     font-family: plain;
     font-size: 9vw;
@@ -503,8 +526,13 @@ form h1 {
     font-size: 3.6vw;
     font-weight: 300;
   }
+
   form .input-box label {
     font-size: 4vw;
+  }
+  .input-box i {
+    font-size: 3.5vw;
+    left: 85%;
   }
   .toggle-container {
     border-radius: 0;

@@ -19,6 +19,10 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/static/css/login.css" />
     <title>Symbi TT-Login</title>
   </head>
@@ -75,17 +79,22 @@
             </div>
             <div class="input-box">
               <input
-                type="text"
+                type="password"
                 required
                 style="background: none"
                 name="confirm_password"
                 value="{{confirm_password}}"
+                class="password"
               />
+
+              <i class="fa-solid fa-eye-slash eye1"></i>
+              <i class="fa-regular fa-eye eye2"></i>
+
               <label for="password">Confirm Password</label>
             </div>
 
             <div class="input-box">
-              <input type="text" name="div" value="{{div}}"/>
+              <input type="text" name="div" value="{{div}}" />
               <label for="divison">Division</label>
             </div>
             <div class="input-box">
@@ -121,9 +130,7 @@
                 <option value="Basic Psychology 3">
                   Basic Psychology-Group-3
                 </option>
-                <option value="other">
-                  Other
-                </option>
+                <option value="other">Other</option>
               </select>
             </div>
 
@@ -182,8 +189,11 @@
                 required
                 style="background: none"
                 name="password"
+                class="s_password"
               />
               <label for="name">Password</label>
+              <i class="fa-solid fa-eye-slash s_eye1"></i>
+              <i class="fa-regular fa-eye s_eye2"></i>
             </div>
 
             <button type="submit" name="submit_action" value="signin">
@@ -227,9 +237,11 @@
     ></script>
     <script>
       var popup = document.getElementById("message");
-      setTimeout(() => {
-        popup.style.display = "none";
-      }, 3000);
+      if (popup) {
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 3000);
+      }
     </script>
   </body>
 </html>
