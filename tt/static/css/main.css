@@ -1,21 +1,21 @@
 @font-face {
   font-family: gil;
-  src: url("/static/font/Gilroy-Light.otf");
+  src: url("/static/font/Gilroy-Light.woff2");
 }
 
 @font-face {
   font-family: Nunito;
-  src: url("/static/font/Nunito-VariableFont_wght.ttf");
+  src: url("/static/font/Nunito-VariableFont_wght.woff2");
 }
 
 @font-face {
   font-family: plain;
-  src: url("/static/font/plain-regular-webfont.woff");
+  src: url("/static/font/plain-regular-webfont.woff2");
 }
 
 @font-face {
   font-family: os;
-  src: url("/static/font/Oswald-VariableFont_wght.ttf");
+  src: url("/static/font/Oswald-VariableFont_wght.woff2");
 }
 
 * {
@@ -596,15 +596,14 @@ form button:hover {
   gap: 0.6vw;
   padding: 2vw 1vw 1vw 1vw;
 }
-.signin_message{
-  font-size: 2.5vw ;
+.signin_message {
+  font-size: 2.5vw;
   background-color: transparent;
   text-transform: capitalize;
   font-weight: 400;
   color: #fff;
   font-family: os;
-  letter-spacing: .1vw;
-
+  letter-spacing: 0.1vw;
 }
 #data-cont h1 {
   background-color: transparent;
@@ -658,9 +657,8 @@ form button:hover {
   #close {
     font-size: 5vw;
   }
-  .signin_message{
-    font-size: 4vw ;
-  
+  .signin_message {
+    font-size: 4vw;
   }
   .dets {
     background-color: transparent;
@@ -884,7 +882,7 @@ form button:hover {
     width: fit-content;
     padding: 1vw 2vw;
   }
-  .loader{
+  .loader {
     left: 42% !important;
   }
   #container {

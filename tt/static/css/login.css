@@ -1,22 +1,23 @@
 @font-face {
   font-family: gil;
-  src: url("/static/font/Gilroy-Light.otf");
+  src: url("/static/font/Gilroy-Light.woff2");
 }
 
 @font-face {
   font-family: Nunito;
-  src: url("/static/font/Nunito-VariableFont_wght.ttf");
+  src: url("/static/font/Nunito-VariableFont_wght.woff2");
 }
 
 @font-face {
   font-family: plain;
-  src: url("/static/font/plain-regular-webfont.woff");
+  src: url("/static/font/plain-regular-webfont.woff2");
 }
 
 @font-face {
   font-family: os;
-  src: url("/static/font/Oswald-VariableFont_wght.ttf");
+  src: url("/static/font/Oswald-VariableFont_wght.woff2");
 }
+
 * {
   margin: 0;
   padding: 0;
