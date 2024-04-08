@@ -5,7 +5,7 @@ from decouple import config
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = config("SECRET_KEY" , default="y&0-px!_btuunradeqv6+x@v&&ano=iixs#=4)qe4d*u#*37#s")
 
 DEBUG = config("DEBUG", cast=bool)
 
