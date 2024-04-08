@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block title %}Symbi TT-Contact{%endblock title %}
 {% load static %} {% block body%}
 
-<link rel="stylesheet" href="/static/css/contact.css" />
+<link rel="stylesheet"  type="text/css" href="{% static '/css/contact.css' %}" />
 <div id="page1" data-scroll>
   <div id="contact">
     <div class="content">
@@ -84,8 +84,9 @@
 </script>
 <link
   href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+  type="text/css"
   rel="stylesheet"
 />
 
-<script src="/static/js/contact.js"></script>
+<script src="{% static '/js/contact.js' %}"></script>
 {% endblock body %}

@@ -1,22 +1,25 @@
+{% load static %} 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>{% block title %}{% endblock title %}</title>
-    <link rel="stylesheet" href="/static/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="/static/images/favicon.png"
+      href="{% static '/images/favicon.png' %}"
       type="image/x-icon"
     />
     <link
       rel="stylesheet"
+      type="text/css"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
-    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      type="text/css"
       rel="stylesheet"
     />
   </head>
@@ -24,7 +27,7 @@
     <nav>
       <div id="nav-left">
         <a href="/"
-          ><img src="/static/images/logo-no-background.png" alt=""
+          ><img src="{% static '/images/logo-no-background.png' %}" alt=""
         /></a>
       </div>
       <div id="nav-right">
@@ -59,7 +62,7 @@
         {% endif %} {% endfor %}
         <div id="nav-2">
           {% if user.is_authenticated %}
-          <img id="profile" src="/static/images/profile.png" alt="Profile" />
+          <img id="profile" src="{% static '/images/profile.png' %}" alt="Profile" />
 
           {% else %}
           <a href="/login/">
@@ -75,7 +78,7 @@
         <div id="profile-cont">
           <div class="card-client1">
             <div class="user-picture">
-              <img src="/static/images/manager.png" alt="" />
+              <img src="{% static '/images/manager.png' %}" alt="" />
             </div>
             <div class="dets">
               <h2>{{user.email}}</h2>
@@ -360,7 +363,7 @@
             </div>
           </a>
           <div id="img-cont">
-            <img src="/static/images/logo-no-background.png" alt="" />
+            <img src="{% static '/images/logo-no-background.png' %}" alt="" />
           </div>
         </div>
       </div>
@@ -369,7 +372,7 @@
       </div>
     </div>
   </div>
-  <script src="/static/js/base.js"></script>
+  <script src="{% static '/js/base.js' %}"></script>
   <script>
     var popup = document.querySelector(".message");
     if (popup){
