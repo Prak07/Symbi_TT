@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config("SECRET_KEY" , default="y&0-px!_btuunradeqv6+x@v&&ano=iixs#=4)qe4d*u#*37#s")
 
-DEBUG = config("DEBUG", cast=bool)
+DEBUG = config("DEBUG", cast=bool , default="False")
 
 ALLOWED_HOSTS = ["*",".vercel.app","now.sh","http://127.0.0.1:8000/","localhost"]
 
