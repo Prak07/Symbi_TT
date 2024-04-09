@@ -2,7 +2,8 @@
     "version": 2,
     "builds": [{
         "src": "time_table/wsgi.py",
-        "use": "@vercel/python"
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb" , "runtime": "python3.8" }
     },
     {
         "src": "build_files.sh",
@@ -19,7 +20,8 @@
         },
         {
             "src": "/(.*)",
-            "dest": "time_table/wsgi.py"
+            "dest": "time_table/wsgi.py",
+            "config": { "maxLambdaSize": "15mb" , "runtime": "python3.8" }
         }
         
     ]

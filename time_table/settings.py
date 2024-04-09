@@ -5,9 +5,9 @@ from decouple import config
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = config("SECRET_KEY" , default="y&0-px!_btuunradeqv6+x@v&&ano=iixs#=4)qe4d*u#*37#s")
+SECRET_KEY = config("SECRET_KEY")
 
-DEBUG = config("DEBUG", cast=bool , default="False")
+DEBUG = config("DEBUG", cast=bool)
 
 ALLOWED_HOSTS = [".vercel.app",".now.sh","http://127.0.0.1:8000/","localhost"]
 
@@ -24,14 +24,14 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 #HTTPS Setting
-SESSION_COOKIE_SECURE=True
-CSRF_COOKIE_SECURE=True
-SECURE_SSL_REDIRECT=True
+# SESSION_COOKIE_SECURE=True
+# CSRF_COOKIE_SECURE=True
+# SECURE_SSL_REDIRECT=True
 
-#HSTS Setting
-SECURE_HSTS_SECONDS=31536000
-SECURE_HSTS_PRELOAD=True
-SECURE_HSTS_INCLUDE_SUBDOMAINS=True
+# #HSTS Setting
+# SECURE_HSTS_SECONDS=31536000
+# SECURE_HSTS_PRELOAD=True
+# SECURE_HSTS_INCLUDE_SUBDOMAINS=True
 
 
 MIDDLEWARE = [
