@@ -24,14 +24,14 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 #HTTPS Setting
-# SESSION_COOKIE_SECURE=True
-# CSRF_COOKIE_SECURE=True
-# SECURE_SSL_REDIRECT=True
+SESSION_COOKIE_SECURE=True
+CSRF_COOKIE_SECURE=True
+SECURE_SSL_REDIRECT=True
 
-# #HSTS Setting
-# SECURE_HSTS_SECONDS=31536000
-# SECURE_HSTS_PRELOAD=True
-# SECURE_HSTS_INCLUDE_SUBDOMAINS=True
+#HSTS Setting
+SECURE_HSTS_SECONDS=31536000
+SECURE_HSTS_PRELOAD=True
+SECURE_HSTS_INCLUDE_SUBDOMAINS=True
 
 
 MIDDLEWARE = [
@@ -105,15 +105,12 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
 
 if DEBUG:
   STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 else:
   STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 

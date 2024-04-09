@@ -20,8 +20,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "time_table/wsgi.py",
-            "config": { "maxLambdaSize": "15mb" , "runtime": "python3.8" }
+            "dest": "time_table/wsgi.py"
         }
         
     ]
