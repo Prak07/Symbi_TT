@@ -9,7 +9,7 @@ SECRET_KEY = config("SECRET_KEY" , default="y&0-px!_btuunradeqv6+x@v&&ano=iixs#=
 
 DEBUG = config("DEBUG", cast=bool , default="False")
 
-ALLOWED_HOSTS = ["*",".vercel.app","now.sh","http://127.0.0.1:8000/","localhost"]
+ALLOWED_HOSTS = [".vercel.app",".now.sh","http://127.0.0.1:8000/","localhost"]
 
 
 # Application definition
