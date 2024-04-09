@@ -20,7 +20,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "time_table/time_table/wsgi.py"
+            "dest": "time_table/wsgi.py"
         }
         
     ]
