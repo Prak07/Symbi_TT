@@ -9,7 +9,7 @@ SECRET_KEY = config("SECRET_KEY")
 
 DEBUG = config("DEBUG", cast=bool)
 
-ALLOWED_HOSTS = [".vercel.app",".now.sh","*"]
+ALLOWED_HOSTS = ["symbi-tt.vercel.app",".now.sh","*"]
 
 
 # Application definition
@@ -26,6 +26,7 @@ INSTALLED_APPS = [
 #HTTPS Setting
 SESSION_COOKIE_SECURE=True
 CSRF_COOKIE_SECURE=True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT=True
 
 #HSTS Setting
