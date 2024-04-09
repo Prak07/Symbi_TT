@@ -9,5 +9,4 @@ urlpatterns = [
     path("", include("tt.urls")),
     re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]
-# urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
 handler404='tt.views.error_404'
