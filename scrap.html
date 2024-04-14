@@ -108,7 +108,7 @@
 
 $(window).on('load', function() {
 
-  var args = {day: '12',
+  var args = {day: '15',
               month: '4',
               year: '2024',
               area: '1',
@@ -144,7 +144,7 @@ $(window).on('load', function() {
 </li>
 <li>
 <form action="day.php" method="get" id="Form1">
-<span class="dateselector js_hidden" data-prefix="" data-day="12" data-month="4" data-year="2024" data-min-year="2019" data-max-year="2029" data-form-id="Form1">
+<span class="dateselector js_hidden" data-prefix="" data-day="15" data-month="4" data-year="2024" data-min-year="2019" data-max-year="2029" data-form-id="Form1">
 <select id="day" name="day">
 <option value="1">1</option>
 <option value="2">2</option>
@@ -157,10 +157,10 @@ $(window).on('load', function() {
 <option value="9">9</option>
 <option value="10">10</option>
 <option value="11">11</option>
-<option value="12" selected="selected">12</option>
+<option value="12">12</option>
 <option value="13">13</option>
 <option value="14">14</option>
-<option value="15">15</option>
+<option value="15" selected="selected">15</option>
 <option value="16">16</option>
 <option value="17">17</option>
 <option value="18">18</option>
@@ -212,20 +212,20 @@ $(window).on('load', function() {
 </form>
 </li>
 <li>
-<a href="help.php?day=12&amp;month=4&amp;year=2024&amp;area=1&amp;room=29">Help</a>
+<a href="help.php?day=15&amp;month=4&amp;year=2024&amp;area=1&amp;room=29">Help</a>
 </li>
 <li>
-<a href="admin.php?day=12&amp;month=4&amp;year=2024&amp;area=1&amp;room=29">Rooms</a>
+<a href="admin.php?day=15&amp;month=4&amp;year=2024&amp;area=1&amp;room=29">Rooms</a>
 </li>
 <li>
-<a href="report.php?day=12&amp;month=4&amp;year=2024&amp;area=1&amp;room=29">Report</a>
+<a href="report.php?day=15&amp;month=4&amp;year=2024&amp;area=1&amp;room=29">Report</a>
 </li>
 <li>
 <form id="header_search" method="get" action="search.php">
 <div>
 <a href="search.php?advanced=1">Search:</a>
 <input type="search" name="search_str" value="" required>
-<input type="hidden" name="day" value="12">
+<input type="hidden" name="day" value="15">
 <input type="hidden" name="month" value="4">
 <input type="hidden" name="year" value="2024">
 <input type="hidden" name="area" value="1">
@@ -238,7 +238,7 @@ $(window).on('load', function() {
                 <a href="">Unknown user</a>
                 <form method="post" action="admin.php">
                   <div>
-                    <input type="hidden" name="TargetURL" value="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29">
+                    <input type="hidden" name="TargetURL" value="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29">
                     <input type="hidden" name="Action" value="QueryName">
                     <input type="submit" value=" Log in ">
                   </div>
@@ -256,7 +256,7 @@ $(window).on('load', function() {
 <table class="calendar">
 <thead>
 <tr>
-<th colspan="7"><a href="month.php?year=2024&amp;month=3&amp;day=12&amp;area=1&amp;room=29">March&nbsp;2024</a></th>
+<th colspan="7"><a href="month.php?year=2024&amp;month=3&amp;day=15&amp;area=1&amp;room=29">March&nbsp;2024</a></th>
 </tr>
 <tr>
 <th>Sun</th>
@@ -330,7 +330,7 @@ $(window).on('load', function() {
 <table class="calendar">
 <thead>
 <tr>
-<th colspan="7"><a href="month.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29">April&nbsp;2024</a></th>
+<th colspan="7"><a href="month.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29">April&nbsp;2024</a></th>
 </tr>
 <tr>
 <th>Sun</th>
@@ -358,12 +358,12 @@ $(window).on('load', function() {
 <td><a href="day.php?year=2024&amp;month=4&amp;day=9&amp;area=1&amp;room=29">9</a></td>
 <td><a href="day.php?year=2024&amp;month=4&amp;day=10&amp;area=1&amp;room=29">10</a></td>
 <td><a href="day.php?year=2024&amp;month=4&amp;day=11&amp;area=1&amp;room=29">11</a></td>
-<td id="sticky_day"><a class="current" href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29">12</a></td>
+<td><a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29">12</a></td>
 <td><a href="day.php?year=2024&amp;month=4&amp;day=13&amp;area=1&amp;room=29">13</a></td>
 </tr>
 <tr>
 <td><a href="day.php?year=2024&amp;month=4&amp;day=14&amp;area=1&amp;room=29">14</a></td>
-<td><a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29">15</a></td>
+<td id="sticky_day"><a class="current" href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29">15</a></td>
 <td><a href="day.php?year=2024&amp;month=4&amp;day=16&amp;area=1&amp;room=29">16</a></td>
 <td><a href="day.php?year=2024&amp;month=4&amp;day=17&amp;area=1&amp;room=29">17</a></td>
 <td><a href="day.php?year=2024&amp;month=4&amp;day=18&amp;area=1&amp;room=29">18</a></td>
@@ -395,7 +395,7 @@ $(window).on('load', function() {
 <table class="calendar">
 <thead>
 <tr>
-<th colspan="7"><a href="month.php?year=2024&amp;month=5&amp;day=12&amp;area=1&amp;room=29">May&nbsp;2024</a></th>
+<th colspan="7"><a href="month.php?year=2024&amp;month=5&amp;day=15&amp;area=1&amp;room=29">May&nbsp;2024</a></th>
 </tr>
 <tr>
 <th>Sun</th>
@@ -517,83 +517,83 @@ $(window).on('load', function() {
 <input type = 'submit' name = 'submit' value = 'Submit'></form>
 </div>
 <div id="dwm">
-<h2>Friday 12 April 2024</h2>
+<h2>Monday 15 April 2024</h2>
 </div>
 
 <nav class="date_nav">
-  <a class="date_before" href="day.php?area=1&amp;room=29&amp;year=2024&amp;month=04&amp;day=11&amp;type=">Go To Day Before</a>
+  <a class="date_before" href="day.php?area=1&amp;room=29&amp;year=2024&amp;month=04&amp;day=14&amp;type=">Go To Day Before</a>
   <a class="date_now" href="day.php?area=1&amp;room=29;">Go To Today</a>
-  <a class="date_after" href="day.php?area=1&amp;room=29&amp;year=2024&amp;month=04&amp;day=13&amp;type=">Go To Day After</a>
+  <a class="date_after" href="day.php?area=1&amp;room=29&amp;year=2024&amp;month=04&amp;day=16&amp;type=">Go To Day After</a>
 </nav>
 <table class="dwm_main" id="day_main" data-resolution="1800">
 <thead>
 <tr>
 <th class="first_last" style="width: 1%">Time:</th>
 <th data-room="29" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29"
                         title="View Week &#10;&#10;Class Room">203 (48)</a></th>
 <th data-room="28" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=28"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=28"
                         title="View Week &#10;&#10;Lab">207 (52)</a></th>
 <th data-room="13" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=13"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=13"
                         title="View Week &#10;&#10;Class Room">301 (50)</a></th>
 <th data-room="31" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=31"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=31"
                         title="View Week &#10;&#10;Class Room">303 (48)</a></th>
 <th data-room="14" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=14"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=14"
                         title="View Week &#10;&#10;Class Room">304 (50)</a></th>
 <th data-room="15" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=15"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=15"
                         title="View Week &#10;&#10;Class Room">305 (48)</a></th>
 <th data-room="16" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=16"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=16"
                         title="View Week &#10;&#10;Class Room">306 (48)</a></th>
 <th data-room="7" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=7"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=7"
                         title="View Week &#10;&#10;Lab">307 (75)</a></th>
 <th data-room="17" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=17"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=17"
                         title="View Week &#10;&#10;Class Room">401 (46)</a></th>
 <th data-room="9" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=9"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=9"
                         title="View Week &#10;&#10;Class Room">402 (28)</a></th>
 <th data-room="10" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=10"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=10"
                         title="View Week &#10;&#10;Lab">404 (30)</a></th>
 <th data-room="18" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=18"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=18"
                         title="View Week &#10;&#10;Class Room">405 (40)</a></th>
 <th data-room="19" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=19"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=19"
                         title="View Week &#10;&#10;Class Room">406 (40)</a></th>
 <th data-room="27" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=27"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=27"
                         title="View Week &#10;&#10;AV Hall">407 (100)</a></th>
 <th data-room="21" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=21"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=21"
                         title="View Week &#10;&#10;Class Room">701 (46)</a></th>
 <th data-room="22" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=22"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=22"
                         title="View Week &#10;&#10;Class Room">702 (44)</a></th>
 <th data-room="23" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=23"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=23"
                         title="View Week &#10;&#10;Lab">703 (21)</a></th>
 <th data-room="24" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=24"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=24"
                         title="View Week &#10;&#10;Class Room">704 (50)</a></th>
 <th data-room="25" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=25"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=25"
                         title="View Week &#10;&#10;Lab">705 (34)</a></th>
 <th data-room="26" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=26"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=26"
                         title="View Week &#10;&#10;Class Room">706 (40)</a></th>
 <th data-room="1" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=1"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=1"
                         title="View Week &#10;&#10;AV Hall">707 (90)</a></th>
 <th data-room="30" style="width: 4.500000%">
-                        <a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=30"
+                        <a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=30"
                         title="View Week &#10;&#10;Class Room">SDRC (15)</a></th>
 </tr>
 </thead>
@@ -601,137 +601,137 @@ $(window).on('load', function() {
 <tr class="even_row">
 <td class="row_labels" data-seconds="27000">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=27000" title="Highlight this line">07:30</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=27000" title="Highlight this line">07:30</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=29&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=28&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=13&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=16&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=17&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=27&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=21&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=24&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=26&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=1&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -739,122 +739,125 @@ $(window).on('load', function() {
 <tr class="odd_row">
 <td class="row_labels" data-seconds="28800">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=28800" title="Highlight this line">08:00</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=28800" title="Highlight this line">08:00</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=29&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
-<td class="N" rowspan="4">
-<div data-id="248652" data-type="N" class="celldiv slots4">
-<a href="view_entry.php?id=248652&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV- Honours Python for Data Science-Ms.Hema Gaikwad"><img class="repeat_symbol N" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Honours Python for Data Science-Ms.Hema Gaikwad</a>
+<td class="G" rowspan="2">
+<div data-id="240811" data-type="G" class="celldiv slots2">
+<a href="view_entry.php?id=240811&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Introduction to Java Enterprise Framework-Div A- Dr. Farhana Desai"><img class="repeat_symbol G" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Introduction to Java Enterprise Framework-Div A- Dr. Farhana Desai</a>
 </div>
 </td>
 <td class="j" rowspan="19">
-<div data-id="253524" data-type="j" class="celldiv slots19">
-<a href="view_entry.php?id=253524&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="Term End Exam PG">Term End Exam PG</a>
-</div>
-</td>
-<td class="N" rowspan="4">
-<div data-id="253051" data-type="N" class="celldiv slots4">
-<a href="view_entry.php?id=253051&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV-Honours Cloud Programming and Application Development- Mr.Parag Joshi"><img class="repeat_symbol N" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV-Honours Cloud Programming and Application Development- Mr.Parag Joshi</a>
-</div>
-</td>
-<td class="N" rowspan="2">
-<div data-id="254626" data-type="N" class="celldiv slots2">
-<a href="view_entry.php?id=254626&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV-Honours Identity and Access Management-Mr.Kunal Chandak"><img class="repeat_symbol N" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV-Honours Identity and Access Management-Mr.Kunal Chandak</a>
+<div data-id="253557" data-type="j" class="celldiv slots19">
+<a href="view_entry.php?id=253557&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="Term End Exam PG">Term End Exam PG</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="h" rowspan="4">
-<div data-id="236757" data-type="h" class="celldiv slots4">
-<a href="view_entry.php?id=236757&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA(Hons) Sem VI_Responsible AI_(AI&amp;ML) A. Kshirsagar"><img class="repeat_symbol h" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA(Hons) Sem VI_Responsible AI_(AI&amp;ML) A. Kshirsagar</a>
-</div>
-</td>
-<td class="N" rowspan="4">
-<div data-id="251749" data-type="N" class="celldiv slots4">
-<a href="view_entry.php?id=251749&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV-Honours Neural Network-Mr. Sulaxan Jadhav"><img class="repeat_symbol N" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV-Honours Neural Network-Mr. Sulaxan Jadhav</a>
-</div>
-</td>
-<td class="R" rowspan="4">
-<div data-id="254624" data-type="R" class="celldiv slots4">
-<a href="view_entry.php?id=254624&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA-IT Sem IV Div A Creativity and Innovation( FCC) Ashok Pattar">BBA-IT Sem IV Div A Creativity and Innovation( FCC)  Ashok Pattar</a>
-</div>
-</td>
-<td class="h" rowspan="4">
-<div data-id="236723" data-type="h" class="celldiv slots4">
-<a href="view_entry.php?id=236723&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA(Hons) Sem VI_Cloud Security(CC)_ Nkhachane"><img class="repeat_symbol h" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA(Hons) Sem VI_Cloud Security(CC)_ Nkhachane</a>
-</div>
-</td>
-<td class="h" rowspan="2">
-<div data-id="250036" data-type="h" class="celldiv slots2">
-<a href="view_entry.php?id=250036&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA(Hons) Sem VI_Quantum Machine Learning(DS)_ Anuja B"><img class="repeat_symbol h" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA(Hons) Sem VI_Quantum Machine Learning(DS)_ Anuja B</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
+</a>
+</div>
+</td>
+<td class="K" rowspan="2">
+<div data-id="246935" data-type="K" class="celldiv slots2">
+<a href="view_entry.php?id=246935&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Foundations of Data Warehousing and Data Mining- Div E- Ms. Kumari Deepika"><img class="repeat_symbol K" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Foundations of Data Warehousing and Data Mining- Div E- Ms. Kumari Deepi</a>
+</div>
+</td>
+<td class="A" rowspan="2">
+<div data-id="253536" data-type="A" class="celldiv slots2">
+<a href="view_entry.php?id=253536&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div A -Creative Writing-Ms.KanchanGauri Joshi"><img class="repeat_symbol A" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div A -Creative Writing-Ms.KanchanGauri Joshi</a>
+</div>
+</td>
+<td class="p" rowspan="2">
+<div data-id="249613" data-type="p" class="celldiv slots2">
+<a href="view_entry.php?id=249613&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Div F- Computer Forensics Detection Prevention IT Frauds-Mr. Sulaxan Jadhav"><img class="repeat_symbol p" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Div F- Computer Forensics Detection Prevention IT Frauds-Mr. Sulaxan Jad</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="O" rowspan="2">
-<div data-id="253514" data-type="O" class="celldiv slots2">
-<a href="view_entry.php?id=253514&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT) II- Banking Operations- Div A- Mr. VIjay Haldavnekar"><img class="repeat_symbol O" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Banking Operations- Div A- Mr. VIjay Haldavnekar</a>
+<div data-id="252806" data-type="O" class="celldiv slots2">
+<a href="view_entry.php?id=252806&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) II- Banking Operations- Div A- Mr. VIjay Haldavnekar"><img class="repeat_symbol O" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Banking Operations- Div A- Mr. VIjay Haldavnekar</a>
 </div>
 </td>
-<td class="U" rowspan="2">
-<div data-id="246901" data-type="U" class="celldiv slots2">
-<a href="view_entry.php?id=246901&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT)  IV Elective: Foundations of Data Warehousing and Data Mining-Dr.Farhana Desai"><img class="repeat_symbol U" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Elective: Foundations of Data Warehousing and Data Mining-Dr.Farhana</a>
+<td class="H" rowspan="2">
+<div data-id="253543" data-type="H" class="celldiv slots2">
+<a href="view_entry.php?id=253543&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Introduction to Blockchain Technologies- Div B- Mr. Shashshank Gaikwad"><img class="repeat_symbol H" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Introduction to Blockchain Technologies- Div B- Mr. Shashshank Gaikwad</a>
 </div>
 </td>
-<td class="Q" rowspan="2">
-<div data-id="252619" data-type="Q" class="celldiv slots2">
-<a href="view_entry.php?id=252619&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT) II- Innovation Management- Div C- Ms. Kanchangauri Joshi"><img class="repeat_symbol Q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Innovation Management- Div C- Ms. Kanchangauri Joshi</a>
+<td class="R" rowspan="2">
+<div data-id="253143" data-type="R" class="celldiv slots2">
+<a href="view_entry.php?id=253143&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT)  IV Div A: Creativity and Innovation-Mr.Ashok Pattar"><img class="repeat_symbol R" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Div A: Creativity and Innovation-Mr.Ashok Pattar</a>
+</div>
+</td>
+<td class="T" rowspan="2">
+<div data-id="243628" data-type="T" class="celldiv slots2">
+<a href="view_entry.php?id=243628&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT)  IV Div C: Introduction to Enterprise Resource Planning--Ms.Hema Gaikwad"><img class="repeat_symbol T" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Div C: Introduction to Enterprise Resource Planning--Ms.Hema Gaikwad</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="j" rowspan="19">
-<div data-id="253525" data-type="j" class="celldiv slots19">
-<a href="view_entry.php?id=253525&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="Term End Exam PG">Term End Exam PG</a>
+<div data-id="253558" data-type="j" class="celldiv slots19">
+<a href="view_entry.php?id=253558&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="Term End Exam PG">Term End Exam PG</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="j" rowspan="19">
-<div data-id="253526" data-type="j" class="celldiv slots19">
-<a href="view_entry.php?id=253526&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="Term End Exam PG">Term End Exam PG</a>
+<div data-id="253559" data-type="j" class="celldiv slots19">
+<a href="view_entry.php?id=253559&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="Term End Exam PG">Term End Exam PG</a>
 </div>
 </td>
 <td class="j" rowspan="19">
-<div data-id="253527" data-type="j" class="celldiv slots19">
-<a href="view_entry.php?id=253527&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="Term End Exam PG">Term End Exam PG</a>
+<div data-id="253560" data-type="j" class="celldiv slots19">
+<a href="view_entry.php?id=253560&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="Term End Exam PG">Term End Exam PG</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -862,47 +865,65 @@ $(window).on('load', function() {
 <tr class="even_row">
 <td class="row_labels" data-seconds="30600">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=30600" title="Highlight this line">08:30</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=30600" title="Highlight this line">08:30</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=29&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -910,72 +931,100 @@ $(window).on('load', function() {
 <tr class="odd_row">
 <td class="row_labels" data-seconds="32400">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=32400" title="Highlight this line">09:00</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=32400" title="Highlight this line">09:00</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=29&amp;hour=9&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=9&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
-<td class="N" rowspan="2">
-<div data-id="241440" data-type="N" class="celldiv slots2">
-<a href="view_entry.php?id=241440&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV-Honours Identity and Access Management-Mr.Kunal Chandak"><img class="repeat_symbol N" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV-Honours Identity and Access Management-Mr.Kunal Chandak</a>
+<td class="G" rowspan="2">
+<div data-id="240828" data-type="G" class="celldiv slots2">
+<a href="view_entry.php?id=240828&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Introduction to Java Enterprise Framework-Div A- Dr. Farhana Desai"><img class="repeat_symbol G" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Introduction to Java Enterprise Framework-Div A- Dr. Farhana Desai</a>
+</div>
+</td>
+<td class="B" rowspan="2">
+<div data-id="237791" data-type="B" class="celldiv slots2">
+<a href="view_entry.php?id=237791&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div B -Creative Writing-Ms.KanchanGauri Joshi"><img class="repeat_symbol B" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div B -Creative Writing-Ms.KanchanGauri Joshi</a>
+</div>
+</td>
+<td class="C" rowspan="2">
+<div data-id="237991" data-type="C" class="celldiv slots2">
+<a href="view_entry.php?id=237991&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div C-Relational Database Management System-Dr.Prafulla Bafna"><img class="repeat_symbol C" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div C-Relational Database Management System-Dr.Prafulla Bafna</a>
+</div>
+</td>
+<td class="o" rowspan="2">
+<div data-id="246952" data-type="o" class="celldiv slots2">
+<a href="view_entry.php?id=246952&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Big Data Analytics- Div E- Ms. Vrushali Kulkarni"><img class="repeat_symbol o" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Big Data Analytics- Div E- Ms. Vrushali Kulkarni</a>
+</div>
+</td>
+<td class="A" rowspan="2">
+<div data-id="253537" data-type="A" class="celldiv slots2">
+<a href="view_entry.php?id=253537&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div A -Server Side Web Technology-Ms. Rasila Walhekar"><img class="repeat_symbol A" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div A -Server Side Web Technology-Ms. Rasila Walhekar</a>
+</div>
+</td>
+<td class="L" rowspan="2">
+<div data-id="245049" data-type="L" class="celldiv slots2">
+<a href="view_entry.php?id=245049&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Foundations of Data Warehousing and Data Mining- Div F- Ms. Kumari Deepika"><img class="repeat_symbol L" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Foundations of Data Warehousing and Data Mining- Div F- Ms. Kumari Deepi</a>
+</div>
+</td>
+<td class="F" rowspan="2">
+<div data-id="239256" data-type="F" class="celldiv slots2">
+<a href="view_entry.php?id=239256&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div F -Creative Writing-Mrinmayi Shrirang Huprikar"><img class="repeat_symbol F" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div F -Creative Writing-Mrinmayi Shrirang Huprikar</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=9&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="h" rowspan="2">
-<div data-id="251709" data-type="h" class="celldiv slots2">
-<a href="view_entry.php?id=251709&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA(Hons) Sem VI_Quantum Machine Learning(DS)_ Anuja B"><img class="repeat_symbol h" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA(Hons) Sem VI_Quantum Machine Learning(DS)_ Anuja B</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=9&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=9&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=9&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=9&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
+</div>
+</td>
+<td class="P" rowspan="2">
+<div data-id="240227" data-type="P" class="celldiv slots2">
+<a href="view_entry.php?id=240227&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) II- Banking Operations- Div B- Mr. VIjay Haldavnekar"><img class="repeat_symbol P" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Banking Operations- Div B- Mr. VIjay Haldavnekar</a>
 </div>
 </td>
 <td class="O" rowspan="2">
-<div data-id="253515" data-type="O" class="celldiv slots2">
-<a href="view_entry.php?id=253515&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT) II- Banking Operations- Div A- Mr. VIjay Haldavnekar"><img class="repeat_symbol O" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Banking Operations- Div A- Mr. VIjay Haldavnekar</a>
+<div data-id="252823" data-type="O" class="celldiv slots2">
+<a href="view_entry.php?id=252823&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Python-DIv A- Dr.Anuja Bokhare"><img class="repeat_symbol O" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Introduction to Python-DIv A- Dr.Anuja Bokhare</a>
 </div>
 </td>
-<td class="U" rowspan="2">
-<div data-id="246918" data-type="U" class="celldiv slots2">
-<a href="view_entry.php?id=246918&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT)  IV Elective: Foundations of Data Warehousing and Data Mining-Dr.Farhana Desai"><img class="repeat_symbol U" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Elective: Foundations of Data Warehousing and Data Mining-Dr.Farhana</a>
+<td class="H" rowspan="2">
+<div data-id="253544" data-type="H" class="celldiv slots2">
+<a href="view_entry.php?id=253544&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Introduction to Blockchain Technologies- Div B- Mr. Shashshank Gaikwad"><img class="repeat_symbol H" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Introduction to Blockchain Technologies- Div B- Mr. Shashshank Gaikwad</a>
 </div>
 </td>
-<td class="Q" rowspan="2">
-<div data-id="252636" data-type="Q" class="celldiv slots2">
-<a href="view_entry.php?id=252636&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT) II- Innovation Management- Div C- Ms. Kanchangauri Joshi"><img class="repeat_symbol Q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Innovation Management- Div C- Ms. Kanchangauri Joshi</a>
+<td class="R" rowspan="2">
+<div data-id="253126" data-type="R" class="celldiv slots2">
+<a href="view_entry.php?id=253126&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT)  IV Div A: Creativity and Innovation-Mr.Ashok Pattar"><img class="repeat_symbol R" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Div A: Creativity and Innovation-Mr.Ashok Pattar</a>
+</div>
+</td>
+<td class="T" rowspan="2">
+<div data-id="248495" data-type="T" class="celldiv slots2">
+<a href="view_entry.php?id=248495&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT)  IV Div C: Current Trends and Practices in IT-Dr.Sarika Sharma"><img class="repeat_symbol T" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Div C: Current Trends and Practices in IT-Dr.Sarika Sharma</a>
+</div>
+</td>
+<td class="V" rowspan="3">
+<div data-id="253538" data-type="V" class="celldiv slots3">
+<a href="view_entry.php?id=253538&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) VI Flexi-Credit Course(Fundamentals of Quality Management)"><img class="repeat_symbol V" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) VI Flexi-Credit Course(Fundamentals of Quality Management)</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=9&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=9&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=9&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=9&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=9&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -983,47 +1032,35 @@ $(window).on('load', function() {
 <tr class="even_row">
 <td class="row_labels" data-seconds="34200">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=34200" title="Highlight this line">09:30</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=34200" title="Highlight this line">09:30</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=29&amp;hour=9&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=9&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=9&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=9&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=9&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=9&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=9&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=9&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=9&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=9&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=9&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=9&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -1031,111 +1068,107 @@ $(window).on('load', function() {
 <tr class="odd_row">
 <td class="row_labels" data-seconds="36000">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=36000" title="Highlight this line">10:00</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=36000" title="Highlight this line">10:00</a>
 </div></td>
-<td class="A" rowspan="4">
-<div data-id="253903" data-type="A" class="celldiv slots4">
-<a href="view_entry.php?id=253903&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="Extra Lecture : BCA Sem II Div A : Yoga Therapy Principles and Practices - Vaishali Madam"><img class="repeat_symbol A" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">Extra Lecture : BCA Sem II Div A : Yoga Therapy Principles and Practices - Vaish</a>
-</div>
-</td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=28&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=16&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=17&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="E" rowspan="6">
-<div data-id="254637" data-type="E" class="celldiv slots6">
-<a href="view_entry.php?id=254637&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="Extra Lecture : BCA Sem II : Yoga Therapy  Principles and Practices - Ramandeep madam">Extra Lecture : BCA Sem II : Yoga Therapy  Principles and Practices - Ramandeep</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=27&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=21&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -1143,90 +1176,96 @@ $(window).on('load', function() {
 <tr class="even_row">
 <td class="row_labels" data-seconds="37800">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=37800" title="Highlight this line">10:30</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=37800" title="Highlight this line">10:30</a>
 </div></td>
-<td class="P" rowspan="2">
-<div data-id="254615" data-type="P" class="celldiv slots2">
-<a href="view_entry.php?id=254615&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT) II- Innovation Management- Div B- Ms. Kanchangauri Joshi- extra">BBA(IT) II- Innovation Management- Div B- Ms. Kanchangauri Joshi- extra</a>
-</div>
-</td>
-<td class="N" rowspan="2">
-<div data-id="253057" data-type="N" class="celldiv slots2">
-<a href="view_entry.php?id=253057&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV-Honours Cloud Programming and Application Development- Mr.Parag Joshi"><img class="repeat_symbol N" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV-Honours Cloud Programming and Application Development- Mr.Parag Joshi</a>
-</div>
-</td>
-<td class="N" rowspan="2">
-<div data-id="241472" data-type="N" class="celldiv slots2">
-<a href="view_entry.php?id=241472&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV-Honours Identity and Access Management-Mr.Kunal Chandak"><img class="repeat_symbol N" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV-Honours Identity and Access Management-Mr.Kunal Chandak</a>
-</div>
-</td>
-<td class="N" rowspan="4">
-<div data-id="250712" data-type="N" class="celldiv slots4">
-<a href="view_entry.php?id=250712&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV-Honours Data preparation and Data management-Dr. Shilpa Mujumdar"><img class="repeat_symbol N" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV-Honours Data preparation and Data management-Dr. Shilpa Mujumdar</a>
-</div>
-</td>
-<td class="h" rowspan="2">
-<div data-id="236808" data-type="h" class="celldiv slots2">
-<a href="view_entry.php?id=236808&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA(Hons) Sem VI_Responsible AI_(AI&amp;ML) A. Kshirsagar"><img class="repeat_symbol h" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA(Hons) Sem VI_Responsible AI_(AI&amp;ML) A. Kshirsagar</a>
-</div>
-</td>
-<td class="N" rowspan="2">
-<div data-id="251766" data-type="N" class="celldiv slots2">
-<a href="view_entry.php?id=251766&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV-Honours Neural Network-Mr. Sulaxan Jadhav"><img class="repeat_symbol N" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV-Honours Neural Network-Mr. Sulaxan Jadhav</a>
-</div>
-</td>
-<td class="C" rowspan="4">
-<div data-id="253940" data-type="C" class="celldiv slots4">
-<a href="view_entry.php?id=253940&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="Extra Lecture : BCA Sem II Div C : Server Side Web Technology - Janhavi Madam">Extra Lecture : BCA Sem II Div C : Server Side Web Technology - Janhavi Madam</a>
-</div>
-</td>
-<td class="h" rowspan="2">
-<div data-id="236740" data-type="h" class="celldiv slots2">
-<a href="view_entry.php?id=236740&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA(Hons) Sem VI_Cloud Security(CC)_ Nkhachane"><img class="repeat_symbol h" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA(Hons) Sem VI_Cloud Security(CC)_ Nkhachane</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=10&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
+<td class="O" rowspan="2">
+<div data-id="240061" data-type="O" class="celldiv slots2">
+<a href="view_entry.php?id=240061&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Operating systems- Div A- Dr. Amol Vibhute"><img class="repeat_symbol O" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Introduction to Operating systems- Div A- Dr. Amol Vibhute</a>
 </div>
 </td>
 <td class="Q" rowspan="2">
-<div data-id="253517" data-type="Q" class="celldiv slots2">
-<a href="view_entry.php?id=253517&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Costing- Div C- Mr. Gopal Phadke"><img class="repeat_symbol Q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Introduction to Costing- Div C- Mr. Gopal Phadke</a>
+<div data-id="253532" data-type="Q" class="celldiv slots2">
+<a href="view_entry.php?id=253532&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Python-DIv C- Ms. Janhavi Pednekar"><img class="repeat_symbol Q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Introduction to Python-DIv C- Ms. Janhavi Pednekar</a>
 </div>
 </td>
-<td class="O" rowspan="2">
-<div data-id="253516" data-type="O" class="celldiv slots2">
-<a href="view_entry.php?id=253516&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT) II- Innovation Management- Div A- Dr. Rajashree Jain"><img class="repeat_symbol O" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Innovation Management- Div A- Dr. Rajashree Jain</a>
+<td class="B" rowspan="2">
+<div data-id="237649" data-type="B" class="celldiv slots2">
+<a href="view_entry.php?id=237649&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div B -Data Structures and  Algorithms- Dr.Priti Kulkarni"><img class="repeat_symbol B" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div B -Data Structures and  Algorithms- Dr.Priti Kulkarni</a>
 </div>
 </td>
-<td class="U" rowspan="2">
-<div data-id="250645" data-type="U" class="celldiv slots2">
-<a href="view_entry.php?id=250645&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT)  IV Elective: Technologies and functions of Industry 4.0-Ms.Shubhashree Waghmare"><img class="repeat_symbol U" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Elective: Technologies and functions of Industry 4.0-Ms.Shubhashree</a>
+<td class="C" rowspan="2">
+<div data-id="245290" data-type="C" class="celldiv slots2">
+<a href="view_entry.php?id=245290&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div C -Creative Writing-Mrinmayi Shrirang Huprikar"><img class="repeat_symbol C" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div C -Creative Writing-Mrinmayi Shrirang Huprikar</a>
+</div>
+</td>
+<td class="D" rowspan="2">
+<div data-id="238423" data-type="D" class="celldiv slots2">
+<a href="view_entry.php?id=238423&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div D -Data Structures and  Algorithms -Dr. Anuja Bokhare"><img class="repeat_symbol D" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div D -Data Structures and  Algorithms -Dr. Anuja Bokhare</a>
+</div>
+</td>
+<td class="E" rowspan="2">
+<div data-id="250468" data-type="E" class="celldiv slots2">
+<a href="view_entry.php?id=250468&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div E-Relational Database Management System-Mr.Shirish Joshi"><img class="repeat_symbol E" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div E-Relational Database Management System-Mr.Shirish Joshi</a>
+</div>
+</td>
+<td class="I" rowspan="2">
+<div data-id="243490" data-type="I" class="celldiv slots2">
+<a href="view_entry.php?id=243490&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Introduction to Blockchain Technologies- Div C- Mr. Shashshank Gaikwad"><img class="repeat_symbol I" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Introduction to Blockchain Technologies- Div C- Mr. Shashshank Gaikwad</a>
+</div>
+</td>
+<td class="F" rowspan="2">
+<div data-id="239305" data-type="F" class="celldiv slots2">
+<a href="view_entry.php?id=239305&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div F -Server Side Web Technology-Ms. Rasila Walhekar"><img class="repeat_symbol F" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div F -Server Side Web Technology-Ms. Rasila Walhekar</a>
+</div>
+</td>
+<td class="o" rowspan="2">
+<div data-id="253551" data-type="o" class="celldiv slots2">
+<a href="view_entry.php?id=253551&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Big Data Analytics- Div D- Ms. Vrushali Kulkarni"><img class="repeat_symbol o" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Big Data Analytics- Div D- Ms. Vrushali Kulkarni</a>
+</div>
+</td>
+<td class="n" rowspan="2">
+<div data-id="253545" data-type="n" class="celldiv slots2">
+<a href="view_entry.php?id=253545&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Introduction to Mobile Concepts- Div B- Dr.Shrikant Mapari"><img class="repeat_symbol n" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Introduction to Mobile Concepts- Div B- Dr.Shrikant Mapari</a>
+</div>
+</td>
+<td class="P" rowspan="2">
+<div data-id="240261" data-type="P" class="celldiv slots2">
+<a href="view_entry.php?id=240261&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) II- Innovation Management- Div B- Ms. Kanchangauri Joshi"><img class="repeat_symbol P" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Innovation Management- Div B- Ms. Kanchangauri Joshi</a>
+</div>
+</td>
+<td class="A" rowspan="2">
+<div data-id="251412" data-type="A" class="celldiv slots2">
+<a href="view_entry.php?id=251412&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div A -Relational Database Management System-Dr.Prafulla Bafna"><img class="repeat_symbol A" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div A -Relational Database Management System-Dr.Prafulla Bafna</a>
+</div>
+</td>
+<td class="T" rowspan="2">
+<div data-id="243837" data-type="T" class="celldiv slots2">
+<a href="view_entry.php?id=243837&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT)  IV Div C: Creativity and Innovation-Mr.Ashok Pattar"><img class="repeat_symbol T" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Div C: Creativity and Innovation-Mr.Ashok Pattar</a>
+</div>
+</td>
+<td class="R" rowspan="2">
+<div data-id="242302" data-type="R" class="celldiv slots2">
+<a href="view_entry.php?id=242302&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT)  IV Div A: Business Research Methodology-Dr.Shilpa Mujumdar"><img class="repeat_symbol R" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Div A: Business Research Methodology-Dr.Shilpa Mujumdar</a>
+</div>
+</td>
+<td class="S" rowspan="2">
+<div data-id="243075" data-type="S" class="celldiv slots2">
+<a href="view_entry.php?id=243075&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT)  IV Div B: Introduction to Enterprise Resource Planning--Ms.Hema Gaikwad"><img class="repeat_symbol S" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Div B: Introduction to Enterprise Resource Planning--Ms.Hema Gaikwad</a>
+</div>
+</td>
+<td class="G" rowspan="2">
+<div data-id="253539" data-type="G" class="celldiv slots2">
+<a href="view_entry.php?id=253539&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Current Trends and Practices in IT- Div A- Dr. Rajashree Jain"><img class="repeat_symbol G" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Current Trends and Practices in IT- Div A- Dr. Rajashree Jain</a>
+</div>
+</td>
+<td class="K" rowspan="2">
+<div data-id="249221" data-type="K" class="celldiv slots2">
+<a href="view_entry.php?id=249221&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Foundations of Data Warehousing and Data Mining- Div E- Ms. Kumari Deepika"><img class="repeat_symbol K" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Foundations of Data Warehousing and Data Mining- Div E- Ms. Kumari Deepi</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=10&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=10&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=10&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=10&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=10&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -1234,35 +1273,11 @@ $(window).on('load', function() {
 <tr class="odd_row">
 <td class="row_labels" data-seconds="39600">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=39600" title="Highlight this line">11:00</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=39600" title="Highlight this line">11:00</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=11&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=11&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=11&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=11&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=11&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=11&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -1270,83 +1285,96 @@ $(window).on('load', function() {
 <tr class="even_row">
 <td class="row_labels" data-seconds="41400">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=41400" title="Highlight this line">11:30</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=41400" title="Highlight this line">11:30</a>
 </div></td>
-<td class="h" rowspan="4">
-<div data-id="253513" data-type="h" class="celldiv slots4">
-<a href="view_entry.php?id=253513&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA(Hons) Sem VI_Computer Forensics - Detection and Prevention of IT Frauds(DSec.)_ S Jadhav"><img class="repeat_symbol h" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA(Hons) Sem VI_Computer Forensics - Detection and Prevention of IT Frauds(DSec</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=11&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=11&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=16&amp;hour=11&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=11&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=11&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="P" rowspan="2">
-<div data-id="252244" data-type="P" class="celldiv slots2">
-<a href="view_entry.php?id=252244&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Python-DIv B-  Mr.Shirish Joshi"><img class="repeat_symbol P" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Introduction to Python-DIv B- Mr.Shirish Joshi</a>
+<td class="O" rowspan="2">
+<div data-id="240078" data-type="O" class="celldiv slots2">
+<a href="view_entry.php?id=240078&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Operating systems- Div A- Dr. Amol Vibhute"><img class="repeat_symbol O" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Introduction to Operating systems- Div A- Dr. Amol Vibhute</a>
 </div>
 </td>
 <td class="Q" rowspan="2">
-<div data-id="253518" data-type="Q" class="celldiv slots2">
-<a href="view_entry.php?id=253518&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Costing- Div C- Mr. Gopal Phadke"><img class="repeat_symbol Q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Introduction to Costing- Div C- Mr. Gopal Phadke</a>
+<div data-id="253533" data-type="Q" class="celldiv slots2">
+<a href="view_entry.php?id=253533&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Python-DIv C- Ms. Janhavi Pednekar"><img class="repeat_symbol Q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Introduction to Python-DIv C- Ms. Janhavi Pednekar</a>
 </div>
 </td>
-<td class="O" rowspan="2">
-<div data-id="254632" data-type="O" class="celldiv slots2">
-<a href="view_entry.php?id=254632&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT) Sem II Div A Innovation Management- Div A- Dr. Rajashree Jain">BBA(IT) Sem II Div A Innovation Management- Div A- Dr. Rajashree Jain</a>
+<td class="B" rowspan="2">
+<div data-id="237719" data-type="B" class="celldiv slots2">
+<a href="view_entry.php?id=237719&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div B -Relational Database Management System-Dr.Prafulla Bafna"><img class="repeat_symbol B" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div B -Relational Database Management System-Dr.Prafulla Bafna</a>
+</div>
+</td>
+<td class="p" rowspan="2">
+<div data-id="248921" data-type="p" class="celldiv slots2">
+<a href="view_entry.php?id=248921&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV-Network Administration- Div.F - Ms. Gauri Madan"><img class="repeat_symbol p" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV-Network Administration- Div. F- Ms. Gauri Madan</a>
+</div>
+</td>
+<td class="D" rowspan="2">
+<div data-id="238529" data-type="D" class="celldiv slots2">
+<a href="view_entry.php?id=238529&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div D -Creative Writing-Mrinmayi Shrirang Huprikar"><img class="repeat_symbol D" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div D -Creative Writing-Mrinmayi Shrirang Huprikar</a>
+</div>
+</td>
+<td class="E" rowspan="2">
+<div data-id="238786" data-type="E" class="celldiv slots2">
+<a href="view_entry.php?id=238786&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div E -Data Structures and  Algorithms- Dr. Anuja Bokhare"><img class="repeat_symbol E" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div E -Data Structures and  Algorithms- Dr. Anuja Bokhare</a>
+</div>
+</td>
+<td class="I" rowspan="2">
+<div data-id="243507" data-type="I" class="celldiv slots2">
+<a href="view_entry.php?id=243507&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Introduction to Blockchain Technologies- Div C- Mr. Shashshank Gaikwad"><img class="repeat_symbol I" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Introduction to Blockchain Technologies- Div C- Mr. Shashshank Gaikwad</a>
+</div>
+</td>
+<td class="F" rowspan="2">
+<div data-id="239407" data-type="F" class="celldiv slots2">
+<a href="view_entry.php?id=239407&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div F-Relational Database Management System-Mr.Shirish Joshi"><img class="repeat_symbol F" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div F-Relational Database Management System-Mr.Shirish Joshi</a>
+</div>
+</td>
+<td class="o" rowspan="2">
+<div data-id="253552" data-type="o" class="celldiv slots2">
+<a href="view_entry.php?id=253552&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Big Data Analytics-  Div D- Ms. Vrushali Kulkarni"><img class="repeat_symbol o" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Big Data Analytics-  Div D- Ms. Vrushali Kulkarni</a>
+</div>
+</td>
+<td class="H" rowspan="2">
+<div data-id="253546" data-type="H" class="celldiv slots2">
+<a href="view_entry.php?id=253546&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Current Trends and Practices in IT- Div B- Dr. Rajashree Jain"><img class="repeat_symbol H" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Current Trends and Practices in IT- Div B- Dr. Rajashree Jain</a>
+</div>
+</td>
+<td class="P" rowspan="2">
+<div data-id="240244" data-type="P" class="celldiv slots2">
+<a href="view_entry.php?id=240244&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) II- Innovation Management- Div B- Ms. Kanchangauri Joshi"><img class="repeat_symbol P" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Innovation Management- Div B- Ms. Kanchangauri Joshi</a>
+</div>
+</td>
+<td class="A" rowspan="2">
+<div data-id="251429" data-type="A" class="celldiv slots2">
+<a href="view_entry.php?id=251429&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div A -Data Structures and  Algorithms -Dr.Priti Kulkarni"><img class="repeat_symbol A" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div A -Data Structures and  Algorithms -Dr.Priti Kulkarni</a>
 </div>
 </td>
 <td class="T" rowspan="2">
-<div data-id="242096" data-type="T" class="celldiv slots2">
-<a href="view_entry.php?id=242096&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT)  IV Div C: Introduction to Enterprise Resource Planning--Ms.Hema Gaikwad"><img class="repeat_symbol T" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Div C: Introduction to Enterprise Resource Planning--Ms.Hema Gaikwad</a>
+<div data-id="243854" data-type="T" class="celldiv slots2">
+<a href="view_entry.php?id=243854&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT)  IV Div C: Creativity and Innovation-Mr.Ashok Pattar"><img class="repeat_symbol T" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Div C: Creativity and Innovation-Mr.Ashok Pattar</a>
+</div>
+</td>
+<td class="R" rowspan="2">
+<div data-id="254662" data-type="R" class="celldiv slots2">
+<a href="view_entry.php?id=254662&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) IV Div A: Business Research Methodology-Dr.Shilpa Mujumdar- extra"><img class="repeat_symbol R" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) IV Div A: Business Research Methodology-Dr.Shilpa Mujumdar- extra</a>
 </div>
 </td>
 <td class="S" rowspan="2">
-<div data-id="252962" data-type="S" class="celldiv slots2">
-<a href="view_entry.php?id=252962&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT)  IV Div B: Current Trends and Practices in IT-Dr.Sarika Sharma"><img class="repeat_symbol S" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Div B: Current Trends and Practices in IT-Dr.Sarika Sharma</a>
+<div data-id="243144" data-type="S" class="celldiv slots2">
+<a href="view_entry.php?id=243144&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT)  IV Div B: Introduction to Enterprise Resource Planning--Ms.Hema Gaikwad"><img class="repeat_symbol S" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Div B: Introduction to Enterprise Resource Planning--Ms.Hema Gaikwad</a>
+</div>
+</td>
+<td class="n" rowspan="2">
+<div data-id="253540" data-type="n" class="celldiv slots2">
+<a href="view_entry.php?id=253540&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Introduction to Mobile Concepts- Div.A - Dr.Shrikant Mapari"><img class="repeat_symbol n" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Introduction to Mobile Concepts- Div.A - Dr.Shrikant Mapari</a>
+</div>
+</td>
+<td class="K" rowspan="2">
+<div data-id="249176" data-type="K" class="celldiv slots2">
+<a href="view_entry.php?id=249176&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Introduction to Java Enterprise Framework-Div E- Dr. Sandeep Gaikwad"><img class="repeat_symbol K" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Introduction to Java Enterprise Framework-Div E- Dr. Sandeep Gaikwad</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=11&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=11&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=11&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=11&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -1354,58 +1382,11 @@ $(window).on('load', function() {
 <tr class="odd_row">
 <td class="row_labels" data-seconds="43200">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=43200" title="Highlight this line">12:00</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=43200" title="Highlight this line">12:00</a>
 </div></td>
-<td class="B" rowspan="4">
-<div data-id="253897" data-type="B" class="celldiv slots4">
-<a href="view_entry.php?id=253897&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="Extra Lecture : BCA Sem II Div B : Yoga Therapy Principles and Practices - Vaishali Madam"><img class="repeat_symbol B" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">Extra Lecture : BCA Sem II Div B : Yoga Therapy Principles and Practices - Vaish</a>
-</div>
-</td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=12&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=12&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=16&amp;hour=12&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=12&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=12&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=12&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=12&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=12&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=12&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -1413,95 +1394,111 @@ $(window).on('load', function() {
 <tr class="even_row">
 <td class="row_labels" data-seconds="45000">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=45000" title="Highlight this line">12:30</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=45000" title="Highlight this line">12:30</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
+</a>
+</div>
+</td>
+<td class="p" rowspan="2">
+<div data-id="248938" data-type="p" class="celldiv slots2">
+<a href="view_entry.php?id=248938&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV-Network Administration- Div.F - Ms. Gauri Madan"><img class="repeat_symbol p" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV-Network Administration- Div. F- Ms. Gauri Madan</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
+</a>
+</div>
+</td>
+<td class="E" rowspan="2">
+<div data-id="252438" data-type="E" class="celldiv slots2">
+<a href="view_entry.php?id=252438&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div E -Creative Writing-Mrinmayi Shrirang Huprikar"><img class="repeat_symbol E" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div E -Creative Writing-Mrinmayi Shrirang Huprikar</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=16&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=17&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=27&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=21&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -1509,101 +1506,101 @@ $(window).on('load', function() {
 <tr class="odd_row">
 <td class="row_labels" data-seconds="46800">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=46800" title="Highlight this line">13:00</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=46800" title="Highlight this line">13:00</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=16&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=17&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=27&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=21&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -1611,97 +1608,100 @@ $(window).on('load', function() {
 <tr class="even_row">
 <td class="row_labels" data-seconds="48600">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=48600" title="Highlight this line">13:30</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=48600" title="Highlight this line">13:30</a>
 </div></td>
-<td class="O" rowspan="2">
-<div data-id="254579" data-type="O" class="celldiv slots2">
-<a href="view_entry.php?id=254579&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Operating systems- Div A- Dr. Amol Vibhute- extra">BBA(IT) II- Introduction to Operating systems- Div A- Dr. Amol Vibhute- extra</a>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=13&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
+</a>
 </div>
 </td>
-<td class="M" rowspan="2">
-<div data-id="245445" data-type="M" class="celldiv slots2">
-<a href="view_entry.php?id=245445&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV- Basic Psychology- Group  2- Ms. Jiya Khatri"><img class="repeat_symbol M" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Basic Psychology- Group  2- Ms. Jiya Khatri</a>
+<td class="K" rowspan="2">
+<div data-id="249159" data-type="K" class="celldiv slots2">
+<a href="view_entry.php?id=249159&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Introduction to Java Enterprise Framework-Div E- Dr. Sandeep Gaikwad"><img class="repeat_symbol K" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Introduction to Java Enterprise Framework-Div E- Dr. Sandeep Gaikwad</a>
 </div>
 </td>
-<td class="T" rowspan="2">
-<div data-id="253964" data-type="T" class="celldiv slots2">
-<a href="view_entry.php?id=253964&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT) IV C-C &amp; I -AP extra">BBA(IT) IV C-C &amp; I -AP extra</a>
+<td class="o" rowspan="2">
+<div data-id="246797" data-type="o" class="celldiv slots2">
+<a href="view_entry.php?id=246797&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Big Data Analytics- Div C- Ms. Vrushali Kulkarni"><img class="repeat_symbol o" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Big Data Analytics- Div C- Ms. Vrushali Kulkarni</a>
+</div>
+</td>
+<td class="C" rowspan="2">
+<div data-id="238170" data-type="C" class="celldiv slots2">
+<a href="view_entry.php?id=238170&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div C -Yoga Therapy Principles-Ms. Ramandeep Kaur"><img class="repeat_symbol C" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div C -Yoga Therapy Principles-Ms. Ramandeep Kaur</a>
 </div>
 </td>
 <td class="D" rowspan="2">
-<div data-id="245343" data-type="D" class="celldiv slots2">
-<a href="view_entry.php?id=245343&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA II Div D-Relational Database Management System-Dr.Prafulla Bafna"><img class="repeat_symbol D" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div D-Relational Database Management System-Dr.Prafulla Bafna</a>
-</div>
-</td>
-<td class="M" rowspan="2">
-<div data-id="253954" data-type="M" class="celldiv slots2">
-<a href="view_entry.php?id=253954&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV- Basic Psychology- Group 3- Ms. Mrinmayi Huprikar"><img class="repeat_symbol M" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Basic Psychology- Group 3- Ms. Mrinmayi Huprikar</a>
-</div>
-</td>
-<td class="M" rowspan="2">
-<div data-id="252943" data-type="M" class="celldiv slots2">
-<a href="view_entry.php?id=252943&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV- Basic Psychology- Group  1 - Ms. Munirah Kheraluwala"><img class="repeat_symbol M" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Basic Psychology- Group  A- Ms. Munirah Kheraluwala</a>
-</div>
-</td>
-<td class="E" rowspan="4">
-<div data-id="253941" data-type="E" class="celldiv slots4">
-<a href="view_entry.php?id=253941&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="Extra Lecture : BCA Sem II Div E : Server Side Web Technology - Janhavi Madam">Extra Lecture : BCA Sem II Div E : Server Side Web Technology - Janhavi Madam</a>
+<div data-id="238548" data-type="D" class="celldiv slots2">
+<a href="view_entry.php?id=238548&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div D -Server Side Web Technology-Ms. Rasila Walhekar"><img class="repeat_symbol D" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div D -Server Side Web Technology-Ms. Rasila Walhekar</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=13&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=13&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
+</div>
+</td>
+<td class="Q" rowspan="2">
+<div data-id="253534" data-type="Q" class="celldiv slots2">
+<a href="view_entry.php?id=253534&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Operating systems- Div C- Dr. Shraddha Vaidya"><img class="repeat_symbol Q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Introduction to Operating systems- Div C- Dr. Shraddha Vaidya</a>
+</div>
+</td>
+<td class="F" rowspan="2">
+<div data-id="239428" data-type="F" class="celldiv slots2">
+<a href="view_entry.php?id=239428&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div F -Data Structures and  Algorithms-Ms.Janhavi Pednekar"><img class="repeat_symbol F" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div F -Data Structures and  Algorithms-Ms.Janhavi Pednekar</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=13&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=13&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
+</div>
+</td>
+<td class="H" rowspan="2">
+<div data-id="253547" data-type="H" class="celldiv slots2">
+<a href="view_entry.php?id=253547&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Foundations of Data Warehousing and Data Mining- Div B- Ms. Kumari Deepika"><img class="repeat_symbol H" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Foundations of Data Warehousing and Data Mining- Div B- Ms. Kumari Deepi</a>
 </div>
 </td>
 <td class="P" rowspan="2">
-<div data-id="239887" data-type="P" class="celldiv slots2">
-<a href="view_entry.php?id=239887&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Costing- Div B- Mr. Gopal Phadke"><img class="repeat_symbol P" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Introduction to Costing- Div B- Mr. Gopal Phadke</a>
+<div data-id="245616" data-type="P" class="celldiv slots2">
+<a href="view_entry.php?id=245616&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) II- Yoga- II- Div B- Ms. Trupti Adke"><img class="repeat_symbol P" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Yoga- II- Div B- Ms. Trupti Adke</a>
 </div>
 </td>
-<td class="S" rowspan="2">
-<div data-id="248478" data-type="S" class="celldiv slots2">
-<a href="view_entry.php?id=248478&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT)  IV Div B: Current Trends and Practices in IT-Dr.Sarika Sharma"><img class="repeat_symbol S" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Div B: Current Trends and Practices in IT-Dr.Sarika Sharma</a>
+<td class="A" rowspan="2">
+<div data-id="251573" data-type="A" class="celldiv slots2">
+<a href="view_entry.php?id=251573&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div A -Yoga Therapy Principles-Ms. Vaishali Kale"><img class="repeat_symbol A" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div A -Yoga Therapy Principles-Ms. Vaishali Kale</a>
 </div>
 </td>
-<td class="M" rowspan="2">
-<div data-id="249449" data-type="M" class="celldiv slots2">
-<a href="view_entry.php?id=249449&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV- Understanding Cinema- Ms. Madhuri Maitra"><img class="repeat_symbol M" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Understanding Cinema- Ms. Madhuri Maitra</a>
+<td class="U" rowspan="2">
+<div data-id="246831" data-type="U" class="celldiv slots2">
+<a href="view_entry.php?id=246831&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT)  IV Elective: Sustainable Marketing- Mr.Ashok Pattar"><img class="repeat_symbol U" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Elective: Sustainable Marketing- Mr.Ashok Pattar</a>
+</div>
+</td>
+<td class="O" rowspan="2">
+<div data-id="252705" data-type="O" class="celldiv slots2">
+<a href="view_entry.php?id=252705&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Costing- Div A- Mr. Rohan Bhase"><img class="repeat_symbol O" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Introduction to Costing- Div A- Mr. Rohan Bhase</a>
+</div>
+</td>
+<td class="n" rowspan="2">
+<div data-id="253541" data-type="n" class="celldiv slots2">
+<a href="view_entry.php?id=253541&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Advance Web Scripting-Div. A- Mr .Gaurav Pant"><img class="repeat_symbol n" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Advance Web Scripting-Div. A- Mr .Gaurav Pant</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=21&amp;hour=13&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=13&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=13&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
+<td class="J" rowspan="2">
+<div data-id="253553" data-type="J" class="celldiv slots2">
+<a href="view_entry.php?id=253553&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Current Trends and Practices in IT- Div D- Dr. Rajashree Jain"><img class="repeat_symbol J" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Current Trends and Practices in IT- Div D- Dr. Rajashree Jain</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=13&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=13&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=13&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=13&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -1709,51 +1709,35 @@ $(window).on('load', function() {
 <tr class="odd_row">
 <td class="row_labels" data-seconds="50400">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=50400" title="Highlight this line">14:00</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=50400" title="Highlight this line">14:00</a>
 </div></td>
-<td class="D" rowspan="4">
-<div data-id="253900" data-type="D" class="celldiv slots4">
-<a href="view_entry.php?id=253900&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="Extra Lecture : BCA Sem II Div D : Yoga Therapy Principles and Practices - Vaishali Madam"><img class="repeat_symbol D" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">Extra Lecture : BCA Sem II Div D : Yoga Therapy Principles and Practices - Vaish</a>
-</div>
-</td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=14&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=14&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=14&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=14&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=21&amp;hour=14&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="l" rowspan="4">
-<div data-id="254618" data-type="l" class="celldiv slots4">
-<a href="view_entry.php?id=254618&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA Sem VI Information Technology for Management - Mr. Rohan Bhase"><img class="repeat_symbol l" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA Sem VI Information Technology for Management - Mr. Rohan Bhase</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=14&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=14&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=14&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=14&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=14&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=14&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -1761,87 +1745,100 @@ $(window).on('load', function() {
 <tr class="even_row">
 <td class="row_labels" data-seconds="52200">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=52200" title="Highlight this line">14:30</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=52200" title="Highlight this line">14:30</a>
 </div></td>
-<td class="O" rowspan="2">
-<div data-id="254580" data-type="O" class="celldiv slots2">
-<a href="view_entry.php?id=254580&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Operating systems- Div A- Dr. Amol Vibhute- extra">BBA(IT) II- Introduction to Operating systems- Div A- Dr. Amol Vibhute- extra</a>
-</div>
-</td>
-<td class="M" rowspan="2">
-<div data-id="245462" data-type="M" class="celldiv slots2">
-<a href="view_entry.php?id=245462&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV- Basic Psychology- Group  2- Ms. Jiya Khatri"><img class="repeat_symbol M" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Basic Psychology- Group  2- Ms. Jiya Khatri</a>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=14&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
+</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=14&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=14&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
+</div>
+</td>
+<td class="o" rowspan="2">
+<div data-id="246814" data-type="o" class="celldiv slots2">
+<a href="view_entry.php?id=246814&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Big Data Analytics- Div C- Ms. Vrushali Kulkarni"><img class="repeat_symbol o" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Big Data Analytics- Div C- Ms. Vrushali Kulkarni</a>
+</div>
+</td>
+<td class="C" rowspan="2">
+<div data-id="238187" data-type="C" class="celldiv slots2">
+<a href="view_entry.php?id=238187&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div C -Yoga Therapy Principles-Ms. Ramandeep Kaur"><img class="repeat_symbol C" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div C -Yoga Therapy Principles-Ms. Ramandeep Kaur</a>
 </div>
 </td>
 <td class="D" rowspan="2">
-<div data-id="245360" data-type="D" class="celldiv slots2">
-<a href="view_entry.php?id=245360&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA II Div D-Relational Database Management System-Dr.Prafulla Bafna"><img class="repeat_symbol D" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div D-Relational Database Management System-Dr.Prafulla Bafna</a>
+<div data-id="238565" data-type="D" class="celldiv slots2">
+<a href="view_entry.php?id=238565&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div D -Server Side Web Technology-Ms. Rasila Walhekar"><img class="repeat_symbol D" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div D -Server Side Web Technology-Ms. Rasila Walhekar</a>
 </div>
 </td>
-<td class="M" rowspan="2">
-<div data-id="253953" data-type="M" class="celldiv slots2">
-<a href="view_entry.php?id=253953&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV- Basic Psychology- Group 3- Ms. Priyanka Kadam"><img class="repeat_symbol M" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Basic Psychology- Group 3- Ms. Priyanka Kadam</a>
+<td class="E" rowspan="2">
+<div data-id="252570" data-type="E" class="celldiv slots2">
+<a href="view_entry.php?id=252570&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div E -Data Structures and  Algorithms- Dr. Anuja Bokhare"><img class="repeat_symbol E" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div E -Data Structures and  Algorithms- Dr. Anuja Bokhare</a>
 </div>
 </td>
-<td class="M" rowspan="2">
-<div data-id="252944" data-type="M" class="celldiv slots2">
-<a href="view_entry.php?id=252944&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV- Basic Psychology- Group  1- Ms. Munirah Kheraluwala"><img class="repeat_symbol M" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Basic Psychology- Group  1- Ms. Munirah Kheraluwala</a>
+<td class="Q" rowspan="2">
+<div data-id="253535" data-type="Q" class="celldiv slots2">
+<a href="view_entry.php?id=253535&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Operating systems- Div C- Dr. Shraddha Vaidya"><img class="repeat_symbol Q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Introduction to Operating systems- Div C- Dr. Shraddha Vaidya</a>
+</div>
+</td>
+<td class="F" rowspan="2">
+<div data-id="239445" data-type="F" class="celldiv slots2">
+<a href="view_entry.php?id=239445&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div F -Data Structures and  Algorithms-Ms.Janhavi Pednekar"><img class="repeat_symbol F" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div F -Data Structures and  Algorithms-Ms.Janhavi Pednekar</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=14&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=14&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=14&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
+<td class="H" rowspan="2">
+<div data-id="253548" data-type="H" class="celldiv slots2">
+<a href="view_entry.php?id=253548&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Foundations of Data Warehousing and Data Mining- Div B- Ms. Kumari Deepika"><img class="repeat_symbol H" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Foundations of Data Warehousing and Data Mining- Div B- Ms. Kumari Deepi</a>
 </div>
 </td>
 <td class="P" rowspan="2">
-<div data-id="239904" data-type="P" class="celldiv slots2">
-<a href="view_entry.php?id=239904&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Costing- Div B- Mr. Gopal Phadke"><img class="repeat_symbol P" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Introduction to Costing- Div B- Mr. Gopal Phadke</a>
+<div data-id="240295" data-type="P" class="celldiv slots2">
+<a href="view_entry.php?id=240295&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) II- Yoga- II- Div B- Ms. Trupti Adke"><img class="repeat_symbol P" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Yoga- II- Div B- Ms. Trupti Adke</a>
 </div>
 </td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=14&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="M" rowspan="2">
-<div data-id="249465" data-type="M" class="celldiv slots2">
-<a href="view_entry.php?id=249465&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV- Understanding Cinema- Ms. Madhuri Maitra"><img class="repeat_symbol M" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Understanding Cinema- Ms. Madhuri Maitra</a>
+<td class="A" rowspan="2">
+<div data-id="251539" data-type="A" class="celldiv slots2">
+<a href="view_entry.php?id=251539&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA II Div A -Yoga Therapy Principles-Ms. Vaishali Kale"><img class="repeat_symbol A" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA II Div A -Yoga Therapy Principles-Ms. Vaishali Kale</a>
 </div>
 </td>
 <td class="U" rowspan="2">
-<div data-id="247383" data-type="U" class="celldiv slots2">
-<a href="view_entry.php?id=247383&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT)  IV Elective: Software Testing-Shirish Joshi"><img class="repeat_symbol U" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Elective: Software Testing-Shirish Joshi</a>
+<div data-id="246848" data-type="U" class="celldiv slots2">
+<a href="view_entry.php?id=246848&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT)  IV Elective: Sustainable Marketing- Mr.Ashok Pattar"><img class="repeat_symbol U" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Elective: Sustainable Marketing- Mr.Ashok Pattar</a>
+</div>
+</td>
+<td class="O" rowspan="2">
+<div data-id="252722" data-type="O" class="celldiv slots2">
+<a href="view_entry.php?id=252722&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Costing- Div A- Mr. Rohan Bhase"><img class="repeat_symbol O" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) II- Introduction to Costing- Div A- Mr. Rohan Bhase</a>
+</div>
+</td>
+<td class="n" rowspan="2">
+<div data-id="253542" data-type="n" class="celldiv slots2">
+<a href="view_entry.php?id=253542&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Advance Web Scripting-Div.A - Mr .Gaurav Pant"><img class="repeat_symbol n" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Advance Web Scripting-Div. A - Mr .Gaurav Pant</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=14&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=14&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=14&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
+<td class="J" rowspan="2">
+<div data-id="253554" data-type="J" class="celldiv slots2">
+<a href="view_entry.php?id=253554&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Foundations of Data Warehousing and Data Mining- Div D- Dr. Amol Vibhute"><img class="repeat_symbol J" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Foundations of Data Warehousing and Data Mining- Div D- Dr. Amol Vibhute</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=14&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=14&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -1849,47 +1846,35 @@ $(window).on('load', function() {
 <tr class="odd_row">
 <td class="row_labels" data-seconds="54000">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=54000" title="Highlight this line">15:00</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=54000" title="Highlight this line">15:00</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=15&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=15&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=15&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=15&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=15&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=15&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=15&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=15&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=15&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=15&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=15&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=15&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -1897,101 +1882,112 @@ $(window).on('load', function() {
 <tr class="even_row">
 <td class="row_labels" data-seconds="55800">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=55800" title="Highlight this line">15:30</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=55800" title="Highlight this line">15:30</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=28&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
+</a>
+</div>
+</td>
+<td class="E" rowspan="4">
+<div data-id="254638" data-type="E" class="celldiv slots4">
+<a href="view_entry.php?id=254638&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="Extra Lecture : BCA Sem II : Yoga Therapy  Principles and Practices - Ramandeep madam">Extra Lecture : BCA Sem II : Yoga Therapy  Principles and Practices - Ramandeep</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=16&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=17&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=27&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=21&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -1999,110 +1995,100 @@ $(window).on('load', function() {
 <tr class="odd_row">
 <td class="row_labels" data-seconds="57600">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=57600" title="Highlight this line">16:00</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=57600" title="Highlight this line">16:00</a>
 </div></td>
+<td class="A" rowspan="2">
+<div data-id="253893" data-type="A" class="celldiv slots2">
+<a href="view_entry.php?id=253893&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="Extra Lecture : BCA Sem II Div A : Yoga Therapy  Principles and Practices - Vaishali Madam"><img class="repeat_symbol A" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">Extra Lecture : BCA Sem II Div A : Yoga Therapy  Principles and Practices - Vais</a>
+</div>
+</td>
+<td class="C" rowspan="2">
+<div data-id="253938" data-type="C" class="celldiv slots2">
+<a href="view_entry.php?id=253938&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="Extra Lecture : BCA Sem II Div C  : Server Side Web Technology - Janhavi Madam">Extra Lecture : BCA Sem II Div C : Server Side Web Technology - Janhavi Madam</a>
+</div>
+</td>
+<td class="J" rowspan="4">
+<div data-id="254634" data-type="J" class="celldiv slots4">
+<a href="view_entry.php?id=254634&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="Extra Lecture - BCA Sem IV Div D - Current Trends and Practices in IT - Rajashree Madam">Extra Lecture - BCA Sem IV Div D - Current Trends and Practices in IT - Rajashre</a>
+</div>
+</td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=29&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
-<td class="O" rowspan="2">
-<div data-id="254581" data-type="O" class="celldiv slots2">
-<a href="view_entry.php?id=254581&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT) II- Introduction to Operating systems- Div A- Dr. Amol Vibhute- extra">BBA(IT) II- Introduction to Operating systems- Div A- Dr. Amol Vibhute- extra</a>
+<td class="l" rowspan="4">
+<div data-id="250911" data-type="l" class="celldiv slots4">
+<a href="view_entry.php?id=250911&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA/BBA(IT) Sem II Basic English Course for International Students-Kanchangauri M Joshi"><img class="repeat_symbol l" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA/BBA(IT) Sem II Basic English Course for International Students-Kanchangauri</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="M" rowspan="2">
-<div data-id="253955" data-type="M" class="celldiv slots2">
-<a href="view_entry.php?id=253955&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BCA IV- Basic Psychology- Group 3- Ms. Mrinmayi Huprikar">BCA IV- Basic Psychology- Group 3- Ms. Mrinmayi Huprikar</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=17&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=27&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
+<td class="n" rowspan="2">
+<div data-id="253549" data-type="n" class="celldiv slots2">
+<a href="view_entry.php?id=253549&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Advance Web Scripting-Div B- Mr .Gaurav Pant"><img class="repeat_symbol n" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Advance Web Scripting-Div B- Mr .Gaurav Pant</a>
 </div>
 </td>
 <td class="U" rowspan="2">
-<div data-id="247417" data-type="U" class="celldiv slots2">
-<a href="view_entry.php?id=247417&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="BBA(IT)  IV Elective: Software Testing-Shirish Joshi"><img class="repeat_symbol U" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Elective: Software Testing-Shirish Joshi</a>
+<div data-id="246715" data-type="U" class="celldiv slots2">
+<a href="view_entry.php?id=246715&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT)  IV Elective: Introduction to International Business-Mr.Umesh Patwari"><img class="repeat_symbol U" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Elective: Introduction to International Business-Mr.Umesh Patwari</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
+</div>
+</td>
+<td class="o" rowspan="2">
+<div data-id="253555" data-type="o" class="celldiv slots2">
+<a href="view_entry.php?id=253555&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Introduction to Cloud Computing- Div C- Ms.Sneha Shirolkar"><img class="repeat_symbol o" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Introduction to Cloud Computing- Div C- Ms.Sneha Shirolkar</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -2110,95 +2096,65 @@ $(window).on('load', function() {
 <tr class="even_row">
 <td class="row_labels" data-seconds="59400">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=59400" title="Highlight this line">16:30</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=59400" title="Highlight this line">16:30</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=29&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=17&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=27&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -2206,112 +2162,92 @@ $(window).on('load', function() {
 <tr class="odd_row">
 <td class="row_labels" data-seconds="61200">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=61200" title="Highlight this line">17:00</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=61200" title="Highlight this line">17:00</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=29&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=28&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=16&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=17&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
+</a>
+</div>
+</td>
+<td class="n" rowspan="2">
+<div data-id="253550" data-type="n" class="celldiv slots2">
+<a href="view_entry.php?id=253550&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Advance Web Scripting-Div B- Mr .Gaurav Pant"><img class="repeat_symbol n" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Advance Web Scripting-Div B- Mr .Gaurav Pant</a>
+</div>
+</td>
+<td class="U" rowspan="2">
+<div data-id="246698" data-type="U" class="celldiv slots2">
+<a href="view_entry.php?id=246698&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BBA(IT)  IV Elective: Introduction to International Business-Mr.Umesh Patwari"><img class="repeat_symbol U" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT)  IV Elective: Introduction to International Business-Mr.Umesh Patwari</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
+</div>
+</td>
+<td class="o" rowspan="2">
+<div data-id="253556" data-type="o" class="celldiv slots2">
+<a href="view_entry.php?id=253556&amp;area=1&amp;day=15&amp;month=4&amp;year=2024" title="BCA IV- Introduction to Cloud Computing- Div C- Ms.Sneha Shirolkar"><img class="repeat_symbol o" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA IV- Introduction to Cloud Computing- Div C- Ms.Sneha Shirolkar</a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="m" rowspan="2">
-<div data-id="254636" data-type="m" class="celldiv slots2">
-<a href="view_entry.php?id=254636&amp;area=1&amp;day=12&amp;month=4&amp;year=2024" title="Placement Activity UG - 2022-25 batch">Placement Activity UG - 2022-25 batch</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=21&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -2319,131 +2255,107 @@ $(window).on('load', function() {
 <tr class="even_row">
 <td class="row_labels" data-seconds="63000">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=63000" title="Highlight this line">17:30</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=63000" title="Highlight this line">17:30</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=29&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=28&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=13&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=16&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=17&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=21&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=24&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=26&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=1&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
-</a>
-</div>
-</td>
-<td class="new">
-<div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -2451,137 +2363,137 @@ $(window).on('load', function() {
 <tr class="odd_row">
 <td class="row_labels" data-seconds="64800">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=64800" title="Highlight this line">18:00</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=64800" title="Highlight this line">18:00</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=29&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=28&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=13&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=16&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=17&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=27&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=21&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=24&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=26&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=1&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -2589,137 +2501,137 @@ $(window).on('load', function() {
 <tr class="even_row">
 <td class="row_labels" data-seconds="66600">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=66600" title="Highlight this line">18:30</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=66600" title="Highlight this line">18:30</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=29&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=28&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=13&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=16&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=17&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=27&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=21&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=24&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=26&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=1&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -2727,137 +2639,137 @@ $(window).on('load', function() {
 <tr class="odd_row">
 <td class="row_labels" data-seconds="68400">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=68400" title="Highlight this line">19:00</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=68400" title="Highlight this line">19:00</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=29&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=28&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=13&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=16&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=17&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=27&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=21&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=24&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=26&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=1&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -2865,137 +2777,137 @@ $(window).on('load', function() {
 <tr class="even_row">
 <td class="row_labels" data-seconds="70200">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=70200" title="Highlight this line">19:30</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=70200" title="Highlight this line">19:30</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=29&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=28&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=13&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=16&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=17&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=27&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=21&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=24&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=26&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=1&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -3003,137 +2915,137 @@ $(window).on('load', function() {
 <tr class="odd_row">
 <td class="row_labels" data-seconds="72000">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=72000" title="Highlight this line">20:00</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=72000" title="Highlight this line">20:00</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=29&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=28&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=13&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=16&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=17&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=27&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=21&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=24&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=26&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=1&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -3141,137 +3053,137 @@ $(window).on('load', function() {
 <tr class="even_row">
 <td class="row_labels" data-seconds="73800">
 <div class="celldiv slots1">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29&amp;timetohighlight=73800" title="Highlight this line">20:30</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29&amp;timetohighlight=73800" title="Highlight this line">20:30</a>
 </div></td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=29&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=28&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=13&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=31&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=14&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=15&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=16&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=7&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=17&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=9&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=10&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=18&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=19&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=27&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=21&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=22&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=23&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=24&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=25&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=26&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=1&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
 <td class="new">
 <div class="celldiv slots1">
-<a href="edit_entry.php?area=1&amp;room=30&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=12">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=4&amp;day=15">
 </a>
 </div>
 </td>
@@ -3280,9 +3192,9 @@ $(window).on('load', function() {
 </table>
 
 <nav class="date_nav">
-  <a class="date_before" href="day.php?area=1&amp;room=29&amp;year=2024&amp;month=04&amp;day=11&amp;type=">Go To Day Before</a>
+  <a class="date_before" href="day.php?area=1&amp;room=29&amp;year=2024&amp;month=04&amp;day=14&amp;type=">Go To Day Before</a>
   <a class="date_now" href="day.php?area=1&amp;room=29;">Go To Today</a>
-  <a class="date_after" href="day.php?area=1&amp;room=29&amp;year=2024&amp;month=04&amp;day=13&amp;type=">Go To Day After</a>
+  <a class="date_after" href="day.php?area=1&amp;room=29&amp;year=2024&amp;month=04&amp;day=16&amp;type=">Go To Day After</a>
 </nav>
 <table id="colour_key"><tr>
 <td class="A">
@@ -3446,59 +3358,59 @@ type.z</div></td>
 </div><div class="screenonly trailer" id="trailer">
 <div id="viewday">
 <div class="trailer_label">
-<a href="day.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29">View Day:</a>
+<a href="day.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29">View Day:</a>
 </div>
 <div class="trailer_links">
-<span><a href="day.php?year=2024&amp;month=04&amp;day=06&amp;area=1&amp;room=29">Apr 06</a></span>
- | <span><a href="day.php?year=2024&amp;month=04&amp;day=07&amp;area=1&amp;room=29">Apr 07</a></span>
- | <span><a href="day.php?year=2024&amp;month=04&amp;day=08&amp;area=1&amp;room=29">Apr 08</a></span>
- | <span><a href="day.php?year=2024&amp;month=04&amp;day=09&amp;area=1&amp;room=29">Apr 09</a></span>
+<span><a href="day.php?year=2024&amp;month=04&amp;day=09&amp;area=1&amp;room=29">Apr 09</a></span>
  | <span><a href="day.php?year=2024&amp;month=04&amp;day=10&amp;area=1&amp;room=29">Apr 10</a></span>
  | <span><a href="day.php?year=2024&amp;month=04&amp;day=11&amp;area=1&amp;room=29">Apr 11</a></span>
- | <span class="current">[ <a href="day.php?year=2024&amp;month=04&amp;day=12&amp;area=1&amp;room=29">Apr 12</a> ]</span>
+ | <span><a href="day.php?year=2024&amp;month=04&amp;day=12&amp;area=1&amp;room=29">Apr 12</a></span>
  | <span><a href="day.php?year=2024&amp;month=04&amp;day=13&amp;area=1&amp;room=29">Apr 13</a></span>
  | <span><a href="day.php?year=2024&amp;month=04&amp;day=14&amp;area=1&amp;room=29">Apr 14</a></span>
- | <span><a href="day.php?year=2024&amp;month=04&amp;day=15&amp;area=1&amp;room=29">Apr 15</a></span>
+ | <span class="current">[ <a href="day.php?year=2024&amp;month=04&amp;day=15&amp;area=1&amp;room=29">Apr 15</a> ]</span>
  | <span><a href="day.php?year=2024&amp;month=04&amp;day=16&amp;area=1&amp;room=29">Apr 16</a></span>
  | <span><a href="day.php?year=2024&amp;month=04&amp;day=17&amp;area=1&amp;room=29">Apr 17</a></span>
  | <span><a href="day.php?year=2024&amp;month=04&amp;day=18&amp;area=1&amp;room=29">Apr 18</a></span>
  | <span><a href="day.php?year=2024&amp;month=04&amp;day=19&amp;area=1&amp;room=29">Apr 19</a></span>
+ | <span><a href="day.php?year=2024&amp;month=04&amp;day=20&amp;area=1&amp;room=29">Apr 20</a></span>
+ | <span><a href="day.php?year=2024&amp;month=04&amp;day=21&amp;area=1&amp;room=29">Apr 21</a></span>
+ | <span><a href="day.php?year=2024&amp;month=04&amp;day=22&amp;area=1&amp;room=29">Apr 22</a></span>
 </div>
 </div>
 <div id="viewweek">
 <div class="trailer_label">
-<a href="week.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29">View Week:</a>
+<a href="week.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29">View Week:</a>
 </div>
 <div class="trailer_links">
-  <a href="week.php?year=2024&amp;month=03&amp;day=15&amp;area=1&amp;room=29">Mar 10</a>
- |   <a href="week.php?year=2024&amp;month=03&amp;day=22&amp;area=1&amp;room=29">Mar 17</a>
- |   <a href="week.php?year=2024&amp;month=03&amp;day=29&amp;area=1&amp;room=29">Mar 24</a>
- |   <a href="week.php?year=2024&amp;month=04&amp;day=05&amp;area=1&amp;room=29">Mar 31</a>
+  <a href="week.php?year=2024&amp;month=03&amp;day=18&amp;area=1&amp;room=29">Mar 17</a>
+ |   <a href="week.php?year=2024&amp;month=03&amp;day=25&amp;area=1&amp;room=29">Mar 24</a>
+ |   <a href="week.php?year=2024&amp;month=04&amp;day=01&amp;area=1&amp;room=29">Mar 31</a>
+ |   <a href="week.php?year=2024&amp;month=04&amp;day=08&amp;area=1&amp;room=29">Apr 07</a>
  | <span class="current">
-[   <a href="week.php?year=2024&amp;month=04&amp;day=12&amp;area=1&amp;room=29">Apr 07</a>
+[   <a href="week.php?year=2024&amp;month=04&amp;day=15&amp;area=1&amp;room=29">Apr 14</a>
 ]</span>
- |   <a href="week.php?year=2024&amp;month=04&amp;day=19&amp;area=1&amp;room=29">Apr 14</a>
- |   <a href="week.php?year=2024&amp;month=04&amp;day=26&amp;area=1&amp;room=29">Apr 21</a>
- |   <a href="week.php?year=2024&amp;month=05&amp;day=03&amp;area=1&amp;room=29">Apr 28</a>
- |   <a href="week.php?year=2024&amp;month=05&amp;day=10&amp;area=1&amp;room=29">May 05</a>
+ |   <a href="week.php?year=2024&amp;month=04&amp;day=22&amp;area=1&amp;room=29">Apr 21</a>
+ |   <a href="week.php?year=2024&amp;month=04&amp;day=29&amp;area=1&amp;room=29">Apr 28</a>
+ |   <a href="week.php?year=2024&amp;month=05&amp;day=06&amp;area=1&amp;room=29">May 05</a>
+ |   <a href="week.php?year=2024&amp;month=05&amp;day=13&amp;area=1&amp;room=29">May 12</a>
 </div>
 </div>
 <div id="viewmonth">
 <div class="trailer_label">
-<a href="month.php?year=2024&amp;month=4&amp;day=12&amp;area=1&amp;room=29">View Month:</a>
+<a href="month.php?year=2024&amp;month=4&amp;day=15&amp;area=1&amp;room=29">View Month:</a>
 </div>
 <div class="trailer_links">
-  <a href="month.php?year=2024&amp;month=02&amp;day=12&amp;area=1&amp;room=29">Feb 2024</a>
- |   <a href="month.php?year=2024&amp;month=03&amp;day=12&amp;area=1&amp;room=29">Mar 2024</a>
+  <a href="month.php?year=2024&amp;month=02&amp;day=15&amp;area=1&amp;room=29">Feb 2024</a>
+ |   <a href="month.php?year=2024&amp;month=03&amp;day=15&amp;area=1&amp;room=29">Mar 2024</a>
  | <span class="current">
-[   <a href="month.php?year=2024&amp;month=04&amp;day=12&amp;area=1&amp;room=29">Apr 2024</a>
+[   <a href="month.php?year=2024&amp;month=04&amp;day=15&amp;area=1&amp;room=29">Apr 2024</a>
 ]</span>
- |   <a href="month.php?year=2024&amp;month=05&amp;day=12&amp;area=1&amp;room=29">May 2024</a>
- |   <a href="month.php?year=2024&amp;month=06&amp;day=12&amp;area=1&amp;room=29">Jun 2024</a>
- |   <a href="month.php?year=2024&amp;month=07&amp;day=12&amp;area=1&amp;room=29">Jul 2024</a>
- |   <a href="month.php?year=2024&amp;month=08&amp;day=12&amp;area=1&amp;room=29">Aug 2024</a>
- |   <a href="month.php?year=2024&amp;month=09&amp;day=12&amp;area=1&amp;room=29">Sep 2024</a>
- |   <a href="month.php?year=2024&amp;month=10&amp;day=12&amp;area=1&amp;room=29">Oct 2024</a>
+ |   <a href="month.php?year=2024&amp;month=05&amp;day=15&amp;area=1&amp;room=29">May 2024</a>
+ |   <a href="month.php?year=2024&amp;month=06&amp;day=15&amp;area=1&amp;room=29">Jun 2024</a>
+ |   <a href="month.php?year=2024&amp;month=07&amp;day=15&amp;area=1&amp;room=29">Jul 2024</a>
+ |   <a href="month.php?year=2024&amp;month=08&amp;day=15&amp;area=1&amp;room=29">Aug 2024</a>
+ |   <a href="month.php?year=2024&amp;month=09&amp;day=15&amp;area=1&amp;room=29">Sep 2024</a>
+ |   <a href="month.php?year=2024&amp;month=10&amp;day=15&amp;area=1&amp;room=29">Oct 2024</a>
 </div>
 </div>
 </div>
