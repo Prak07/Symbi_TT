@@ -5,12 +5,12 @@ from decouple import config
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = os.environ["SECRET_KEY"]
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
-DEBUG = os.environ["DEBUG"]
+DEBUG = os.environ.get("DEBUG")
 
-ALLOWED_HOSTS = [os.environ["WEBSITE_HOSTNAME"]]
-CSRF_TRUSTED_ORIGINS=["https://"+os.environ['WEBSITE_HOSTNAME']]
+ALLOWED_HOSTS = [os.environ.get("WEBSITE_HOSTNAME")]
+CSRF_TRUSTED_ORIGINS=["https://"+os.environ.get('WEBSITE_HOSTNAME')]
 
 # Application definition
 
@@ -71,9 +71,9 @@ DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres',
-        'USER': os.environ['DB_USER'],
-        'PASSWORD': os.environ['DB_PASS'],
-        'HOST': os.environ['DB_HOST'],
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASS'),
+        'HOST': os.environ.get('DB_HOST'),
         'PORT': '5432',
     }
 }
