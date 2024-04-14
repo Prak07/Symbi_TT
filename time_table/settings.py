@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-DEBUG = os.environ.get("DEBUG")
+DEBUG = True
 
 ALLOWED_HOSTS = ["*","symbi-tt.azurewebsites.net"]
 CSRF_TRUSTED_ORIGINS=["https://"+"symbi-tt.azurewebsites.net"]
