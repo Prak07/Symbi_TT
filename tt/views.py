@@ -305,8 +305,7 @@ def routine(request, year, month, day):
                         subject = subject[1].split("-")
                         subject = subject[0]
                     else:
-                        subject = tds[1].get_text().split("-")
-                        subject = subject[1].replace(sem, "")
+                        subject = tds[1].get_text()
 
                     room = str(tds[5].get_text().split("-")[1])
 
@@ -381,6 +380,7 @@ def routine(request, year, month, day):
                             f" {div} " in title
                             or f" {div}-" in title
                             or f" {div}:" in title
+                            or f".{div} " in title
                         ):
                             scraping(i)
                         if honours == True:
@@ -398,6 +398,7 @@ def routine(request, year, month, day):
                             f" {div} " in title
                             or f" {div}-" in title
                             or f" {div}:" in title
+                            or f".{div} " in title
                         ):
                             scraping(i)
                         if "Flexi-Credit" in title:
