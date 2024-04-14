@@ -290,22 +290,7 @@ def routine(request, year, month, day):
 
                     tds = soup1.find_all("td")
 
-                    if (
-                        "Extra Lecture" in tds[1].get_text()
-                        or "Lecture Scheduled" in tds[1].get_text()
-                    ):
-                        subject = tds[1].get_text().split(":")
-                        subject = "Extra Lecture : " + subject[2]
-                    elif "MBA(IT)" in tds[1].get_text():
-                        subject = tds[1].get_text().split("-")
-                        subject = subject[0].replace(sem, " ")
-                        subject = subject.replace(course, " ")
-                    elif ":" in tds[1].get_text():
-                        subject = tds[1].get_text().split(":")
-                        subject = subject[1].split("-")
-                        subject = subject[0]
-                    else:
-                        subject = tds[1].get_text()
+                    subject = tds[1].get_text()
 
                     room = str(tds[5].get_text().split("-")[1])
 
