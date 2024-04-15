@@ -9,7 +9,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["symbitt.in","symbi-tt.azurewebsites.net","www.symbitt.in","127.0.0.0","localhost"]
+ALLOWED_HOSTS = ["symbitt.in","symbi-tt.azurewebsites.net","127.0.0.1","localhost"]
 CSRF_TRUSTED_ORIGINS=["https://"+"symbi-tt.azurewebsites.net","https://"+"symbitt.in","https://"+"www.symbitt.in"]
 
 # Application definition
