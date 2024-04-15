@@ -7,10 +7,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["symbitt.in","symbi-tt.azurewebsites.net","www.symbitt.in","127.0.0.0","localhost"]
-CSRF_TRUSTED_ORIGINS=["https://"+"symbi-tt.azurewebsites.net","https://"+"symbi-tt.in","https://"+"www.symbi-tt.in"]
+CSRF_TRUSTED_ORIGINS=["https://"+"symbi-tt.azurewebsites.net","https://"+"symbitt.in","https://"+"www.symbitt.in"]
 
 # Application definition
 
