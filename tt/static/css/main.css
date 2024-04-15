@@ -496,12 +496,13 @@ form button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4vw;
-  gap: 3vw;
+  padding: 2vw;
+  gap: 2vw;
 }
 .calendar {
   height: 27vw;
-  width: 30vw;
+  width: 32vw;
+  max-width: 32vw;
   margin-top: 1vw;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(100px);
@@ -588,6 +589,7 @@ form button:hover {
 #data-cont {
   min-height: 33vw;
   width: 70vw;
+  max-width: 70vw;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 0.8vw;
   display: flex;
@@ -612,7 +614,7 @@ form button:hover {
   font-weight: 600;
   font-family: gil;
   line-height: 3.8vw;
-  margin-bottom: 2vw;
+  margin-bottom: 3vw;
 }
 #data-cont .elem {
   width: 100%;
@@ -897,6 +899,7 @@ form button:hover {
     align-self: center;
     height: 71vw;
     width: 80vw;
+    max-width: 80vw;
   }
   .month-year {
     font-size: 6vw;
@@ -931,12 +934,13 @@ form button:hover {
     font-weight: 600;
   }
   #data-cont {
-    width: 100%;
+    width: 95%;
+    max-width: 95%;
     padding: 6vw 2vw 2vw 2vw;
   }
   #data-cont h1 {
     font-size: 7vw;
-    margin-bottom: 4vw;
+    margin-bottom: 8vw;
   }
 
   #data-cont .elem {
