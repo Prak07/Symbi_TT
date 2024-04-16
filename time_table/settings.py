@@ -14,12 +14,10 @@ ALLOWED_HOSTS = [
     "symbi-tt.azurewebsites.net",
     "127.0.0.1",
     "localhost",
-    "*",
 ]
 CSRF_TRUSTED_ORIGINS = [
     "https://" + "symbi-tt.azurewebsites.net",
     "https://" + "symbitt.in",
-    "https://" + "www.symbitt.in",
 ]
 
 # Application definition

@@ -11,6 +11,7 @@ import asyncio
 from bs4 import BeautifulSoup
 from datetime import date, datetime
 import json
+import pytz
 
 from asgiref.sync import sync_to_async
 
@@ -230,8 +231,14 @@ def home(request):
         update_profile(request, "index.html")
 
     async def async_home():
-        today = str(date.today())
-        year, month, day = today.split("-")
+        today = datetime.now()
+        # Specify the timezone for India
+        india_timezone = pytz.timezone('Asia/Kolkata')
+        # Convert the current date and time to Indian Standard Time (IST)
+        today_in_india= today.astimezone(india_timezone)
+        # Convert the datetime object to a string
+        today = today_in_india.strftime('%Y-%m-%d %H:%M:%S %Z')
+        year, month, day = today[0:10].split("-")
         data = await get(request, year, month, day)
         return render(request, "index.html", data)
 
