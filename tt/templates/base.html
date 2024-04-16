@@ -1,22 +1,28 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>{% block title %}{% endblock title %}</title>
-    <link rel="stylesheet" href="/static/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="/static/images/favicon.webp"
+      href="{% static '/images/favicon.png' %}"
       type="image/x-icon"
     />
     <link
       rel="stylesheet"
+      type="text/css"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
-    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.css"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      type="text/css"
       rel="stylesheet"
     />
   </head>
@@ -24,7 +30,7 @@
     <nav>
       <div id="nav-left">
         <a href="/"
-          ><img src="/static/images/logo-no-background.webp" alt=""
+          ><img src="{% static '/images/logo-no-background.png' %}" alt=""
         /></a>
       </div>
       <div id="nav-right">
@@ -59,8 +65,11 @@
         {% endif %} {% endfor %}
         <div id="nav-2">
           {% if user.is_authenticated %}
-          <img id="profile" src="/static/images/profile.webp" alt="Profile" />
-
+          <img
+            id="profile"
+            src="{% static '/images/profile.png' %}"
+            alt="Profile"
+          />
           {% else %}
           <a href="/login/">
             <span>Login</span>
@@ -75,7 +84,7 @@
         <div id="profile-cont">
           <div class="card-client1">
             <div class="user-picture">
-              <img src="/static/images/manager.webp" alt="" />
+              <img src="{% static '/images/manager.png' %}" alt="" />
             </div>
             <div class="dets">
               <h2>{{user.email}}</h2>
@@ -256,7 +265,7 @@
             <h3>Socials</h3>
           </div>
           <a
-            href="https://www.linkedin.com/pulse/topics/home/?trk=guest_homepage-basic_guest_nav_menu_articles"
+            href="https://www.linkedin.com/in/prakhar-agrawal-8a8932242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             target="_blank"
           >
             <div class="button">
@@ -277,14 +286,17 @@
             </div>
           </a>
 
-          <a href="https://github.com/i-Rony-op" target="_blank">
+          <a href="https://github.com/Prak07/Symbi_TT/" target="_blank">
             <div class="button">
               <span class="label-up"><i class="ri-github-fill"></i>GitHub</span>
               <span class="label-up"><i class="ri-github-fill"></i>GitHub</span>
             </div>
           </a>
 
-          <a href="https://www.instagram.com/" target="_blank">
+          <a
+            href="https://www.instagram.com/tarang7531?igsh=MW5tNHJpaWViZ3lwYg=="
+            target="_blank"
+          >
             <div class="button">
               <span class="label-up"
                 ><i class="ri-instagram-line"></i>Instagram</span
@@ -360,7 +372,7 @@
             </div>
           </a>
           <div id="img-cont">
-            <img src="/static/images/logo-no-background.webp" alt="" />
+            <img src="{% static '/images/logo-no-background.png' %}" alt="" />
           </div>
         </div>
       </div>
@@ -369,7 +381,7 @@
       </div>
     </div>
   </div>
-  <script src="/static/js/base.js"></script>
+  <script src="{% static '/js/base.js' %}"></script>
   <script>
     var popup = document.querySelector(".message");
     if (popup) {

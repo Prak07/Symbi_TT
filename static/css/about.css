@@ -1,0 +1,953 @@
+@font-face {
+  font-family: gil;
+  src: url("/static/font/Gilroy-Light.woff2");
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url("/static/font/Nunito-VariableFont_wght.woff2");
+}
+
+@font-face {
+  font-family: plain;
+  src: url("/static/font/plain-regular-webfont.woff2");
+}
+
+@font-face {
+  font-family: os;
+  src: url("/static/font/Oswald-VariableFont_wght.woff2");
+}
+@font-face {
+  font-family: mons;
+  src: url("/static/font/Montserrat-VariableFont_wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Nunito;
+  background-color: #151515;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+::selection {
+  color: black;
+  background-color: #fff;
+}
+#page1 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 1vw 3vw;
+}
+
+#nav-2 img {
+  width: 50px;
+  cursor: pointer;
+}
+#profile-cont {
+  width: 30vw;
+  height: 37.5vw;
+  display: flex;
+  background-color: transparent;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#close {
+  font-size: 1.7vw;
+  font-weight: 100;
+  height: fit-content;
+  color: #fff;
+  border-radius: 0.5vw;
+  padding: 0.1vw 0.2vw;
+  background-color: rgba(255, 64, 0, 0.828);
+  cursor: pointer;
+}
+.message {
+  top: 2% !important;
+}
+
+.dets {
+  background-color: transparent;
+  margin-top: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8vw;
+}
+.dets h2 {
+  color: rgb(255, 64, 0);
+  font-size: 2vw;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.dets h4 {
+  font-size: 1.3vw;
+  font-weight: 300;
+  background-color: transparent;
+  color: #fff !important;
+}
+.card-client1 .button-cont {
+  width: 100%;
+  display: flex;
+  padding: 3vw 5vw;
+  justify-content: space-between;
+  background-color: transparent;
+}
+.card-client2 .button-cont {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 0 3vw;
+}
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 15%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 64, 0);
+}
+
+.sign {
+  width: 100%;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.sign svg {
+  width: 17px;
+  background-color: transparent !important;
+}
+
+.sign svg path {
+  fill: white;
+}
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  background-color: transparent;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+.Btn:hover {
+  width: 125px;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 20px;
+}
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: 0.3s;
+  padding-right: 10px;
+}
+.Btn:active {
+  transform: translate(2px, 2px);
+}
+.edit-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 15%;
+  background-color: #151515;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.edit-svgIcon {
+  width: 17px;
+  transition-duration: 0.3s;
+  background-color: transparent;
+}
+
+.edit-svgIcon path {
+  fill: white;
+}
+
+.edit-button:hover {
+  width: 120px;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+  background-color: #151515;
+  align-items: center;
+}
+
+.edit-button:hover .edit-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.edit-button::before {
+  display: none;
+  content: "Edit";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.edit-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+
+.card-client1 {
+  background: #555;
+  min-width: 30vw;
+  height: 37.5vw;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 0 6px 10px #212121;
+  border-radius: 10px;
+  text-align: center;
+  color: rgba(255, 64, 0, 0.828);
+  font-family: "Poppins", sans-serif;
+  transition: all 1s ease;
+}
+.card-client2 {
+  background: #555;
+  min-width: 30vw;
+  height: 37.5vw;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  gap: 1vw;
+  flex-direction: column;
+  box-shadow: 0 6px 10px #212121;
+  border-radius: 10px;
+  text-align: center;
+  color: rgba(255, 64, 0, 0.828);
+  font-family: "Poppins", sans-serif;
+  transition: all 1s ease;
+}
+.card-client2 h2 {
+  font-size: 2.5vw;
+  color: rgb(255, 64, 0);
+  font-weight: 600;
+  background-color: transparent;
+}
+.card-client2 p {
+  background-color: rgba(0, 0, 0, 0.281);
+  color: #fff;
+  font-size: 1.3vw;
+  padding: 0.5vw 1.5vw;
+  border: 1px solid #fff;
+  border-radius: 5vw;
+  font-weight: 600;
+  letter-spacing: 0.1vw;
+  margin-top: 1vw;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: transparent;
+  gap: 1.5vw;
+}
+form .input-box {
+  position: relative;
+  border-bottom: 1px solid #fff;
+  width: 80%;
+  height: 3vw;
+  background-color: transparent;
+}
+form .input-box label {
+  position: absolute;
+  top: -5px;
+  left: 0.1vw;
+  transform: translateY(-50%);
+  font-size: 1vw;
+  color: #fff;
+  font-weight: 400;
+  pointer-events: none;
+  background-color: transparent;
+  transition: all ease 0.5s;
+}
+form .input-box input[type="text"] {
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 100;
+  font-size: 1vw;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+form .input-box input:valid ~ label {
+  color: rgba(0, 255, 85, 0.854);
+}
+.input-box input:invalid ~ label {
+  color: rgba(255, 0, 0, 0.854);
+}
+input {
+  background-color: black;
+  color: #fff;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  vertical-align: top;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+}
+form button {
+  background-color: rgba(255, 64, 0, 0.726);
+  color: #fff;
+  font-size: 1.3vw;
+  padding: 0.5vw 1.5vw;
+  border: 1px solid transparent;
+  border-radius: 5vw;
+  font-weight: 600;
+  margin-top: 1vw;
+  cursor: pointer;
+  letter-spacing: 0.5vw;
+  width: 8vw;
+  transition: all 0.3s ease-in-out;
+}
+form button:hover {
+  scale: 1.1;
+}
+.card-client2 p:hover {
+  scale: 1.02;
+}
+
+#select-program {
+  width: 80%;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  padding-bottom: 0.5vw;
+}
+#select-program #menu {
+  background-color: rgba(255, 64, 0, 0.854) !important;
+  width: 100%;
+  color: #fff;
+  padding: 0.5vw 1vw;
+  font-size: 1.1vw;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  border-radius: 1vw;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#select-program option {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #212121;
+  font-size: 1vw;
+  font-weight: 200;
+}
+#select-electives {
+  width: 80%;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 0.5vw;
+  background-color: transparent;
+}
+#select-electives #elec-menu {
+  background-color: rgba(255, 64, 0, 0.854) !important;
+  width: 100%;
+  color: #fff;
+  padding: 0.5vw 1vw;
+  font-size: 1.1vw;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  border-radius: 1vw;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#select-electives option {
+  color: #fff;
+  background-color: #212121;
+  font-size: 1vw;
+  font-weight: 200;
+}
+#radio {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  margin-left: 3vw;
+  gap: 0.2vw;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 0.5vw;
+  margin-top: -0.5vw;
+  margin-bottom: -0.5vw;
+  width: 79%;
+}
+#radio h3 {
+  font-size: 1vw;
+  text-align: start;
+  font-weight: 400;
+  background-color: transparent;
+
+  color: #fff;
+}
+.radio-button-container {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+
+  gap: 1.8vw;
+}
+
+.radio-button {
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-button__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-button__label {
+  display: inline-block;
+  padding-left: 2vw;
+  position: relative;
+  background-color: transparent;
+
+  font-size: 0.9vw;
+  color: #f2f2f2;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.radio-button__custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.3vw;
+  height: 1.3vw;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 64, 0, 0.446);
+  transition: all 0.3s ease;
+}
+
+.radio-button__input:checked + .radio-button__label .radio-button__custom {
+  background-color: rgba(255, 64, 0, 0.854);
+  border-color: transparent;
+  transform: scale(0.8);
+  box-shadow: 0 0 20px rgb(255, 64, 0);
+}
+
+.radio-button__input:checked + .radio-button__label {
+  color: rgb(255, 64, 0);
+}
+
+.radio-button__label:hover .radio-button__custom {
+  transform: scale(1.2);
+  border-color: rgba(255, 64, 0, 0.854) s;
+  box-shadow: 0 0 20px rgba(255, 64, 0, 0.854);
+}
+
+#about {
+  width: 100%;
+  height: 38vw;
+  padding: 1vw 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+.content {
+  overflow: hidden;
+}
+
+#about h1 {
+  background-color: transparent;
+  font-family: plain;
+  text-transform: uppercase;
+  font-size: 7vw;
+  color: #fff;
+  font-weight: 500;
+}
+#about .underline {
+  border-bottom: 1px solid white;
+  width: 80%;
+}
+#about h1 em {
+  background-color: transparent;
+  font-family: plain;
+  text-transform: uppercase;
+  font-size: 7vw;
+  -webkit-text-stroke: 0.1vw rgba(255, 64, 0, 0.854);
+  color: transparent;
+}
+#about p {
+  width: 80%;
+  color: #fff;
+  background: transparent;
+  font-size: 1.5vw;
+  line-height: 2.5vw;
+  font-weight: 100;
+}
+
+#founders {
+  width: 100%;
+  min-height: 38vw;
+  padding: 1vw 5vw;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  flex-direction: column;
+  gap: 2vw;
+}
+#founders h1 {
+  background-color: transparent;
+  font-family: plain;
+  text-transform: uppercase;
+  font-size: 7.5vw;
+  color: #fff;
+  font-weight: 500;
+  margin-right: 1vw;
+}
+#founders .underline {
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+#founders h1 em {
+  background-color: transparent;
+  font-family: plain;
+  text-transform: uppercase;
+  font-size: 7vw;
+  -webkit-text-stroke: 0.1vw rgba(255, 64, 0, 0.854);
+  color: transparent;
+}
+.partners {
+  color: #fff;
+  width: 100%;
+  display: flex;
+  gap: 4vw;
+  align-items: center;
+  justify-content: space-between;
+}
+.partners-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+}
+.partners h2 {
+  font-family: mons;
+  text-transform: uppercase;
+  font-size: 6vw;
+  color: #fff;
+  font-weight: 700;
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  justify-content: space-between;
+}
+.desc p {
+  font-size: 1.3vw;
+  font-weight: 300;
+  line-height: 2.5vw;
+}
+.desc a {
+  text-decoration: none;
+  color: #fff;
+}
+.desc h4 {
+  font-size: 1.1vw;
+  font-weight: 400;
+  width: fit-content;
+  background-color: rgba(255, 64, 0, 0.829);
+  border-radius: 20px;
+  padding: 0.5vw 1.5vw;
+}
+.overflow {
+  overflow: hidden;
+  background-color: #202020 !important;
+}
+@media screen and (max-width: 600px) {
+  .mousefollower {
+    display: none;
+  }
+  #page1 {
+    min-height: 40vh;
+  }
+  #close {
+    font-size: 5vw;
+  }
+  .dets {
+    background-color: transparent;
+    margin-top: 1vw;
+    gap: 3.8vw;
+  }
+  .dets h2 {
+    color: rgb(255, 64, 0);
+    font-size: 5vw;
+    font-weight: 600;
+    background-color: transparent;
+  }
+  .dets h4 {
+    font-size: 3.9vw;
+  }
+  #profile-cont {
+    width: 75%;
+    height: 120vw;
+    background-color: transparent;
+  }
+  .message {
+    top: 6% !important;
+    left: 42% !important;
+  }
+  .message h4 {
+    font-size: 4.5vw !important;
+  }
+
+  .card-client1 {
+    background: #555;
+    min-width: 100%;
+    height: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 6px 10px #212121;
+    border-radius: 10px;
+    text-align: center;
+    color: rgba(255, 64, 0, 0.828);
+    font-family: "Poppins", sans-serif;
+    transition: all 1s ease;
+  }
+  .card-client2 {
+    background: #555;
+    min-width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    gap: 5vw;
+    flex-direction: column;
+    box-shadow: 0 6px 10px #212121;
+    border-radius: 10px;
+    text-align: center;
+    color: rgba(255, 64, 0, 0.828);
+    font-family: "Poppins", sans-serif;
+    transition: all 1s ease;
+  }
+  .card-client2 h2 {
+    font-size: 7vw;
+    color: rgb(255, 64, 0);
+    font-weight: 600;
+    background-color: transparent;
+  }
+  .card-client2 p {
+    background-color: rgba(0, 0, 0, 0.281);
+    color: #fff;
+    font-size: 4.3vw;
+    padding: 0.5vw 1.5vw;
+    border: 1px solid #fff;
+    border-radius: 5vw;
+    font-weight: 600;
+    letter-spacing: 0.1vw;
+    margin-top: 1vw;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  form button {
+    font-size: 4.3vw;
+    width: 20vw;
+  }
+
+  .user-picture svg {
+    width: 2.5rem;
+    fill: currentColor;
+  }
+  form {
+    gap: 6vw;
+  }
+  form .input-box {
+    position: relative;
+    border-bottom: 1px solid #fff;
+    width: 80%;
+    height: 9vw;
+    background-color: transparent;
+  }
+  form .input-box input[type="text"] {
+    font-size: 4vw;
+  }
+  form .input-box label {
+    position: absolute;
+    top: -5px;
+    left: 0.1vw;
+    transform: translateY(-50%);
+    font-size: 3vw;
+    color: #fff;
+    font-weight: 400;
+    pointer-events: none;
+    background-color: transparent;
+    transition: all ease 0.5s;
+  }
+  .card-client2 .button-cont {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0 6.5vw;
+  }
+  #select-program {
+    width: 80%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.5vw;
+  }
+  #select-program #menu {
+    background-color: rgba(255, 64, 0, 0.854) !important;
+    width: 100%;
+    color: #fff;
+    padding: 0.5vw 1vw;
+    font-size: 3.5vw;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  #select-program option {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: #212121;
+    font-size: 1vw;
+    font-weight: 200;
+  }
+  #select-electives {
+    width: 80%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.5vw;
+  }
+  #select-electives #elec-menu {
+    background-color: rgba(255, 64, 0, 0.854) !important;
+    width: 100%;
+    color: #fff;
+    padding: 0.5vw 1vw;
+    font-size: 3.5vw;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  #select-electives option {
+    color: #fff;
+    background-color: #212121;
+    font-size: 1vw;
+    font-weight: 200;
+  }
+  #radio {
+    margin-left: 7vw;
+    padding: 0 3vw;
+  }
+  .radio-button-container {
+    gap: 15vw;
+  }
+  .radio-button__custom {
+    width: 3.5vw;
+    height: 3.5vw;
+    margin-top: 0.5vw;
+    margin-left: -2vw;
+  }
+  #radio h3 {
+    font-size: 3.5vw;
+    text-align: start;
+    font-weight: 400;
+    background-color: transparent;
+    color: #fff;
+  }
+  .radio-button__label {
+    font-size: 3.5vw;
+  }
+  form button {
+    font-size: 4.3vw;
+    width: 20vw;
+  }
+  nav {
+    position: static;
+    padding: 8vw 5vw;
+  }
+  #nav-left img {
+    width: 28%;
+  }
+  #nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2.5vw;
+  }
+  #nav-1 {
+    gap: 4vw;
+  }
+
+  #nav-1 a h4 {
+    font-size: 3vw;
+    font-weight: 500;
+  }
+  #nav-2 img {
+    width: 35px;
+  }
+  #nav-2 a {
+    font-size: 3vw;
+    width: fit-content;
+    padding: 1vw 2vw;
+  }
+
+  #about {
+    min-height: 175vw;
+    padding: 1vw 1vw;
+  }
+  #about h1 {
+    font-size: 18vw;
+  }
+  #about h1 em {
+    font-size: 18vw;
+    -webkit-text-stroke: 0.3vw rgba(255, 64, 0, 0.854);
+  }
+  #about .underline {
+    width: 95%;
+  }
+  #about p {
+    font-size: 4vw;
+    line-height: 6.5vw;
+    width: 95%;
+  }
+  #founders {
+    min-height: 151vw;
+    padding: 1vw 0vw;
+    gap: 3vw;
+    align-items: normal;
+  }
+  #founders h1 {
+    font-size: 15.7vw;
+  }
+
+  #founders .underline {
+    width: 100%;
+  }
+  #founders .para {
+    width: 100%;
+  }
+  #founders .para p {
+    font-size: 4vw;
+    line-height: 6.9vw;
+    width: 100%;
+    text-align: start;
+  }
+
+  #scope {
+    min-height: 157vw;
+    padding: 1vw 1vw;
+    gap: 4vw;
+  }
+  #scope h1 {
+    font-size: 18vw;
+  }
+  #scope .underline {
+    width: 95%;
+  }
+  #scope p {
+    font-size: 4vw;
+    line-height: 7vw;
+    width: 95%;
+  }
+  #footer {
+    height: 35vh;
+  }
+  #footer #footer-container {
+    padding: 0vw 0vw !important;
+    justify-content: space-around;
+  }
+  #footer .links {
+    height: 70%;
+    width: 28vw;
+    gap: 3.5vw;
+  }
+  #footer .links h3 {
+    font-size: 3.3vw;
+  }
+  .button {
+    height: 5vw;
+  }
+  .label-up {
+    font-size: 3.8vw;
+  }
+  .mail {
+    font-size: 2.5vw !important;
+    color: #fff;
+  }
+  .label-up i {
+    font-size: 4vw !important;
+  }
+  #copyright h3 {
+    font-size: 5vw;
+  }
+}
