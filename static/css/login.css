@@ -1,22 +1,23 @@
 @font-face {
   font-family: gil;
-  src: url("/static/font/Gilroy-Light.otf");
+  src: url("/static/font/Gilroy-Light.woff2");
 }
 
 @font-face {
   font-family: Nunito;
-  src: url("/static/font/Nunito-VariableFont_wght.ttf");
+  src: url("/static/font/Nunito-VariableFont_wght.woff2");
 }
 
 @font-face {
   font-family: plain;
-  src: url("/static/font/plain-regular-webfont.woff");
+  src: url("/static/font/plain-regular-webfont.woff2");
 }
 
 @font-face {
   font-family: os;
-  src: url("/static/font/Oswald-VariableFont_wght.ttf");
+  src: url("/static/font/Oswald-VariableFont_wght.woff2");
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -42,6 +43,7 @@ body {
 #img-div {
   position: fixed;
   padding: 1.5vw 2.7vw;
+  z-index: 99;
 }
 img {
   width: 4.5vw;
@@ -454,10 +456,10 @@ form h1 {
     width: 100%;
     height: 100%;
     justify-content: center;
-    padding: 20vw 0vw;
+    padding: 11vw 0vw;
   }
   img {
-    width: 12%;
+    width: 8%;
   }
   #message {
     z-index: 9;

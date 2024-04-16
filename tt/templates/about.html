@@ -1,5 +1,5 @@
-{% extends "base.html"%} {% block title %}Symbi TT-About{%endblock title %} 
-{% load static %} {% block body%}
+{% extends "base.html"%} {% block title %} Symbi TT-About {% endblock title %}
+{% block body%} {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}" />
 <div id="page1">
   <div id="about">
@@ -8,36 +8,83 @@
     </div>
     <div class="underline"></div>
     <p data-scroll data-scroll-speed="1">
-      Welcome to the Symbiosis College Simplified Timetable Website – your hassle-free solution for accessing daily class schedules with ease. Designed with simplicity in mind, our platform focuses on providing students with quick and convenient access to their class timetables.
-
-      Navigating through your daily schedule shouldn't be a daunting task, which is why we've created a user-friendly interface that prioritizes simplicity and efficiency. Say goodbye to the complexities of the existing timetable system and embrace a streamlined approach to managing your classes.
-      With our user-friendly website, you can quickly and easily check the timetable for the day, ensuring that you never miss a class.
-      Experience the simplicity of managing your daily class schedule with the Symbiosis College Simplified Timetable Website.
+      Welcome to the Symbiosis College Simplified Timetable Website – your
+      hassle-free solution for accessing daily class schedules with ease.
+      Designed with simplicity in mind, our platform focuses on providing
+      students with quick and convenient access to their class timetables.
+      Navigating through your daily schedule shouldn't be a daunting task, which
+      is why we've created a user-friendly interface that prioritizes simplicity
+      and efficiency. Say goodbye to the complexities of the existing timetable
+      system and embrace a streamlined approach to managing your classes. With
+      our user-friendly website, you can quickly and easily check the timetable
+      for the day, ensuring that you never miss a class. Experience the
+      simplicity of managing your daily class schedule with the Symbiosis
+      College Simplified Timetable Website.
     </p>
   </div>
-  <div id="objective">
+  <div id="founders">
     <div class="content">
-      <h1>Objectives</h1>
+      <h1>About<em>US </em></h1>
     </div>
     <div class="underline"></div>
-    <div class="para" data-scroll data-scroll-speed="2">
-      <p>
-        •	User Authentication: Implement a secure user authentication system to ensure that users can access the website and view personalized class schedules.
-        •	Personalized Time-table Generation: Develop functionality to generate personalized class schedules for each user based on their enrolled courses and class.
-        •	Real-Time Updates: Implement mechanisms to ensure that the displayed class schedules are updated in real-time, reflecting any changes or modifications made on the main college website promptly.
-        •	Mobile Responsive: Design the website to be responsive and accessible on various devices, including smartphones and tablets, allowing users to access their personalized class schedules on-the-go.
-        By achieving these objectives , our Website aims to provide students personalized experience for accessing and managing their class schedules
-      </p>
-    </div>
-  </div>
-  <div id="scope">
-    <div class="content">
-      <h1>Scope</h1>
-    </div>
-    <div class="underline"></div>
-    <div class="para" data-scroll data-scroll-speed="2">
-      <p>
-        The scope of our website project encompasses various crucial aspects aimed at providing students with a convenient and efficient way to access their class schedules. By integrating web scraping functionality, the project ensures seamless extraction of schedule data from the main college website, allowing for real-time updates and display on the Symbiosis College Timetable Website.We ensure that the website is fully responsive and optimized for mobile devices, allowing students to access their class schedules conveniently from smartphones and tablets.We have integrated a mechanism for real-time updates to ensure that the displayed timetable reflects any changes or modifications to class schedules promptly if done in the main time table. This feature enhances the reliability and accuracy of the timetable information
+    <div class="partners-cont">
+      <div class="partners">
+        <h2>RAUNAK SHARMA</h2>
+        <div class="desc">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Consequuntur vitae dolorem tempore doloribus odio ipsam accusantium
+            magnam enim illum, sequi illo nisi error? Suscipit quas id quia
+            quasi, totam eaque error corporis optio, doloribus eius, sapiente
+            voluptate. Velit illum assumenda ducimus inventore distinctio
+            deserunt? Maiores perferendis tenetur recusandae est ipsa.
+          </p>
+          <a
+            href="https://www.linkedin.com/in/raunak-sharma-5393a9248/"
+            target="_blank"
+          >
+            <h4>Visit Profile</h4>
+          </a>
+        </div>
+      </div>
+      <div class="partners" id="partners">
+        <div class="desc">
+          <p style="text-align: start">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Consequuntur vitae dolorem tempore doloribus odio ipsam accusantium
+            magnam enim illum, sequi illo nisi error? Suscipit quas id quia
+            quasi, totam eaque error corporis optio, doloribus eius, sapiente
+            voluptate. Velit illum assumenda ducimus inventore distinctio
+            deserunt? Maiores perferendis tenetur recusandae est ipsa.
+          </p>
+          <a
+            href="https://www.linkedin.com/in/prakhar-agrawal-8a8932242/"
+            target="_blank"
+          >
+            <h4>Visit Profile</h4>
+          </a>
+        </div>
+        <h2 style="margin-bottom: 4vw">PRAKHAR AGARWAL</h2>
+      </div>
+      <div class="partners">
+        <h2>OM KESHWANI</h2>
+        <div class="desc">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Consequuntur vitae dolorem tempore doloribus odio ipsam accusantium
+            magnam enim illum, sequi illo nisi error? Suscipit quas id quia
+            quasi, totam eaque error corporis optio, doloribus eius, sapiente
+            voluptate. Velit illum assumenda ducimus inventore distinctio
+            deserunt? Maiores perferendis tenetur recusandae est ipsa.
+          </p>
+          <a
+            href="https://www.linkedin.com/in/om-keshwani-4990031ba/"
+            target="_blank"
+          >
+            <h4>Visit Profile</h4>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -45,14 +92,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
 <script
-  type="text/javascript"
-  src="https://unpkg.com/sheryjs/dist/Shery.js"
-></script>
-<script
   src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
   integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
   crossorigin="anonymous"
   referrerpolicy="no-referrer"
+></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"
 ></script>
 
 <script src="{% static '/js/about.js' %}"></script>

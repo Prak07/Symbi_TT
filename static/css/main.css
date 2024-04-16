@@ -1,21 +1,21 @@
 @font-face {
   font-family: gil;
-  src: url("/static/font/Gilroy-Light.otf");
+  src: url("/static/font/Gilroy-Light.woff2");
 }
 
 @font-face {
   font-family: Nunito;
-  src: url("/static/font/Nunito-VariableFont_wght.ttf");
+  src: url("/static/font/Nunito-VariableFont_wght.woff2");
 }
 
 @font-face {
   font-family: plain;
-  src: url("/static/font/plain-regular-webfont.woff");
+  src: url("/static/font/plain-regular-webfont.woff2");
 }
 
 @font-face {
   font-family: os;
-  src: url("/static/font/Oswald-VariableFont_wght.ttf");
+  src: url("/static/font/Oswald-VariableFont_wght.woff2");
 }
 
 * {
@@ -28,7 +28,7 @@
 html,
 body {
   height: 100%;
-  background-color: #202020 ;
+  background-color: #202020;
   width: 100%;
 }
 
@@ -497,12 +497,25 @@ form button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4vw;
-  gap: 3vw;
+  padding: 0vw 1vw;
+  gap: 1vw;
+}
+#data-cont {
+  min-height: 33vw;
+  width: 70vw;
+  max-width: 66.8vw;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.8vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.6vw;
+  padding: 2vw 1vw 1vw 1vw;
 }
 .calendar {
   height: 27vw;
-  width: 30vw;
+  width: 32vw;
+  max-width: 32vw;
   margin-top: 1vw;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(100px);
@@ -586,26 +599,14 @@ form button:hover {
   border-radius: 0.5vw;
 }
 
-#data-cont {
-  min-height: 33vw;
-  width: 70vw;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 0.8vw;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 0.6vw;
-  padding: 2vw 1vw 1vw 1vw;
-}
-.signin_message{
-  font-size: 2.5vw ;
+.signin_message {
+  font-size: 2.5vw;
   background-color: transparent;
   text-transform: capitalize;
   font-weight: 400;
   color: #fff;
   font-family: os;
-  letter-spacing: .1vw;
-
+  letter-spacing: 0.1vw;
 }
 #data-cont h1 {
   background-color: transparent;
@@ -614,7 +615,7 @@ form button:hover {
   font-weight: 600;
   font-family: gil;
   line-height: 3.8vw;
-  margin-bottom: 2vw;
+  margin-bottom: 3vw;
 }
 #data-cont .elem {
   width: 100%;
@@ -636,7 +637,7 @@ form button:hover {
   padding: 0vw 0.8vw;
   align-items: center;
   justify-content: center;
-  width: 20vw;
+  width: 21.3vw;
   border-right: 1px solid #fff;
 }
 .elem .elem-parts h3 {
@@ -659,9 +660,8 @@ form button:hover {
   #close {
     font-size: 5vw;
   }
-  .signin_message{
-    font-size: 4vw ;
-  
+  .signin_message {
+    font-size: 4vw;
   }
   .dets {
     background-color: transparent;
@@ -885,7 +885,7 @@ form button:hover {
     width: fit-content;
     padding: 1vw 2vw;
   }
-  .loader{
+  .loader {
     left: 42% !important;
   }
   #container {
@@ -900,6 +900,7 @@ form button:hover {
     align-self: center;
     height: 71vw;
     width: 80vw;
+    max-width: 80vw;
   }
   .month-year {
     font-size: 6vw;
@@ -934,12 +935,13 @@ form button:hover {
     font-weight: 600;
   }
   #data-cont {
-    width: 100%;
+    width: 95%;
+    max-width: 95%;
     padding: 6vw 2vw 2vw 2vw;
   }
   #data-cont h1 {
     font-size: 7vw;
-    margin-bottom: 4vw;
+    margin-bottom: 8vw;
   }
 
   #data-cont .elem {
