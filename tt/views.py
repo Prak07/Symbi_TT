@@ -366,6 +366,7 @@ def routine(request, year, month, day):
                             or f" {div}-" in title
                             or f" {div}:" in title
                             or f".{div} " in title
+                            or f".{div}-" in title
                         ):
                             scraping(i)
                         if honours == True:
@@ -384,6 +385,7 @@ def routine(request, year, month, day):
                             or f" {div}-" in title
                             or f" {div}:" in title
                             or f".{div} " in title
+                            or f".{div}-" in title
                         ):
                             scraping(i)
                         if "Flexi-Credit" in title:
@@ -397,6 +399,8 @@ def routine(request, year, month, day):
                             f" {div} " in title
                             or f" {div}-" in title
                             or f" {div}:" in title
+                            or f" {div}." in title
+                            or f".{div}" in title
                         ):
                             scraping(i)
                     if "(SPM)" in title or "(DA)" in title:
