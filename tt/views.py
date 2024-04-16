@@ -498,6 +498,5 @@ def update_routine(request):
 
         return asyncio.run(async_home())
 
-
 def error_404(request, exception):
-    return render(request, "404.html")
+    return render(request,"404.html")

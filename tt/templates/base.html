@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,10 +16,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.css"
-    />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       type="text/css"
@@ -65,11 +62,8 @@
         {% endif %} {% endfor %}
         <div id="nav-2">
           {% if user.is_authenticated %}
-          <img
-            id="profile"
-            src="{% static '/images/profile.png' %}"
-            alt="Profile"
-          />
+          <img id="profile" src="{% static '/images/profile.png' %}" alt="Profile" />
+
           {% else %}
           <a href="/login/">
             <span>Login</span>
@@ -293,10 +287,7 @@
             </div>
           </a>
 
-          <a
-            href="https://www.instagram.com/tarang7531?igsh=MW5tNHJpaWViZ3lwYg=="
-            target="_blank"
-          >
+          <a href="https://www.instagram.com/tarang7531?igsh=MW5tNHJpaWViZ3lwYg==" target="_blank">
             <div class="button">
               <span class="label-up"
                 ><i class="ri-instagram-line"></i>Instagram</span
@@ -384,7 +375,7 @@
   <script src="{% static '/js/base.js' %}"></script>
   <script>
     var popup = document.querySelector(".message");
-    if (popup) {
+    if (popup){
       setTimeout(() => {
         popup.style.display = "none";
       }, 3000);
