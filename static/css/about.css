@@ -1,21 +1,25 @@
 @font-face {
   font-family: gil;
-  src: url("/static/font/Gilroy-Light.otf");
+  src: url("/static/font/Gilroy-Light.woff2");
 }
 
 @font-face {
   font-family: Nunito;
-  src: url("/static/font/Nunito-VariableFont_wght.ttf");
+  src: url("/static/font/Nunito-VariableFont_wght.woff2");
 }
 
 @font-face {
   font-family: plain;
-  src: url("/static/font/plain-regular-webfont.woff");
+  src: url("/static/font/plain-regular-webfont.woff2");
 }
 
 @font-face {
   font-family: os;
-  src: url("/static/font/Oswald-VariableFont_wght.ttf");
+  src: url("/static/font/Oswald-VariableFont_wght.woff2");
+}
+@font-face {
+  font-family: mons;
+  src: url("/static/font/Montserrat-VariableFont_wght.ttf");
 }
 
 * {
@@ -537,71 +541,33 @@ form button:hover {
   background: transparent;
   font-size: 1.5vw;
   line-height: 2.5vw;
+  font-weight: 100;
 }
 
-#objective {
+#founders {
   width: 100%;
-  height: 38vw;
+  min-height: 38vw;
   padding: 1vw 5vw;
   display: flex;
   align-items: flex-end;
+  position: relative;
   flex-direction: column;
   gap: 2vw;
 }
-#objective h1 {
+#founders h1 {
   background-color: transparent;
   font-family: plain;
   text-transform: uppercase;
-  font-size: 7vw;
+  font-size: 7.5vw;
   color: #fff;
   font-weight: 500;
+  margin-right: 1vw;
 }
-#objective .underline {
+#founders .underline {
   border-bottom: 1px solid white;
-  width: 80%;
-}
-#objective h1 em {
-  background-color: transparent;
-  font-family: plain;
-  text-transform: uppercase;
-  font-size: 7vw;
-  -webkit-text-stroke: 0.1vw rgba(255, 64, 0, 0.854);
-  color: transparent;
-}
-#objective .para {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  width: 80%;
-}
-#objective .para p {
-  color: #fff;
-  background: transparent;
-  font-size: 1.5vw;
-  line-height: 2.5vw;
-  text-align: end;
-}
-#scope {
   width: 100%;
-  height: 38vw;
-  padding: 1vw 5vw;
-  display: flex;
-  flex-direction: column;
-  gap: 2vw;
 }
-#scope h1 {
-  background-color: transparent;
-  font-family: plain;
-  text-transform: uppercase;
-  font-size: 7vw;
-  color: #fff;
-  font-weight: 500;
-}
-#scope .underline {
-  border-bottom: 1px solid white;
-  width: 80%;
-}
-#scope h1 em {
+#founders h1 em {
   background-color: transparent;
   font-family: plain;
   text-transform: uppercase;
@@ -609,14 +575,49 @@ form button:hover {
   -webkit-text-stroke: 0.1vw rgba(255, 64, 0, 0.854);
   color: transparent;
 }
-#scope p {
-  width: 80%;
+.partners {
   color: #fff;
-  background: transparent;
-  font-size: 1.5vw;
+  width: 100%;
+  display: flex;
+  gap: 4vw;
+  align-items: center;
+  justify-content: space-between;
+}
+.partners-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+}
+.partners h2 {
+  font-family: mons;
+  text-transform: uppercase;
+  font-size: 6vw;
+  color: #fff;
+  font-weight: 700;
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  justify-content: space-between;
+}
+.desc p {
+  font-size: 1.3vw;
+  font-weight: 300;
   line-height: 2.5vw;
 }
-
+.desc a {
+  text-decoration: none;
+  color: #fff;
+}
+.desc h4 {
+  font-size: 1.1vw;
+  font-weight: 400;
+  width: fit-content;
+  background-color: rgba(255, 64, 0, 0.829);
+  border-radius: 20px;
+  padding: 0.5vw 1.5vw;
+}
 .overflow {
   overflow: hidden;
   background-color: #202020 !important;
@@ -879,23 +880,23 @@ form button:hover {
     line-height: 6.5vw;
     width: 95%;
   }
-  #objective {
+  #founders {
     min-height: 151vw;
     padding: 1vw 0vw;
     gap: 3vw;
     align-items: normal;
   }
-  #objective h1 {
+  #founders h1 {
     font-size: 15.7vw;
   }
 
-  #objective .underline {
+  #founders .underline {
     width: 100%;
   }
-  #objective .para {
+  #founders .para {
     width: 100%;
   }
-  #objective .para p {
+  #founders .para p {
     font-size: 4vw;
     line-height: 6.9vw;
     width: 100%;
@@ -926,7 +927,7 @@ form button:hover {
     justify-content: space-around;
   }
   #footer .links {
-    height: 70%;
+    height: 83%;
     width: 28vw;
     gap: 3.5vw;
   }
