@@ -19,7 +19,7 @@
 }
 @font-face {
   font-family: mons;
-  src: url("/static/font/Montserrat-VariableFont_wght.ttf");
+  src: url("/static/font/Montserrat-VariableFont_wght.woff2");
 }
 
 * {

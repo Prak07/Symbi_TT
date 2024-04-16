@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="{% static '/images/favicon.png' %}"
+      href="{% static '/images/favicon.webp' %}"
       type="image/x-icon"
     />
     <link
@@ -30,7 +30,7 @@
     <nav>
       <div id="nav-left">
         <a href="/"
-          ><img src="{% static '/images/logo-no-background.png' %}" alt=""
+          ><img src="{% static '/images/logo-no-background.webp' %}" alt=""
         /></a>
       </div>
       <div id="nav-right">
@@ -67,7 +67,7 @@
           {% if user.is_authenticated %}
           <img
             id="profile"
-            src="{% static '/images/profile.png' %}"
+            src="{% static '/images/profile.webp' %}"
             alt="Profile"
           />
           {% else %}
@@ -84,7 +84,7 @@
         <div id="profile-cont">
           <div class="card-client1">
             <div class="user-picture">
-              <img src="{% static '/images/manager.png' %}" alt="" />
+              <img src="{% static '/images/manager.webp' %}" alt="" />
             </div>
             <div class="dets">
               <h2>{{user.email}}</h2>
@@ -372,7 +372,7 @@
             </div>
           </a>
           <div id="img-cont">
-            <img src="{% static '/images/logo-no-background.png' %}" alt="" />
+            <img src="{% static '/images/logo-no-background.webp' %}" alt="" />
           </div>
         </div>
       </div>
