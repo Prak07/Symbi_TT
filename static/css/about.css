@@ -36,8 +36,7 @@ body {
 }
 
 ::selection {
-  color: black;
-  background-color: #fff;
+  color: #dd3a03;
 }
 #page1 {
   width: 100%;
@@ -540,7 +539,7 @@ form button:hover {
   color: #fff;
   background: transparent;
   font-size: 1.5vw;
-  line-height: 2.5vw;
+  line-height: 2.7vw;
   font-weight: 100;
 }
 
@@ -594,29 +593,77 @@ form button:hover {
   font-size: 6vw;
   color: #fff;
   font-weight: 700;
+  line-height: 8vw;
 }
 .desc {
   display: flex;
   flex-direction: column;
   gap: 2vw;
   justify-content: space-between;
+  padding: 1.5vw;
 }
 .desc p {
   font-size: 1.3vw;
   font-weight: 300;
   line-height: 2.5vw;
 }
+.desc p span {
+  color: rgba(255, 64, 0, 0.925);
+  font-size: 1.5vw;
+  font-weight: 500;
+}
 .desc a {
+  position: relative;
   text-decoration: none;
+  color: rgb(255, 64, 0);
+  width: fit-content;
+  border: 1px solid rgb(255, 64, 0);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5vw 1.5vw;
+  transition: all 0.3s ease;
+  gap: 0.2vw;
+}
+.desc a::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgb(255, 64, 0) !important;
+  bottom: -100%;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.desc a:hover::after {
+  bottom: 0;
+}
+.desc a:hover h4 {
   color: #fff;
 }
+
 .desc h4 {
   font-size: 1.1vw;
   font-weight: 400;
   width: fit-content;
-  background-color: rgba(255, 64, 0, 0.829);
-  border-radius: 20px;
-  padding: 0.5vw 1.5vw;
+  background-color: transparent;
+  position: relative;
+  z-index: 99;
+  transition: all 0.3s ease;
+}
+.desc a i {
+  font-size: 1.2vw;
+  background-color: transparent !important;
+  display: block;
+  z-index: 99;
+  transition: all 0.3s ease;
+}
+.desc a:hover i {
+  color: #fff;
+  transform: rotate(45deg);
 }
 .overflow {
   overflow: hidden;
@@ -881,7 +928,7 @@ form button:hover {
     width: 95%;
   }
   #founders {
-    min-height: 151vw;
+    min-height: 100vw;
     padding: 1vw 0vw;
     gap: 3vw;
     align-items: normal;
@@ -889,35 +936,45 @@ form button:hover {
   #founders h1 {
     font-size: 15.7vw;
   }
+  #founders h1 em {
+    font-size: 15.7vw;
+    -webkit-text-stroke: 0.3vw rgba(255, 64, 0, 0.854);
+  }
 
   #founders .underline {
     width: 100%;
   }
-  #founders .para {
-    width: 100%;
-  }
-  #founders .para p {
-    font-size: 4vw;
-    line-height: 6.9vw;
-    width: 100%;
-    text-align: start;
-  }
-
-  #scope {
-    min-height: 157vw;
-    padding: 1vw 1vw;
+  .partners {
+    flex-direction: column;
     gap: 4vw;
   }
-  #scope h1 {
-    font-size: 18vw;
+  .partners h2 {
+    font-size: 8vw;
+    line-height: 11vw;
+    margin-bottom: 0 !important;
+    margin-top: 3vw;
   }
-  #scope .underline {
-    width: 95%;
+  .desc {
+    padding: 1vw 3vw;
+    gap: 4vw;
   }
-  #scope p {
+  .desc p {
     font-size: 4vw;
     line-height: 7vw;
-    width: 95%;
+  }
+  .desc p span {
+    font-size: 4vw;
+    line-height: 7vw;
+  }
+  .desc a {
+    padding: 2vw 3vw;
+    width: 100%;
+  }
+  .desc a i {
+    font-size: 4vw;
+  }
+  .desc h4 {
+    font-size: 4vw;
   }
   #footer {
     height: 35vh;

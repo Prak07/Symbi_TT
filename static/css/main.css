@@ -33,8 +33,7 @@ body {
 }
 
 ::selection {
-  color: black;
-  background-color: #fff;
+  color: #dd3a03;
 }
 #page1 {
   width: 100%;
@@ -497,17 +496,18 @@ form button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0vw 1vw;
-  gap: 1vw;
+  padding: 0vw 3vw;
+  gap: 2vw;
 }
 #data-cont {
   min-height: 33vw;
-  width: 70vw;
+  width: 65vw;
   max-width: 66.8vw;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 0.8vw;
   display: flex;
   align-items: center;
+  align-self: flex-start;
   flex-direction: column;
   gap: 0.6vw;
   padding: 2vw 1vw 1vw 1vw;
@@ -516,7 +516,7 @@ form button:hover {
   height: 27vw;
   width: 32vw;
   max-width: 32vw;
-  margin-top: 1vw;
+  margin-top: 1.7vw;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(100px);
   color: white;
@@ -637,12 +637,12 @@ form button:hover {
   padding: 0vw 0.8vw;
   align-items: center;
   justify-content: center;
-  width: 21.3vw;
+  width: 19vw;
   border-right: 1px solid #fff;
 }
 .elem .elem-parts h3 {
   color: white;
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   font-weight: 400;
   background: transparent;
 }
@@ -935,8 +935,8 @@ form button:hover {
     font-weight: 600;
   }
   #data-cont {
-    width: 95%;
-    max-width: 95%;
+    width: 98%;
+    max-width: 100%;
     padding: 6vw 2vw 2vw 2vw;
   }
   #data-cont h1 {
