@@ -214,8 +214,8 @@ function calendar() {
   message.classList.add('signin_message');
   message.textContent = 'SIGN IN TO SEE YOUR PERSONALIZED ROUTINE';
   container.appendChild(message);
-  document.getElementById("time_table").style.display = "block";
   window.location.href = "/login/";
+  document.getElementById("time_table").style.display = "block";
 });
         });
       });
