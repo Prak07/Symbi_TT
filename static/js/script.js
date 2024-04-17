@@ -150,7 +150,7 @@ function calendar() {
             body:JSON.stringify({"date":selectedDate})
           }).then(response => {
     if (!response.ok) {
-        throw new Error("Network response was not ok");
+      throw new Error("Network response was not ok");
     }
     return response.json(); // Parse JSON response
 })
@@ -207,7 +207,8 @@ function calendar() {
       document.getElementById("time_table").style.display = "block";
 })
 .catch(error => {
-    console.error("Error updating HTML content:", error);
+  document.getElementById("loader").style.display = "none";
+  window.location.href = "/login/";
 });
         });
       });

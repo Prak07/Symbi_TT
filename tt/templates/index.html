@@ -30,12 +30,10 @@
 <div id="page1">
   <div id="container">
     <div id="data-cont" data-scroll data-scroll-speed="2">
-      {% if user.is_authenticated %}
       <div class="loader" id="loader"></div>
-      {% endif %}
       <h1>Your Routine</h1>
-      {% if user.is_authenticated %}
       <div id="time_table" style="background: transparent">
+      {% if user.is_authenticated %}
         {% if data_list %} {% for i in data_list %}
         <div class="elem">
           <div class="elem-parts">
@@ -51,10 +49,10 @@
         {% endfor %} {% else %}
         <p class="signin_message">NO CLASSES TODAY</p>
         {% endif %}
+        {% else %}
+        <p class="signin_message">SIGN IN TO SEE YOUR PERSONALIZED ROUTINE</p>
+        {% endif %}
       </div>
-      {% else %}
-      <p class="signin_message">sign in to see your personalised routine</p>
-      {% endif %}
     </div>
     <div class="calendar" data-scroll data-scroll-speed="2">
       <div class="header">

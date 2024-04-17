@@ -12,7 +12,6 @@ from bs4 import BeautifulSoup
 from datetime import date, datetime
 import json
 import pytz
-
 from asgiref.sync import sync_to_async
 
 
@@ -460,54 +459,56 @@ def routine(request, year, month, day):
     else:
         return "none"
 
-
 def update_routine(request):
-    if request.method == "POST":
-        data = json.loads(request.body)
-        selected_date = data.get("date")
-        selected_date = selected_date[0:10].split("-")
-        year = int(selected_date[0])
-        month = int(selected_date[1])
-        day = int(selected_date[2])
-        if month == 2:
-            if year % 4 == 0:
-                if day == 29:
+    if request.user.is_authenticated:
+        if request.method == "POST":
+            data = json.loads(request.body)
+            selected_date = data.get("date")
+            selected_date = selected_date[0:10].split("-")
+            year = int(selected_date[0])
+            month = int(selected_date[1])
+            day = int(selected_date[2])
+            if month == 2:
+                if year % 4 == 0:
+                    if day == 29:
+                        day = 1
+                        month += 1
+                    else:
+                        day += 1
+                else:
+                    if day == 28:
+                        day = 1
+                        month += 1
+                    else:
+                        day += 1
+            elif month == 12:
+                if day == 31:
+                    day = 1
+                    month = 1
+                    year += 1
+                else:
+                    day += 1
+            elif month % 2 != 0 or month == 8:
+                if day == 31:
                     day = 1
                     month += 1
                 else:
                     day += 1
-            else:
-                if day == 28:
+            elif month % 2 == 0:
+                if day == 30:
                     day = 1
                     month += 1
                 else:
+
                     day += 1
-        elif month == 12:
-            if day == 31:
-                day = 1
-                month = 1
-                year += 1
-            else:
-                day += 1
-        elif month % 2 != 0 or month == 8:
-            if day == 31:
-                day = 1
-                month += 1
-            else:
-                day += 1
-        elif month % 2 == 0:
-            if day == 30:
-                day = 1
-                month += 1
-            else:
 
-                day += 1
+            async def async_home():
+                data = await get(request, year, month, day)
+                return JsonResponse(data)
 
-        async def async_home():
-            data = await get(request, year, month, day)
-            return JsonResponse(data)
-
-        return asyncio.run(async_home())
+            return asyncio.run(async_home())
+    else:
+        return render(request,"login.html")
 
 def error_404(request, exception):
     return render(request,"404.html")
