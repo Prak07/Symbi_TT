@@ -208,6 +208,13 @@ function calendar() {
 })
 .catch(error => {
   document.getElementById("loader").style.display = "none";
+  const container = document.querySelector('#time_table');
+  container.innerHTML='';
+  const message = document.createElement('p');
+  message.classList.add('signin_message');
+  message.textContent = 'SIGN IN TO SEE YOUR PERSONALIZED ROUTINE';
+  container.appendChild(message);
+  document.getElementById("time_table").style.display = "block";
   window.location.href = "/login/";
 });
         });
