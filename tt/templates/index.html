@@ -30,7 +30,9 @@
 <div id="page1">
   <div id="container">
     <div id="data-cont" data-scroll data-scroll-speed="2">
+      {% if user.is_authenticated %}
       <div class="loader" id="loader"></div>
+      {% endif %}
       <h1>Your Routine</h1>
       {% if user.is_authenticated %}
       <div id="time_table" style="background: transparent">
