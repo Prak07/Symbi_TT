@@ -19,7 +19,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://" + "symbi-tt.azurewebsites.net",
     "https://" + "symbitt.in",
 ]
-USE_X_FORWARDED_FOR=True
+# USE_X_FORWARDED_FOR=True
 #HTTPS Setting
 SESSION_COOKIE_SECURE=True
 CSRF_COOKIE_SECURE=True
@@ -111,8 +111,6 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 
 USE_TZ = True
-SECURITY_MAX_ATTEMPTS = 20
-SECURITY_BLOCK_TIME = 60 * 2
 
 
 STATIC_URL = "/static/"
