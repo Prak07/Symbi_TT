@@ -19,6 +19,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://" + "symbi-tt.azurewebsites.net",
     "https://" + "symbitt.in",
 ]
+USE_X_FORWARDED_FOR=True
 #HTTPS Setting
 SESSION_COOKIE_SECURE=True
 CSRF_COOKIE_SECURE=True
