@@ -1,13 +1,13 @@
 import os
 from pathlib import Path
 from decouple import config
-
+import tt.middleware
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = config("SECRET_KEY")
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "symbitt.in",
@@ -19,17 +19,17 @@ CSRF_TRUSTED_ORIGINS = [
     "https://" + "symbi-tt.azurewebsites.net",
     "https://" + "symbitt.in",
 ]
-# USE_X_FORWARDED_FOR=True
+USE_X_FORWARDED_FOR=True
 #HTTPS Setting
-SESSION_COOKIE_SECURE=True
-CSRF_COOKIE_SECURE=True
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT=True
+# SESSION_COOKIE_SECURE=True
+# CSRF_COOKIE_SECURE=True
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_SSL_REDIRECT=True
 
-#HSTS Setting
-SECURE_HSTS_SECONDS=31536000
-SECURE_HSTS_PRELOAD=True
-SECURE_HSTS_INCLUDE_SUBDOMAINS=True
+# #HSTS Setting
+# SECURE_HSTS_SECONDS=31536000
+# SECURE_HSTS_PRELOAD=True
+# SECURE_HSTS_INCLUDE_SUBDOMAINS=True
 
 # Application definition
 
@@ -43,10 +43,11 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 
-
+USE_X_FORWARDED_FOR=True
 MIDDLEWARE = [
+    "tt.middleware.IPBlockMiddleware",
+    "tt.middleware.RequestTrackingMiddleware",
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -80,9 +81,9 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "postgres",
-        "USER": os.environ.get("DB_USER"),
-        "PASSWORD": os.environ.get("DB_PASS"),
-        "HOST": os.environ.get("DB_HOST"),
+        "USER": config("DB_USER"),
+        "PASSWORD": config("DB_PASS"),
+        "HOST": config("DB_HOST"),
         "PORT": "5432",
     }
 }
@@ -114,9 +115,10 @@ USE_TZ = True
 
 
 STATIC_URL = "/static/"
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+if DEBUG:
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
