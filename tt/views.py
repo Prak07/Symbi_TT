@@ -14,8 +14,10 @@ from datetime import date, datetime
 import json
 import pytz
 from asgiref.sync import sync_to_async
+from django_ratelimit.decorators import ratelimit
 
 
+##@ratelimit(key='ip', rate='20/s', block=True)
 def login(request):
     if request.method == "POST":
         submit_action = request.POST.get("submit_action")
@@ -170,12 +172,12 @@ def login(request):
     else:
         return render(request, "login.html")
 
-
+##@ratelimit(key='ip', rate='20/s', block=True)
 def logout(request):
     auth.logout(request)
     return redirect("/")
 
-
+##@ratelimit(key='ip', rate='20/s', block=True)
 def update_profile(request, page):
     if request.method == "POST":
         user = request.user
@@ -219,13 +221,13 @@ def update_profile(request, page):
             messages.info(request, "Profile Updated")
     return render(request, page)
 
-
+##@ratelimit(key='ip', rate='20/s', block=True)
 @sync_to_async
 def get(request, year, month, day):
     data = routine(request, year, month, day)
     return {"data_list": data}
 
-
+##@ratelimit(key='ip', rate='20/s', block=True)
 def home(request):
     client_ip = request.META.get('HTTP_X_REAL_IP')
 
@@ -248,12 +250,12 @@ def home(request):
 
     return asyncio.run(async_home())
 
-
+##@ratelimit(key='ip', rate='20/s', block=True)
 def about(request):
     update_profile(request, "about.html")
     return render(request, "about.html")
 
-
+##@ratelimit(key='ip', rate='20/s', block=True)
 def contact(request):
     if request.method == "POST" and "contact_form" in request.POST:
         name = request.POST.get("name")
@@ -266,7 +268,7 @@ def contact(request):
     update_profile(request, "contact.html")
     return render(request, "contact.html")
 
-
+# @ratelimit(key='ip', rate='1/m', block=True)
 def routine(request, year, month, day):
     if request.user.is_authenticated:
         url = f"http://time-table.sicsr.ac.in/day.php?year={year}&month={month}&day={day}&area=1&room=29"
@@ -463,7 +465,7 @@ def routine(request, year, month, day):
             return []
     else:
         return "none"
-
+##@ratelimit(key='ip', rate='20/s', block=True)
 def update_routine(request):
     client_ip = request.META.get('HTTP_X_REAL_IP')
 
