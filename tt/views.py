@@ -1,3 +1,4 @@
+
 from django.forms import ValidationError
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
@@ -226,6 +227,10 @@ def get(request, year, month, day):
 
 
 def home(request):
+    client_ip = request.META.get('HTTP_X_REAL_IP')
+
+    # Print the client's IP address
+    print("Client IP Address:", client_ip)
     if request.method == "POST":
         update_profile(request, "index.html")
 
@@ -460,6 +465,10 @@ def routine(request, year, month, day):
         return "none"
 
 def update_routine(request):
+    client_ip = request.META.get('HTTP_X_REAL_IP')
+
+    # Print the client's IP address
+    print("Client IP Address:", client_ip)
     if request.user.is_authenticated:
         if request.method == "POST":
             data = json.loads(request.body)
