@@ -971,24 +971,36 @@ form button:hover {
   #nav-2 img {
     width: 35px;
   }
+  #search-form {
+    gap: 0;
+  }
   .container-input {
     position: absolute;
-    left: 11%;
+    left: 14%;
+    top: 90%;
+  }
+  #search-form input {
+    color: #fff;
+    border-radius: 5px;
+    padding: 2vw 7vw;
+    width: 73vw;
+    margin: 0;
+    outline: none;
   }
   .input {
-    width: 63%;
-    padding: 2vw 0vw 2vw 1vw;
-    font-size: 2.4vw;
+    width: 73vw;
+    padding: 2vw 7vw;
+    font-size: 3.5vw;
     border-radius: 5px;
   }
   .input:focus {
-    width: 63%;
+    width: 73vw;
   }
   .search-cont i {
-    display: none;
+    font-size: 3.5vw !important;
   }
   #search-dets {
-    width: 180%;
+    width: 100%;
     border-radius: 5px;
   }
   #search-dets h3 {
@@ -1208,7 +1220,7 @@ form button:hover {
   }
   nav {
     position: relative;
-    padding: 8vw 1.5vw;
+    padding: 8vw 5vw;
   }
   #nav-left img {
     width: 28%;
@@ -1216,10 +1228,10 @@ form button:hover {
   #nav-right {
     display: flex;
     align-items: center;
-    gap: 0.5vw;
+    gap: 2.5vw;
   }
   #nav-1 {
-    gap: 1.6vw;
+    gap: 4vw;
   }
 
   #nav-1 a h4 {
@@ -1238,7 +1250,7 @@ form button:hover {
   #container {
     height: 70%;
     width: 100%;
-    padding: 6vw 1vw 2vw 1vw;
+    padding: 10vw 1vw 2vw 1vw;
     flex-direction: column;
     align-items: center;
     justify-content: center;

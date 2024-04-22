@@ -1,3 +1,4 @@
+
 from django.forms import ValidationError
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
@@ -12,8 +13,9 @@ from bs4 import BeautifulSoup
 from datetime import date, datetime
 import json
 import pytz
-
 from asgiref.sync import sync_to_async
+from django_ratelimit.decorators import ratelimit
+
 
 
 def login(request):
@@ -227,6 +229,10 @@ def get(request, year, month, day):
 
 
 def home(request):
+    client_ip = request.META.get('HTTP_X_REAL_IP')
+
+    # Print the client's IP address
+    print("Client IP Address:", client_ip)
     if request.method == "POST":
         update_profile(request, "index.html")
 
@@ -465,8 +471,146 @@ def routine(request, year, month, day):
     else:
         return "none"
 
-
 def update_routine(request):
+    client_ip = request.META.get('HTTP_X_REAL_IP')
+
+    # Print the client's IP address
+    print("Client IP Address:", client_ip)
+    if request.user.is_authenticated:
+        if request.method == "POST":
+            data = json.loads(request.body)
+            selected_date = data.get("date")
+            selected_date = selected_date[0:10].split("-")
+            year = int(selected_date[0])
+            month = int(selected_date[1])
+            day = int(selected_date[2])
+            if month == 2:
+                if year % 4 == 0:
+                    if day == 29:
+                        day = 1
+                        month += 1
+                    else:
+                        day += 1
+                else:
+                    if day == 28:
+                        day = 1
+                        month += 1
+                    else:
+                        day += 1
+            elif month == 12:
+                if day == 31:
+                    day = 1
+                    month = 1
+                    year += 1
+                else:
+                    day += 1
+            elif month % 2 != 0 or month == 8:
+                if day == 31:
+                    day = 1
+                    month += 1
+                else:
+                    day += 1
+            elif month % 2 == 0:
+                if day == 30:
+                    day = 1
+                    month += 1
+                else:
+
+                    day += 1
+
+            async def async_home():
+                data = await get(request, year, month, day)
+                return JsonResponse(data)
+
+            return asyncio.run(async_home())
+    else:
+        return render(request,"login.html")
+
+def error_404(request, exception):
+    return render(request,"404.html")
+
+def routine_teacher(request, year, month, day , teacher):
+    url = f"http://time-table.sicsr.ac.in/day.php?year={year}&month={month}&day={day}&area=1&room=29"
+    def fetch(url, path):
+        r = requests.get(url)
+        with open(path, "w") as f:
+            f.write(r.text)
+
+    try:
+        fetch(url, "scrap.html")
+        with open("scrap.html") as f:
+            html_doc = f.read()
+    except:
+        pass
+
+    soup = BeautifulSoup(html_doc, "html.parser")
+    l = []
+
+    def teacher_scraping(i):
+        try:
+            url = "http://time-table.sicsr.ac.in/" + i.get("href")
+            fetch(url, "scrap2.html")
+            with open("scrap2.html") as f:
+                html_doc1 = f.read()
+                soup1 = BeautifulSoup(html_doc1, "html.parser")
+
+                tds = soup1.find_all("td")
+
+                subject = tds[1].get_text()
+
+                room = str(tds[5].get_text().split("-")[1])
+
+                start = tds[7].get_text().split("-")[0]
+                time_obj = datetime.strptime(start.strip(), "%H:%M:%S")
+                start = str(time_obj.strftime("%I:%M:%S "))
+
+
+                end = str(tds[11].get_text().split("-")[0])
+                time_obj = datetime.strptime(end.strip(), "%H:%M:%S")
+                end = str(time_obj.strftime("%I:%M:%S "))
+
+                l.append([str(subject), start, end, room])
+        except Exception as e:
+            print(e)
+    for i in soup.find_all("a"):
+        raw_title = str(i.get("title")).split()
+        title = " ".join(raw_title) 
+        if teacher in title:
+            teacher_scraping(i)
+    j = 0
+    data = []
+    for k in l:
+        try:
+            if l[j][2] == l[j + 1][1] and l[j][0] == l[j + 1][0]:
+                data.append(
+                    [str(l[j][0]), str(l[j][1]), str(l[j + 1][2]), str(l[j][3])]
+                )
+                j += 2
+            else:
+                data.append([str(l[j][0]), l[j][1], l[j][2], l[j][3]])
+                j += 1
+        except IndexError:
+            try:
+                data.append([l[j][0], l[j][1], l[j][2], l[j][3]])
+                break
+            except IndexError:
+                break
+
+    if data != []:
+        return data
+    else:
+        return []
+
+
+@sync_to_async
+def get_teacher(request, year, month, day):
+    data = routine_teacher(request, year, month, day)
+    return {"data_list": data}
+
+def update_teacher(request):
+    client_ip = request.META.get('HTTP_X_REAL_IP')
+    # Print the client's IP address
+    print("Client IP Address:", client_ip)
     if request.method == "POST":
         data = json.loads(request.body)
         selected_date = data.get("date")
@@ -508,12 +652,29 @@ def update_routine(request):
 
                 day += 1
 
-        async def async_home():
-            data = await get(request, year, month, day)
+        async def async_teacher():
+            data = await get_teacher(request, year, month, day)
             return JsonResponse(data)
 
-        return asyncio.run(async_home())
+        return asyncio.run(async_teacher())
 
 
 def error_404(request, exception):
     return render(request, "404.html")
+def search_teacher(request):
+    if request.method=="POST":
+        data = json.loads(request.body)
+        teacher=data.get("teacher")
+        async def async_teacher():
+            today = datetime.now()
+            # Specify the timezone for India
+            india_timezone = pytz.timezone('Asia/Kolkata')
+            # Convert the current date and time to Indian Standard Time (IST)
+            today_in_india= today.astimezone(india_timezone)
+            # Convert the datetime object to a string
+            today = today_in_india.strftime('%Y-%m-%d %H:%M:%S %Z')
+            year, month, day = today[0:10].split("-")
+            data = await get_teacher(request, year, month, day,teacher)
+            return JsonResponse(data)
+        
+        return asyncio.run(async_teacher())

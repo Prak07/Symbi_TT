@@ -67,20 +67,22 @@
           /></a>
         </div>
 
-        <div class="container-input">
-          <div class="search-cont">
-            <input
-              type="text"
-              placeholder="Find Teacher"
-              name="text"
-              class="input"
-            />
-            <i class="ri-search-line"></i>
+        <form action="#" id="search-form">
+          {% csrf_token %}
+          <div class="container-input">
+            <div class="search-cont">
+              <input
+                type="text"
+                placeholder="Find Teacher"
+                name="text"
+                class="input"
+              />
+              <i class="ri-search-line"></i>
+            </div>
+            <div id="search-dets"></div>
           </div>
-          <div id="search-dets">
-            
-          </div>
-        </div>
+        </form>
+
         <div id="nav-right">
           <div id="nav-1">
             <a href="/"><h4>Home</h4></a>
@@ -311,7 +313,7 @@
             {% if user.is_authenticated %}
             <div class="loader" id="loader"></div>
             {% endif %}
-            <h1>Teacher's Lectures</h1>
+            <h1>Teacher's Lecture</h1>
             {% if user.is_authenticated %}
             <div id="time_table" style="background: transparent">
               {% if data_list %} {% for i in data_list %}
