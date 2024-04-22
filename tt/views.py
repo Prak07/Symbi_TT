@@ -667,6 +667,6 @@ def search_teacher(request):
             today = today_in_india.strftime('%Y-%m-%d %H:%M:%S %Z')
             year, month, day = today[0:10].split("-")
             data = await get_teacher(request, year, month, day,teacher)
-            return render(request, "teacher.html", data)
+            return JsonResponse(data)
         
         return asyncio.run(async_teacher())
