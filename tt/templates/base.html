@@ -36,6 +36,7 @@
       <div id="nav-right">
         <div id="nav-1">
           <a href="/"><h4>Home</h4></a>
+          <a href="/teachers"><h4>Teachers</h4></a>
           <a href="/about/"><h4>About</h4></a>
           <a href="/contact/"><h4>Contact</h4></a>
         </div>
@@ -79,6 +80,7 @@
       </div>
     </nav>
     <body>
+      
       {% if user.is_authenticated %}
       <div class="overlay">
         <div id="profile-cont">
@@ -258,6 +260,7 @@
       </div>
       {% endif %} {% block body%} {% endblock body %}
     </body>
+
     <div id="footer">
       <div id="footer-container">
         <div class="links">
@@ -335,6 +338,16 @@
             </div>
           </a>
 
+          <a href="/teachers/">
+            <div class="button">
+              <span class="label-up"
+                ><i class="ri-presentation-fill"></i>Teachers</span
+              >
+              <span class="label-up"
+                ><i class="ri-presentation-fill"></i>Teachers</span
+              >
+            </div>
+          </a>
           <a href="/about/">
             <div class="button">
               <span class="label-up"

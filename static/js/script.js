@@ -70,6 +70,7 @@ gsap.from("#nav-2", {
   duration: 1,
   delay: 0.2,
 });
+
 function getCookie(name) {
   let cookieValue = null;
   if (document.cookie && document.cookie !== '') {

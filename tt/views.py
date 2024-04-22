@@ -233,16 +233,21 @@ def home(request):
     async def async_home():
         today = datetime.now()
         # Specify the timezone for India
-        india_timezone = pytz.timezone('Asia/Kolkata')
+        india_timezone = pytz.timezone("Asia/Kolkata")
         # Convert the current date and time to Indian Standard Time (IST)
-        today_in_india= today.astimezone(india_timezone)
+        today_in_india = today.astimezone(india_timezone)
         # Convert the datetime object to a string
-        today = today_in_india.strftime('%Y-%m-%d %H:%M:%S %Z')
+        today = today_in_india.strftime("%Y-%m-%d %H:%M:%S %Z")
         year, month, day = today[0:10].split("-")
         data = await get(request, year, month, day)
         return render(request, "index.html", data)
 
     return asyncio.run(async_home())
+
+
+def teachers(request):
+    update_profile(request, "teachers.html")
+    return render(request, "teachers.html")
 
 
 def about(request):
@@ -509,5 +514,6 @@ def update_routine(request):
 
         return asyncio.run(async_home())
 
+
 def error_404(request, exception):
-    return render(request,"404.html")
+    return render(request, "404.html")

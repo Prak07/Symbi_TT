@@ -43,20 +43,6 @@ function cursor() {
 cursor();
 var tl = gsap.timeline();
 
-tl.from("#about h1", {
-  y: 500,
-  opacity: 0,
-  duration: 1.5,
-});
-tl.from("#about .underline", {
-  x: -200,
-  opacity: 0,
-  duration: 0.7,
-});
-tl.from("#about p", {
-  opacity: 0,
-  duration: 0.7,
-});
 gsap.from("#nav-left img", {
   y: -100,
   opacity: 0,
@@ -77,56 +63,31 @@ gsap.from("#nav-1 a", {
 });
 
 gsap.from("#founders .content h1", {
-  y: 100,
+  y: 300,
   opacity: 0,
-  duration: 1,
-  scrollTrigger: {
-    trigger: "#founders .content h1",
-    scroller: "#main",
-    start: "top 90%",
-  },
+  duration: 1.5,
 });
 gsap.from("#founders .underline", {
   x: 200,
   opacity: 0,
-  duration: 0.7,
-  scrollTrigger: {
-    trigger: "#founders .underline",
-    scroller: "#main",
-    start: "top 90%",
-  },
+  duration: 1.5,
 });
 
 gsap.from("#cont1 h2", {
-  y: 100,
+  x: -500,
   opacity: 0,
-  duration: 1,
-  scrollTrigger: {
-    trigger: ".cont h2",
-    scroller: "#main",
-    start: "top 98%",
-  },
+  duration: 1.5,
 });
 
 gsap.from("#desc1 p", {
-  y: 100,
+  x: 400,
   opacity: 0,
-  duration: 1,
-  scrollTrigger: {
-    trigger: "#desc1 p",
-    scroller: "#main",
-    start: "top 99%",
-  },
+  duration: 1.5,
 });
-gsap.from("#desc1 a", {
-  y: 100,
+gsap.from("#desc1 a ", {
+  y: 200,
   opacity: 0,
-  duration: 1,
-  scrollTrigger: {
-    trigger: "#desc1 a",
-    scroller: "#main",
-    start: "top 98%",
-  },
+  duration: 1.5,
 });
 
 gsap.from("#cont2 h2", {
@@ -157,7 +118,7 @@ gsap.from("#desc2 a", {
   scrollTrigger: {
     trigger: "#desc2 a",
     scroller: "#main",
-    start: "bottom 95%",
+    start: "top 900px",
   },
 });
 gsap.from("#cont3 h2", {
@@ -167,7 +128,7 @@ gsap.from("#cont3 h2", {
   scrollTrigger: {
     trigger: "#cont3 h2",
     scroller: "#main",
-    start: "bottom 110%",
+    start: "bottom 130%",
   },
 });
 
@@ -178,7 +139,7 @@ gsap.from("#desc3 p", {
   scrollTrigger: {
     trigger: "#desc3 p",
     scroller: "#main",
-    start: "bottom 111%",
+    start: "bottom 132%",
   },
 });
 
@@ -189,7 +150,7 @@ gsap.from("#desc3 a", {
   scrollTrigger: {
     trigger: "#desc3 a",
     scroller: "#main",
-    start: "top 99%",
+    start: "bottom 133%",
   },
 });
 function rearrangeElements() {

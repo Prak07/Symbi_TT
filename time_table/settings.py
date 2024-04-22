@@ -5,7 +5,7 @@ from decouple import config
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = config("SECRET_KEY")
 
 DEBUG = True
 
@@ -14,22 +14,23 @@ ALLOWED_HOSTS = [
     "symbi-tt.azurewebsites.net",
     "127.0.0.1",
     "localhost",
+    "*",
 ]
-CSRF_TRUSTED_ORIGINS = [
-    "https://" + "symbi-tt.azurewebsites.net",
-    "https://" + "symbitt.in",
-]
+# CSRF_TRUSTED_ORIGINS = [
+#     "https://" + "symbi-tt.azurewebsites.net",
+#     "https://" + "symbitt.in",
+# ]
 
-#HTTPS Setting
-SESSION_COOKIE_SECURE=True
-CSRF_COOKIE_SECURE=True
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT=True
+# # HTTPS Setting
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+# SECURE_SSL_REDIRECT = True
 
-#HSTS Setting
-SECURE_HSTS_SECONDS=31536000
-SECURE_HSTS_PRELOAD=True
-SECURE_HSTS_INCLUDE_SUBDOMAINS=True
+# # HSTS Setting
+# SECURE_HSTS_SECONDS = 31536000
+# SECURE_HSTS_PRELOAD = True
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
 # Application definition
 
@@ -80,9 +81,9 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "postgres",
-        "USER": os.environ.get("DB_USER"),
-        "PASSWORD": os.environ.get("DB_PASS"),
-        "HOST": os.environ.get("DB_HOST"),
+        "USER": config("DB_USER"),
+        "PASSWORD": config("DB_PASS"),
+        "HOST": config("DB_HOST"),
         "PORT": "5432",
     }
 }
