@@ -73,92 +73,80 @@ gsap.from("#founders .underline", {
   duration: 1.5,
 });
 
-gsap.from("#cont1 h2", {
-  x: -500,
+gsap.from("#desc1 h2", {
+  x: -300,
   opacity: 0,
-  duration: 1.5,
+  duration: 1.2,
+});
+
+gsap.from("#cont1", {
+  x: -300,
+  scale: 0,
+  opacity: 0,
+  duration: 1.2,
 });
 
 gsap.from("#desc1 p", {
   x: 400,
   opacity: 0,
-  duration: 1.5,
+  duration: 1.2,
 });
 gsap.from("#desc1 a ", {
   y: 200,
   opacity: 0,
-  duration: 1.5,
+  duration: 1.2,
 });
 
-gsap.from("#cont2 h2", {
-  y: 100,
-  opacity: 0,
-  duration: 1,
-  scrollTrigger: {
-    trigger: ".cont h2",
-    scroller: "#main",
-    start: "bottom 95%",
-  },
-});
+if (window.innerWidth > 600) {
+  gsap.from("#cont2", {
+    x: 500,
+    opacity: 0,
+    duration: 1.2,
+    scrollTrigger: {
+      trigger: "#cont2",
+      scroller: "#main",
+      start: "top 98%",
+    },
+  });
 
-gsap.from("#desc2 p", {
-  y: 100,
-  opacity: 0,
-  duration: 1,
-  scrollTrigger: {
-    trigger: "#desc2 p",
-    scroller: "#main",
-    start: "top 98%",
-  },
-});
-gsap.from("#desc2 a", {
-  y: 100,
-  opacity: 0,
-  duration: 1,
-  scrollTrigger: {
-    trigger: "#desc2 a",
-    scroller: "#main",
-    start: "top 900px",
-  },
-});
-gsap.from("#cont3 h2", {
-  y: 100,
-  opacity: 0,
-  duration: 1,
-  scrollTrigger: {
-    trigger: "#cont3 h2",
-    scroller: "#main",
-    start: "bottom 130%",
-  },
-});
+  gsap.from("#desc2 h2", {
+    x: -400,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: "#desc h2",
+      scroller: "#main",
+      start: "bottom 95%",
+    },
+  });
 
-gsap.from("#desc3 p", {
-  y: 100,
-  opacity: 0,
-  duration: 1,
-  scrollTrigger: {
-    trigger: "#desc3 p",
-    scroller: "#main",
-    start: "bottom 132%",
-  },
-});
-
-gsap.from("#desc3 a", {
-  y: 100,
-  opacity: 0,
-  duration: 1,
-  scrollTrigger: {
-    trigger: "#desc3 a",
-    scroller: "#main",
-    start: "bottom 133%",
-  },
-});
+  gsap.from("#desc2 p", {
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: "#desc2 p",
+      scroller: "#main",
+      start: "top 98%",
+    },
+  });
+  gsap.from("#desc2 a", {
+    x: 100,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: "#desc2 a",
+      scroller: "#main",
+      start: "top 900px",
+    },
+  });
+}
 function rearrangeElements() {
   var cont = document.getElementById("cont2");
   var desc = document.getElementById("desc2");
   var partners = document.getElementById("partners");
 
-  if (window.innerWidth <= 600) {
+  if (window.innerWidth <= 900) {
     partners.insertBefore(cont, desc);
   } else {
     partners.insertBefore(desc, cont);

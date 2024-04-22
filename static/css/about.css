@@ -33,6 +33,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  background-color: #151515;
 }
 
 ::selection {
@@ -41,7 +42,7 @@ body {
 #page1 {
   width: 100%;
   min-height: 100vh;
-  padding: 1vw 3vw;
+  padding: 0vw 3vw;
 }
 
 #nav-2 img {
@@ -512,11 +513,11 @@ form button:hover {
 #founders {
   width: 100%;
   min-height: 38vw;
-  padding: 1vw 5vw;
+  padding: 0vw 5vw 5vw 7vw;
   display: flex;
   position: relative;
   flex-direction: column;
-  gap: 2vw;
+  gap: 1vw;
 }
 #founders h1 {
   background-color: transparent;
@@ -543,34 +544,53 @@ form button:hover {
   color: #fff;
   width: 100%;
   display: flex;
-  gap: 4vw;
-  align-items: center;
+  gap: 2vw;
   justify-content: space-between;
 }
+.cont {
+  height: 22vw;
+  border-radius: 50%;
+  width: 113vw;
+  background-color: skyblue;
+  overflow: hidden;
+}
+#cont1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 40% 120%;
+  scale: 1.2;
+}
+#cont2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 38%;
+}
+
 .partners-cont {
   display: flex;
   flex-direction: column;
-  gap: 3vw;
+  gap: 1vw;
 }
 .partners h2 {
   font-family: mons;
   text-transform: uppercase;
-  font-size: 6vw;
+  font-size: 3.5vw;
   color: #fff;
   font-weight: 700;
-  line-height: 8vw;
 }
 .desc {
   display: flex;
   flex-direction: column;
-  gap: 2vw;
+  gap: 1vw;
   justify-content: space-between;
-  padding: 1.5vw;
+  padding: 0 1.5vw;
 }
 .desc p {
-  font-size: 1.3vw;
+  font-size: 1.4vw;
   font-weight: 300;
-  line-height: 2.5vw;
+  line-height: 2.7vw;
 }
 .desc p span {
   color: rgba(255, 64, 0, 0.925);
@@ -640,6 +660,7 @@ form button:hover {
   }
   #page1 {
     min-height: 40vh;
+    padding: 0;
   }
   #close {
     font-size: 5vw;
@@ -875,9 +896,12 @@ form button:hover {
 
   #founders {
     min-height: 100vw;
-    padding: 1vw 0vw;
+    padding: 0vw 2vw 8vw 2vw;
     gap: 3vw;
     align-items: normal;
+  }
+  .partners-cont {
+    gap: 10vw;
   }
   #founders h1 {
     font-size: 18.7vw;
@@ -892,17 +916,24 @@ form button:hover {
   }
   .partners {
     flex-direction: column;
-    gap: 6.5vw;
+    gap: 1vw;
+    align-items: center;
+    padding-top: 2vw;
   }
-  .partners h2 {
-    font-size: 8.5vw;
+  .desc h2 {
+    font-size: 8vw;
     line-height: 11vw;
     margin-bottom: 0 !important;
-    margin-top: 3vw;
+    margin-top: 1vw;
+  }
+  .cont {
+    height: 50vw;
+    width: 50vw;
   }
   .desc {
     padding: 1vw 3vw;
-    gap: 5vw;
+    gap: 3vw;
+    align-items: center;
   }
   .desc p {
     font-size: 4.4vw;
@@ -913,6 +944,7 @@ form button:hover {
     line-height: 9vw;
   }
   .desc a {
+    margin-top: 2vw;
     padding: 2vw 3vw;
     width: 100%;
   }
