@@ -569,8 +569,79 @@ def routine_teacher(request, year, month, day, teacher):
     for i in soup.find_all("a"):
         raw_title = str(i.get("title")).split()
         title = " ".join(raw_title)
-        if teacher.lower() in title.lower():
-            teacher_scraping(i)
+        t_names = [
+        "Jatinderkumar Saini",
+        "Parag Kaveri",
+        "Sarika Sharma",
+        "Rajashree Jain",
+        "Rajesh Dhanraj",
+        "Shirish Joshi",
+        "Shraddha Vaidya",
+        "Shilpa Mujumdar",
+        "Shubhashri Waghmare",
+        "Priti Kulkarni",
+        "Sachin Naik",
+        "Shrikant Mapari",
+        "Gaurav Pant",
+        "Shashank Gaikwad",
+        "Prafulla Bafna",
+        "Anuja Bokhare",
+        "Hema Gaikwad",
+        "Kumari Deepika",
+        "Amol Vibhute",
+        "Sandeep Gaikwad",
+        "Prathamesh Lahande",
+        "Pattar Gurunath",
+        "Chaitanya Kulkarni",
+        "Shashikant Nehul",
+        "Sonal Parmar",
+        "Kanchangauri Joshi",
+        "Rajesh Math",
+        "Rohan Pramod Bhase",
+        "Anirudha Ketkar",
+        "Vijay Haldavnekar",
+        "Satyajit Achyut Wale",
+        "Janhavi Pednekar",
+        "Sarika Zambad",
+        "Joshi Ambadas",
+        "Vaishali Joshi",
+        "Kirti Mehare",
+        "Gauri Madan",
+        "Shashank Gaikwad",
+        "Kunal Chandak",
+        "Renuka Vaidya",
+        "Siddharth Subramaniam",
+        "Vatsala Gupta",
+        "Surbhi Pai",
+        "Sagar Bedre",
+        "Sneha Shirlokar",
+        "Sulaxan Jadhav",
+        "Mrinmayi Huprikar",
+        "Ramandeep Kaur",
+        "Vaishali Kale",
+        "Umesh Patwari",
+        "Gopal Phadke",
+        "Ashwini Shende",
+        "Parag Joshi",
+        "Nandkumar Khachane",
+        "Trupti Adke",
+        "Ketki Hasbnis",
+        "Ketki Deshpande ",
+        "Biswajit Mohpatra",
+        "Manjusha Joshi",
+        "Manjusha Kalgaonkar",
+        "Atul Kahate",
+        "Rasila Walhekar",
+        "Pranita Dube",
+        ]
+        if " " in teacher:
+            if any(teacher.lower() in name.lower() for name in t_names):
+                if teacher.lower() in title.lower():
+                    teacher_scraping(i)
+        else:
+            if any(teacher.lower() in name.lower().split() for name in t_names):
+                if teacher.lower() in title.lower():
+                    teacher_scraping(i)
     j = 0
     data = []
     for k in l:

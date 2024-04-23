@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config("SECRET_KEY")
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "symbitt.in",
@@ -18,10 +18,10 @@ ALLOWED_HOSTS = [
     "*",
 ]
 
-# CSRF_TRUSTED_ORIGINS = [
-#     "https://" + "symbi-tt.azurewebsites.net",
-#     "https://" + "symbitt.in",
-# ]
+CSRF_TRUSTED_ORIGINS = [
+    "https://" + "symbi-tt.azurewebsites.net",
+    "https://" + "symbitt.in",
+]
 # HTTPS Setting
 # SESSION_COOKIE_SECURE=True
 # CSRF_COOKIE_SECURE=True
@@ -45,10 +45,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 
-# USE_X_FORWARDED_FOR = True
+USE_X_FORWARDED_FOR = True
 MIDDLEWARE = [
-    # "tt.middleware.IPBlockMiddleware",
-    # "tt.middleware.RequestTrackingMiddleware",
+    "tt.middleware.IPBlockMiddleware",
+    "tt.middleware.RequestTrackingMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",

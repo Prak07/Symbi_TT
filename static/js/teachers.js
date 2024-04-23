@@ -309,14 +309,14 @@ var input = document.querySelector(".search-cont .input");
 var search_dets = document.querySelector("#search-dets");
 var form = document.getElementById("search-form");
 var t_names = [
-  "Jatinderkumar R. Saini",
-  "Parag Ravikant Kaveri",
+  "Jatinderkumar Saini",
+  "Parag Kaveri",
   "Sarika Sharma",
   "Rajashree Jain",
-  "Rajesh Kumar Dhanraj",
+  "Rajesh Dhanraj",
   "Shirish Joshi",
-  "Shraddha Mihir Vaidya",
-  "Shilpa Bhaskar Mujumdar",
+  "Shraddha Vaidya",
+  "Shilpa Mujumdar",
   "Shubhashri Waghmare",
   "Priti Kulkarni",
   "Sachin Naik",
@@ -330,7 +330,61 @@ var t_names = [
   "Amol Vibhute",
   "Sandeep Gaikwad",
   "Prathamesh Lahande",
+  "Pattar Gurunath",
+  "Chaitanya Kulkarni",
+  "Shashikant Nehul",
+  "Sonal Parmar",
+  "Kanchangauri Joshi",
+  "Rajesh Math",
+  "Rohan Pramod Bhase",
+  "Anirudha Ketkar",
+  "Vijay Haldavnekar",
+  "Satyajit Achyut Wale",
+  "Janhavi Pednekar",
+  "Sarika Zambad",
+  "Joshi Ambadas",
+  "Vaishali Joshi",
+  "Kirti Mehare",
+  "Gauri Madan",
+  "Shashank Gaikwad",
+  "Kunal Chandak",
+  "Renuka Vaidya",
+  "Siddharth Subramaniam",
+  "Vatsala Gupta",
+  "Surbhi Pai",
+  "Sagar Bedre",
+  "Sneha Shirlokar",
+  "Sulaxan Jadhav",
+  "Mrinmayi Huprikar",
+  "Ramandeep Kaur",
+  "Vaishali Kale",
+  "Umesh Patwari",
+  "Gopal Phadke",
+  "Ashwini Shende",
+  "Parag Joshi",
+  "Nandkumar Khachane",
+  "Trupti Adke",
+  "Ketki Hasbnis",
+  "Ketki Deshpande ",
+  "Biswajit Mohpatra",
+  "Manjusha Joshi",
+  "Manjusha Kalgaonkar",
+  "Atul Kahate",
+  "Rasila Walhekar",
+  "Pranita Dube",
 ];
+
+
+// Get the form element
+var form = document.getElementById('search-form');
+// Add submit event listener to the form
+form.addEventListener('submit', function(event) {
+    // Get form data
+    var name = document.getElementById('teacher').value;
+    // Store form data in local storage
+    localStorage.setItem("selected_name", name.trim());
+});
+
 
 function handleSearch() {
   function updateSearchResults() {
@@ -345,9 +399,12 @@ function handleSearch() {
     }
 
     const filter_array = t_names.filter(
-      (name) => name.toLowerCase().includes(inputValue.toLowerCase())
+      (name) => {
+      // name.toLowerCase().includes(inputValue.toLowerCase())
       // name.toLowerCase().startsWith(inputValue.toLowerCase())
-    );
+      const names = name.split(" ");
+      return names[0].toLowerCase().startsWith(inputValue.toLowerCase()) || names[1].toLowerCase().startsWith(inputValue.toLowerCase());
+  });
 
     let clutter = "";
     if (filter_array.length === 0) {
