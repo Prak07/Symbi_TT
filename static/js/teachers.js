@@ -145,7 +145,7 @@ function calendar() {
           document.getElementById("loader").style.display = "block";
           const selectedDateString = this.dataset.date;
           selectedDate = new Date(selectedDateString);
-          teacher_name=localStorage.getItem("selected_name");
+          teacher_name = localStorage.getItem("selected_name");
           renderCalendar(); // Re-render the calendar to update the selected date UI
           // You can perform further operations with the selected date here
           fetch("/update_teacher/", {
@@ -154,7 +154,7 @@ function calendar() {
               "Content-Type": "application/json",
               "X-CSRFToken": csrftoken,
             },
-            body: JSON.stringify({ date: selectedDate , teacher : teacher_name }),
+            body: JSON.stringify({ date: selectedDate, teacher: teacher_name }),
           })
             .then((response) => {
               if (!response.ok) {
@@ -207,7 +207,7 @@ function calendar() {
                 container.innerHTML = "";
                 const message = document.createElement("p");
                 message.classList.add("signin_message");
-                message.textContent = "NO CLASSES TODAY";
+                message.textContent = "no lectures";
                 container.appendChild(message);
               }
               document.getElementById("loader").style.display = "none";
@@ -216,10 +216,8 @@ function calendar() {
             .catch((error) => {
               console.error("Error updating HTML content:", error);
             });
-          
         });
       });
-      
     }
 
     prevButton.addEventListener("click", function () {
@@ -306,9 +304,10 @@ gsap.from(".container-input", {
   opacity: 0,
   duration: 1.5,
 });
+
 var input = document.querySelector(".search-cont .input");
 var search_dets = document.querySelector("#search-dets");
-var form = document.getElementById('search-form');
+var form = document.getElementById("search-form");
 var t_names = [
   "Jatinderkumar R. Saini",
   "Parag Ravikant Kaveri",
@@ -345,8 +344,9 @@ function handleSearch() {
       return;
     }
 
-    const filter_array = t_names.filter((name) =>
-      name.toLowerCase().startsWith(inputValue)
+    const filter_array = t_names.filter(
+      (name) => name.toLowerCase().includes(inputValue.toLowerCase())
+      // name.toLowerCase().startsWith(inputValue.toLowerCase())
     );
 
     let clutter = "";

@@ -1,4 +1,3 @@
-
 from django.forms import ValidationError
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
@@ -15,7 +14,6 @@ import json
 import pytz
 from asgiref.sync import sync_to_async
 from django_ratelimit.decorators import ratelimit
-
 
 
 def login(request):
@@ -230,7 +228,7 @@ def get(request, year, month, day):
 
 
 def home(request):
-    client_ip = request.META.get('HTTP_X_REAL_IP')
+    client_ip = request.META.get("HTTP_X_REAL_IP")
 
     # Print the client's IP address
     print("Client IP Address:", client_ip)
@@ -250,7 +248,6 @@ def home(request):
         return render(request, "index.html", data)
 
     return asyncio.run(async_home())
-
 
 
 def about(request):
@@ -468,8 +465,9 @@ def routine(request, year, month, day):
     else:
         return "none"
 
+
 def update_routine(request):
-    client_ip = request.META.get('HTTP_X_REAL_IP')
+    client_ip = request.META.get("HTTP_X_REAL_IP")
 
     # Print the client's IP address
     print("Client IP Address:", client_ip)
@@ -521,13 +519,12 @@ def update_routine(request):
 
             return asyncio.run(async_home())
     else:
-        return render(request,"login.html")
+        return render(request, "login.html")
 
-def error_404(request, exception):
-    return render(request,"404.html")
 
-def routine_teacher(request, year, month, day , teacher):
+def routine_teacher(request, year, month, day, teacher):
     url = f"http://time-table.sicsr.ac.in/day.php?year={year}&month={month}&day={day}&area=1&room=29"
+
     def fetch(url, path):
         r = requests.get(url)
         with open(path, "w") as f:
@@ -561,7 +558,6 @@ def routine_teacher(request, year, month, day , teacher):
                 time_obj = datetime.strptime(start.strip(), "%H:%M:%S")
                 start = str(time_obj.strftime("%I:%M:%S "))
 
-
                 end = str(tds[11].get_text().split("-")[0])
                 time_obj = datetime.strptime(end.strip(), "%H:%M:%S")
                 end = str(time_obj.strftime("%I:%M:%S "))
@@ -569,10 +565,11 @@ def routine_teacher(request, year, month, day , teacher):
                 l.append([str(subject), start, end, room])
         except Exception as e:
             print(e)
+
     for i in soup.find_all("a"):
         raw_title = str(i.get("title")).split()
-        title = " ".join(raw_title) 
-        if teacher in title:
+        title = " ".join(raw_title)
+        if teacher.lower() in title.lower():
             teacher_scraping(i)
     j = 0
     data = []
@@ -600,21 +597,22 @@ def routine_teacher(request, year, month, day , teacher):
 
 
 @sync_to_async
-def get_teacher(request, year, month, day , teacher):
-    data = routine_teacher(request, year, month, day , teacher)
-    if data==[]:
-        return {"data_list": data,"message":"NO LECTURES TODAY"}
+def get_teacher(request, year, month, day, teacher):
+    data = routine_teacher(request, year, month, day, teacher)
+    if data == []:
+        return {"data_list": data, "message": "NO LECTURES TODAY"}
     else:
         return {"data_list": data}
 
+
 def update_teacher(request):
-    client_ip = request.META.get('HTTP_X_REAL_IP')
+    client_ip = request.META.get("HTTP_X_REAL_IP")
     # Print the client's IP address
     print("Client IP Address:", client_ip)
     if request.method == "POST":
         data = json.loads(request.body)
         selected_date = data.get("date")
-        selected_teacher=data.get("teacher")
+        selected_teacher = data.get("teacher")
         selected_date = selected_date[0:10].split("-")
         year = int(selected_date[0])
         month = int(selected_date[1])
@@ -650,11 +648,11 @@ def update_teacher(request):
                 day = 1
                 month += 1
             else:
-                
+
                 day += 1
 
         async def async_teacher():
-            data = await get_teacher(request, year, month, day , selected_teacher)
+            data = await get_teacher(request, year, month, day, selected_teacher)
             return JsonResponse(data)
 
         return asyncio.run(async_teacher())
@@ -662,21 +660,24 @@ def update_teacher(request):
 
 def search_teacher(request):
     if request.method == "POST" and "teacher" in request.POST:
-        teacher=request.POST["teacher"]
+        teacher = request.POST["teacher"]
+
         async def async_teacher():
             today = datetime.now()
             # Specify the timezone for India
-            india_timezone = pytz.timezone('Asia/Kolkata')
+            india_timezone = pytz.timezone("Asia/Kolkata")
             # Convert the current date and time to Indian Standard Time (IST)
-            today_in_india= today.astimezone(india_timezone)
+            today_in_india = today.astimezone(india_timezone)
             # Convert the datetime object to a string
-            today = today_in_india.strftime('%Y-%m-%d %H:%M:%S %Z')
+            today = today_in_india.strftime("%Y-%m-%d %H:%M:%S %Z")
             year, month, day = today[0:10].split("-")
-            data = await get_teacher(request, year, month , day , teacher)
-            data["teacher"]=teacher
-            return render(request,"teachers.html",data)
+            data = await get_teacher(request, year, month, day, teacher)
+            data["teacher"] = teacher
+            return render(request, "teachers.html", data)
+
         return asyncio.run(async_teacher())
-    return render(request,"teachers.html")
-    
+    return render(request, "teachers.html")
+
+
 def error_404(request, exception):
     return render(request, "404.html")

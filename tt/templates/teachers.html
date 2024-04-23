@@ -70,24 +70,14 @@
           {% csrf_token %}
           <div class="container-input">
             <div class="search-cont">
-              {% if teacher %}
-              <input
-                type="text"
-                placeholder="{{teacher}}"
-                name="teacher"
-                class="input"
-                required
-              />
-              {% else %}
               <input
                 type="text"
                 placeholder="Find Teacher"
                 name="teacher"
                 class="input"
-                id="teacher_name"
                 required
+                value="{{teacher}}"
               />
-              {% endif %}
               <i class="ri-search-line"></i>
             </div>
             <div id="search-dets"></div>
@@ -101,7 +91,8 @@
             <a href="/about/"><h4>About</h4></a>
             <a href="/contact/"><h4>Contact</h4></a>
           </div>
-      </nav>      
+        </div>
+      </nav>
       <div id="page1">
         <div id="container">
           <div id="data-cont" data-scroll data-scroll-speed="2">
@@ -120,14 +111,15 @@
                   <h3>{{i.3}}</h3>
                 </div>
               </div>
-              {% endfor %} 
+              {% endfor %} {% else %} {% if message %}
+              <p class="signin_message" style="text-align: center">
+                {{message}}
+              </p>
               {% else %}
-              {% if message %}
-              <p class="signin_message" style="text-align: center;">{{message}}</p>
-              {% else %}
-              <p class="signin_message" style="text-align: center;">SEARCH THE NAME OF TEACHER TO GET THE LECTURES </p>
-              {% endif %}
-              {% endif %}
+              <p class="signin_message" style="text-align: center">
+                SEARCH THE NAME OF TEACHER TO GET THE LECTURES
+              </p>
+              {% endif %} {% endif %}
             </div>
           </div>
           <div class="calendar" data-scroll data-scroll-speed="2">

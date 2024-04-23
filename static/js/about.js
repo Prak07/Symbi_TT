@@ -68,7 +68,7 @@ gsap.from("#founders .content h1", {
   duration: 1.5,
 });
 gsap.from("#founders .underline", {
-  x: 200,
+  scale: 0,
   opacity: 0,
   duration: 1.5,
 });
@@ -81,7 +81,6 @@ gsap.from("#desc1 h2", {
 
 gsap.from("#cont1", {
   x: -300,
-  // scale: 0,
   opacity: 0,
   duration: 1.1,
 });
@@ -94,7 +93,7 @@ gsap.from("#desc1 p", {
 gsap.from("#desc1 a ", {
   y: 200,
   opacity: 0,
-  duration: .9,
+  duration: 0.9,
 });
 
 if (window.innerWidth > 600) {
@@ -106,17 +105,6 @@ if (window.innerWidth > 600) {
       trigger: "#cont2",
       scroller: "#main",
       start: "top 98%",
-    },
-  });
-
-  gsap.from("#desc2 h2", {
-    x: -400,
-    opacity: 0,
-    duration: 1,
-    scrollTrigger: {
-      trigger: "#desc h2",
-      scroller: "#main",
-      start: "bottom 95%",
     },
   });
 

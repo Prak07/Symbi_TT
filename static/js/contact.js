@@ -60,7 +60,6 @@ gsap.from("#nav-1 a", {
   y: -50,
   opacity: 0,
   duration: 1,
-
   stagger: 0.1,
 });
 
@@ -68,24 +67,20 @@ gsap.from("#contact .content h1", {
   opacity: 0,
   y: 500,
   duration: 1.5,
-  delay: 0.7,
 });
 
 gsap.from("#contact .underline", {
   opacity: 0,
-  x: 100,
-  duration: 0.5,
-  delay: 1,
+  scale: 0,
+  duration: 1.1,
 });
 gsap.from("#form-container form", {
   opacity: 0,
-  x: -400,
-  duration: 1.5,
-  delay: 0.8,
+  x: -300,
+  duration: 0.9,
 });
 gsap.from("#contact-info .elem-cont h1, #info .elem-cont h3", {
   opacity: 0,
   y: 300,
-  duration: 1.5,
-  delay: 0.8,
+  duration: 1.2,
 });
