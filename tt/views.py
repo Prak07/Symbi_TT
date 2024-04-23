@@ -179,47 +179,48 @@ def logout(request):
 
 
 def update_profile(request, page):
-    if request.method == "POST":
-        user = request.user
-        div = request.POST["div"]
-        email = request.POST["email"]
-        div = div.upper()
-        sem = request.POST["sem"]
-        sem = sem.upper()
-        sem_s = {
-            "1": "I",
-            "2": "II",
-            "3": "III",
-            "4": "IV",
-            "5": "V",
-            "6": "VI",
-            "7": "VII",
-            "8": "VIII",
-        }
-        if sem in sem_s:
-            sem = sem_s[sem]
-        program = request.POST["program"]
-        elective = request.POST["elective"]
-        Honours = request.POST["honours"]
-        if Honours == "yes":
-            user.email = email
-            user.sem = sem
-            user.div = div
-            user.program = program
-            user.elective = elective
-            user.honours = True
-            user.save()
-            messages.info(request, "Profile Updated")
-        else:
-            user.email = email
-            user.sem = sem
-            user.div = div
-            user.program = program
-            user.honours = False
-            user.elective = elective
-            user.save()
-            messages.info(request, "Profile Updated")
-    return render(request, page)
+    if request.user.is_authenticated:
+        if request.method == "POST":
+            user = request.user
+            div = request.POST["div"]
+            email = request.POST["email"]
+            div = div.upper()
+            sem = request.POST["sem"]
+            sem = sem.upper()
+            sem_s = {
+                "1": "I",
+                "2": "II",
+                "3": "III",
+                "4": "IV",
+                "5": "V",
+                "6": "VI",
+                "7": "VII",
+                "8": "VIII",
+            }
+            if sem in sem_s:
+                sem = sem_s[sem]
+            program = request.POST["program"]
+            elective = request.POST["elective"]
+            Honours = request.POST["honours"]
+            if Honours == "yes":
+                user.email = email
+                user.sem = sem
+                user.div = div
+                user.program = program
+                user.elective = elective
+                user.honours = True
+                user.save()
+                messages.info(request, "Profile Updated")
+            else:
+                user.email = email
+                user.sem = sem
+                user.div = div
+                user.program = program
+                user.honours = False
+                user.elective = elective
+                user.save()
+                messages.info(request, "Profile Updated")
+        return render(request, page)
 
 
 @sync_to_async
@@ -250,10 +251,6 @@ def home(request):
 
     return asyncio.run(async_home())
 
-
-def teachers(request):
-    update_profile(request, "teachers.html")
-    return render(request, "teachers.html")
 
 
 def about(request):
@@ -603,9 +600,12 @@ def routine_teacher(request, year, month, day , teacher):
 
 
 @sync_to_async
-def get_teacher(request, year, month, day):
-    data = routine_teacher(request, year, month, day)
-    return {"data_list": data}
+def get_teacher(request, year, month, day , teacher):
+    data = routine_teacher(request, year, month, day , teacher)
+    if data==[]:
+        return {"data_list": data,"message":"NO LECTURES TODAY"}
+    else:
+        return {"data_list": data}
 
 def update_teacher(request):
     client_ip = request.META.get('HTTP_X_REAL_IP')
@@ -614,6 +614,7 @@ def update_teacher(request):
     if request.method == "POST":
         data = json.loads(request.body)
         selected_date = data.get("date")
+        selected_teacher=data.get("teacher")
         selected_date = selected_date[0:10].split("-")
         year = int(selected_date[0])
         month = int(selected_date[1])
@@ -649,22 +650,19 @@ def update_teacher(request):
                 day = 1
                 month += 1
             else:
-
+                
                 day += 1
 
         async def async_teacher():
-            data = await get_teacher(request, year, month, day)
+            data = await get_teacher(request, year, month, day , selected_teacher)
             return JsonResponse(data)
 
         return asyncio.run(async_teacher())
 
 
-def error_404(request, exception):
-    return render(request, "404.html")
 def search_teacher(request):
-    if request.method=="POST":
-        data = json.loads(request.body)
-        teacher=data.get("teacher")
+    if request.method == "POST" and "teacher" in request.POST:
+        teacher=request.POST["teacher"]
         async def async_teacher():
             today = datetime.now()
             # Specify the timezone for India
@@ -674,7 +672,11 @@ def search_teacher(request):
             # Convert the datetime object to a string
             today = today_in_india.strftime('%Y-%m-%d %H:%M:%S %Z')
             year, month, day = today[0:10].split("-")
-            data = await get_teacher(request, year, month, day,teacher)
-            return JsonResponse(data)
-        
+            data = await get_teacher(request, year, month , day , teacher)
+            data["teacher"]=teacher
+            return render(request,"teachers.html",data)
         return asyncio.run(async_teacher())
+    return render(request,"teachers.html")
+    
+def error_404(request, exception):
+    return render(request, "404.html")

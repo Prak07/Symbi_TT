@@ -74,27 +74,27 @@ gsap.from("#founders .underline", {
 });
 
 gsap.from("#desc1 h2", {
-  x: -300,
+  x: 400,
   opacity: 0,
-  duration: 1.2,
+  duration: 1.1,
 });
 
 gsap.from("#cont1", {
   x: -300,
-  scale: 0,
+  // scale: 0,
   opacity: 0,
-  duration: 1.2,
+  duration: 1.1,
 });
 
 gsap.from("#desc1 p", {
   x: 400,
   opacity: 0,
-  duration: 1.2,
+  duration: 1.1,
 });
 gsap.from("#desc1 a ", {
   y: 200,
   opacity: 0,
-  duration: 1.2,
+  duration: .9,
 });
 
 if (window.innerWidth > 600) {

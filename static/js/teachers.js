@@ -139,19 +139,22 @@ function calendar() {
       const dayElements = document.querySelectorAll(".day");
       dayElements.forEach((dayElement) => {
         dayElement.addEventListener("click", function () {
-          document.getElementById("loader").style.display = "block";
+          var input = document.querySelector(".search-cont .input");
+          const inputValue = input.value.trim().toLowerCase();
           document.getElementById("time_table").style.display = "none";
+          document.getElementById("loader").style.display = "block";
           const selectedDateString = this.dataset.date;
           selectedDate = new Date(selectedDateString);
+          teacher_name=localStorage.getItem("selected_name");
           renderCalendar(); // Re-render the calendar to update the selected date UI
           // You can perform further operations with the selected date here
-          fetch("/update_routine/", {
+          fetch("/update_teacher/", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
               "X-CSRFToken": csrftoken,
             },
-            body: JSON.stringify({ date: selectedDate }),
+            body: JSON.stringify({ date: selectedDate , teacher : teacher_name }),
           })
             .then((response) => {
               if (!response.ok) {
@@ -213,8 +216,10 @@ function calendar() {
             .catch((error) => {
               console.error("Error updating HTML content:", error);
             });
+          
         });
       });
+      
     }
 
     prevButton.addEventListener("click", function () {
@@ -303,7 +308,7 @@ gsap.from(".container-input", {
 });
 var input = document.querySelector(".search-cont .input");
 var search_dets = document.querySelector("#search-dets");
-
+var form = document.getElementById('search-form');
 var t_names = [
   "Jatinderkumar R. Saini",
   "Parag Ravikant Kaveri",
@@ -363,6 +368,7 @@ function handleSearch() {
           display: "none",
           opacity: 0,
         });
+        form.submit();
       });
     });
 
@@ -374,7 +380,6 @@ function handleSearch() {
   }
 
   input.addEventListener("input", updateSearchResults);
-
   input.addEventListener("blur", function () {
     gsap.to(search_dets, {
       top: "0%",
