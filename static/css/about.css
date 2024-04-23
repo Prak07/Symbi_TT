@@ -548,9 +548,9 @@ form button:hover {
   justify-content: space-between;
 }
 .cont {
-  height: 22vw;
+  height: 24vw;
   border-radius: 50%;
-  width: 113vw;
+  width: 125vw;
   background-color: skyblue;
   overflow: hidden;
 }
@@ -558,8 +558,8 @@ form button:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 40% 120%;
-  scale: 1.2;
+  object-position: 50% 150%;
+  scale: 1.4;
 }
 #cont2 img {
   width: 100%;
