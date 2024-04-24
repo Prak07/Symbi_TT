@@ -346,7 +346,7 @@ var t_names = [
   "Vaishali Joshi",
   "Kirti Mehare",
   "Gauri Madan",
-  "Shashank Gaikwad",
+  "Shashshank Gaikwad",
   "Kunal Chandak",
   "Renuka Vaidya",
   "Siddharth Subramaniam",

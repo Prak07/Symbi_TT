@@ -583,7 +583,7 @@ def routine_teacher(request, year, month, day, teacher):
         "Sachin Naik",
         "Shrikant Mapari",
         "Gaurav Pant",
-        "Shashank Gaikwad",
+        "Shashshank Gaikwad",
         "Prafulla Bafna",
         "Anuja Bokhare",
         "Hema Gaikwad",
