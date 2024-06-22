@@ -355,6 +355,7 @@ var t_names = [
   "Sagar Bedre",
   "Sneha Shirlokar",
   "Sulaxan Jadhav",
+  "Vrushali Kulkarni",
   "Mrinmayi Huprikar",
   "Ramandeep Kaur",
   "Vaishali Kale",
@@ -402,8 +403,13 @@ function handleSearch() {
       (name) => {
       // name.toLowerCase().includes(inputValue.toLowerCase())
       // name.toLowerCase().startsWith(inputValue.toLowerCase())
-      const names = name.split(" ");
-      return names[0].toLowerCase().startsWith(inputValue.toLowerCase()) || names[1].toLowerCase().startsWith(inputValue.toLowerCase());
+      if (inputValue.includes(" ")){
+        return name.toLowerCase().includes(inputValue.toLowerCase())
+      }
+      else{
+        const names = name.split(" ");
+        return names[0].toLowerCase().startsWith(inputValue.toLowerCase()) || names[1].toLowerCase().startsWith(inputValue.toLowerCase());
+      }
   });
 
     let clutter = "";

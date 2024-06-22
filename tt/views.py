@@ -370,6 +370,10 @@ def routine(request, year, month, day):
         for i in soup.find_all("a"):
             raw_title = str(i.get("title")).split()
             title = " ".join(raw_title)
+            title=title.replace("Group A"," ")
+            title=title.replace("Group B"," ")
+            title=title.replace("Group C"," ")
+            
             if course == "BCA":
                 if "BCA" in title:
                     if f" {sem} " in title or f" {sem}-" in title:
@@ -616,6 +620,7 @@ def routine_teacher(request, year, month, day, teacher):
         "Sagar Bedre",
         "Sneha Shirlokar",
         "Sulaxan Jadhav",
+        "Vrushali Kulkarni",
         "Mrinmayi Huprikar",
         "Ramandeep Kaur",
         "Vaishali Kale",
