@@ -133,9 +133,13 @@ function calendar() {
 
         daysHTML += `<div class="${classes}" data-date="${date.toISOString()}">${i}</div>`;
       }
+
+      
       daysElement.innerHTML = daysHTML;
       const csrftoken = getCookie("csrftoken");
       // Add event listeners to each day element for date selection
+      if (localStorage.getItem("selected_name")){
+        document.querySelector(".search-cont .input").placeholder=localStorage.getItem("selected_name");
       const dayElements = document.querySelectorAll(".day");
       dayElements.forEach((dayElement) => {
         dayElement.addEventListener("click", function () {
@@ -218,7 +222,7 @@ function calendar() {
             });
         });
       });
-    }
+    }};
 
     prevButton.addEventListener("click", function () {
       currentDate.setMonth(currentDate.getMonth() - 1);

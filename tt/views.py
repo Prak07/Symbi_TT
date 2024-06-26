@@ -386,7 +386,7 @@ def routine(request, year, month, day):
                         ):
                             scraping(i)
                         if honours == True:
-                            if "Honours" in title:
+                            if "Honours" in title or "Hon." in title:
                                 scraping(i)
                         if "Flexi-Credit" in title:
                             scraping(i)
