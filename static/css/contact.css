@@ -916,7 +916,7 @@ form button:hover span:after {
   }
   #contact {
     height: 90%;
-    padding: 1vw 4vw;
+    padding: 1vw 3vw;
     align-items: normal;
     gap: 3.8vw;
   }
@@ -977,7 +977,7 @@ form button:hover span:after {
   #info h3 {
     font-size: 5vw;
     padding-bottom: 0.3vw !important;
-    width: 100%;
+    width: 101%;
     text-align: center;
   }
   #info h3 i {

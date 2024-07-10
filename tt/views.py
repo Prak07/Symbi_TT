@@ -370,10 +370,10 @@ def routine(request, year, month, day):
         for i in soup.find_all("a"):
             raw_title = str(i.get("title")).split()
             title = " ".join(raw_title)
-            title=title.replace("Group A"," ")
-            title=title.replace("Group B"," ")
-            title=title.replace("Group C"," ")
-            
+            title = title.replace("Group A", " ")
+            title = title.replace("Group B", " ")
+            title = title.replace("Group C", " ")
+
             if course == "BCA":
                 if "BCA" in title:
                     if f" {sem} " in title or f" {sem}-" in title:
@@ -574,70 +574,70 @@ def routine_teacher(request, year, month, day, teacher):
         raw_title = str(i.get("title")).split()
         title = " ".join(raw_title)
         t_names = [
-        "Jatinderkumar Saini",
-        "Parag Kaveri",
-        "Sarika Sharma",
-        "Rajashree Jain",
-        "Rajesh Dhanraj",
-        "Shirish Joshi",
-        "Shraddha Vaidya",
-        "Shilpa Mujumdar",
-        "Shubhashri Waghmare",
-        "Priti Kulkarni",
-        "Sachin Naik",
-        "Shrikant Mapari",
-        "Gaurav Pant",
-        "Shashshank Gaikwad",
-        "Prafulla Bafna",
-        "Anuja Bokhare",
-        "Hema Gaikwad",
-        "Kumari Deepika",
-        "Amol Vibhute",
-        "Sandeep Gaikwad",
-        "Prathamesh Lahande",
-        "Pattar Gurunath",
-        "Chaitanya Kulkarni",
-        "Shashikant Nehul",
-        "Sonal Parmar",
-        "Kanchangauri Joshi",
-        "Rajesh Math",
-        "Rohan Pramod Bhase",
-        "Anirudha Ketkar",
-        "Vijay Haldavnekar",
-        "Satyajit Achyut Wale",
-        "Janhavi Pednekar",
-        "Sarika Zambad",
-        "Joshi Ambadas",
-        "Vaishali Joshi",
-        "Kirti Mehare",
-        "Gauri Madan",
-        "Shashank Gaikwad",
-        "Kunal Chandak",
-        "Renuka Vaidya",
-        "Siddharth Subramaniam",
-        "Vatsala Gupta",
-        "Surbhi Pai",
-        "Sagar Bedre",
-        "Sneha Shirlokar",
-        "Sulaxan Jadhav",
-        "Vrushali Kulkarni",
-        "Mrinmayi Huprikar",
-        "Ramandeep Kaur",
-        "Vaishali Kale",
-        "Umesh Patwari",
-        "Gopal Phadke",
-        "Ashwini Shende",
-        "Parag Joshi",
-        "Nandkumar Khachane",
-        "Trupti Adke",
-        "Ketki Hasbnis",
-        "Ketki Deshpande ",
-        "Biswajit Mohpatra",
-        "Manjusha Joshi",
-        "Manjusha Kalgaonkar",
-        "Atul Kahate",
-        "Rasila Walhekar",
-        "Pranita Dube",
+            "Jatinderkumar Saini",
+            "Parag Kaveri",
+            "Sarika Sharma",
+            "Rajashree Jain",
+            "Rajesh Dhanraj",
+            "Shirish Joshi",
+            "Shraddha Vaidya",
+            "Shilpa Mujumdar",
+            "Shubhashri Waghmare",
+            "Priti Kulkarni",
+            "Sachin Naik",
+            "Shrikant Mapari",
+            "Gaurav Pant",
+            "Shashshank Gaikwad",
+            "Prafulla Bafna",
+            "Anuja Bokhare",
+            "Hema Gaikwad",
+            "Kumari Deepika",
+            "Amol Vibhute",
+            "Sandeep Gaikwad",
+            "Prathamesh Lahande",
+            "Pattar Gurunath",
+            "Chaitanya Kulkarni",
+            "Shashikant Nehul",
+            "Sonal Parmar",
+            "Kanchangauri Joshi",
+            "Rajesh Math",
+            "Rohan Pramod Bhase",
+            "Anirudha Ketkar",
+            "Vijay Haldavnekar",
+            "Satyajit Achyut Wale",
+            "Janhavi Pednekar",
+            "Sarika Zambad",
+            "Joshi Ambadas",
+            "Vaishali Joshi",
+            "Kirti Mehare",
+            "Gauri Madan",
+            "Shashank Gaikwad",
+            "Kunal Chandak",
+            "Renuka Vaidya",
+            "Siddharth Subramaniam",
+            "Vatsala Gupta",
+            "Surbhi Pai",
+            "Sagar Bedre",
+            "Sneha Shirlokar",
+            "Sulaxan Jadhav",
+            "Vrushali Kulkarni",
+            "Mrinmayi Huprikar",
+            "Ramandeep Kaur",
+            "Vaishali Kale",
+            "Umesh Patwari",
+            "Gopal Phadke",
+            "Ashwini Shende",
+            "Parag Joshi",
+            "Nandkumar Khachane",
+            "Trupti Adke",
+            "Ketki Hasbnis",
+            "Ketki Deshpande ",
+            "Biswajit Mohpatra",
+            "Manjusha Joshi",
+            "Manjusha Kalgaonkar",
+            "Atul Kahate",
+            "Rasila Walhekar",
+            "Pranita Dube",
         ]
         if " " in teacher:
             if any(teacher.lower() in name.lower() for name in t_names):
@@ -753,6 +753,14 @@ def search_teacher(request):
 
         return asyncio.run(async_teacher())
     return render(request, "teachers.html")
+
+
+def check_mail(request):
+    return render(request, "check_mail.html")
+
+
+def new_pass(request):
+    return render(request, "new_pass.html")
 
 
 def error_404(request, exception):
