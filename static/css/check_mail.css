@@ -149,6 +149,10 @@ p {
   border-radius: 5vw;
   margin-bottom: 0.5vw;
   margin-top: 1vw;
+  transition: all ease 0.3s;
+}
+.submit:hover {
+  scale: 1.1;
 }
 @media screen and (max-width: 600px) {
   img {

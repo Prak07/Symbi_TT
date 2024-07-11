@@ -18,20 +18,20 @@ ALLOWED_HOSTS = [
     "*",
 ]
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://" + "symbi-tt.azurewebsites.net",
-    "https://" + "symbitt.in",
-]
-# HTTPS Setting
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-SECURE_SSL_REDIRECT = True
+# CSRF_TRUSTED_ORIGINS = [
+#     "https://" + "symbi-tt.azurewebsites.net",
+#     "https://" + "symbitt.in",
+# ]
+# # HTTPS Setting
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+# SECURE_SSL_REDIRECT = True
 
-# HSTS Setting
-SECURE_HSTS_SECONDS = 31536000
-SECURE_HSTS_PRELOAD = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# # HSTS Setting
+# SECURE_HSTS_SECONDS = 31536000
+# SECURE_HSTS_PRELOAD = True
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
 # Application definition
 
@@ -47,8 +47,8 @@ INSTALLED_APPS = [
 
 USE_X_FORWARDED_FOR = True
 MIDDLEWARE = [
-    "tt.middleware.IPBlockMiddleware",
-    "tt.middleware.RequestTrackingMiddleware",
+    # "tt.middleware.IPBlockMiddleware",
+    # "tt.middleware.RequestTrackingMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
