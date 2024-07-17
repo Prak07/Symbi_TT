@@ -118,6 +118,7 @@ p {
   border: solid 1px #fff;
   letter-spacing: 1px;
   width: 100%;
+  position: ;
 }
 
 .input-field input:focus,
@@ -135,6 +136,24 @@ p {
   font-weight: bold;
   border: none;
   border-radius: 100px;
+}
+
+.input-field i {
+  position: absolute;
+  color: #fff;
+  position: absolute;
+  transform: translateY(312%);
+  left: 87%;
+  font-size: 1vw;
+  cursor: pointer;
+  transition: all 3s ease;
+  padding: 2px;
+  background-color: transparent !important;
+}
+.s_eye2 {
+  display: none;
+  color: rgb(255, 64, 0) !important;
+  background-color: transparent !important;
 }
 
 .submit {

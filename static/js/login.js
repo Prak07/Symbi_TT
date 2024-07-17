@@ -5,9 +5,7 @@ const password = document.querySelector(".password");
 const eye1 = document.querySelector(".eye1");
 const eye2 = document.querySelector(".eye2");
 const s_password = document.querySelector(".s_password");
-const s_eye1 = document.querySelector(".s_eye1");
-const s_eye2 = document.querySelector(".s_eye2");
-
+c
 eye1.onclick = () => {
   if (password.type === "password") {
     password.type = "text";
@@ -22,6 +20,7 @@ eye2.onclick = () => {
     eye2.style.display = "none";
   }
 };
+
 s_eye1.onclick = () => {
   if (s_password.type === "password") {
     s_password.type = "text";
@@ -36,6 +35,7 @@ s_eye2.onclick = () => {
     s_eye2.style.display = "none";
   }
 };
+
 registerBtn.addEventListener("click", () => {
   container.classList.add("active");
 });
