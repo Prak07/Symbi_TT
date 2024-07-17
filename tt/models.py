@@ -17,3 +17,16 @@ class ContactUser(models.Model):
     name = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
     message = models.CharField(max_length=500)
+    
+    def __str__(self):
+        return str(self.email)
+
+
+class ForgotPass(models.Model):
+    user=models.OneToOneField(CustomUser,on_delete=models.CASCADE)
+    forgot_pass_token=models.CharField(max_length=100,blank=True,null=True)
+    created_on=models.DateTimeField(auto_now_add=True)
+    expiry_time=models.CharField(max_length=100,blank=True,null=True)
+
+    def __str__(self):
+        return self.user.username

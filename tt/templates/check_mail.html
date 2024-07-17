@@ -47,8 +47,32 @@
     >
       <img src="/static/images/logo-no-background.webp" alt="" />
     </a>
+    {% for message in messages %} {% if message %}
+    <div classs="container p-5" id="message" style="position: absolute">
+      <div class="row no-gutters">
+        <div class="col-lg-2 col-md-15 mt-5" style="margin-left: 82vw">
+          <div class="alert alert-{{message.tags}} fade show" role="alert">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="alert"
+              aria-label="Close"
+            >
+              <span aria-hidden="True">&times;</span>
+            </button>
+            <h4
+              class="alert-heading"
+              style="font-size:larger; color: {{color}}"
+            >
+              {{message}}
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %} {% endfor %}
     <div id="page1">
-      <form class="form" action="/new_pass/">
+      <form class="form" action="/check_mail/" method="post">
         {% csrf_token %}
 
         <i class="ri-mail-check-fill"></i>
@@ -59,7 +83,7 @@
             required
             autocomplete="off"
             type="text"
-            name="text"
+            name="email"
             id="e-mail"
           />
           <label for="username">Your Email</label>
@@ -97,5 +121,13 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script>
+      var popup = document.getElementById("message");
+      if (popup) {
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 3000);
+      }
+    </script>
   </body>
 </html>

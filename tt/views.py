@@ -1,6 +1,8 @@
-from django.forms import ValidationError
+from email.mime.text import MIMEText
+import aiosmtplib
+import uuid, time
 from django.shortcuts import render, redirect
-from django.contrib.auth.models import User, auth
+from django.contrib.auth.models import auth
 from django.http import HttpResponse, JsonResponse
 from .models import *
 from django.contrib import messages
@@ -9,12 +11,12 @@ from django.core.validators import validate_email
 import requests
 import asyncio
 from bs4 import BeautifulSoup
-from datetime import date, datetime
+from datetime import datetime
 import json
 import pytz
 from asgiref.sync import sync_to_async
 from django_ratelimit.decorators import ratelimit
-
+from django.conf import settings
 
 def login(request):
     if request.method == "POST":
@@ -756,12 +758,88 @@ def search_teacher(request):
 
 
 def check_mail(request):
+    if request.method=="POST":
+        email=request.POST["email"]
+        try:
+            user = CustomUser.objects.get(email=email)
+            if user is not None:
+                expiryntoken=asyncio.run(send_forgot_email(email))  
+                try :
+                    pass_user=ForgotPass.objects.get(user=user)
+                    pass_user.expiry_time=expiryntoken[1]
+                    pass_user.forgot_pass_token=expiryntoken[0]
+                    pass_user.save()
+                except:
+                    ForgotPass.objects.update_or_create(user=user,forgot_pass_token=expiryntoken[0],expiry_time=expiryntoken[1])
+                messages.success(request,"Email sent Successfully")
+                return redirect("/check_mail/")
+        except Exception:
+            messages.info(request,"This email is not registerd")
+            return redirect("/check_mail/")
+    
     return render(request, "check_mail.html")
 
 
-def new_pass(request):
-    return render(request, "new_pass.html")
+def new_pass(request,token):
+        if request.method=="POST":
+            try:
+                user_pass=ForgotPass.objects.get(forgot_pass_token=token)
+                if float(user_pass.expiry_time)> float(time.time()):
+                    password=request.POST['password']
+                    conf_password=request.POST['password']
+                    if password==conf_password:
+                        user_pass.user.set_password(password)
+                        user_pass.user.save()
+                        messages.success(request,"Password Updated Successfully")
+                        user_pass.forgot_pass_token=None
+                        user_pass.save()
+                        return redirect("/login/")
+                    else:
+                        messages.error(request,"Passwords doesn't match")
+                        return redirect("/new_pass/")
+            except Exception:
+                return HttpResponse("<h2>This is not a Valid link<h2>")
+        return render(request,"new_pass.html")
 
+async def send_forgot_email(email):
+    token=str(uuid.uuid4())
+    expiry_time = str(time.time()+3600)
+    subject= "Password Reset Request For Your Account On Symbitt"
+    message= f"Hi, click on the link to reset your password http://symbitt.in/new_pass/{token} And This link is valid for only one time use"
+    message= f"""
+Dear User,
+We received a request to reset the password for your account. To proceed with this process, please click on the link below:
+http://192.168.0.124:8000/new_pass/{token}
+
+Please note:
+
+a.This link is valid for one-time use only.
+b.The link will expire in 60 minutes from the time this email was sent.
+
+If you experience any issues or have concerns, please contact our support team.
+Thank you for helping us keep your account secure.
+
+Best regards,
+Symbitt Team"""
+
+    msg = MIMEText(message)
+    msg['Subject'] = subject
+    msg['From'] = settings.EMAIL_HOST_USER
+    msg['To'] = email
+    try:
+        await aiosmtplib.send(
+            msg,
+            hostname=settings.EMAIL_HOST,
+            port=settings.EMAIL_PORT,
+            username=settings.EMAIL_HOST_USER,
+            password=settings.EMAIL_HOST_PASSWORD,
+            use_tls=settings.EMAIL_USE_TLS
+        )
+    except Exception as e:
+        print(f"Failed to send email: {e}")
+        return None
+
+    return [token, expiry_time]
 
 def error_404(request, exception):
     return render(request, "404.html")
