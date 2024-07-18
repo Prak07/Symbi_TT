@@ -256,4 +256,9 @@ p {
     margin-top: 1vw;
     width: 60%;
   }
+  #message {
+    margin-left: -33vw;
+    position: relative;
+    z-index: 9;
+  }
 }

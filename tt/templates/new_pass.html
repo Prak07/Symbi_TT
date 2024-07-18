@@ -48,6 +48,8 @@
       <img src="/static/images/logo-no-background.webp" alt="" />
     </a>
     {% for message in messages %} {% if message %}
+    <div id="message">
+
     <div classs="container p-5" id="message" style="position: absolute">
       <div class="row no-gutters">
         <div class="col-lg-2 col-md-15 mt-5" style="margin-left: 82vw">
@@ -70,6 +72,8 @@
         </div>
       </div>
     </div>
+  </div>
+
     {% endif %} {% endfor %}
     <div id="page1">
       <form class="form" method="post">
@@ -97,8 +101,8 @@
             id="c_pass"
           />
           <label for="username">Confirm Password</label>
-          <i class="fa-solid fa-eye-slash s_eye1"></i>
-          <i class="fa-regular fa-eye s_eye2"></i>
+          <i class="fa-solid fa-eye-slash s_eye1 eye"></i>
+          <i class="fa-regular fa-eye s_eye2 eye"></i>
         </div>
         <input class="submit" type="submit" value="SUBMIT" />
       </form>
@@ -120,13 +124,13 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <!-- <script>
+    <script>
       var popup = document.getElementById("message");
       if (popup) {
         setTimeout(() => {
           popup.style.display = "none";
         }, 3000);
       }
-    </script> -->
+    </script>
   </body>
 </html>
