@@ -2,10 +2,12 @@ const container = document.getElementById("container");
 const registerBtn = document.getElementById("register");
 const loginBtn = document.getElementById("login");
 const password = document.querySelector(".password");
+const s_eye1 = document.querySelector(".s_eye1");
+const s_eye2 = document.querySelector(".s_eye2");
 const eye1 = document.querySelector(".eye1");
 const eye2 = document.querySelector(".eye2");
 const s_password = document.querySelector(".s_password");
-c
+
 eye1.onclick = () => {
   if (password.type === "password") {
     password.type = "text";
