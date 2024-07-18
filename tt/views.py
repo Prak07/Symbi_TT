@@ -15,7 +15,6 @@ from datetime import datetime
 import json
 import pytz
 from asgiref.sync import sync_to_async
-from django_ratelimit.decorators import ratelimit
 from django.conf import settings
 
 
