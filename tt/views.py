@@ -18,6 +18,7 @@ from asgiref.sync import sync_to_async
 from django_ratelimit.decorators import ratelimit
 from django.conf import settings
 
+
 def login(request):
     if request.method == "POST":
         submit_action = request.POST.get("submit_action")
@@ -758,58 +759,65 @@ def search_teacher(request):
 
 
 def check_mail(request):
-    if request.method=="POST":
-        email=request.POST["email"]
+    if request.method == "POST":
+        email = request.POST["email"]
         try:
             user = CustomUser.objects.get(email=email)
             if user is not None:
-                expiryntoken=asyncio.run(send_forgot_email(email))  
-                try :
-                    pass_user=ForgotPass.objects.get(user=user)
-                    pass_user.expiry_time=expiryntoken[1]
-                    pass_user.forgot_pass_token=expiryntoken[0]
+                expiryntoken = asyncio.run(send_forgot_email(email))
+                try:
+                    pass_user = ForgotPass.objects.get(user=user)
+                    pass_user.expiry_time = expiryntoken[1]
+                    pass_user.forgot_pass_token = expiryntoken[0]
                     pass_user.save()
                 except:
-                    ForgotPass.objects.update_or_create(user=user,forgot_pass_token=expiryntoken[0],expiry_time=expiryntoken[1])
-                messages.success(request,"Email sent Successfully")
+                    ForgotPass.objects.update_or_create(
+                        user=user,
+                        forgot_pass_token=expiryntoken[0],
+                        expiry_time=expiryntoken[1],
+                    )
+                messages.success(request, "Email sent Successfully")
                 return redirect("/check_mail/")
         except Exception:
-            messages.info(request,"This email is not registerd")
+            messages.info(request, "This email is not registerd")
             return redirect("/check_mail/")
-    
+
     return render(request, "check_mail.html")
 
 
-def new_pass(request,token):
-        if request.method=="POST":
-            try:
-                user_pass=ForgotPass.objects.get(forgot_pass_token=token)
-                if float(user_pass.expiry_time)> float(time.time()):
-                    password=request.POST['password']
-                    conf_password=request.POST['password']
-                    if password==conf_password:
-                        user_pass.user.set_password(password)
-                        user_pass.user.save()
-                        messages.success(request,"Password Updated Successfully")
-                        user_pass.forgot_pass_token=None
-                        user_pass.save()
-                        return redirect("/login/")
-                    else:
-                        messages.error(request,"Passwords doesn't match")
-                        return redirect("/new_pass/")
-            except Exception:
-                return HttpResponse("<h2>This is not a Valid link<h2>")
-        return render(request,"new_pass.html")
+def new_pass(request, token):
+    try:
+        user_pass = ForgotPass.objects.get(forgot_pass_token=token)
+        if float(user_pass.expiry_time) > float(time.time()):
+            if request.method == "POST":
+                password = request.POST["password"]
+                conf_password = request.POST["confirm_password"]
+                if password == conf_password:
+                    user_pass.user.set_password(password)
+                    user_pass.user.save()
+                    messages.success(request, "Password Updated Successfully")
+                    user_pass.forgot_pass_token = None
+                    user_pass.save()
+                    return redirect("/login/")
+                else:
+                    messages.info(request, "Passwords doesn't match")
+                    return redirect(f"/new_pass/{token}")
+        else:
+            return render(request, "404.html")
+    except Exception:
+        return render(request, "404.html")
+    return render(request, "new_pass.html")
+
 
 async def send_forgot_email(email):
-    token=str(uuid.uuid4())
-    expiry_time = str(time.time()+3600)
-    subject= "Password Reset Request For Your Account On Symbitt"
-    message= f"Hi, click on the link to reset your password http://symbitt.in/new_pass/{token} And This link is valid for only one time use"
-    message= f"""
+    token = str(uuid.uuid4())
+    expiry_time = str(time.time() + 3600)
+    subject = "Password Reset Request For Your Account On Symbitt"
+    message = f"Hi, click on the link to reset your password http://symbitt.in/new_pass/{token} And This link is valid for only one time use"
+    message = f"""
 Dear User,
 We received a request to reset the password for your account. To proceed with this process, please click on the link below:
-http://192.168.0.124:8000/new_pass/{token}
+http://127.0.0.1:8000/new_pass/{token}
 
 Please note:
 
@@ -823,9 +831,9 @@ Best regards,
 Symbitt Team"""
 
     msg = MIMEText(message)
-    msg['Subject'] = subject
-    msg['From'] = settings.EMAIL_HOST_USER
-    msg['To'] = email
+    msg["Subject"] = subject
+    msg["From"] = settings.EMAIL_HOST_USER
+    msg["To"] = email
     try:
         await aiosmtplib.send(
             msg,
@@ -833,13 +841,14 @@ Symbitt Team"""
             port=settings.EMAIL_PORT,
             username=settings.EMAIL_HOST_USER,
             password=settings.EMAIL_HOST_PASSWORD,
-            use_tls=settings.EMAIL_USE_TLS
+            use_tls=settings.EMAIL_USE_TLS,
         )
     except Exception as e:
         print(f"Failed to send email: {e}")
         return None
 
     return [token, expiry_time]
+
 
 def error_404(request, exception):
     return render(request, "404.html")
