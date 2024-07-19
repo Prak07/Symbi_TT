@@ -48,6 +48,7 @@
       <img src="/static/images/logo-no-background.webp" alt="" />
     </a>
     {% for message in messages %} {% if message %}
+<div id="message">
 
     <div classs="container p-5" id="message" style="position: absolute">
       <div class="row no-gutters">
@@ -71,6 +72,8 @@
         </div>
       </div>
     </div>
+</div>
+
     {% endif %} {% endfor %}
     <div id="page1">
       <form class="form" action="/check_mail/" method="post">
@@ -122,13 +125,13 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <!-- <script>
+    <script>
       var popup = document.getElementById("message");
       if (popup) {
         setTimeout(() => {
           popup.style.display = "none";
         }, 3000);
       }
-    </script> -->
+    </script>
   </body>
 </html>

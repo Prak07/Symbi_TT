@@ -15,7 +15,6 @@ from datetime import datetime
 import json
 import pytz
 from asgiref.sync import sync_to_async
-from django_ratelimit.decorators import ratelimit
 from django.conf import settings
 
 
@@ -813,11 +812,10 @@ async def send_forgot_email(email):
     token = str(uuid.uuid4())
     expiry_time = str(time.time() + 3600)
     subject = "Password Reset Request For Your Account On Symbitt"
-    message = f"Hi, click on the link to reset your password http://symbitt.in/new_pass/{token} And This link is valid for only one time use"
     message = f"""
 Dear User,
 We received a request to reset the password for your account. To proceed with this process, please click on the link below:
-http://127.0.0.1:8000/new_pass/{token}
+http://symbitt.in/new_pass/{token}
 
 Please note:
 

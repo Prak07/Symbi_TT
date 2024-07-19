@@ -118,7 +118,6 @@ p {
   border: solid 1px #fff;
   letter-spacing: 1px;
   width: 100%;
-  position: ;
 }
 
 .input-field input:focus,
@@ -277,5 +276,15 @@ p {
     margin-bottom: 0.5vw;
     margin-top: 1vw;
     width: 60%;
+  }
+  .eye {
+    font-size: 3.9vw !important;
+    left: 85% !important;
+    top: -35% !important;
+  }
+  #message {
+    margin-left: -33vw;
+    position: relative;
+    z-index: 9;
   }
 }
