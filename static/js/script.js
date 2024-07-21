@@ -203,7 +203,7 @@ function calendar() {
           message.classList.add('signin_message');
           message.textContent = 'NO CLASSES ON '+new Date(selectedDate).toLocaleDateString()
           container.appendChild(message);
-      }+
+      }
       document.getElementById("loader").style.display = "none";
       document.getElementById("time_table").style.display = "block";
 })
