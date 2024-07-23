@@ -640,6 +640,7 @@ def routine_teacher(request, year, month, day, teacher):
             "Atul Kahate",
             "Rasila Walhekar",
             "Pranita Dube",
+            "Farhana Desai"
         ]
         if " " in teacher:
             if any(teacher.lower() in name.lower() for name in t_names):
