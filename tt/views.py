@@ -230,10 +230,6 @@ def get(request, year, month, day):
 
 
 def home(request):
-    client_ip = request.META.get("HTTP_X_REAL_IP")
-
-    # Print the client's IP address
-    print("Client IP Address:", client_ip)
     if request.method == "POST":
         update_profile(request, "index.html")
 
@@ -421,29 +417,28 @@ def routine(request, year, month, day):
                             or f".{div}" in title
                         ):
                             scraping(i)
-                    if "(SPM)" in title or "(DA)" in title:
-                        scraping(i)
-                    if "Flexi-Credit" in title:
-                        scraping(i)
-                    if elective != "none":
-                        electives(elective)
+                        if "(SPM)" in title or "(DA)" in title:
+                            scraping(i)
+                        if "Flexi-Credit" in title:
+                            scraping(i)
+                        if elective != "none":
+                            electives(elective)
             elif course == "MSC(CA)":
                 if "MSc(CA)" in title:
                     if f" {sem} " in title or f" {sem}-" in title:
                         scraping(i)
-                    if "Flexi-Credit" in title:
-                        scraping(i)
-                    if elective != "none":
-                        electives(elective)
+                        if "Flexi-Credit" in title:
+                            scraping(i)
+                        if elective != "none":
+                            electives(elective)
             elif course == "MBA(DT)":
                 if "MBA(DT)" in title:
                     if f" {sem} " in title or f" {sem}-" in title:
                         scraping(i)
-                    if "Flexi-Credit" in title:
-
-                        scraping(i)
-                    if elective != "none":
-                        electives(elective)
+                        if "Flexi-Credit" in title:
+                            scraping(i)
+                        if elective != "none":
+                            electives(elective)
 
         j = 0
         data = []
@@ -473,10 +468,6 @@ def routine(request, year, month, day):
 
 
 def update_routine(request):
-    client_ip = request.META.get("HTTP_X_REAL_IP")
-
-    # Print the client's IP address
-    print("Client IP Address:", client_ip)
     if request.user.is_authenticated:
         if request.method == "POST":
             data = json.loads(request.body)
@@ -646,10 +637,19 @@ def routine_teacher(request, year, month, day, teacher):
             if any(teacher.lower() in name.lower() for name in t_names):
                 if teacher.lower() in title.lower():
                     teacher_scraping(i)
+            else:
+                if len(teacher)>=3:
+                    if teacher.lower() in title.lower():
+                        teacher_scraping(i)
         else:
             if any(teacher.lower() in name.lower().split() for name in t_names):
                 if teacher.lower() in title.lower():
                     teacher_scraping(i)
+            else:
+                if len(teacher)>=3:
+                    if teacher.lower() in title.lower():
+                        teacher_scraping(i)
+                    
     j = 0
     data = []
     for k in l:
@@ -679,15 +679,12 @@ def routine_teacher(request, year, month, day, teacher):
 def get_teacher(request, year, month, day, teacher):
     data = routine_teacher(request, year, month, day, teacher)
     if data == []:
-        return {"data_list": data, "message": "NO LECTURES TODAY"}
+        return {"data_list": data, "message": "NO LECTURES"}
     else:
         return {"data_list": data}
 
 
 def update_teacher(request):
-    client_ip = request.META.get("HTTP_X_REAL_IP")
-    # Print the client's IP address
-    print("Client IP Address:", client_ip)
     if request.method == "POST":
         data = json.loads(request.body)
         selected_date = data.get("date")
@@ -843,7 +840,7 @@ Symbitt Team"""
             use_tls=settings.EMAIL_USE_TLS,
         )
     except Exception as e:
-        print(f"Failed to send email: {e}")
+        print(e)
         return None
 
     return [token, expiry_time]
