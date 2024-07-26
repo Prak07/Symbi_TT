@@ -639,7 +639,7 @@ def routine_teacher(request, year, month, day, teacher):
                     teacher_scraping(i)
             else:
                 if len(teacher)>=3:
-                    if teacher.lower() in title.lower():
+                    if teacher.lower() in title.lower()[-20:-1]:
                         teacher_scraping(i)
         else:
             if any(teacher.lower() in name.lower().split() for name in t_names):
@@ -647,7 +647,7 @@ def routine_teacher(request, year, month, day, teacher):
                     teacher_scraping(i)
             else:
                 if len(teacher)>=3:
-                    if teacher.lower() in title.lower():
+                    if teacher.lower() in title.lower()[-20:-1]:
                         teacher_scraping(i)
                     
     j = 0
