@@ -47,8 +47,8 @@ INSTALLED_APPS = [
 
 USE_X_FORWARDED_FOR = True
 MIDDLEWARE = [
-    "tt.middleware.IPBlockMiddleware",
-    "tt.middleware.RequestTrackingMiddleware",
+    # "tt.middleware.IPBlockMiddleware",
+    # "tt.middleware.RequestTrackingMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
