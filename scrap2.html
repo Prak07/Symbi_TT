@@ -1,0 +1,385 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="utf-8">
+<title>Time Table</title>
+  <link href="jquery/ui/css/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
+  <link href="jquery/ui/css/sunny/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
+  <link href="jquery/datatables/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+  <link href="jquery/datatables/css/buttons.dataTables.css" rel="stylesheet" type="text/css">
+  <link href="jquery/datatables/css/fixedColumns.dataTables.min.css" rel="stylesheet" type="text/css">
+  <link href="jquery/datatables/css/colReorder.dataTables.css" rel="stylesheet" type="text/css">
+      
+    <link rel="stylesheet" href="css/mrbs.css.php" type="text/css">
+        <link rel="stylesheet" media="print" href="css/mrbs-print.css.php" type="text/css">
+    <!--[if IE]>
+    <link rel="stylesheet" href="css/mrbs-ie.css" type="text/css">
+    <![endif]-->
+        <!--[if IE 8]>
+    <link rel="stylesheet" href="css/mrbs-ie8.css" type="text/css">
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/mrbs-ielte8.css" type="text/css">
+    <![endif]-->
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" href="css/mrbs-ielte7.css.php" type="text/css">
+    <![endif]-->
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="css/mrbs-ielte6.css" type="text/css">
+    <![endif]-->
+        <meta name="robots" content="noindex, nofollow">
+
+<!--[if (!IE)|(gt IE 8)]><!-->
+  <script type="text/javascript" src="jquery/jquery-2.2.4.min.js"></script>
+  <!--<![endif]-->
+
+<!--[if lte IE 8]>
+  <script type="text/javascript" src="jquery/jquery-1.11.0.min.js"></script>
+<![endif]-->
+
+  <script type="text/javascript" src="jquery/jquery-migrate-1.4.1.min.js"></script>
+    <script type="text/javascript" src="jquery/ui/jquery-ui.min.js"></script>
+  
+
+<script type="text/javascript">
+  //<![CDATA[
+  var lteIE6 = false;
+  //]]>
+</script>
+<!--[if lte IE 6]>
+<script type="text/javascript">
+  //<![CDATA[
+  var lteIE6 = true;
+  //]]>
+</script>
+<![endif]-->
+    
+<script type="text/javascript">
+  //<![CDATA[
+  var lteIE7 = false;
+  //]]>
+</script>
+<!--[if lte IE 7]>
+<script type="text/javascript">
+  //<![CDATA[
+  var lteIE7 = true;
+  //]]>
+</script>
+<![endif]-->
+    
+<script type="text/javascript">
+  //<![CDATA[
+  var lteIE8 = false;
+  //]]>
+</script>
+<!--[if lte IE 8]>
+<script type="text/javascript">
+  //<![CDATA[
+  var lteIE8 = true;
+  //]]>
+</script>
+<![endif]-->
+    
+<script type="text/javascript">
+  //<![CDATA[
+    function init(params)
+  {
+  }
+  //]]>
+</script>
+
+<script type="text/javascript" src="js/functions.js.php?area=1"></script>
+<script type="text/javascript" src="js/datepicker.js.php?area=1"></script>
+<script type="text/javascript" src="js/general.js.php?area=1"></script>
+
+    
+
+<!--[if lte IE 8]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    
+<script type="text/javascript">
+
+//<![CDATA[
+
+
+$(window).on('load', function() {
+
+  var args = {day: '7',
+              month: '8',
+              year: '2024',
+              area: '1',
+              room: '19',
+              page: 'view_entry'};
+    init(args);
+
+});
+
+
+//]]>
+</script></head>
+<body class="non_js view_entry">
+    <script type="text/javascript">
+      //<![CDATA[
+      $('body').addClass('js').removeClass('non_js');
+      //]]>
+    </script> 
+    <header class="banner">
+<nav>
+<ul>
+<li>
+<div id="company">
+<div id="logo">
+<a href="http://sicsr.ac.in/">
+<span>Symbiosis Institute of Computer Studies and Research</span>
+</a>
+</div>
+<div id="mrbs">
+<a href="index.php">Time Table</a>
+</div>
+</div>
+</li>
+<li>
+<form action="day.php" method="get" id="Form1">
+<span class="dateselector js_hidden" data-prefix="" data-day="7" data-month="8" data-year="2024" data-min-year="2019" data-max-year="2029" data-form-id="Form1">
+<select id="day" name="day">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7" selected="selected">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+<select id="month" name="month">
+<option value="1">Jan</option>
+<option value="2">Feb</option>
+<option value="3">Mar</option>
+<option value="4">Apr</option>
+<option value="5">May</option>
+<option value="6">Jun</option>
+<option value="7">Jul</option>
+<option value="8" selected="selected">Aug</option>
+<option value="9">Sep</option>
+<option value="10">Oct</option>
+<option value="11">Nov</option>
+<option value="12">Dec</option>
+</select>
+<select id="year" name="year">
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024" selected="selected">2024</option>
+<option value="2025">2025</option>
+<option value="2026">2026</option>
+<option value="2027">2027</option>
+<option value="2028">2028</option>
+<option value="2029">2029</option>
+</select>
+</span>
+<input type="hidden" name="area" value="1">
+<input type="hidden" name="room" value="19">
+<input type="submit" value="goto">
+</form>
+</li>
+<li>
+<a href="help.php?day=7&amp;month=8&amp;year=2024&amp;area=1&amp;room=19">Help</a>
+</li>
+<li>
+<a href="admin.php?day=7&amp;month=8&amp;year=2024&amp;area=1&amp;room=19">Rooms</a>
+</li>
+<li>
+<a href="report.php?day=7&amp;month=8&amp;year=2024&amp;area=1&amp;room=19">Report</a>
+</li>
+<li>
+<form id="header_search" method="get" action="search.php">
+<div>
+<a href="search.php?advanced=1">Search:</a>
+<input type="search" name="search_str" value="" required>
+<input type="hidden" name="day" value="7">
+<input type="hidden" name="month" value="8">
+<input type="hidden" name="year" value="2024">
+<input type="hidden" name="area" value="1">
+<input type="hidden" name="room" value="19">
+</div>
+</form>
+</li>
+<li>
+<div id="logon_box">
+                <a href="">Unknown user</a>
+                <form method="post" action="admin.php">
+                  <div>
+                    <input type="hidden" name="TargetURL" value="view_entry.php?id=274167&amp;area=1&amp;day=7&amp;month=8&amp;year=2024">
+                    <input type="hidden" name="Action" value="QueryName">
+                    <input type="submit" value=" Log in ">
+                  </div>
+                </form>
+<a id="user_list_link" href="edit_users.php">User list</a>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+<div id="contents">
+<h3>
+BCA V Div D - Group B- Machine Learning- Ms. Poonam Pawar</h3>
+<table id="entry">
+<tbody>
+<tr>
+<td>Description:</td>
+<td>BCA V Div D - Group B- Machine Learning- Ms. Poonam Pawar</td>
+</tr>
+<tr>
+<td>Confirmation status:</td>
+<td>Confirmed</td>
+</tr>
+<tr>
+<td>Room:</td>
+<td>SICSR - 406</td>
+</tr>
+<tr>
+<td>Start time:</td>
+<td>10:30:00 - Wednesday 07 August 2024</td>
+</tr>
+<tr>
+<td>Duration:</td>
+<td>1 hours</td>
+</tr>
+<tr>
+<td>End time:</td>
+<td>11:30:00 - Wednesday 07 August 2024</td>
+</tr>
+<tr>
+<td>Type:</td>
+<td>BCA (V) Elective - Group B</td>
+</tr>
+<tr>
+<td>Created by:</td>
+<td>coordinator</td>
+</tr>
+<tr>
+<td>Modified by:</td>
+<td>coordinator</td>
+</tr>
+<tr>
+<td>Last updated:</td>
+<td>22:00:47 - Thursday 20 June 2024</td>
+</tr>
+<tr>
+<td>Repeat type:</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td>Repeat every:</td>
+<td>1 week</td>
+</tr>
+<tr>
+<td>Repeat day:</td>
+<td>Wednesday</td>
+</tr>
+<tr>
+<td>Repeat end date:</td>
+<td>Wednesday 06 November 2024</td>
+</tr>
+</tbody>
+</table>
+
+<div id="view_entry_nav">
+  <div>
+<a href="edit_entry.php?id=274167&amp;returl=day.php%3Fyear%3D2024%26month%3D8%26day%3D7%26area%3D1">Edit Entry</a> - <a href="edit_entry.php?id=274167&amp;edit_type=series&amp;day=7&amp;month=8&amp;year=2024&amp;returl=day.php%3Fyear%3D2024%26month%3D8%26day%3D7%26area%3D1">Edit Series</a></div>
+<div>
+<a href="del_entry.php?id=274167&amp;series=0&amp;returl=day.php%3Fyear%3D2024%26month%3D8%26day%3D7%26area%3D1" onclick="return confirm('Are you sure\nyou want to\ndelete this entry?\n\n');">Delete Entry</a> - <a href="del_entry.php?id=274167&amp;series=1&amp;day=7&amp;month=8&amp;year=2024&amp;returl=day.php%3Fyear%3D2024%26month%3D8%26day%3D7%26area%3D1" onClick="return confirm('Are you sure\nyou want to\ndelete this entry?\n\n');">Delete Series</a></div>
+<div>
+<a href="edit_entry.php?id=274167&amp;copy=1&amp;returl=day.php%3Fyear%3D2024%26month%3D8%26day%3D7%26area%3D1">Copy Entry</a> - <a href="edit_entry.php?id=274167&amp;edit_type=series&amp;day=7&amp;month=8&amp;year=2024&amp;copy=1&amp;returl=day.php%3Fyear%3D2024%26month%3D8%26day%3D7%26area%3D1">Copy Series</a></div>
+<div>
+<a href="view_entry.php?action=export&amp;id=274167&amp;returl=day.php%3Fyear%3D2024%26month%3D8%26day%3D7%26area%3D1">Export Entry</a> - <a href="view_entry.php?action=export&amp;id=15535&amp;series=1&amp;day=7&amp;month=8&amp;year=2024&amp;returl=day.php%3Fyear%3D2024%26month%3D8%26day%3D7%26area%3D1">Export Series</a></div>
+  <div id="returl">
+      </div>
+</div>
+
+</div><div class="screenonly trailer" id="trailer">
+<div id="viewday">
+<div class="trailer_label">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=19">View Day:</a>
+</div>
+<div class="trailer_links">
+<span><a href="day.php?year=2024&amp;month=08&amp;day=01&amp;area=1&amp;room=19">Aug 01</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=02&amp;area=1&amp;room=19">Aug 02</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=03&amp;area=1&amp;room=19">Aug 03</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=04&amp;area=1&amp;room=19">Aug 04</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=05&amp;area=1&amp;room=19">Aug 05</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=06&amp;area=1&amp;room=19">Aug 06</a></span>
+ | <span class="current">[ <a href="day.php?year=2024&amp;month=08&amp;day=07&amp;area=1&amp;room=19">Aug 07</a> ]</span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=08&amp;area=1&amp;room=19">Aug 08</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=09&amp;area=1&amp;room=19">Aug 09</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=10&amp;area=1&amp;room=19">Aug 10</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=11&amp;area=1&amp;room=19">Aug 11</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=12&amp;area=1&amp;room=19">Aug 12</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=13&amp;area=1&amp;room=19">Aug 13</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=14&amp;area=1&amp;room=19">Aug 14</a></span>
+</div>
+</div>
+<div id="viewweek">
+<div class="trailer_label">
+<a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=19">View Week:</a>
+</div>
+<div class="trailer_links">
+  <a href="week.php?year=2024&amp;month=07&amp;day=10&amp;area=1&amp;room=19">Jul 07</a>
+ |   <a href="week.php?year=2024&amp;month=07&amp;day=17&amp;area=1&amp;room=19">Jul 14</a>
+ |   <a href="week.php?year=2024&amp;month=07&amp;day=24&amp;area=1&amp;room=19">Jul 21</a>
+ |   <a href="week.php?year=2024&amp;month=07&amp;day=31&amp;area=1&amp;room=19">Jul 28</a>
+ | <span class="current">
+[   <a href="week.php?year=2024&amp;month=08&amp;day=07&amp;area=1&amp;room=19">Aug 04</a>
+]</span>
+ |   <a href="week.php?year=2024&amp;month=08&amp;day=14&amp;area=1&amp;room=19">Aug 11</a>
+ |   <a href="week.php?year=2024&amp;month=08&amp;day=21&amp;area=1&amp;room=19">Aug 18</a>
+ |   <a href="week.php?year=2024&amp;month=08&amp;day=28&amp;area=1&amp;room=19">Aug 25</a>
+ |   <a href="week.php?year=2024&amp;month=09&amp;day=04&amp;area=1&amp;room=19">Sep 01</a>
+</div>
+</div>
+<div id="viewmonth">
+<div class="trailer_label">
+<a href="month.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=19">View Month:</a>
+</div>
+<div class="trailer_links">
+  <a href="month.php?year=2024&amp;month=06&amp;day=7&amp;area=1&amp;room=19">Jun 2024</a>
+ |   <a href="month.php?year=2024&amp;month=07&amp;day=7&amp;area=1&amp;room=19">Jul 2024</a>
+ | <span class="current">
+[   <a href="month.php?year=2024&amp;month=08&amp;day=7&amp;area=1&amp;room=19">Aug 2024</a>
+]</span>
+ |   <a href="month.php?year=2024&amp;month=09&amp;day=7&amp;area=1&amp;room=19">Sep 2024</a>
+ |   <a href="month.php?year=2024&amp;month=10&amp;day=7&amp;area=1&amp;room=19">Oct 2024</a>
+ |   <a href="month.php?year=2024&amp;month=11&amp;day=7&amp;area=1&amp;room=19">Nov 2024</a>
+ |   <a href="month.php?year=2024&amp;month=12&amp;day=7&amp;area=1&amp;room=19">Dec 2024</a>
+ |   <a href="month.php?year=2025&amp;month=01&amp;day=7&amp;area=1&amp;room=19">Jan 2025</a>
+ |   <a href="month.php?year=2025&amp;month=02&amp;day=7&amp;area=1&amp;room=19">Feb 2025</a>
+</div>
+</div>
+</div>
+  </body>
+</html>

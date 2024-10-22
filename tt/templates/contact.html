@@ -1,0 +1,83 @@
+{% extends "base.html" %} {% block title %}Symbi TT-Contact{%endblock title %}
+{% load static %} {% block body%}
+
+<link rel="stylesheet" type="text/css" href="{% static '/css/contact.css' %}" />
+<div id="page1" data-scroll>
+  <div id="contact">
+    <div class="content">
+      <h1>Let's <em> Talk </em></h1>
+    </div>
+    <div class="underline"></div>
+    <div id="form-container" data-scroll data-scroll-speed="1">
+      <form action="/contact/" method="post" name="contact_form">
+        {% csrf_token %}
+        <div class="input-box">
+          <input type="text" required name="name" />
+          <label for="name">Name</label>
+        </div>
+        <div class="input-box">
+          <input type="text" required name="email" />
+          <label for="name">Email</label>
+        </div>
+        <div class="input-box">
+          <input type="text" required name="message" />
+          <label for="name">Message</label>
+        </div>
+        <button type="submit" name="contact_form"><span>Send!</span></button>
+      </form>
+      <div id="contact-info">
+        <div class="elem-cont" data-scroll data-scroll-speed="1">
+          <h1>Contact Information</h1>
+        </div>
+        <div id="info">
+          <div class="elem-cont" data-scroll data-scroll-speed="1">
+            <h3>
+              <a
+                href="mailto:symbitimetable@gmail.com"
+                style="text-decoration: none; color: aliceblue"
+                ><i class="ri-mail-fill"> - </i>symbitimetable@gmail.com</a
+              >
+            </h3>
+          </div>
+          <div class="elem-cont" data-scroll data-scroll-speed="1">
+            <h3>
+              <a
+                href="https://www.google.com/maps/place/Symbiosis+Institute+of+Computer+Studies+and+Research/@18.5334443,73.8312226,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bf797c679e05:0x2579cb5b06c4d90b!8m2!3d18.5334443!4d73.8337975!16s%2Fm%2F0272pw4?entry=ttu"
+                style="text-decoration: none; color: aliceblue"
+                target="_blank"
+                ><i class="ri-map-pin-range-fill"> - </i>SICSR</a
+              >
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script
+  type="text/javascript"
+  src="https://unpkg.com/sheryjs/dist/Shery.js"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+  integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script>
+  var popup = document.querySelector(".message");
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 3000);
+</script>
+<link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+  type="text/css"
+  rel="stylesheet"
+/>
+
+<script src="{% static '/js/contact.js' %}"></script>
+{% endblock body %}

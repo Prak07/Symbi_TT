@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{% static '/images/favicon.webp' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static '/css/check_mail.css' %}"
+    />
+    <title>Symbi TT-Change Password</title>
+  </head>
+  <body>
+    <a
+      id="img-div"
+      href="/"
+      style="
+        translate: none;
+        rotate: none;
+        scale: none;
+        opacity: 1;
+        transform: translate(0px, 0px);
+      "
+    >
+      <img src="/static/images/logo-no-background.webp" alt="" />
+    </a>
+    {% for message in messages %} {% if message %}
+<div id="message">
+
+    <div classs="container p-5" id="message" style="position: absolute">
+      <div class="row no-gutters">
+        <div class="col-lg-2 col-md-15 mt-5" style="margin-left: 82vw">
+          <div class="alert alert-{{message.tags}} fade show" role="alert">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="alert"
+              aria-label="Close"
+            >
+              <span aria-hidden="True">&times;</span>
+            </button>
+            <h4
+              class="alert-heading"
+              style="font-size:larger; color: {{color}}"
+            >
+              {{message}}
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+    {% endif %} {% endfor %}
+    <div id="page1">
+      <form class="form" action="/check_mail/" method="post">
+        {% csrf_token %}
+
+        <i class="ri-mail-check-fill"></i>
+        <h1 class="form-title">Email Verification</h1>
+        <p>Please verify your email to reset password!</p>
+        <div class="input-field">
+          <input
+            required
+            autocomplete="off"
+            type="text"
+            name="email"
+            id="e-mail"
+          />
+          <label for="username">Your Email</label>
+        </div>
+        <input class="submit" type="submit" value="Verify" />
+        <p style="font-size: 15px">
+          Back to
+          <a
+            style="
+              text-decoration: none;
+              border-bottom: 1px solid #c53a0c;
+              color: #c53a0c;
+              font-weight: 700;
+            "
+            href="/login/"
+            >Login?</a
+          >
+        </p>
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="{% static '/js/check_mail.js' %}"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var popup = document.getElementById("message");
+      if (popup) {
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>

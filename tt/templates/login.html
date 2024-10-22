@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{% static '/images/favicon.webp' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static '/css/login.css' %}"
+    />
+    <title>Symbi TT-Login</title>
+  </head>
+
+  <body>
+    {% for message in messages %} {% if message %}
+    <div classs="container p-5" id="message" style="position: absolute">
+      <div class="row no-gutters">
+        <div class="col-lg-2 col-md-15 mt-5" style="margin-left: 82vw">
+          <div class="alert alert-{{message.tags}} fade show" role="alert">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="alert"
+              aria-label="Close"
+            >
+              <span aria-hidden="True">&times;</span>
+            </button>
+            <h4
+              class="alert-heading"
+              style="font-size:larger; color: {{color}}"
+            >
+              {{message}}
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %} {% endfor %}
+    <a id="img-div" href="/">
+      <img src="{% static '/images/logo-no-background.webp' %}" alt="" />
+    </a>
+    <div id="page1">
+      <div class="container" id="container">
+        <div class="form-container sign-up">
+          <form method="post" style="gap: 1.25vw">
+            {% csrf_token %}
+            <h1 style="margin-bottom: 0">Create Account</h1>
+
+            <div class="input-box">
+              <input type="text" required name="email" value="{{email}}" />
+              <label for="email">Email</label>
+            </div>
+
+            <div class="input-box">
+              <input
+                type="password"
+                required
+                style="background: none"
+                name="password"
+                value="{{password}}"
+              />
+              <label for="password">Password</label>
+            </div>
+            <div class="input-box">
+              <input
+                type="password"
+                required
+                style="background: none"
+                name="confirm_password"
+                value="{{confirm_password}}"
+                class="password"
+              />
+
+              <i class="fa-solid fa-eye-slash eye1"></i>
+              <i class="fa-regular fa-eye eye2"></i>
+
+              <label for="password">Confirm Password</label>
+            </div>
+
+            <div class="input-box">
+              <input type="text" name="div" value="{{div}}" />
+              <label for="divison">Division</label>
+            </div>
+            <div class="input-box">
+              <input type="text" required name="sem" value="{{sem}}" />
+              <label for="semester">Sem</label>
+            </div>
+            <div id="select-program">
+              <select id="menu" name="program" required>
+                <option value="" disabled selected>Program</option>
+                <option value="BCA">BCA</option>
+                <option value="BBA(IT)">BBA(IT)</option>
+                <option value="MSC(CA)">MSC(CA)</option>
+                <option value="MBA(IT)">MBA(IT)</option>
+                <option value="MBA(DT)">MBA(DT)</option>
+              </select>
+            </div>
+            <div id="select-electives">
+              <select id="elec-menu" name="elective">
+                <option value="none" selected>Electives</option>
+                <option value="Creative">Creative Writing</option>
+                <option value="Understanding">Understanding Cinema</option>
+                <option value="Appreciating">Appreciating Cinema</option>
+                <option value="Music">Music in Media I</option>
+                <option value="Introduction">Introduction to Theatre</option>
+                <option value="Foundation">Foundations of Ethics</option>
+                <option value="Sociology">Basic Sociology</option>
+                <option value="Basic Psychology 1">
+                  Basic Psychology-Group-1
+                </option>
+                <option value="Basic Psychology 2">
+                  Basic Psychology-Group-2
+                </option>
+                <option value="Basic Psychology 3">
+                  Basic Psychology-Group-3
+                </option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div id="radio">
+              <h3>Honours ?</h3>
+              <div class="radio-button-container">
+                <div class="radio-button">
+                  <input
+                    required
+                    type="radio"
+                    class="radio-button__input"
+                    id="radio1"
+                    name="honours"
+                    value="yes"
+                  />
+                  <label class="radio-button__label" for="radio1">
+                    <span class="radio-button__custom"></span>
+                    Yes
+                  </label>
+                </div>
+                <div class="radio-button">
+                  <input
+                    required
+                    type="radio"
+                    class="radio-button__input"
+                    id="radio2"
+                    name="honours"
+                    value="no"
+                    checked
+                  />
+                  <label class="radio-button__label" for="radio2">
+                    <span class="radio-button__custom"></span>
+                    NO
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" name="submit_action" value="signup">
+              Sign Up
+            </button>
+          </form>
+        </div>
+        <div class="form-container sign-in">
+          <form method="post">
+            {% csrf_token %}
+            <h1>Sign In</h1>
+
+            <div class="input-box">
+              <input type="text" required name="email" />
+              <label for="username">Email</label>
+            </div>
+            <div class="input-box">
+              <input
+                type="password"
+                required
+                style="background: none"
+                name="password"
+                class="s_password"
+              />
+              <label for="name">Password</label>
+
+              <i class="fa-solid fa-eye-slash s_eye1"></i>
+              <i class="fa-regular fa-eye s_eye2"></i>
+            </div>
+            <a href="/check_mail/" id="forgot_pass">Forgot Password?</a>
+
+            <button type="submit" name="submit_action" value="signin">
+              Sign In
+            </button>
+          </form>
+        </div>
+        <div class="toggle-container">
+          <div class="toggle">
+            <div class="toggle-panel toggle-left">
+              <h1>Already have an account?</h1>
+              <p>Sign-in, now to get your routine!</p>
+              <button class="hidden" id="login"><p>Sign In</p></button>
+            </div>
+            <div class="toggle-panel toggle-right">
+              <h1 style="width: 80%">Don't have an account?</h1>
+              <p>Register, now to get your routine!</p>
+              <button class="hidden" id="register"><p>Sign Up</p></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="{% static '/js/login.js' %}"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var popup = document.getElementById("message");
+      if (popup) {
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>

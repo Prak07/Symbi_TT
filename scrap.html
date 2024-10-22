@@ -1,0 +1,3547 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="utf-8">
+<title>Time Table</title>
+  <link href="jquery/ui/css/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
+  <link href="jquery/ui/css/sunny/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
+  <link href="jquery/datatables/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+  <link href="jquery/datatables/css/buttons.dataTables.css" rel="stylesheet" type="text/css">
+  <link href="jquery/datatables/css/fixedColumns.dataTables.min.css" rel="stylesheet" type="text/css">
+  <link href="jquery/datatables/css/colReorder.dataTables.css" rel="stylesheet" type="text/css">
+      
+    <link rel="stylesheet" href="css/mrbs.css.php" type="text/css">
+        <link rel="stylesheet" media="print" href="css/mrbs-print.css.php" type="text/css">
+    <!--[if IE]>
+    <link rel="stylesheet" href="css/mrbs-ie.css" type="text/css">
+    <![endif]-->
+        <!--[if IE 8]>
+    <link rel="stylesheet" href="css/mrbs-ie8.css" type="text/css">
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/mrbs-ielte8.css" type="text/css">
+    <![endif]-->
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" href="css/mrbs-ielte7.css.php" type="text/css">
+    <![endif]-->
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="css/mrbs-ielte6.css" type="text/css">
+    <![endif]-->
+        <meta name="robots" content="noindex, nofollow">
+
+<!--[if (!IE)|(gt IE 8)]><!-->
+  <script type="text/javascript" src="jquery/jquery-2.2.4.min.js"></script>
+  <!--<![endif]-->
+
+<!--[if lte IE 8]>
+  <script type="text/javascript" src="jquery/jquery-1.11.0.min.js"></script>
+<![endif]-->
+
+  <script type="text/javascript" src="jquery/jquery-migrate-1.4.1.min.js"></script>
+    <script type="text/javascript" src="jquery/ui/jquery-ui.min.js"></script>
+  
+
+<script type="text/javascript">
+  //<![CDATA[
+  var lteIE6 = false;
+  //]]>
+</script>
+<!--[if lte IE 6]>
+<script type="text/javascript">
+  //<![CDATA[
+  var lteIE6 = true;
+  //]]>
+</script>
+<![endif]-->
+    
+<script type="text/javascript">
+  //<![CDATA[
+  var lteIE7 = false;
+  //]]>
+</script>
+<!--[if lte IE 7]>
+<script type="text/javascript">
+  //<![CDATA[
+  var lteIE7 = true;
+  //]]>
+</script>
+<![endif]-->
+    
+<script type="text/javascript">
+  //<![CDATA[
+  var lteIE8 = false;
+  //]]>
+</script>
+<!--[if lte IE 8]>
+<script type="text/javascript">
+  //<![CDATA[
+  var lteIE8 = true;
+  //]]>
+</script>
+<![endif]-->
+    
+<script type="text/javascript">
+  //<![CDATA[
+    function init(params)
+  {
+  }
+  //]]>
+</script>
+
+<script type="text/javascript" src="js/functions.js.php?area=1"></script>
+<script type="text/javascript" src="js/datepicker.js.php?area=1"></script>
+<script type="text/javascript" src="js/general.js.php?area=1"></script>
+
+    
+  <script type="text/javascript" src="js/refresh.js.php?area=1"></script>
+    <script type="text/javascript" src="js/resizable.js.php?area=1"></script>
+  <script type="text/javascript" src="js/multiple.js.php?area=1"></script>
+    <script type="text/javascript" src="js/cell_click.js.php?area=1"></script>
+  
+<!--[if lte IE 8]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    
+<script type="text/javascript">
+
+//<![CDATA[
+
+
+$(window).on('load', function() {
+
+  var args = {day: '7',
+              month: '8',
+              year: '2024',
+              area: '1',
+              room: '29',
+              page: 'day'};
+    init(args);
+
+});
+
+
+//]]>
+</script></head>
+<body class="non_js day">
+    <script type="text/javascript">
+      //<![CDATA[
+      $('body').addClass('js').removeClass('non_js');
+      //]]>
+    </script> 
+    <header class="banner">
+<nav>
+<ul>
+<li>
+<div id="company">
+<div id="logo">
+<a href="http://sicsr.ac.in/">
+<span>Symbiosis Institute of Computer Studies and Research</span>
+</a>
+</div>
+<div id="mrbs">
+<a href="index.php">Time Table</a>
+</div>
+</div>
+</li>
+<li>
+<form action="day.php" method="get" id="Form1">
+<span class="dateselector js_hidden" data-prefix="" data-day="7" data-month="8" data-year="2024" data-min-year="2019" data-max-year="2029" data-form-id="Form1">
+<select id="day" name="day">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7" selected="selected">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+<select id="month" name="month">
+<option value="1">Jan</option>
+<option value="2">Feb</option>
+<option value="3">Mar</option>
+<option value="4">Apr</option>
+<option value="5">May</option>
+<option value="6">Jun</option>
+<option value="7">Jul</option>
+<option value="8" selected="selected">Aug</option>
+<option value="9">Sep</option>
+<option value="10">Oct</option>
+<option value="11">Nov</option>
+<option value="12">Dec</option>
+</select>
+<select id="year" name="year">
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024" selected="selected">2024</option>
+<option value="2025">2025</option>
+<option value="2026">2026</option>
+<option value="2027">2027</option>
+<option value="2028">2028</option>
+<option value="2029">2029</option>
+</select>
+</span>
+<input type="hidden" name="area" value="1">
+<input type="hidden" name="room" value="29">
+<input type="submit" value="goto">
+</form>
+</li>
+<li>
+<a href="help.php?day=7&amp;month=8&amp;year=2024&amp;area=1&amp;room=29">Help</a>
+</li>
+<li>
+<a href="admin.php?day=7&amp;month=8&amp;year=2024&amp;area=1&amp;room=29">Rooms</a>
+</li>
+<li>
+<a href="report.php?day=7&amp;month=8&amp;year=2024&amp;area=1&amp;room=29">Report</a>
+</li>
+<li>
+<form id="header_search" method="get" action="search.php">
+<div>
+<a href="search.php?advanced=1">Search:</a>
+<input type="search" name="search_str" value="" required>
+<input type="hidden" name="day" value="7">
+<input type="hidden" name="month" value="8">
+<input type="hidden" name="year" value="2024">
+<input type="hidden" name="area" value="1">
+<input type="hidden" name="room" value="29">
+</div>
+</form>
+</li>
+<li>
+<div id="logon_box">
+                <a href="">Unknown user</a>
+                <form method="post" action="admin.php">
+                  <div>
+                    <input type="hidden" name="TargetURL" value="day.php?year=2024&amp;month=08&amp;day=07&amp;area=1&amp;room=29">
+                    <input type="hidden" name="Action" value="QueryName">
+                    <input type="submit" value=" Log in ">
+                  </div>
+                </form>
+<a id="user_list_link" href="edit_users.php">User list</a>
+</div>
+</li>
+</ul>
+</nav>
+</header>
+<div id="contents">
+<div id="dwm_header" class="screenonly">
+<nav id="cals">
+<div id="cal_last">
+<table class="calendar">
+<thead>
+<tr>
+<th colspan="7"><a href="month.php?year=2024&amp;month=7&amp;day=7&amp;area=1&amp;room=29">July&nbsp;2024</a></th>
+</tr>
+<tr>
+<th>Sun</th>
+<th>Mon</th>
+<th>Tue</th>
+<th>Wed</th>
+<th>Thu</th>
+<th>Fri</th>
+<th>Sat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&nbsp;</td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=1&amp;area=1&amp;room=29">1</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=2&amp;area=1&amp;room=29">2</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=3&amp;area=1&amp;room=29">3</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=4&amp;area=1&amp;room=29">4</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=5&amp;area=1&amp;room=29">5</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=6&amp;area=1&amp;room=29">6</a></td>
+</tr>
+<tr>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=7&amp;area=1&amp;room=29">7</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=8&amp;area=1&amp;room=29">8</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=9&amp;area=1&amp;room=29">9</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=10&amp;area=1&amp;room=29">10</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=11&amp;area=1&amp;room=29">11</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=12&amp;area=1&amp;room=29">12</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=13&amp;area=1&amp;room=29">13</a></td>
+</tr>
+<tr>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=14&amp;area=1&amp;room=29">14</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=15&amp;area=1&amp;room=29">15</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=16&amp;area=1&amp;room=29">16</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=17&amp;area=1&amp;room=29">17</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=18&amp;area=1&amp;room=29">18</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=19&amp;area=1&amp;room=29">19</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=20&amp;area=1&amp;room=29">20</a></td>
+</tr>
+<tr>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=21&amp;area=1&amp;room=29">21</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=22&amp;area=1&amp;room=29">22</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=23&amp;area=1&amp;room=29">23</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=24&amp;area=1&amp;room=29">24</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=25&amp;area=1&amp;room=29">25</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=26&amp;area=1&amp;room=29">26</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=27&amp;area=1&amp;room=29">27</a></td>
+</tr>
+<tr>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=28&amp;area=1&amp;room=29">28</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=29&amp;area=1&amp;room=29">29</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=30&amp;area=1&amp;room=29">30</a></td>
+<td><a href="day.php?year=2024&amp;month=7&amp;day=31&amp;area=1&amp;room=29">31</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="cal_this">
+<table class="calendar">
+<thead>
+<tr>
+<th colspan="7"><a href="month.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29">August&nbsp;2024</a></th>
+</tr>
+<tr>
+<th>Sun</th>
+<th>Mon</th>
+<th>Tue</th>
+<th>Wed</th>
+<th>Thu</th>
+<th>Fri</th>
+<th>Sat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=1&amp;area=1&amp;room=29">1</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=2&amp;area=1&amp;room=29">2</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=3&amp;area=1&amp;room=29">3</a></td>
+</tr>
+<tr>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=4&amp;area=1&amp;room=29">4</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=5&amp;area=1&amp;room=29">5</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=6&amp;area=1&amp;room=29">6</a></td>
+<td id="sticky_day"><a class="current" href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29">7</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=8&amp;area=1&amp;room=29">8</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=9&amp;area=1&amp;room=29">9</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=10&amp;area=1&amp;room=29">10</a></td>
+</tr>
+<tr>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=11&amp;area=1&amp;room=29">11</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=12&amp;area=1&amp;room=29">12</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=13&amp;area=1&amp;room=29">13</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=14&amp;area=1&amp;room=29">14</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=15&amp;area=1&amp;room=29">15</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=16&amp;area=1&amp;room=29">16</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=17&amp;area=1&amp;room=29">17</a></td>
+</tr>
+<tr>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=18&amp;area=1&amp;room=29">18</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=19&amp;area=1&amp;room=29">19</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=20&amp;area=1&amp;room=29">20</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=21&amp;area=1&amp;room=29">21</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=22&amp;area=1&amp;room=29">22</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=23&amp;area=1&amp;room=29">23</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=24&amp;area=1&amp;room=29">24</a></td>
+</tr>
+<tr>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=25&amp;area=1&amp;room=29">25</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=26&amp;area=1&amp;room=29">26</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=27&amp;area=1&amp;room=29">27</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=28&amp;area=1&amp;room=29">28</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=29&amp;area=1&amp;room=29">29</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=30&amp;area=1&amp;room=29">30</a></td>
+<td><a href="day.php?year=2024&amp;month=8&amp;day=31&amp;area=1&amp;room=29">31</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="cal_next">
+<table class="calendar">
+<thead>
+<tr>
+<th colspan="7"><a href="month.php?year=2024&amp;month=9&amp;day=7&amp;area=1&amp;room=29">September&nbsp;2024</a></th>
+</tr>
+<tr>
+<th>Sun</th>
+<th>Mon</th>
+<th>Tue</th>
+<th>Wed</th>
+<th>Thu</th>
+<th>Fri</th>
+<th>Sat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=1&amp;area=1&amp;room=29">1</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=2&amp;area=1&amp;room=29">2</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=3&amp;area=1&amp;room=29">3</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=4&amp;area=1&amp;room=29">4</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=5&amp;area=1&amp;room=29">5</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=6&amp;area=1&amp;room=29">6</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=7&amp;area=1&amp;room=29">7</a></td>
+</tr>
+<tr>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=8&amp;area=1&amp;room=29">8</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=9&amp;area=1&amp;room=29">9</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=10&amp;area=1&amp;room=29">10</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=11&amp;area=1&amp;room=29">11</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=12&amp;area=1&amp;room=29">12</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=13&amp;area=1&amp;room=29">13</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=14&amp;area=1&amp;room=29">14</a></td>
+</tr>
+<tr>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=15&amp;area=1&amp;room=29">15</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=16&amp;area=1&amp;room=29">16</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=17&amp;area=1&amp;room=29">17</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=18&amp;area=1&amp;room=29">18</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=19&amp;area=1&amp;room=29">19</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=20&amp;area=1&amp;room=29">20</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=21&amp;area=1&amp;room=29">21</a></td>
+</tr>
+<tr>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=22&amp;area=1&amp;room=29">22</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=23&amp;area=1&amp;room=29">23</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=24&amp;area=1&amp;room=29">24</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=25&amp;area=1&amp;room=29">25</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=26&amp;area=1&amp;room=29">26</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=27&amp;area=1&amp;room=29">27</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=28&amp;area=1&amp;room=29">28</a></td>
+</tr>
+<tr>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=29&amp;area=1&amp;room=29">29</a></td>
+<td><a href="day.php?year=2024&amp;month=9&amp;day=30&amp;area=1&amp;room=29">30</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</nav>
+</div>
+<div id="div_type">
+<form id = 'sorttype' method = post action = ''><label for="type">Type:</label>
+<select id="type" name="type">
+<option value="A">BCA (V) - Div. A</option>
+<option value="B">BCA (V) - Div. B</option>
+<option value="C">BCA (V) - Div. C</option>
+<option value="D">BCA (V) - Div. D</option>
+<option value="E">BCA (V) - Div. E</option>
+<option value="F">BCA (V) - Div. F</option>
+<option value="G">BCA (V) - Elective</option>
+<option value="H">BCA (III) - Div. A</option>
+<option value="I">BCA (III) - Div. B</option>
+<option value="J">BCA (III) - Div. C</option>
+<option value="K">BCA (III) - Div. D</option>
+<option value="L">BCA (III) - Div. E</option>
+<option value="M">BCA (III) - Div. F</option>
+<option value="N">BCA (III) - Elective</option>
+<option value="O">BCA(Honours) - (V)</option>
+<option value="P">BBA-IT (V) - Div. A</option>
+<option value="Q">BBA-IT (V) - Div. B</option>
+<option value="R">BBA-IT (V) - Div. C</option>
+<option value="S">BBA-IT (V) - Elective</option>
+<option value="T">BBA-IT (III) - Div. A</option>
+<option value="U">BBA-IT (III) - Div. B</option>
+<option value="V">BBA-IT (III) - Div. C</option>
+<option value="W">BBA-IT (III) - Elective</option>
+<option value="X">MSC-CA (I)</option>
+<option value="Y">MSC-CA (III)</option>
+<option value="Z">MSC-CA (III) - SD</option>
+<option value="a">MSC-CA (III) - DS</option>
+<option value="b">MBA-IT (I) - Div. A</option>
+<option value="c">MBA-IT (I) - Div. B</option>
+<option value="d">MBA-IT (III) - Div. A</option>
+<option value="e">MBA-IT (III) - Div. B</option>
+<option value="f">MBA-IT (III) - DA</option>
+<option value="g">MBA-IT (III)- SPM</option>
+<option value="h">MBA-DT (I)</option>
+<option value="i">MBA-DT (III)</option>
+<option value="j">EXAM</option>
+<option value="k">Elective</option>
+<option value="l">Common Batch</option>
+<option value="m">Guest Lecture</option>
+<option value="n">Meetups</option>
+<option value="o">BREAK</option>
+<option value="p">BCA (V) Elective - Group A</option>
+<option value="q">BCA (V) Elective - Group B</option>
+<option value="r">BCA (V) Elective - Group C</option>
+<option value="s">BCA (I) - Div. A</option>
+<option value="t">BCA (I) - Div. B</option>
+<option value="u">BCA (I) - Div. C</option>
+<option value="v">BCA (I) - Div. D</option>
+<option value="w">BCA (I) - Div. E</option>
+<option value="x">BBA-IT (I) - Div. A</option>
+<option value="y">BBA-IT (I) - Div. B</option>
+<option value="z">BBA-IT (I) - Div. C</option>
+</select>
+<input type = 'submit' name = 'submit' value = 'Submit'></form>
+</div>
+<div id="dwm">
+<h2>Wednesday 07 August 2024</h2>
+</div>
+
+<nav class="date_nav">
+  <a class="date_before" href="day.php?area=1&amp;room=29&amp;year=2024&amp;month=08&amp;day=06&amp;type=">Go To Day Before</a>
+  <a class="date_now" href="day.php?area=1&amp;room=29;">Go To Today</a>
+  <a class="date_after" href="day.php?area=1&amp;room=29&amp;year=2024&amp;month=08&amp;day=08&amp;type=">Go To Day After</a>
+</nav>
+<table class="dwm_main" id="day_main" data-resolution="1800">
+<thead>
+<tr>
+<th class="first_last" style="width: 1%">Time:</th>
+<th data-room="29" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29"
+                        title="View Week &#10;&#10;Class Room">203 (24)</a></th>
+<th data-room="28" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=28"
+                        title="View Week &#10;&#10;Lab">207 (52)</a></th>
+<th data-room="13" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=13"
+                        title="View Week &#10;&#10;Class Room">301 (50)</a></th>
+<th data-room="31" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=31"
+                        title="View Week &#10;&#10;Class Room">303 (48)</a></th>
+<th data-room="14" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=14"
+                        title="View Week &#10;&#10;Class Room">304 (50)</a></th>
+<th data-room="15" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=15"
+                        title="View Week &#10;&#10;Class Room">305 (48)</a></th>
+<th data-room="16" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=16"
+                        title="View Week &#10;&#10;Class Room">306 (48)</a></th>
+<th data-room="7" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=7"
+                        title="View Week &#10;&#10;Lab">307 (75)</a></th>
+<th data-room="17" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=17"
+                        title="View Week &#10;&#10;Class Room">401 (46)</a></th>
+<th data-room="9" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=9"
+                        title="View Week &#10;&#10;Class Room">402 (28)</a></th>
+<th data-room="10" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=10"
+                        title="View Week &#10;&#10;Lab">404 (30)</a></th>
+<th data-room="18" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=18"
+                        title="View Week &#10;&#10;Class Room">405 (40)</a></th>
+<th data-room="19" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=19"
+                        title="View Week &#10;&#10;Class Room">406 (40)</a></th>
+<th data-room="27" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=27"
+                        title="View Week &#10;&#10;AV Hall">407 (100)</a></th>
+<th data-room="21" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=21"
+                        title="View Week &#10;&#10;Class Room">701 (46)</a></th>
+<th data-room="22" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=22"
+                        title="View Week &#10;&#10;Class Room">702 (44)</a></th>
+<th data-room="23" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=23"
+                        title="View Week &#10;&#10;Lab">703 (21)</a></th>
+<th data-room="24" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=24"
+                        title="View Week &#10;&#10;Class Room">704 (50)</a></th>
+<th data-room="25" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=25"
+                        title="View Week &#10;&#10;Lab">705 (34)</a></th>
+<th data-room="26" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=26"
+                        title="View Week &#10;&#10;Class Room">706 (40)</a></th>
+<th data-room="1" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=1"
+                        title="View Week &#10;&#10;AV Hall">707 (90)</a></th>
+<th data-room="30" style="width: 4.500000%">
+                        <a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=30"
+                        title="View Week &#10;&#10;Class Room">SDRC (15)</a></th>
+</tr>
+</thead>
+<tbody>
+<tr class="even_row">
+<td class="row_labels" data-seconds="27000">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=27000" title="Highlight this line">07:30</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=7&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="odd_row">
+<td class="row_labels" data-seconds="28800">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=28800" title="Highlight this line">08:00</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="C" rowspan="2">
+<div data-id="284267" data-type="C" class="celldiv slots2">
+<a href="view_entry.php?id=284267&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div C - NoSQL Databases- Ms.Poonam Ghule"><img class="repeat_symbol C" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div C - NoSQL Databases- Ms.Poonam Ghule</a>
+</div>
+</td>
+<td class="V" rowspan="2">
+<div data-id="263963" data-type="V" class="celldiv slots2">
+<a href="view_entry.php?id=263963&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) III Div C -IT Tools for Statistics- I-Ms.Shatakshi Swaroop"><img class="repeat_symbol V" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) III Div C -IT Tools for Statistics- I-Ms.Shatakshi Swaroop</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="T" rowspan="2">
+<div data-id="263287" data-type="T" class="celldiv slots2">
+<a href="view_entry.php?id=263287&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) III Div A Elective -Soft Skills-Ms.Mrinmayi Huprikar"><img class="repeat_symbol T" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) III Div A Elective -Soft Skills-Ms.Mrinmayi Huprikar</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="E" rowspan="2">
+<div data-id="276189" data-type="E" class="celldiv slots2">
+<a href="view_entry.php?id=276189&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div E -Enterprise Application Development using JavaEE- Mr. Girish Bal"><img class="repeat_symbol E" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div E -Enterprise Application Development using JavaEE- Mr. Girish Bal</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="b" rowspan="2">
+<div data-id="285833" data-type="b" class="celldiv slots2">
+<a href="view_entry.php?id=285833&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) I Div A- Basic Business Statistics for Data Analysis- Mr. Rohan Bhase">MBA(IT) I Div A- Basic Business Statistics for Data Analysis- Mr. Rohan Bhase</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=8&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="q" rowspan="2">
+<div data-id="273344" data-type="q" class="celldiv slots2">
+<a href="view_entry.php?id=273344&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div B - Group B - Machine Learning- Ms. Poonam Pawar"><img class="repeat_symbol q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div B - Group B - Machine Learning- Ms. Poonam Pawar</a>
+</div>
+</td>
+<td class="q" rowspan="2">
+<div data-id="274017" data-type="q" class="celldiv slots2">
+<a href="view_entry.php?id=274017&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div D - Group B- Cloud Architectures and Security- Mr. Pranav Sahasrabudhe"><img class="repeat_symbol q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div D - Group B- Cloud Architectures and Security- Mr. Pranav Sahasrabudhe</a>
+</div>
+</td>
+<td class="p" rowspan="2">
+<div data-id="276227" data-type="p" class="celldiv slots2">
+<a href="view_entry.php?id=276227&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div A - Group A- PHP Framework- Ms.Farhana Desai"><img class="repeat_symbol p" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div A - Group A- PHP Framework- Ms.Farhana Desai</a>
+</div>
+</td>
+<td class="d" rowspan="2">
+<div data-id="259739" data-type="d" class="celldiv slots2">
+<a href="view_entry.php?id=259739&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) III Div A- IT Tools and Techniques for Business- Mr. Ashok Pattar"><img class="repeat_symbol d" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(IT) III Div A- IT Tools and Techniques for Business- Mr. Ashok Pattar</a>
+</div>
+</td>
+<td class="g" rowspan="2">
+<div data-id="263064" data-type="g" class="celldiv slots2">
+<a href="view_entry.php?id=263064&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) III- Requirements Management(SPM)- Mr. Vaibhav Patil"><img class="repeat_symbol g" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(IT) III- Requirements Management(SPM)- Mr. Vaibhav Patil</a>
+</div>
+</td>
+<td class="Z" rowspan="4">
+<div data-id="274682" data-type="Z" class="celldiv slots4">
+<a href="view_entry.php?id=274682&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MSc(CA) Sem III Web UI and Content Management (SD)_ Gaurav Pant"><img class="repeat_symbol Z" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MSc(CA) Sem III Web UI and Content Management (SD)_ Gaurav Pant</a>
+</div>
+</td>
+<td class="i" rowspan="2">
+<div data-id="275196" data-type="i" class="celldiv slots2">
+<a href="view_entry.php?id=275196&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(DT) III- Regulatory Perspectives for Digital Business- Co. Maneesh Joshi"><img class="repeat_symbol i" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(DT) III- Regulatory Perspectives for Digital Business- Co. Maneesh Joshi</a>
+</div>
+</td>
+<td class="a" rowspan="4">
+<div data-id="271210" data-type="a" class="celldiv slots4">
+<a href="view_entry.php?id=271210&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MSc(CA) Sem III Artificial Neural Network and Deep Learning (DS)_ Sulaxan Jadhav"><img class="repeat_symbol a" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MSc(CA) Sem III Artificial Neural Network and Deep Learning (DS)_ Sulaxan Jadhav</a>
+</div>
+</td>
+<td class="L" rowspan="2">
+<div data-id="270568" data-type="L" class="celldiv slots2">
+<a href="view_entry.php?id=270568&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div E - Operating  Systems- Ms. Kumari Deepika"><img class="repeat_symbol L" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div E - Operating  Systems- Ms. Kumari Deepika</a>
+</div>
+</td>
+<td class="M" rowspan="2">
+<div data-id="275234" data-type="M" class="celldiv slots2">
+<a href="view_entry.php?id=275234&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div F - Software  Engineering- Ms. Kirti Mehere"><img class="repeat_symbol M" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div F - Software  Engineering- Ms. Kirti Mehere</a>
+</div>
+</td>
+<td class="i" rowspan="2">
+<div data-id="283380" data-type="i" class="celldiv slots2">
+<a href="view_entry.php?id=283380&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(DT) Sem III Internet of Things_Prof.Dr. Jatinderkumar R Saini"><img class="repeat_symbol i" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(DT) Sem III Internet of Things_Prof.Dr. Jatinderkumar R Saini</a>
+</div>
+</td>
+</tr>
+<tr class="even_row">
+<td class="row_labels" data-seconds="30600">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=30600" title="Highlight this line">08:30</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=8&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="odd_row">
+<td class="row_labels" data-seconds="32400">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=32400" title="Highlight this line">09:00</a>
+</div></td>
+<td class="h" rowspan="2">
+<div data-id="285679" data-type="h" class="celldiv slots2">
+<a href="view_entry.php?id=285679&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(DT) I - Business Agile Practices- Mr. Shashank Gaikwad"><img class="repeat_symbol h" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(DT) I - Business Agile Practices- Mr. Shashank Gaikwad</a>
+</div>
+</td>
+<td class="C" rowspan="2">
+<div data-id="284268" data-type="C" class="celldiv slots2">
+<a href="view_entry.php?id=284268&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div C - NoSQL Databases- Ms.Poonam Ghule"><img class="repeat_symbol C" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div C - NoSQL Databases- Ms.Poonam Ghule</a>
+</div>
+</td>
+<td class="V" rowspan="2">
+<div data-id="263982" data-type="V" class="celldiv slots2">
+<a href="view_entry.php?id=263982&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) III Div C -IT Tools for Statistics- I-Ms.Shatakshi Swaroop"><img class="repeat_symbol V" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) III Div C -IT Tools for Statistics- I-Ms.Shatakshi Swaroop</a>
+</div>
+</td>
+<td class="U" rowspan="2">
+<div data-id="263699" data-type="U" class="celldiv slots2">
+<a href="view_entry.php?id=263699&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) III Div B-Creativity and Innovation-Mr.Satyajit Wale"><img class="repeat_symbol U" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) III Div B-Creativity and Innovation-Mr.Satyajit Wale</a>
+</div>
+</td>
+<td class="T" rowspan="2">
+<div data-id="263306" data-type="T" class="celldiv slots2">
+<a href="view_entry.php?id=263306&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) III Div A Elective -Soft Skills-Ms.Mrinmayi Huprikar"><img class="repeat_symbol T" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) III Div A Elective -Soft Skills-Ms.Mrinmayi Huprikar</a>
+</div>
+</td>
+<td class="P" rowspan="2">
+<div data-id="264231" data-type="P" class="celldiv slots2">
+<a href="view_entry.php?id=264231&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) V Div A-E-Business Technology-Dr. Prafulla Bafna"><img class="repeat_symbol P" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) V Div A-E-Business Technology-Dr. Prafulla Bafna</a>
+</div>
+</td>
+<td class="Q" rowspan="2">
+<div data-id="265287" data-type="Q" class="celldiv slots2">
+<a href="view_entry.php?id=265287&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) V Div B -Information Technology and Regulatory Compliance-Mr.Rohan Bhase"><img class="repeat_symbol Q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) V Div B -Information Technology and Regulatory Compliance-Mr.Rohan Bhase</a>
+</div>
+</td>
+<td class="E" rowspan="2">
+<div data-id="276208" data-type="E" class="celldiv slots2">
+<a href="view_entry.php?id=276208&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div E -Enterprise Application Development using JavaEE- Mr. Girish Bal"><img class="repeat_symbol E" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div E -Enterprise Application Development using JavaEE- Mr. Girish Bal</a>
+</div>
+</td>
+<td class="b" rowspan="2">
+<div data-id="285784" data-type="b" class="celldiv slots2">
+<a href="view_entry.php?id=285784&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) I Div A- Introduction to Python- Dr. Sandeep Gaikwad"><img class="repeat_symbol b" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(IT) I Div A- Introduction to Python- Dr. Sandeep Gaikwad</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=9&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="X" rowspan="2">
+<div data-id="273531" data-type="X" class="celldiv slots2">
+<a href="view_entry.php?id=273531&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MSc(CA) Sem I Relational Database Management System_Rasila Walhekar"><img class="repeat_symbol X" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MSc(CA) Sem I Relational Database Management System_Rasila Walhekar</a>
+</div>
+</td>
+<td class="q" rowspan="2">
+<div data-id="273363" data-type="q" class="celldiv slots2">
+<a href="view_entry.php?id=273363&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div B - Group B - Machine Learning- Ms. Poonam Pawar"><img class="repeat_symbol q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div B - Group B - Machine Learning- Ms. Poonam Pawar</a>
+</div>
+</td>
+<td class="q" rowspan="2">
+<div data-id="274036" data-type="q" class="celldiv slots2">
+<a href="view_entry.php?id=274036&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div D - Group B- Cloud Architectures and Security- Mr. Pranav Sahasrabudhe"><img class="repeat_symbol q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div D - Group B- Cloud Architectures and Security- Mr. Pranav Sahasrabudhe</a>
+</div>
+</td>
+<td class="p" rowspan="2">
+<div data-id="276246" data-type="p" class="celldiv slots2">
+<a href="view_entry.php?id=276246&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div A - Group A- PHP Framework- Ms.Farhana Desai"><img class="repeat_symbol p" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div A - Group A- PHP Framework- Ms.Farhana Desai</a>
+</div>
+</td>
+<td class="d" rowspan="2">
+<div data-id="259756" data-type="d" class="celldiv slots2">
+<a href="view_entry.php?id=259756&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) III Div A- IT Tools and Techniques for Business- Mr. Ashok Pattar"><img class="repeat_symbol d" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(IT) III Div A- IT Tools and Techniques for Business- Mr. Ashok Pattar</a>
+</div>
+</td>
+<td class="g" rowspan="2">
+<div data-id="263079" data-type="g" class="celldiv slots2">
+<a href="view_entry.php?id=263079&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) III- Requirements Management(SPM)- Mr. Vaibhav Patil"><img class="repeat_symbol g" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(IT) III- Requirements Management(SPM)- Mr. Vaibhav Patil</a>
+</div>
+</td>
+<td class="i" rowspan="2">
+<div data-id="275209" data-type="i" class="celldiv slots2">
+<a href="view_entry.php?id=275209&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(DT) III- Regulatory Perspectives for Digital Business- Co. Maneesh Joshi"><img class="repeat_symbol i" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(DT) III- Regulatory Perspectives for Digital Business- Co. Maneesh Joshi</a>
+</div>
+</td>
+<td class="L" rowspan="2">
+<div data-id="270587" data-type="L" class="celldiv slots2">
+<a href="view_entry.php?id=270587&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div E - Operating  Systems- Ms. Kumari Deepika"><img class="repeat_symbol L" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div E - Operating  Systems- Ms. Kumari Deepika</a>
+</div>
+</td>
+<td class="M" rowspan="2">
+<div data-id="275253" data-type="M" class="celldiv slots2">
+<a href="view_entry.php?id=275253&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div F - Software  Engineering- Ms. Kirti Mehere"><img class="repeat_symbol M" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div F - Software  Engineering- Ms. Kirti Mehere</a>
+</div>
+</td>
+<td class="i" rowspan="2">
+<div data-id="283391" data-type="i" class="celldiv slots2">
+<a href="view_entry.php?id=283391&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(DT) Sem III Internet of Things_Prof.Dr. Jatinderkumar R Saini"><img class="repeat_symbol i" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(DT) Sem III Internet of Things_Prof.Dr. Jatinderkumar R Saini</a>
+</div>
+</td>
+</tr>
+<tr class="even_row">
+<td class="row_labels" data-seconds="34200">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=34200" title="Highlight this line">09:30</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=9&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="odd_row">
+<td class="row_labels" data-seconds="36000">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=36000" title="Highlight this line">10:00</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=10&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="even_row">
+<td class="row_labels" data-seconds="37800">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=37800" title="Highlight this line">10:30</a>
+</div></td>
+<td class="H" rowspan="2">
+<div data-id="268960" data-type="H" class="celldiv slots2">
+<a href="view_entry.php?id=268960&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div A - Operating  Systems- Dr.Amol Vibhute"><img class="repeat_symbol H" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div A - Operating  Systems- Dr.Amol Vibhute</a>
+</div>
+</td>
+<td class="A" rowspan="2">
+<div data-id="272016" data-type="A" class="celldiv slots2">
+<a href="view_entry.php?id=272016&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div A -Enterprise Application Development using JavaEE-  Dr. Shrikant Mapari"><img class="repeat_symbol A" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div A -Enterprise Application Development using JavaEE-  Dr. Shrikant Mapa</a>
+</div>
+</td>
+<td class="V" rowspan="2">
+<div data-id="271606" data-type="V" class="celldiv slots2">
+<a href="view_entry.php?id=271606&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) III Div C Elective -Soft Skills-Ms.Mrinmayi Huprikar"><img class="repeat_symbol V" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) III Div C Elective -Soft Skills-Ms.Mrinmayi Huprikar</a>
+</div>
+</td>
+<td class="U" rowspan="2">
+<div data-id="263718" data-type="U" class="celldiv slots2">
+<a href="view_entry.php?id=263718&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) III Div B- Relational Database Management System-Dr. Prafulla Bafna"><img class="repeat_symbol U" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) III Div B- Relational Database Management System-Dr. Prafulla Bafna</a>
+</div>
+</td>
+<td class="T" rowspan="2">
+<div data-id="263326" data-type="T" class="celldiv slots2">
+<a href="view_entry.php?id=263326&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) III Div A -Human Resource Management-Dr. Sarika Sharma"><img class="repeat_symbol T" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) III Div A -Human Resource Management-Dr. Sarika Sharma</a>
+</div>
+</td>
+<td class="P" rowspan="2">
+<div data-id="264729" data-type="P" class="celldiv slots2">
+<a href="view_entry.php?id=264729&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) V Div A - Fundamentals of Data Science-Dr. Shraddha Vaidya"><img class="repeat_symbol P" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) V Div A - Fundamentals of Data Science-Dr. Shraddha Vaidya</a>
+</div>
+</td>
+<td class="Q" rowspan="2">
+<div data-id="265325" data-type="Q" class="celldiv slots2">
+<a href="view_entry.php?id=265325&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) V Div B -Information Technology and Regulatory Compliance-Mr.Rohan Bhase"><img class="repeat_symbol Q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) V Div B -Information Technology and Regulatory Compliance-Mr.Rohan Bhase</a>
+</div>
+</td>
+<td class="f" rowspan="2">
+<div data-id="258010" data-type="f" class="celldiv slots2">
+<a href="view_entry.php?id=258010&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) III- Web Analytics(DA)- Mr. Gaurav Pant"><img class="repeat_symbol f" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(IT) III- Web Analytics(DA)- Mr. Gaurav Pant</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=10&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="Z" rowspan="2">
+<div data-id="271184" data-type="Z" class="celldiv slots2">
+<a href="view_entry.php?id=271184&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MSc(CA) Sem III Object-Oriented Programming and Data Structures (SD) _ Rasila W"><img class="repeat_symbol Z" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MSc(CA) Sem III Object-Oriented Programming and Data Structures (SD) _ Rasila W</a>
+</div>
+</td>
+<td class="X" rowspan="4">
+<div data-id="271346" data-type="X" class="celldiv slots4">
+<a href="view_entry.php?id=271346&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MSc(CA) Sem I Design of Content Management System _ Nandkumar Khachane"><img class="repeat_symbol X" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MSc(CA) Sem I Design of Content Management System _ Nandkumar Khachane</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=10&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="q" rowspan="2">
+<div data-id="274167" data-type="q" class="celldiv slots2">
+<a href="view_entry.php?id=274167&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div D - Group B- Machine Learning- Ms. Poonam Pawar"><img class="repeat_symbol q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div D - Group B- Machine Learning- Ms. Poonam Pawar</a>
+</div>
+</td>
+<td class="r" rowspan="2">
+<div data-id="274418" data-type="r" class="celldiv slots2">
+<a href="view_entry.php?id=274418&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div E - Group C- Network Monitoring and  Troubleshooting- Ms. Gauri Madan"><img class="repeat_symbol r" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div E - Group C- Network Monitoring and  Troubleshooting- Ms. Gauri Madan</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=10&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=10&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="i" rowspan="2">
+<div data-id="257485" data-type="i" class="celldiv slots2">
+<a href="view_entry.php?id=257485&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(DT) III- Digital Branding and Promotion with Social Media- Mr. Satyajit Wale"><img class="repeat_symbol i" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(DT) III- Digital Branding and Promotion with Social Media- Mr. Satyajit Wale</a>
+</div>
+</td>
+<td class="M" rowspan="2">
+<div data-id="270966" data-type="M" class="celldiv slots2">
+<a href="view_entry.php?id=270966&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div F - Operating  Systems- Ms. Samruddhi Sapkal"><img class="repeat_symbol M" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div F - Operating  Systems- Ms. Samruddhi Sapkal</a>
+</div>
+</td>
+<td class="a" rowspan="2">
+<div data-id="260230" data-type="a" class="celldiv slots2">
+<a href="view_entry.php?id=260230&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MSc(CA) Sem III Artificial Neural Network and Deep Learning (DS)_ Sulaxan Jadhav"><img class="repeat_symbol a" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MSc(CA) Sem III Artificial Neural Network and Deep Learning (DS)_ Sulaxan Jadhav</a>
+</div>
+</td>
+<td class="K" rowspan="2">
+<div data-id="269991" data-type="K" class="celldiv slots2">
+<a href="view_entry.php?id=269991&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div D - Software  Engineering- Ms. Kirti Mehere"><img class="repeat_symbol K" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div D - Software  Engineering- Ms. Kirti Mehere</a>
+</div>
+</td>
+<td class="q" rowspan="2">
+<div data-id="284476" data-type="q" class="celldiv slots2">
+<a href="view_entry.php?id=284476&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div C - Group B- Cloud Architectures and Security- Mr. Pranav Sahasrabudhe"><img class="repeat_symbol q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div C - Group B- Cloud Architectures and Security- Mr. Pranav Sahasrabudhe</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=10&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="odd_row">
+<td class="row_labels" data-seconds="39600">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=39600" title="Highlight this line">11:00</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=11&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=11&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=11&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=11&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=11&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="even_row">
+<td class="row_labels" data-seconds="41400">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=41400" title="Highlight this line">11:30</a>
+</div></td>
+<td class="H" rowspan="2">
+<div data-id="268979" data-type="H" class="celldiv slots2">
+<a href="view_entry.php?id=268979&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div A - Operating  Systems- Dr.Amol Vibhute"><img class="repeat_symbol H" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div A - Operating  Systems- Dr.Amol Vibhute</a>
+</div>
+</td>
+<td class="A" rowspan="2">
+<div data-id="272035" data-type="A" class="celldiv slots2">
+<a href="view_entry.php?id=272035&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div A -Enterprise Application Development using JavaEE-  Dr. Shrikant Mapari"><img class="repeat_symbol A" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div A -Enterprise Application Development using JavaEE-  Dr. Shrikant Mapa</a>
+</div>
+</td>
+<td class="V" rowspan="2">
+<div data-id="271624" data-type="V" class="celldiv slots2">
+<a href="view_entry.php?id=271624&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) III Div C Elective -Soft Skills-Ms.Mrinmayi Huprikar"><img class="repeat_symbol V" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) III Div C Elective -Soft Skills-Ms.Mrinmayi Huprikar</a>
+</div>
+</td>
+<td class="U" rowspan="2">
+<div data-id="263737" data-type="U" class="celldiv slots2">
+<a href="view_entry.php?id=263737&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) III Div B- Relational Database Management System-Dr. Prafulla Bafna"><img class="repeat_symbol U" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) III Div B- Relational Database Management System-Dr. Prafulla Bafna</a>
+</div>
+</td>
+<td class="L" rowspan="2">
+<div data-id="270606" data-type="L" class="celldiv slots2">
+<a href="view_entry.php?id=270606&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div E - Network  Essentials- Mr. Sulaxan Jadhav"><img class="repeat_symbol L" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div E - Network  Essentials- Mr. Sulaxan Jadhav</a>
+</div>
+</td>
+<td class="P" rowspan="2">
+<div data-id="264748" data-type="P" class="celldiv slots2">
+<a href="view_entry.php?id=264748&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) V Div A - Fundamentals of Data Science-Dr. Shraddha Vaidya"><img class="repeat_symbol P" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) V Div A - Fundamentals of Data Science-Dr. Shraddha Vaidya</a>
+</div>
+</td>
+<td class="R" rowspan="2">
+<div data-id="266100" data-type="R" class="celldiv slots2">
+<a href="view_entry.php?id=266100&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) V Div C-E-Business Technology-Mr. Vijay Haldavnekar"><img class="repeat_symbol R" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) V Div C-E-Business Technology-Mr. Vijay Haldavnekar</a>
+</div>
+</td>
+<td class="f" rowspan="2">
+<div data-id="258027" data-type="f" class="celldiv slots2">
+<a href="view_entry.php?id=258027&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) III- Web Analytics(DA)- Mr. Gaurav Pant"><img class="repeat_symbol f" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(IT) III- Web Analytics(DA)- Mr. Gaurav Pant</a>
+</div>
+</td>
+<td class="a" rowspan="4">
+<div data-id="284841" data-type="a" class="celldiv slots4">
+<a href="view_entry.php?id=284841&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MSc(CA) Sem III Image Processing (DS)_ Aniket Nagane"><img class="repeat_symbol a" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MSc(CA) Sem III Image Processing (DS)_ Aniket Nagane</a>
+</div>
+</td>
+<td class="Z" rowspan="2">
+<div data-id="277307" data-type="Z" class="celldiv slots2">
+<a href="view_entry.php?id=277307&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MSc(CA) (SD)Sem III Cloud Programming using Services Shashank Gaikwad"><img class="repeat_symbol Z" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MSc(CA) (SD)Sem III Cloud Programming using Services Shashank Gaikwad</a>
+</div>
+</td>
+<td class="J" rowspan="2">
+<div data-id="269626" data-type="J" class="celldiv slots2">
+<a href="view_entry.php?id=269626&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div C - Structured Query Language- Ms. Kumari Deepika"><img class="repeat_symbol J" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div C - Structured Query Language- Ms. Kumari Deepika</a>
+</div>
+</td>
+<td class="I" rowspan="2">
+<div data-id="274770" data-type="I" class="celldiv slots2">
+<a href="view_entry.php?id=274770&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div B - Business and Managerial Communication-Col. Maneesh Joshi"><img class="repeat_symbol I" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div B - Business and Managerial Communication-Col. Maneesh Joshi</a>
+</div>
+</td>
+<td class="r" rowspan="2">
+<div data-id="274456" data-type="r" class="celldiv slots2">
+<a href="view_entry.php?id=274456&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div E - Group C- Network Monitoring and  Troubleshooting- Ms. Gauri Madan"><img class="repeat_symbol r" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div E - Group C- Network Monitoring and  Troubleshooting- Ms. Gauri Madan</a>
+</div>
+</td>
+<td class="b" rowspan="2">
+<div data-id="262855" data-type="b" class="celldiv slots2">
+<a href="view_entry.php?id=262855&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) I Div A- Web Development Framework- Ms. Janhavi Pednekar"><img class="repeat_symbol b" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(IT) I Div A- Web Development Framework- Ms. Janhavi Pednekar</a>
+</div>
+</td>
+<td class="h" rowspan="2">
+<div data-id="262630" data-type="h" class="celldiv slots2">
+<a href="view_entry.php?id=262630&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(DT) I - Operations Research- Mr. Rohan Bhase"><img class="repeat_symbol h" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(DT) I - Operations Research- Mr. Rohan Bhase</a>
+</div>
+</td>
+<td class="i" rowspan="2">
+<div data-id="257502" data-type="i" class="celldiv slots2">
+<a href="view_entry.php?id=257502&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(DT) III- Digital Branding and Promotion with Social Media- Mr. Satyajit Wale"><img class="repeat_symbol i" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(DT) III- Digital Branding and Promotion with Social Media- Mr. Satyajit Wale</a>
+</div>
+</td>
+<td class="M" rowspan="2">
+<div data-id="270985" data-type="M" class="celldiv slots2">
+<a href="view_entry.php?id=270985&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div F - Operating  Systems- Ms. Samruddhi Sapkal"><img class="repeat_symbol M" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div F - Operating  Systems- Ms. Samruddhi Sapkal</a>
+</div>
+</td>
+<td class="s" rowspan="2">
+<div data-id="280007" data-type="s" class="celldiv slots2">
+<a href="view_entry.php?id=280007&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA I Div A- Computational Thinking- Mr. Aniruddha Kshirsagar"><img class="repeat_symbol s" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA I Div A- Computational Thinking- Mr. Aniruddha Kshirsagar</a>
+</div>
+</td>
+<td class="K" rowspan="2">
+<div data-id="270010" data-type="K" class="celldiv slots2">
+<a href="view_entry.php?id=270010&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div D - Software  Engineering- Ms. Kirti Mehere"><img class="repeat_symbol K" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div D - Software  Engineering- Ms. Kirti Mehere</a>
+</div>
+</td>
+<td class="q" rowspan="2">
+<div data-id="284477" data-type="q" class="celldiv slots2">
+<a href="view_entry.php?id=284477&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div C - Group B- Cloud Architectures and Security- Mr. Pranav Sahasrabudhe"><img class="repeat_symbol q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div C - Group B- Cloud Architectures and Security- Mr. Pranav Sahasrabudhe</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=11&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="odd_row">
+<td class="row_labels" data-seconds="43200">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=43200" title="Highlight this line">12:00</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=12&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="even_row">
+<td class="row_labels" data-seconds="45000">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=45000" title="Highlight this line">12:30</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="Q" rowspan="2">
+<div data-id="285293" data-type="Q" class="celldiv slots2">
+<a href="view_entry.php?id=285293&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) V Div B -Design Thinking and Problem Solving-Ms.Samruddhi Sapkal"><img class="repeat_symbol Q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) V Div B -Design Thinking and Problem Solving-Ms.Samruddhi Sapkal</a>
+</div>
+</td>
+<td class="L" rowspan="2">
+<div data-id="270625" data-type="L" class="celldiv slots2">
+<a href="view_entry.php?id=270625&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div E - Network  Essentials- Mr. Sulaxan Jadhav"><img class="repeat_symbol L" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div E - Network  Essentials- Mr. Sulaxan Jadhav</a>
+</div>
+</td>
+<td class="w" rowspan="2">
+<div data-id="281253" data-type="w" class="celldiv slots2">
+<a href="view_entry.php?id=281253&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA I Div E- Communication Skills- Ms.Aparna Khandekar"><img class="repeat_symbol w" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA I Div E- Communication Skills- Ms.Aparna Khandekar</a>
+</div>
+</td>
+<td class="t" rowspan="2">
+<div data-id="280313" data-type="t" class="celldiv slots2">
+<a href="view_entry.php?id=280313&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA I Div B- Yoga and Mental Health- Ms .Ramandeep Kaur"><img class="repeat_symbol t" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA I Div B- Yoga and Mental Health- Ms .Ramandeep Kaur</a>
+</div>
+</td>
+<td class="f" rowspan="2">
+<div data-id="277363" data-type="f" class="celldiv slots2">
+<a href="view_entry.php?id=277363&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) III- Web Analytics(DA)- Mr. Gaurav Pant"><img class="repeat_symbol f" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(IT) III- Web Analytics(DA)- Mr. Gaurav Pant</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="X" rowspan="2">
+<div data-id="271277" data-type="X" class="celldiv slots2">
+<a href="view_entry.php?id=271277&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MSc(CA) Sem I Design and Analysis of Algorithms_Gauri Madan"><img class="repeat_symbol X" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MSc(CA) Sem I Design and Analysis of Algorithms_Gauri Madan</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="s" rowspan="2">
+<div data-id="282109" data-type="s" class="celldiv slots2">
+<a href="view_entry.php?id=282109&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA I Div A- Computational Thinking- Mr. Aniruddha Kshirsagar"><img class="repeat_symbol s" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA I Div A- Computational Thinking- Mr. Aniruddha Kshirsagar</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=12&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="odd_row">
+<td class="row_labels" data-seconds="46800">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=46800" title="Highlight this line">13:00</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=13&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="even_row">
+<td class="row_labels" data-seconds="48600">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=48600" title="Highlight this line">13:30</a>
+</div></td>
+<td class="H" rowspan="2">
+<div data-id="268998" data-type="H" class="celldiv slots2">
+<a href="view_entry.php?id=268998&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div A - Data Analysis Using  Python- Ms. Hema Gaikwad"><img class="repeat_symbol H" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div A - Data Analysis Using  Python- Ms. Hema Gaikwad</a>
+</div>
+</td>
+<td class="c" rowspan="2">
+<div data-id="277377" data-type="c" class="celldiv slots2">
+<a href="view_entry.php?id=277377&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) I Div B- PHP- Dr. Sandeep Gaikwad"><img class="repeat_symbol c" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(IT) I Div B- PHP- Dr. Sandeep Gaikwad</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=13&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="Q" rowspan="2">
+<div data-id="285331" data-type="Q" class="celldiv slots2">
+<a href="view_entry.php?id=285331&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) V Div B -Design Thinking and Problem Solving-Ms.Samruddhi Sapkal"><img class="repeat_symbol Q" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) V Div B -Design Thinking and Problem Solving-Ms.Samruddhi Sapkal</a>
+</div>
+</td>
+<td class="U" rowspan="2">
+<div data-id="285350" data-type="U" class="celldiv slots2">
+<a href="view_entry.php?id=285350&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) III Div B -Human Resource Management-Dr. Sarika Sharma"><img class="repeat_symbol U" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) III Div B -Human Resource Management-Dr. Sarika Sharma</a>
+</div>
+</td>
+<td class="x" rowspan="2">
+<div data-id="277634" data-type="x" class="celldiv slots2">
+<a href="view_entry.php?id=277634&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) I Div A- Business Accounting-Mr. Gopal Phadke"><img class="repeat_symbol x" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) I Div A- Business Accounting-Mr. Gopal Phadke</a>
+</div>
+</td>
+<td class="R" rowspan="2">
+<div data-id="266137" data-type="R" class="celldiv slots2">
+<a href="view_entry.php?id=266137&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) V Div C-E-Business Technology-Mr. Vijay Haldavnekar"><img class="repeat_symbol R" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) V Div C-E-Business Technology-Mr. Vijay Haldavnekar</a>
+</div>
+</td>
+<td class="z" rowspan="2">
+<div data-id="283245" data-type="z" class="celldiv slots2">
+<a href="view_entry.php?id=283245&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) I Div C -Web Technologies-Ms.Janhavi Pednekar"><img class="repeat_symbol z" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) I Div C -Web Technologies-Ms.Janhavi Pednekar</a>
+</div>
+</td>
+<td class="M" rowspan="2">
+<div data-id="284376" data-type="M" class="celldiv slots2">
+<a href="view_entry.php?id=284376&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div F - Structured Query Language- Ms. Kumari Deepika"><img class="repeat_symbol M" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div F - Structured Query Language- Ms. Kumari Deepika</a>
+</div>
+</td>
+<td class="g" rowspan="2">
+<div data-id="283714" data-type="g" class="celldiv slots2">
+<a href="view_entry.php?id=283714&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) III- Software Quality Standards II(SPM)"><img class="repeat_symbol g" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(IT) III- Software Quality Standards II(SPM)</a>
+</div>
+</td>
+<td class="h" rowspan="2">
+<div data-id="283128" data-type="h" class="celldiv slots2">
+<a href="view_entry.php?id=283128&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(DT) I - Electronic Customer Relationship Management- Mr. Satyajit Wale"><img class="repeat_symbol h" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(DT) I - Electronic Customer Relationship Management- Mr. Satyajit Wale</a>
+</div>
+</td>
+<td class="I" rowspan="2">
+<div data-id="269272" data-type="I" class="celldiv slots2">
+<a href="view_entry.php?id=269272&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div B - Operating  Systems- Dr.Amol Vibhute"><img class="repeat_symbol I" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div B - Operating  Systems- Dr.Amol Vibhute</a>
+</div>
+</td>
+<td class="J" rowspan="2">
+<div data-id="275690" data-type="J" class="celldiv slots2">
+<a href="view_entry.php?id=275690&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div C - Business and Managerial Communication-Col. Maneesh Joshi"><img class="repeat_symbol J" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div C - Business and Managerial Communication-Col. Maneesh Joshi</a>
+</div>
+</td>
+<td class="C" rowspan="2">
+<div data-id="284412" data-type="C" class="celldiv slots2">
+<a href="view_entry.php?id=284412&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div C -Enterprise Application Development using JavaEE-  Dr. Shrikant Mapari"><img class="repeat_symbol C" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div C -Enterprise Application Development using JavaEE-  Dr. Shrikant Mapa</a>
+</div>
+</td>
+<td class="p" rowspan="2">
+<div data-id="283441" data-type="p" class="celldiv slots2">
+<a href="view_entry.php?id=283441&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div A - Group A- Introduction to Web Services- Ms. Vrushali Kulkarni"><img class="repeat_symbol p" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div A - Group A- Introduction to Web Services- Ms. Vrushali Kulkarni</a>
+</div>
+</td>
+<td class="y" rowspan="2">
+<div data-id="278094" data-type="y" class="celldiv slots2">
+<a href="view_entry.php?id=278094&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) I Div B - Yoga - I-Ms. Trupti Adke"><img class="repeat_symbol y" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) I Div B - Yoga - I-Ms. Trupti Adke</a>
+</div>
+</td>
+<td class="i" rowspan="2">
+<div data-id="257302" data-type="i" class="celldiv slots2">
+<a href="view_entry.php?id=257302&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(DT) III- Innovation Management and New Product Development- Mr. Rohan Bhase"><img class="repeat_symbol i" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(DT) III- Innovation Management and New Product Development- Mr. Rohan Bhase</a>
+</div>
+</td>
+<td class="b" rowspan="2">
+<div data-id="262810" data-type="b" class="celldiv slots2">
+<a href="view_entry.php?id=262810&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) I Div A- Principles and Practice of IT Enabled Management- Dr. Sarika Zambad"><img class="repeat_symbol b" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(IT) I Div A- Principles and Practice of IT Enabled Management- Dr. Sarika Za</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=13&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="K" rowspan="2">
+<div data-id="270241" data-type="K" class="celldiv slots2">
+<a href="view_entry.php?id=270241&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div D - Innovation Management- Ms. Gauri Joshi"><img class="repeat_symbol K" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div D - Innovation Management- Ms. Gauri Joshi</a>
+</div>
+</td>
+<td class="u" rowspan="2">
+<div data-id="283105" data-type="u" class="celldiv slots2">
+<a href="view_entry.php?id=283105&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA I Div C- Communication Skills- Ms.Aparna Khandekar"><img class="repeat_symbol u" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA I Div C- Communication Skills- Ms.Aparna Khandekar</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=13&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="odd_row">
+<td class="row_labels" data-seconds="50400">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=50400" title="Highlight this line">14:00</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=14&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=14&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=14&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="even_row">
+<td class="row_labels" data-seconds="52200">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=52200" title="Highlight this line">14:30</a>
+</div></td>
+<td class="H" rowspan="2">
+<div data-id="269017" data-type="H" class="celldiv slots2">
+<a href="view_entry.php?id=269017&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div A - Data Analysis Using  Python- Ms. Hema Gaikwad"><img class="repeat_symbol H" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div A - Data Analysis Using  Python- Ms. Hema Gaikwad</a>
+</div>
+</td>
+<td class="c" rowspan="2">
+<div data-id="277388" data-type="c" class="celldiv slots2">
+<a href="view_entry.php?id=277388&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) I Div B- PHP- Dr. Sandeep Gaikwad"><img class="repeat_symbol c" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(IT) I Div B- PHP- Dr. Sandeep Gaikwad</a>
+</div>
+</td>
+<td class="w" rowspan="2">
+<div data-id="281272" data-type="w" class="celldiv slots2">
+<a href="view_entry.php?id=281272&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA I Div E- Computational Thinking-Mr. Aniruddha Kshirsagar"><img class="repeat_symbol w" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA I Div E- Computational Thinking-Mr. Aniruddha Kshirsagar</a>
+</div>
+</td>
+<td class="X" rowspan="4">
+<div data-id="285486" data-type="X" class="celldiv slots4">
+<a href="view_entry.php?id=285486&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MSc(CA) Sem I Research Methodology_Dr.Sarika Sharma">MSc(CA) Sem I Research Methodology_Dr.Sarika Sharma</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=14&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="x" rowspan="2">
+<div data-id="277653" data-type="x" class="celldiv slots2">
+<a href="view_entry.php?id=277653&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) I Div A- Business Accounting-Mr. Gopal Phadke"><img class="repeat_symbol x" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) I Div A- Business Accounting-Mr. Gopal Phadke</a>
+</div>
+</td>
+<td class="R" rowspan="2">
+<div data-id="266626" data-type="R" class="celldiv slots2">
+<a href="view_entry.php?id=266626&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) V Div C - Fundamentals of Data Science-Mr.Rajesh Math"><img class="repeat_symbol R" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) V Div C - Fundamentals of Data Science-Mr.Rajesh Math</a>
+</div>
+</td>
+<td class="z" rowspan="2">
+<div data-id="283264" data-type="z" class="celldiv slots2">
+<a href="view_entry.php?id=283264&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) I Div C -Web Technologies-Ms.Janhavi Pednekar"><img class="repeat_symbol z" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) I Div C -Web Technologies-Ms.Janhavi Pednekar</a>
+</div>
+</td>
+<td class="M" rowspan="2">
+<div data-id="284396" data-type="M" class="celldiv slots2">
+<a href="view_entry.php?id=284396&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div F - Structured Query Language- Ms. Kumari Deepika"><img class="repeat_symbol M" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div F - Structured Query Language- Ms. Kumari Deepika</a>
+</div>
+</td>
+<td class="g" rowspan="2">
+<div data-id="283725" data-type="g" class="celldiv slots2">
+<a href="view_entry.php?id=283725&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) III- Software Quality Standards II(SPM)"><img class="repeat_symbol g" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(IT) III- Software Quality Standards II(SPM)</a>
+</div>
+</td>
+<td class="h" rowspan="2">
+<div data-id="283138" data-type="h" class="celldiv slots2">
+<a href="view_entry.php?id=283138&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(DT) I - Financial Management- Mr. Rohan Bhase"><img class="repeat_symbol h" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(DT) I - Financial Management- Mr. Rohan Bhase</a>
+</div>
+</td>
+<td class="I" rowspan="2">
+<div data-id="269291" data-type="I" class="celldiv slots2">
+<a href="view_entry.php?id=269291&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div B - Operating  Systems- Dr.Amol Vibhute"><img class="repeat_symbol I" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div B - Operating  Systems- Dr.Amol Vibhute</a>
+</div>
+</td>
+<td class="u" rowspan="2">
+<div data-id="280657" data-type="u" class="celldiv slots2">
+<a href="view_entry.php?id=280657&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA I Div C- Yoga and Mental Health- Ms .Ramandeep Kaur"><img class="repeat_symbol u" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA I Div C- Yoga and Mental Health- Ms .Ramandeep Kaur</a>
+</div>
+</td>
+<td class="C" rowspan="2">
+<div data-id="284413" data-type="C" class="celldiv slots2">
+<a href="view_entry.php?id=284413&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div C -Enterprise Application Development using JavaEE-  Dr. Shrikant Mapari"><img class="repeat_symbol C" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div C -Enterprise Application Development using JavaEE-  Dr. Shrikant Mapa</a>
+</div>
+</td>
+<td class="p" rowspan="2">
+<div data-id="283457" data-type="p" class="celldiv slots2">
+<a href="view_entry.php?id=283457&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA V Div A - Group A- Introduction to Web Services- Ms. Vrushali Kulkarni"><img class="repeat_symbol p" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA V Div A - Group A- Introduction to Web Services- Ms. Vrushali Kulkarni</a>
+</div>
+</td>
+<td class="y" rowspan="2">
+<div data-id="278113" data-type="y" class="celldiv slots2">
+<a href="view_entry.php?id=278113&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) I Div B - Yoga - I-Ms. Trupti Adke"><img class="repeat_symbol y" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) I Div B - Yoga - I-Ms. Trupti Adke</a>
+</div>
+</td>
+<td class="i" rowspan="2">
+<div data-id="261180" data-type="i" class="celldiv slots2">
+<a href="view_entry.php?id=261180&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(DT) III- Applications of Augmented Reality and Technology Trends- Dr. Parag Kaveri"><img class="repeat_symbol i" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(DT) III- Applications of Augmented Reality and Technology Trends- Dr. Parag</a>
+</div>
+</td>
+<td class="b" rowspan="2">
+<div data-id="262825" data-type="b" class="celldiv slots2">
+<a href="view_entry.php?id=262825&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) I Div A- Principles and Practice of IT Enabled Management- Dr. Sarika Zambad"><img class="repeat_symbol b" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(IT) I Div A- Principles and Practice of IT Enabled Management- Dr. Sarika Za</a>
+</div>
+</td>
+<td class="s" rowspan="2">
+<div data-id="280064" data-type="s" class="celldiv slots2">
+<a href="view_entry.php?id=280064&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA I Div A- Communication Skills- Dr. Vatsala Gupta"><img class="repeat_symbol s" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA I Div A- Communication Skills- Dr. Vatsala Gupta</a>
+</div>
+</td>
+<td class="K" rowspan="2">
+<div data-id="270260" data-type="K" class="celldiv slots2">
+<a href="view_entry.php?id=270260&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div D - Innovation Management- Ms. Gauri Joshi"><img class="repeat_symbol K" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div D - Innovation Management- Ms. Gauri Joshi</a>
+</div>
+</td>
+<td class="t" rowspan="2">
+<div data-id="282272" data-type="t" class="celldiv slots2">
+<a href="view_entry.php?id=282272&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA I Div B- Communication Skills- Ms. Ketaki Bal"><img class="repeat_symbol t" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA I Div B- Communication Skills- Ms. Ketaki Bal</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=14&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="odd_row">
+<td class="row_labels" data-seconds="54000">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=54000" title="Highlight this line">15:00</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=15&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=15&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="even_row">
+<td class="row_labels" data-seconds="55800">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=55800" title="Highlight this line">15:30</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="S" rowspan="2">
+<div data-id="279022" data-type="S" class="celldiv slots2">
+<a href="view_entry.php?id=279022&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) V Elective -Advanced Financial Management-Mr.Rohan Bhase"><img class="repeat_symbol S" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) V Elective -Advanced Financial Management-Mr.Rohan Bhase</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=15&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="odd_row">
+<td class="row_labels" data-seconds="57600">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=57600" title="Highlight this line">16:00</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="u" rowspan="2">
+<div data-id="280681" data-type="u" class="celldiv slots2">
+<a href="view_entry.php?id=280681&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA I Div C- Web Technologies- Dr. Sandeep Gaikwad"><img class="repeat_symbol u" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA I Div C- Web Technologies- Dr. Sandeep Gaikwad</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="y" rowspan="2">
+<div data-id="278132" data-type="y" class="celldiv slots2">
+<a href="view_entry.php?id=278132&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) I Div B -Business Accounting-Mr. Gopal Phadke"><img class="repeat_symbol y" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) I Div B -Business Accounting-Mr. Gopal Phadke</a>
+</div>
+</td>
+<td class="x" rowspan="2">
+<div data-id="277672" data-type="x" class="celldiv slots2">
+<a href="view_entry.php?id=277672&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) I Div A- Web Technologies-Dr.Prathamesh Lahande"><img class="repeat_symbol x" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) I Div A- Web Technologies-Dr.Prathamesh Lahande</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="g" rowspan="2">
+<div data-id="283736" data-type="g" class="celldiv slots2">
+<a href="view_entry.php?id=283736&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) III- Software Quality Standards II(SPM)"><img class="repeat_symbol g" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">MBA(IT) III- Software Quality Standards II(SPM)</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="I" rowspan="2">
+<div data-id="269310" data-type="I" class="celldiv slots2">
+<a href="view_entry.php?id=269310&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div B - Innovation Management- Ms. Gauri Joshi"><img class="repeat_symbol I" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div B - Innovation Management- Ms. Gauri Joshi</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="s" rowspan="2">
+<div data-id="281657" data-type="s" class="celldiv slots2">
+<a href="view_entry.php?id=281657&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA I Div A- Yoga and Mental Health- Ms .Ramandeep Kaur"><img class="repeat_symbol s" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA I Div A- Yoga and Mental Health- Ms .Ramandeep Kaur</a>
+</div>
+</td>
+<td class="c" rowspan="2">
+<div data-id="285829" data-type="c" class="celldiv slots2">
+<a href="view_entry.php?id=285829&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="MBA(IT) I Div B- Web Development Framework- Ms. Janhavi Pedneka">MBA(IT) I Div B- Web Development Framework- Ms. Janhavi Pedneka</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="t" rowspan="2">
+<div data-id="280370" data-type="t" class="celldiv slots2">
+<a href="view_entry.php?id=280370&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA I Div B- Computational Thinking- Mr. Aniruddha Kshirsagar"><img class="repeat_symbol t" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA I Div B- Computational Thinking- Mr. Aniruddha Kshirsagar</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=16&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="even_row">
+<td class="row_labels" data-seconds="59400">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=59400" title="Highlight this line">16:30</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="S" rowspan="2">
+<div data-id="279041" data-type="S" class="celldiv slots2">
+<a href="view_entry.php?id=279041&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) V Elective -Advanced Financial Management-Mr.Rohan Bhase"><img class="repeat_symbol S" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) V Elective -Advanced Financial Management-Mr.Rohan Bhase</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=16&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="odd_row">
+<td class="row_labels" data-seconds="61200">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=61200" title="Highlight this line">17:00</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="u" rowspan="2">
+<div data-id="280701" data-type="u" class="celldiv slots2">
+<a href="view_entry.php?id=280701&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA I Div C- Web Technologies- Dr. Sandeep Gaikwad"><img class="repeat_symbol u" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA I Div C- Web Technologies- Dr. Sandeep Gaikwad</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="y" rowspan="2">
+<div data-id="278151" data-type="y" class="celldiv slots2">
+<a href="view_entry.php?id=278151&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) I Div B -Business Accounting-Mr. Gopal Phadke"><img class="repeat_symbol y" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) I Div B -Business Accounting-Mr. Gopal Phadke</a>
+</div>
+</td>
+<td class="x" rowspan="2">
+<div data-id="277691" data-type="x" class="celldiv slots2">
+<a href="view_entry.php?id=277691&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BBA(IT) I Div A- Web Technologies-Dr.Prathamesh Lahande"><img class="repeat_symbol x" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BBA(IT) I Div A- Web Technologies-Dr.Prathamesh Lahande</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="I" rowspan="2">
+<div data-id="269329" data-type="I" class="celldiv slots2">
+<a href="view_entry.php?id=269329&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA III Div B - Innovation Management- Ms. Gauri Joshi"><img class="repeat_symbol I" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA III Div B - Innovation Management- Ms. Gauri Joshi</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="s" rowspan="2">
+<div data-id="281676" data-type="s" class="celldiv slots2">
+<a href="view_entry.php?id=281676&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA I Div A- Yoga and Mental Health- Ms .Ramandeep Kaur"><img class="repeat_symbol s" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA I Div A- Yoga and Mental Health- Ms .Ramandeep Kaur</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="t" rowspan="2">
+<div data-id="280389" data-type="t" class="celldiv slots2">
+<a href="view_entry.php?id=280389&amp;area=1&amp;day=7&amp;month=8&amp;year=2024" title="BCA I Div B- Computational Thinking- Mr. Aniruddha Kshirsagar"><img class="repeat_symbol t" src="images/repeat.png" alt="Series" title="Series" width="10" height="10">BCA I Div B- Computational Thinking- Mr. Aniruddha Kshirsagar</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=17&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="even_row">
+<td class="row_labels" data-seconds="63000">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=63000" title="Highlight this line">17:30</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=17&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="odd_row">
+<td class="row_labels" data-seconds="64800">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=64800" title="Highlight this line">18:00</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=18&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="even_row">
+<td class="row_labels" data-seconds="66600">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=66600" title="Highlight this line">18:30</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=18&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="odd_row">
+<td class="row_labels" data-seconds="68400">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=68400" title="Highlight this line">19:00</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=19&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="even_row">
+<td class="row_labels" data-seconds="70200">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=70200" title="Highlight this line">19:30</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=19&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="odd_row">
+<td class="row_labels" data-seconds="72000">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=72000" title="Highlight this line">20:00</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=20&amp;minute=0&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+<tr class="even_row">
+<td class="row_labels" data-seconds="73800">
+<div class="celldiv slots1">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29&amp;timetohighlight=73800" title="Highlight this line">20:30</a>
+</div></td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=29&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=28&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=13&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=31&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=14&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=15&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=16&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=7&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=17&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=9&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=10&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=18&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=19&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=27&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=21&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=22&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=23&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=24&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=25&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=26&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=1&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+<td class="new">
+<div class="celldiv slots1">
+<a href="edit_entry.php?area=1&amp;room=30&amp;hour=20&amp;minute=30&amp;year=2024&amp;month=8&amp;day=7">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+<nav class="date_nav">
+  <a class="date_before" href="day.php?area=1&amp;room=29&amp;year=2024&amp;month=08&amp;day=06&amp;type=">Go To Day Before</a>
+  <a class="date_now" href="day.php?area=1&amp;room=29;">Go To Today</a>
+  <a class="date_after" href="day.php?area=1&amp;room=29&amp;year=2024&amp;month=08&amp;day=08&amp;type=">Go To Day After</a>
+</nav>
+<table id="colour_key"><tr>
+<td class="A">
+<div class="celldiv slots1" title="BCA (V) - Div. A">
+BCA (V) - Div. A</div></td>
+<td class="B">
+<div class="celldiv slots1" title="BCA (V) - Div. B">
+BCA (V) - Div. B</div></td>
+<td class="C">
+<div class="celldiv slots1" title="BCA (V) - Div. C">
+BCA (V) - Div. C</div></td>
+<td class="D">
+<div class="celldiv slots1" title="BCA (V) - Div. D">
+BCA (V) - Div. D</div></td>
+<td class="E">
+<div class="celldiv slots1" title="BCA (V) - Div. E">
+BCA (V) - Div. E</div></td>
+<td class="F">
+<div class="celldiv slots1" title="BCA (V) - Div. F">
+BCA (V) - Div. F</div></td>
+<td class="G">
+<div class="celldiv slots1" title="BCA (V) - Elective">
+BCA (V) - Elective</div></td>
+<td class="H">
+<div class="celldiv slots1" title="BCA (III) - Div. A">
+BCA (III) - Div. A</div></td>
+<td class="I">
+<div class="celldiv slots1" title="BCA (III) - Div. B">
+BCA (III) - Div. B</div></td>
+</tr><tr><td class="J">
+<div class="celldiv slots1" title="BCA (III) - Div. C">
+BCA (III) - Div. C</div></td>
+<td class="K">
+<div class="celldiv slots1" title="BCA (III) - Div. D">
+BCA (III) - Div. D</div></td>
+<td class="L">
+<div class="celldiv slots1" title="BCA (III) - Div. E">
+BCA (III) - Div. E</div></td>
+<td class="M">
+<div class="celldiv slots1" title="BCA (III) - Div. F">
+BCA (III) - Div. F</div></td>
+<td class="N">
+<div class="celldiv slots1" title="BCA (III) - Elective">
+BCA (III) - Elective</div></td>
+<td class="O">
+<div class="celldiv slots1" title="BCA(Honours) - (V)">
+BCA(Honours) - (V)</div></td>
+<td class="P">
+<div class="celldiv slots1" title="BBA-IT (V) - Div. A">
+BBA-IT (V) - Div. A</div></td>
+<td class="Q">
+<div class="celldiv slots1" title="BBA-IT (V) - Div. B">
+BBA-IT (V) - Div. B</div></td>
+<td class="R">
+<div class="celldiv slots1" title="BBA-IT (V) - Div. C">
+BBA-IT (V) - Div. C</div></td>
+</tr><tr><td class="S">
+<div class="celldiv slots1" title="BBA-IT (V) - Elective">
+BBA-IT (V) - Elective</div></td>
+<td class="T">
+<div class="celldiv slots1" title="BBA-IT (III) - Div. A">
+BBA-IT (III) - Div. A</div></td>
+<td class="U">
+<div class="celldiv slots1" title="BBA-IT (III) - Div. B">
+BBA-IT (III) - Div. B</div></td>
+<td class="V">
+<div class="celldiv slots1" title="BBA-IT (III) - Div. C">
+BBA-IT (III) - Div. C</div></td>
+<td class="W">
+<div class="celldiv slots1" title="BBA-IT (III) - Elective">
+BBA-IT (III) - Elective</div></td>
+<td class="X">
+<div class="celldiv slots1" title="MSC-CA (I)">
+MSC-CA (I)</div></td>
+<td class="Y">
+<div class="celldiv slots1" title="MSC-CA (III)">
+MSC-CA (III)</div></td>
+<td class="Z">
+<div class="celldiv slots1" title="MSC-CA (III) - SD">
+MSC-CA (III) - SD</div></td>
+<td class="a">
+<div class="celldiv slots1" title="MSC-CA (III) - DS">
+MSC-CA (III) - DS</div></td>
+</tr><tr><td class="b">
+<div class="celldiv slots1" title="MBA-IT (I) - Div. A">
+MBA-IT (I) - Div. A</div></td>
+<td class="c">
+<div class="celldiv slots1" title="MBA-IT (I) - Div. B">
+MBA-IT (I) - Div. B</div></td>
+<td class="d">
+<div class="celldiv slots1" title="MBA-IT (III) - Div. A">
+MBA-IT (III) - Div. A</div></td>
+<td class="e">
+<div class="celldiv slots1" title="MBA-IT (III) - Div. B">
+MBA-IT (III) - Div. B</div></td>
+<td class="f">
+<div class="celldiv slots1" title="MBA-IT (III) - DA">
+MBA-IT (III) - DA</div></td>
+<td class="g">
+<div class="celldiv slots1" title="MBA-IT (III)- SPM">
+MBA-IT (III)- SPM</div></td>
+<td class="h">
+<div class="celldiv slots1" title="MBA-DT (I)">
+MBA-DT (I)</div></td>
+<td class="i">
+<div class="celldiv slots1" title="MBA-DT (III)">
+MBA-DT (III)</div></td>
+<td class="j">
+<div class="celldiv slots1" title="EXAM">
+EXAM</div></td>
+</tr><tr><td class="k">
+<div class="celldiv slots1" title="Elective">
+Elective</div></td>
+<td class="l">
+<div class="celldiv slots1" title="Common Batch">
+Common Batch</div></td>
+<td class="m">
+<div class="celldiv slots1" title="Guest Lecture">
+Guest Lecture</div></td>
+<td class="n">
+<div class="celldiv slots1" title="Meetups">
+Meetups</div></td>
+<td class="o">
+<div class="celldiv slots1" title="BREAK">
+BREAK</div></td>
+<td class="p">
+<div class="celldiv slots1" title="BCA (V) Elective - Group A">
+BCA (V) Elective - Group A</div></td>
+<td class="q">
+<div class="celldiv slots1" title="BCA (V) Elective - Group B">
+BCA (V) Elective - Group B</div></td>
+<td class="r">
+<div class="celldiv slots1" title="BCA (V) Elective - Group C">
+BCA (V) Elective - Group C</div></td>
+<td class="s">
+<div class="celldiv slots1" title="BCA (I) - Div. A">
+BCA (I) - Div. A</div></td>
+</tr><tr><td class="t">
+<div class="celldiv slots1" title="BCA (I) - Div. B">
+BCA (I) - Div. B</div></td>
+<td class="u">
+<div class="celldiv slots1" title="BCA (I) - Div. C">
+BCA (I) - Div. C</div></td>
+<td class="v">
+<div class="celldiv slots1" title="BCA (I) - Div. D">
+BCA (I) - Div. D</div></td>
+<td class="w">
+<div class="celldiv slots1" title="BCA (I) - Div. E">
+BCA (I) - Div. E</div></td>
+<td class="x">
+<div class="celldiv slots1" title="BBA-IT (I) - Div. A">
+BBA-IT (I) - Div. A</div></td>
+<td class="y">
+<div class="celldiv slots1" title="BBA-IT (I) - Div. B">
+BBA-IT (I) - Div. B</div></td>
+<td class="z">
+<div class="celldiv slots1" title="BBA-IT (I) - Div. C">
+BBA-IT (I) - Div. C</div></td>
+<td colspan="2" id="row_padding">&nbsp;</td>
+</tr></table>
+</div><div class="screenonly trailer" id="trailer">
+<div id="viewday">
+<div class="trailer_label">
+<a href="day.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29">View Day:</a>
+</div>
+<div class="trailer_links">
+<span><a href="day.php?year=2024&amp;month=08&amp;day=01&amp;area=1&amp;room=29">Aug 01</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=02&amp;area=1&amp;room=29">Aug 02</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=03&amp;area=1&amp;room=29">Aug 03</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=04&amp;area=1&amp;room=29">Aug 04</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=05&amp;area=1&amp;room=29">Aug 05</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=06&amp;area=1&amp;room=29">Aug 06</a></span>
+ | <span class="current">[ <a href="day.php?year=2024&amp;month=08&amp;day=07&amp;area=1&amp;room=29">Aug 07</a> ]</span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=08&amp;area=1&amp;room=29">Aug 08</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=09&amp;area=1&amp;room=29">Aug 09</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=10&amp;area=1&amp;room=29">Aug 10</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=11&amp;area=1&amp;room=29">Aug 11</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=12&amp;area=1&amp;room=29">Aug 12</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=13&amp;area=1&amp;room=29">Aug 13</a></span>
+ | <span><a href="day.php?year=2024&amp;month=08&amp;day=14&amp;area=1&amp;room=29">Aug 14</a></span>
+</div>
+</div>
+<div id="viewweek">
+<div class="trailer_label">
+<a href="week.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29">View Week:</a>
+</div>
+<div class="trailer_links">
+  <a href="week.php?year=2024&amp;month=07&amp;day=10&amp;area=1&amp;room=29">Jul 07</a>
+ |   <a href="week.php?year=2024&amp;month=07&amp;day=17&amp;area=1&amp;room=29">Jul 14</a>
+ |   <a href="week.php?year=2024&amp;month=07&amp;day=24&amp;area=1&amp;room=29">Jul 21</a>
+ |   <a href="week.php?year=2024&amp;month=07&amp;day=31&amp;area=1&amp;room=29">Jul 28</a>
+ | <span class="current">
+[   <a href="week.php?year=2024&amp;month=08&amp;day=07&amp;area=1&amp;room=29">Aug 04</a>
+]</span>
+ |   <a href="week.php?year=2024&amp;month=08&amp;day=14&amp;area=1&amp;room=29">Aug 11</a>
+ |   <a href="week.php?year=2024&amp;month=08&amp;day=21&amp;area=1&amp;room=29">Aug 18</a>
+ |   <a href="week.php?year=2024&amp;month=08&amp;day=28&amp;area=1&amp;room=29">Aug 25</a>
+ |   <a href="week.php?year=2024&amp;month=09&amp;day=04&amp;area=1&amp;room=29">Sep 01</a>
+</div>
+</div>
+<div id="viewmonth">
+<div class="trailer_label">
+<a href="month.php?year=2024&amp;month=8&amp;day=7&amp;area=1&amp;room=29">View Month:</a>
+</div>
+<div class="trailer_links">
+  <a href="month.php?year=2024&amp;month=06&amp;day=7&amp;area=1&amp;room=29">Jun 2024</a>
+ |   <a href="month.php?year=2024&amp;month=07&amp;day=7&amp;area=1&amp;room=29">Jul 2024</a>
+ | <span class="current">
+[   <a href="month.php?year=2024&amp;month=08&amp;day=7&amp;area=1&amp;room=29">Aug 2024</a>
+]</span>
+ |   <a href="month.php?year=2024&amp;month=09&amp;day=7&amp;area=1&amp;room=29">Sep 2024</a>
+ |   <a href="month.php?year=2024&amp;month=10&amp;day=7&amp;area=1&amp;room=29">Oct 2024</a>
+ |   <a href="month.php?year=2024&amp;month=11&amp;day=7&amp;area=1&amp;room=29">Nov 2024</a>
+ |   <a href="month.php?year=2024&amp;month=12&amp;day=7&amp;area=1&amp;room=29">Dec 2024</a>
+ |   <a href="month.php?year=2025&amp;month=01&amp;day=7&amp;area=1&amp;room=29">Jan 2025</a>
+ |   <a href="month.php?year=2025&amp;month=02&amp;day=7&amp;area=1&amp;room=29">Feb 2025</a>
+</div>
+</div>
+</div>
+  </body>
+</html>

@@ -1,0 +1,308 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symbi TT-Teachers</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/teachers.css' %}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static '/images/favicon.webp' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <style>
+      .loader {
+        display: none;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        width: 50px;
+        height: 50px;
+        border: 4px solid #d92f00;
+        border-top: 4px solid #000000;
+        border-radius: 50%;
+        animation: spin 2s linear infinite;
+        background-color: transparent;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <nav>
+        <div id="nav-left">
+          <a href="/"
+            ><img src="{% static '/images/logo-no-background.webp' %}" alt=""
+          /></a>
+        </div>
+
+        <form id="search-form" method="post" name="search_form">
+          {% csrf_token %}
+          <div class="container-input">
+            <div class="search-cont">
+              <input
+                type="text"
+                placeholder="Find Teacher"
+                name="teacher"
+                class="input"
+                id="teacher"
+                required
+                value="{{teacher}}"
+              />
+              <i class="ri-search-line"></i>
+            </div>
+            <div id="search-dets"></div>
+          </div>
+        </form>
+
+        <div id="nav-right">
+          <div id="nav-1">
+            <a href="/"><h4>Home</h4></a>
+            <a href="/teachers/"><h4>Teachers</h4></a>
+            <a href="/about/"><h4>About</h4></a>
+            <a href="/contact/"><h4>Contact</h4></a>
+          </div>
+        </div>
+      </nav>
+      <div id="page1">
+        <div id="container">
+          <div id="data-cont" data-scroll data-scroll-speed="2">
+            <div class="loader" id="loader"></div>
+            <h1>Teacher's Lecture</h1>
+            <div id="time_table" style="background: transparent">
+              {% if data_list %} {% for i in data_list %}
+              <div class="elem">
+                <div class="elem-parts">
+                  <h3>{{i.0}}</h3>
+                </div>
+                <div class="elem-parts">
+                  <h3>{{i.1}}-{{i.2}}</h3>
+                </div>
+                <div class="elem-parts">
+                  <h3>{{i.3}}</h3>
+                </div>
+              </div>
+              {% endfor %} {% else %} {% if message %}
+              <p class="signin_message" style="text-align: center">
+                {{message}}
+              </p>
+              {% else %}
+              <p class="signin_message" style="text-align: center">
+                SEARCH THE NAME OF TEACHER TO GET THE LECTURES
+              </p>
+              {% endif %} {% endif %}
+            </div>
+          </div>
+          <div class="calendar" data-scroll data-scroll-speed="2">
+            <div class="header">
+              <button class="prev">&#10094;</button>
+              <div class="month-year"></div>
+              <button class="next">&#10095;</button>
+            </div>
+            <div class="weekdays">
+              <h4>Sun</h4>
+              <h4>Mon</h4>
+              <h4>Tue</h4>
+              <h4>Wed</h4>
+              <h4>Thu</h4>
+              <h4>Fri</h4>
+              <h4>Sat</h4>
+            </div>
+            <div class="days"></div>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div id="footer-container">
+          <div class="links">
+            <div class="overflow">
+              <h3>Socials</h3>
+            </div>
+            <a
+              href="https://www.linkedin.com/in/prakhar-agrawal-8a8932242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+            >
+              <div class="button">
+                <span class="label-up"
+                  ><i
+                    class="ri-linkedin-box-fill"
+                    style="color: rgb(219, 212, 212); font-size: 2vw"
+                  ></i
+                  >LinkedIn</span
+                >
+                <span class="label-up"
+                  ><i
+                    class="ri-linkedin-box-fill"
+                    style="color: rgb(219, 212, 212)"
+                  ></i
+                  >LinkedIn</span
+                >
+              </div>
+            </a>
+
+            <a href="https://github.com/Prak07/Symbi_TT/" target="_blank">
+              <div class="button">
+                <span class="label-up"
+                  ><i class="ri-github-fill"></i>GitHub</span
+                >
+                <span class="label-up"
+                  ><i class="ri-github-fill"></i>GitHub</span
+                >
+              </div>
+            </a>
+
+            <a
+              href="https://www.instagram.com/tarang7531?igsh=MW5tNHJpaWViZ3lwYg=="
+              target="_blank"
+            >
+              <div class="button">
+                <span class="label-up"
+                  ><i class="ri-instagram-line"></i>Instagram</span
+                >
+                <span class="label-up"
+                  ><i class="ri-instagram-line"></i>Instagram</span
+                >
+              </div>
+            </a>
+
+            <a href="https://twitter.com/" target="_blank">
+              <div class="button">
+                <span class="label-up"
+                  ><i class="ri-twitter-x-fill"></i>Twitter</span
+                >
+                <span class="label-up"
+                  ><i class="ri-twitter-x-fill"></i>Twitter</span
+                >
+              </div>
+            </a>
+          </div>
+          <div class="links">
+            <div class="overflow">
+              <h3>Quick Links</h3>
+            </div>
+            <a href="/">
+              <div class="button">
+                <span class="label-up"
+                  ><i class="ri-home-3-line" style="font-size: 2.2vw"></i
+                  >Home</span
+                >
+                <span class="label-up"
+                  ><i class="ri-home-3-line" style="font-size: 2.2vw"></i
+                  >Home</span
+                >
+              </div>
+            </a>
+            <a href="/teachers/">
+              <div class="button">
+                <span class="label-up"
+                  ><i class="ri-presentation-fill"></i>Teachers</span
+                >
+                <span class="label-up"
+                  ><i class="ri-presentation-fill"></i>Teachers</span
+                >
+              </div>
+            </a>
+            <a href="/about/">
+              <div class="button">
+                <span class="label-up"
+                  ><i class="ri-user-search-line"></i>About</span
+                >
+                <span class="label-up"
+                  ><i class="ri-user-search-line"></i>About</span
+                >
+              </div>
+            </a>
+
+            <a href="/contact/">
+              <div class="button">
+                <span class="label-up"
+                  ><i class="ri-customer-service-2-line"></i>Contact</span
+                >
+                <span class="label-up"
+                  ><i class="ri-customer-service-2-line"></i>Contact</span
+                >
+              </div>
+            </a>
+          </div>
+          <div class="links">
+            <div class="overflow">
+              <h3>Say Hi...!</h3>
+            </div>
+            <a href="mailto:symbitimetable@gmail.com">
+              <div class="button" style="height: 2.9vw">
+                <span class="label-up mail"
+                  ><i class="ri-mail-send-line"></i> symbitimetable@gmail.com
+                </span>
+                <span class="label-up mail"
+                  ><i class="ri-mail-send-line"></i> symbitimetable@gmail.com
+                </span>
+              </div>
+            </a>
+            <div id="img-cont">
+              <img
+                src="{% static '/images/logo-no-background.webp' %}"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div id="copyright">
+          <h3>Symbi Time Table &copy; 2024</h3>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/sheryjs/dist/Shery.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="{% static '/js/teachers.js' %}"></script>
+    <script>
+      var popup = document.querySelector(".message");
+      if (popup) {
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>

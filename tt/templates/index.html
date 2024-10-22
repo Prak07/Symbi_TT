@@ -1,0 +1,91 @@
+{% extends "base.html" %} {% block title %} Symbi TT {% endblock title %}
+{%block body %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+<style>
+  .loader {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    border: 4px solid #d92f00;
+    border-top: 4px solid #000000;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    background-color: transparent;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+<div id="page1">
+  
+  <div id="container">
+    <div id="data-cont" data-scroll data-scroll-speed="2">
+      <div class="loader" id="loader"></div>
+      <h1>Your Routine</h1>
+      <div id="time_table" style="background: transparent">
+      {% if user.is_authenticated %}
+        {% if data_list %} {% for i in data_list %}
+        <div class="elem">
+          <div class="elem-parts">
+            <h3>{{i.0}}</h3>
+          </div>
+          <div class="elem-parts">
+            <h3>{{i.1}}-{{i.2}}</h3>
+          </div>
+          <div class="elem-parts">
+            <h3>{{i.3}}</h3>
+          </div>
+        </div>
+        {% endfor %} {% else %}
+        <p class="signin_message">NO CLASSES TODAY</p>
+        {% endif %}
+        {% else %}
+        <p class="signin_message">SIGN IN TO SEE YOUR PERSONALIZED ROUTINE</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="calendar" data-scroll data-scroll-speed="2">
+      <div class="header">
+        <button class="prev">&#10094;</button>
+        <div class="month-year"></div>
+        <button class="next">&#10095;</button>
+      </div>
+      <div class="weekdays">
+        <h4>Sun</h4>
+        <h4>Mon</h4>
+        <h4>Tue</h4>
+        <h4>Wed</h4>
+        <h4>Thu</h4>
+        <h4>Fri</h4>
+        <h4>Sat</h4>
+      </div>
+      <div class="days"></div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script
+  type="text/javascript"
+  src="https://unpkg.com/sheryjs/dist/Shery.js"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+  integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script src="{% static '/js/script.js' %}"></script>
+{% endblock body %}

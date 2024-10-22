@@ -1,0 +1,231 @@
+@font-face {
+  font-family: gil;
+  src: url("/static/font/Gilroy-Light.woff2");
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url("/static/font/Nunito-VariableFont_wght.woff2");
+}
+
+@font-face {
+  font-family: plain;
+  src: url("/static/font/plain-regular-webfont.woff2");
+}
+
+@font-face {
+  font-family: os;
+  src: url("/static/font/Oswald-VariableFont_wght.woff2");
+}
+@font-face {
+  font-family: mons;
+  src: url("/static/font/Montserrat-VariableFont_wght.woff2");
+}
+@font-face {
+  font-family: arima;
+  src: url("/static/font/Arima-VariableFont_wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Nunito;
+  background-color: #151515;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #151515;
+}
+
+#main {
+  position: relative;
+}
+
+::selection {
+  color: #dd3a03;
+}
+.overflow {
+  overflow: hidden;
+  width: fit-content;
+}
+#page1 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2vw 0vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#page1 h3 {
+  font-size: 3vw;
+  font-family: arima;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 94%;
+  line-height: 6vw;
+  text-align: center;
+}
+#page1 h3 span {
+  font-size: 5.5vw;
+  font-family: arima;
+  color: transparent;
+  -webkit-text-stroke: 0.1vw rgba(255, 64, 0, 0.708);
+  text-transform: uppercase;
+  line-height: 5vw;
+  transition: all 0.2s ease-in-out;
+}
+#page1 h3 span:hover {
+  color: #dd3a03;
+}
+#profiles {
+  padding: 2vw 0vw;
+  display: flex;
+  position: relative;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  gap: 2vw;
+  position: relative;
+}
+
+.img-div {
+  height: 20vw;
+  width: 20vw;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.img-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  align-items: flex-start;
+  justify-content: center;
+  width: 38%;
+}
+
+.desc h2 {
+  font-size: 3.6vw;
+  text-transform: uppercase;
+  color: #fff;
+  width: 80%;
+  font-family: mons;
+  transition: 0.3s;
+}
+.desc h2:hover {
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff6a;
+}
+.btn2 {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  border: 2px solid #fefefe;
+  color: #fefefe;
+  text-decoration: none;
+  font-weight: 600;
+  background-color: #151515;
+  transition: 0.3s;
+}
+
+.btn2::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - -2px);
+  background-color: #151515;
+  transition: 0.3s ease-out;
+
+  transform: scaleY(1);
+}
+
+.btn2::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 50px);
+  background-color: #151515;
+  transition: 0.3s ease-out;
+  transform: scaleY(1);
+}
+
+.btn2:hover::before {
+  transform: translateY(-25px);
+  height: 0;
+}
+
+.btn2:hover::after {
+  transform: scaleX(0);
+  transition-delay: 0.15s;
+}
+
+.btn2:hover {
+  border: 2px solid #fefefe;
+  background-color: #fff;
+  color: #000;
+  border-radius: 1vw;
+}
+
+.btn2 span {
+  position: relative;
+  z-index: 3;
+  background-color: transparent;
+  font-family: mons;
+  font-size: 28px;
+}
+
+button {
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+}
+#message {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  text-align: center;
+  padding: 2vw 5vw;
+}
+#message h2 {
+  font-family: arima;
+  color: #dadada6d;
+  font-size: 2.3vw;
+}
+#message h3 {
+  font-family: arima;
+  color: #dd3a03;
+  font-size: 2.3vw;
+  text-transform: capitalize;
+  font-weight: 800;
+  width: 100%;
+}
+#message span {
+  font-family: arima;
+}
+
+@media screen and (max-width: 600px) {
+  .mousefollower {
+    display: none;
+  }
+  #page1 {
+    min-height: 40vh;
+    padding: 0;
+  }
+}
