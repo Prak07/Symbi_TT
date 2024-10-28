@@ -1,24 +1,24 @@
 @font-face {
   font-family: Nunito;
-  src: url("fonts/Nunito-VariableFont_wght.woff2");
+  src: url("/static/font/Nunito-VariableFont_wght.woff2");
 }
 
 @font-face {
   font-family: plain;
-  src: url("fonts/plain-regular-webfont.woff2");
+  src: url("/static/font/plain-regular-webfont.woff2");
 }
 
 @font-face {
   font-family: os;
-  src: url("fonts/Oswald-VariableFont_wght.woff2");
+  src: url("/static/font/Oswald-VariableFont_wght.woff2");
 }
 @font-face {
   font-family: mons;
-  src: url("fonts/Montserrat-VariableFont_wght.woff2");
+  src: url("/static/font/Montserrat-VariableFont_wght.woff2");
 }
 @font-face {
   font-family: arima;
-  src: url("fonts/Arima-VariableFont_wght.ttf");
+  src: url("/static/font/Arima-VariableFont_wght.ttf");
 }
 
 * {
