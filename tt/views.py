@@ -252,6 +252,9 @@ def about(request):
     update_profile(request, "about.html")
     return render(request, "about.html")
 
+def message(request):
+    return render(request, "message.html")
+
 
 def contact(request):
     if request.method == "POST" and "contact_form" in request.POST:

@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message</title>
+    <link rel="shortcut icon" href="{% static '/images/favicon.webp' %}" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/message.css'  %}" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="page1">
+        <div class="overflow">
+          <h3>message from <span>creators!</span></h3>
+        </div>
+        <div id="profiles">
+          <div
+            class="profile"
+            id="prak"
+            style="border-right: 0.1px solid #ffffff5d; border-radius: 0.1vw"
+          >
+            <div class="overflow">
+              <div class="img-div" id="right">
+                <img src="{% static 'images/Prakhar.webp' %}" />
+              </div>
+            </div>
+            <div class="desc">
+              <div class="overflow">
+                <h2>Prakhar AGRAWAL</h2>
+              </div>
+              <div class="overflow">
+                <button>
+                  <a
+                    href="https://www.linkedin.com/in/prakhar-agrawal-8a8932242/"
+                    target="_blank"
+                    class="btn2"
+                    ><span class="spn2">LinkedIn 🚀</span></a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile">
+            <div class="desc">
+              <div class="overflow">
+                <h2>Raunak Sharma</h2>
+              </div>
+              <div class="overflow">
+                <button>
+                  <a
+                    href="https://www.linkedin.com/in/raunak-sharma-5393a9248/"
+                    target="_blank"
+                    class="btn2"
+                    ><span class="spn2">LinkedIn 👋</span></a
+                  >
+                </button>
+              </div>
+            </div>
+            <div class="overflow">
+              <div class="img-div" id="left">
+                <img src="{% static 'images/Raunak.jpg' %}" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="message">
+          <h2>
+            We regret to inform you that the Symbitt college timetable website
+            will be taken down indefinitely. Since we have been running the site
+            entirely with our own resources and without any funding or support
+            from the college, we've reached a point where we can no longer
+            sustain it.
+          </h2>
+          <h2>
+            We made numerous efforts to collaborate with the college authorities
+            to have the site hosted on their server, but despite our best
+            attempts, they have refused. As a result, we have no option but to
+            take the site offline.
+          </h2>
+          <h2>
+            If you'd like to see the site up and running in future semesters, we
+            encourage you to reach out to the college authorities and express
+            your support for deploying it on their server.
+          </h2>
+          <h2>Thank you for your understanding and continued support.</h2>
+          <h2>
+            Best regards, The Symbitt Team ✌️
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/sheryjs/dist/Shery.js"
+    ></script>
+
+    <script src="{% static 'js/message.js' %}"></script>
+  </body>
+</html>
