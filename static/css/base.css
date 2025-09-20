@@ -48,6 +48,32 @@
   width: 100%;
 }
 
+/* Buy Me a Coffee Modal Styles */
+#buyCoffeeBtn {
+  transition: box-shadow 0.2s;
+}
+#buyCoffeeBtn:hover {
+  box-shadow: 0 4px 16px #ffdd0080;
+  background: #ffe066;
+}
+#buyCoffeeModal {
+  animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+#buyCoffeeModal h2 {
+  font-size: 2vw;
+  color: #222;
+}
+#buyCoffeeModal img {
+  border: 2px solid #ffdd00;
+}
+#buyCoffeeModal b {
+  color: #ff8800;
+}
+
 nav {
   display: flex;
   align-items: center;
