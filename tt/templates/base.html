@@ -4,6 +4,7 @@
   <head>
     <title>{% block title %}{% endblock title %}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/coffee.css' %}" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -65,6 +66,9 @@
         </div>
         {% endif %} {% endfor %}
         <div id="nav-2">
+          <button id="nav-coffee-btn" class="coffee-btn">
+            <i class="ri-cup-line"></i><span class="coffee-btn-text">Buy Me a Coffee</span>
+          </button>
           {% if user.is_authenticated %}
           <img
             id="profile"
@@ -258,6 +262,28 @@
         <i id="close" class="ri-close-large-line"></i>
       </div>
       {% endif %} {% block body%} {% endblock body %}
+      
+      <!-- Buy Me a Coffee Modal -->
+      <div id="coffee-modal-overlay" class="coffee-modal-overlay">
+        <div class="coffee-modal">
+          <span id="coffee-modal-close" class="coffee-modal-close"><i class="ri-close-line"></i></span>
+          <h2>Support <span>Symbi Time Table</span></h2>
+          
+          <div class="coffee-qr-container">
+            <img src="{% static '/images/upi_qr.png' %}" alt="UPI QR Code" class="coffee-qr-image">
+          </div>
+          
+          <div class="coffee-upi-details">
+            <p>UPI ID: <strong id="upi-id">symbitimetable@ybl</strong></p>
+            <button id="copy-upi-btn" class="coffee-btn"><i class="ri-file-copy-line"></i><span>Copy UPI ID</span></button>
+            <p>Your support helps us keep the service running!</p>
+          </div>
+          
+          <div class="coffee-modal-footer">
+            <p>Thank you for using Symbi Time Table ❤️</p>
+          </div>
+        </div>
+      </div>
     </body>
 
     <div id="footer">
@@ -394,6 +420,7 @@
     </div>
   </div>
   <script src="{% static '/js/base.js' %}"></script>
+  <script src="{% static '/js/coffee.js' %}"></script>
   <script>
     var popup = document.querySelector(".message");
     if (popup) {
