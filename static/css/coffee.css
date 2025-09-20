@@ -8,7 +8,7 @@
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 200px;
   z-index: 999;
   opacity: 0;
   visibility: hidden;
@@ -21,16 +21,16 @@
 }
 
 .coffee-modal {
-  background-color: #202020;
+  background-color: #202020 !important;
   border-radius: 10px;
   width: 40vw;
   max-width: 500px;
+  height: fit-content;
   padding: 2vw;
   color: white;
   position: relative;
   animation: modalFadeIn 0.5s forwards;
   box-shadow: 0 4px 20px rgba(255, 64, 0, 0.4);
-  border: 2px solid rgba(255, 64, 0, 0.854);
 }
 
 @keyframes modalFadeIn {
@@ -54,6 +54,7 @@
 
 .coffee-modal h2 span {
   color: rgba(255, 64, 0, 0.854);
+  font-family: os;
 }
 
 .coffee-modal-close {
@@ -87,6 +88,9 @@
 
 .coffee-upi-details {
   background-color: #151515;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 1vw;
   border-radius: 8px;
   margin-bottom: 1.5vw;
@@ -130,8 +134,11 @@
 
 .coffee-btn i {
   font-size: 1.4vw;
+  background-color: transparent;
 }
-
+.coffee-btn-text {
+  background-color: transparent;
+}
 .coffee-btn:hover {
   background-color: rgba(255, 64, 0, 1);
   transform: translateY(-2px);
@@ -141,6 +148,7 @@
 /* Navbar Coffee Button */
 #nav-coffee-btn {
   margin-right: 1vw;
+  outline: none;
 }
 
 #copy-upi-btn {
@@ -157,56 +165,56 @@
     padding: 20px;
     max-width: none;
   }
-  
+
   .coffee-modal h2 {
     font-size: 20px;
     margin-bottom: 15px;
   }
-  
+
   .coffee-modal-close {
     font-size: 24px;
     top: 5px;
     right: 10px;
   }
-  
+
   .coffee-upi-details {
     padding: 12px;
   }
-  
+
   .coffee-upi-details p {
     font-size: 14px;
     margin: 8px 0;
   }
-  
+
   .coffee-btn {
     padding: 8px 12px;
     font-size: 14px;
   }
-  
+
   .coffee-btn i {
     font-size: 16px;
   }
-  
+
   .coffee-modal-footer {
     font-size: 12px;
   }
-  
+
   .coffee-qr-image {
     width: 80%;
     max-width: 200px;
   }
-  
+
   /* Navbar Coffee Button Mobile */
   #nav-coffee-btn {
     margin-right: 10px;
     padding: 6px 8px;
     font-size: 0; /* Hide text on mobile */
   }
-  
+
   #nav-coffee-btn i {
     font-size: 18px; /* Keep only the icon visible */
   }
-  
+
   /* Copy UPI button mobile */
   #copy-upi-btn {
     display: block;
@@ -221,21 +229,21 @@
     width: 95%;
     padding: 15px;
   }
-  
+
   .coffee-modal h2 {
     font-size: 18px;
     margin-bottom: 12px;
   }
-  
+
   .coffee-qr-image {
     width: 85%;
     max-width: 180px;
   }
-  
+
   .coffee-upi-details p {
     font-size: 12px;
   }
-  
+
   #nav-coffee-btn {
     margin-right: 5px;
   }

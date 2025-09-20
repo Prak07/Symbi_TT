@@ -23,7 +23,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Nunito;
-  background-color: #151515;
 }
 html,
 body {
@@ -38,6 +37,7 @@ body {
   width: 100%;
   padding: 0vw 3vw;
   height: 90vh;
+  background-color: #151515;  
 }
 
 #nav-2 img {

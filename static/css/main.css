@@ -23,7 +23,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Nunito;
-  background-color: #151515;
+  /* background-color: #151515; */
 }
 html,
 body {
@@ -38,6 +38,7 @@ body {
 #page1 {
   width: 100%;
   min-height: 100vh;
+  background-color: #151515;
 }
 
 #profile-cont {
