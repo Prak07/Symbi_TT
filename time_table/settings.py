@@ -47,8 +47,8 @@ INSTALLED_APPS = [
 
 USE_X_FORWARDED_FOR = True
 MIDDLEWARE = [
-    "tt.middleware.IPBlockMiddleware",
-    "tt.middleware.RequestTrackingMiddleware",
+    # "tt.middleware.IPBlockMiddleware",
+    # "tt.middleware.RequestTrackingMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -80,16 +80,11 @@ WSGI_APPLICATION = "time_table.wsgi.application"
 
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "postgres",
-        "USER": config("DB_USER"),
-        "PASSWORD": config("DB_PASS"),
-        "HOST": config("DB_HOST"),
-        "PORT": "5432",
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {

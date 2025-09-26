@@ -3,7 +3,7 @@ import aiosmtplib
 import uuid, time
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import auth
-from django.http import HttpResponse, JsonResponse
+from django.http import JsonResponse
 from .models import *
 from django.contrib import messages
 from django.contrib.auth.hashers import make_password
